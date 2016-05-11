@@ -11,7 +11,9 @@ site_url: http://md2korg.github.io/
 pages:
   - Home: index.md
   - mCerebrum: mCerebrum/index.md
-  - Cerebral Cortex: cerebralcortex/index.md
+  - Cerebral Cortex:
+    - Overview: cerebralcortex/index.md
+    - API: cerebralcortex/api.md
   - Data Protection: data_protection.md
   - Contributors: contributors.md
   - License: license.md
