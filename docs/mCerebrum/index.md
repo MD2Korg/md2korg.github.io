@@ -16,7 +16,7 @@ mCerebrum provides support for reliable data collection from mobile and wearable
 * Microsoft band (accelerometers, gyroscopes, galvanic skin response, UV exposure)
 * AutoSense Chest (ECG, respiration, galvanic skin response, accelerometer)
 * AutoSense Wrist (accelerometer, gyroscope, galvanic skin response)
-* EasySense (ultrawideband radio frequency for lung fluid and cardiorespiratory motion)
+* EasySense (ultra wideband radio frequency for lung fluid and cardiorespiratory motion)
 * Omron BLE Blood Pressure Monitor (blood pressure)
 * Omron BLE Weight Scale (weight, balance, frailty)
 * Android smartphones (GPS, accelerometers)
