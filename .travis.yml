@@ -16,4 +16,5 @@ after_success:
   - git config user.email "dev@md2k.org"
   - git remote add gh-token "https://${GH_TOKEN}@github.com/MD2Korg/md2korg.github.io.git";
   - git fetch gh-token
+  - git checkout gh-token/dev
   - mkdocs gh-deploy -v --clean -b master -m "Travis CI deployed to master with build $TRAVIS_BUILD_NUMBER"
