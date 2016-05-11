@@ -1,5 +1,5 @@
 language: python
-python: '3.5'
+python: '3.4'
 
 env:
   global:
@@ -9,6 +9,7 @@ install:
   - pip install mkdocs -U
 
 script:
+  - mkdocs build
   
 after_success:
   - git config user.name "Travis CI"
