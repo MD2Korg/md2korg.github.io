@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <meta name="author" content="Timothy Hnat">
+  
+  <title>API - MD2K Software Documentation</title>
+  
+
+  <link rel="shortcut icon" href="../../img/favicon.ico">
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "API";
+    var mkdocs_page_input_path = "cerebralcortex/api.md";
+    var mkdocs_page_url = "/cerebralcortex/api/";
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+  <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '', 'md2korg.github.io');
+      ga('send', 'pageview');
+  </script>
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../.." class="icon icon-home"> MD2K Software Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+        <ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../mCerebrum/">mCerebrum</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <ul class="subnav">
+    <li><span>Cerebral Cortex</span></li>
+
+        
+            
+    <li class="toctree-l1 ">
+        <a class="" href="../">Overview</a>
+        
+    </li>
+
+        
+            
+    <li class="toctree-l1 current">
+        <a class="current" href="./">API</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API</a></li>
+                
+                    <li><a class="toctree-l4" href="#register-participant">Register Participant</a></li>
+                
+                    <li><a class="toctree-l4" href="#register-study">Register Study</a></li>
+                
+                    <li><a class="toctree-l4" href="#register-participant-in-study">Register Participant in Study</a></li>
+                
+                    <li><a class="toctree-l4" href="#register-data-source">Register Data Source</a></li>
+                
+                    <li><a class="toctree-l4" href="#load-data-for-each-data-stream">Load data for each data stream</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#participant-registration">Participant registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#study-registration">Study registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#participant-study-registration">Participant-Study registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#datasource-registration">Datasource registration</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#data-point-bulk-loader">Data point bulk loader</a></li>
+                
+            
+            </ul>
+        
+    </li>
+
+        
+    </ul>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../data_protection/">Data Protection</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../contributors/">Contributors</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../license/">License</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../../references/">References</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../..">MD2K Software Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Cerebral Cortex &raquo;</li>
+        
+      
+    
+    <li>API</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API</h1>
+<p>JSON API</p>
+<h2 id="register-participant">Register Participant</h2>
+<p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
+}
+</code></pre>
+
+<h2 id="register-study">Register Study</h2>
+<p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;identifier&quot;: &quot;Study XYZ&quot;,
+    &quot;name&quot;: &quot;Study Name&quot;
+}
+</code></pre>
+
+<h2 id="register-participant-in-study">Register Participant in Study</h2>
+<p><strong>URL:</strong> <code>https://cerebralcortex/studies/register_participant</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
+    &quot;study_id&quot;: 4
+}
+</code></pre>
+
+<h2 id="register-data-source">Register Data Source</h2>
+<p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
+    &quot;datasource&quot;: {
+        &quot;type&quot;: &quot;MEMORY&quot;,
+        &quot;platform&quot;: {
+            &quot;type&quot;: &quot;PHONE&quot;,
+            &quot;metadata&quot;: {
+                &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
+                &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
+                &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
+                &quot;NAME&quot;: &quot;Phone&quot;
+            }
+        },
+        &quot;application&quot;: {
+            &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
+            &quot;metadata&quot;: {
+                &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
+                &quot;VERSION_NUMBER&quot;: &quot;11&quot;
+            }
+        },
+        &quot;dataDescriptors&quot;: [
+            {
+                &quot;UNIT&quot;: &quot;megabyte&quot;,
+                &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
+                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+                &quot;MIN_VALUE&quot;: &quot;0&quot;,
+                &quot;DATA_TYPE&quot;: &quot;float&quot;,
+                &quot;NAME&quot;: &quot;Size&quot;
+            },
+            {
+                &quot;UNIT&quot;: &quot;megabyte&quot;,
+                &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
+                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+                &quot;MIN_VALUE&quot;: &quot;0&quot;,
+                &quot;DATA_TYPE&quot;: &quot;float&quot;,
+                &quot;NAME&quot;: &quot;Available&quot;
+            }
+        ],
+        &quot;metadata&quot;: {
+            &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
+            &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+            &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
+            &quot;NAME&quot;: &quot;Memory&quot;
+        }
+    }
+}
+</code></pre>
+
+<h2 id="load-data-for-each-data-stream">Load data for each data stream</h2>
+<p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;datastream_id&quot;: 5,
+    &quot;data&quot;: [
+        {
+            &quot;dateTime&quot;: 1455862218000,
+            &quot;offset&quot;: -21600000,
+            &quot;sample&quot;: [1,2,3,4]
+        },
+        {
+            &quot;dateTime&quot;: 1455862219000,
+            &quot;offset&quot;: -21600000,
+            &quot;sample&quot;: [
+                {
+                    &quot;foo&quot;:&quot;bar&quot;
+                },
+                {
+                    &quot;foo&quot;:&quot;bar&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<h1 id="participant-registration">Participant registration</h1>
+<p>JSON API for participant registration</p>
+<p>Request fields</p>
+<ul>
+<li><code>identifier</code>: String identifier</li>
+<li><code>id</code> (optional): UUID of this form: a37fbcab-0f90-4dd3-907d-f0cb3f247302</li>
+</ul>
+<p>Response fields</p>
+<ul>
+<li><code>identifier</code>: String</li>
+<li><code>id</code>: UUID</li>
+<li><code>created_at</code>: DateTime</li>
+<li><code>updated_at</code>: DateTime</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
+}
+</code></pre>
+
+<p><em>Response</em></p>
+<pre><code>{
+  &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
+  &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
+  &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
+  &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
+}
+</code></pre>
+
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
+    &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;
+}
+</code></pre>
+
+<p><em>Reponse</em></p>
+<pre><code>{
+  &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
+  &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
+  &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
+  &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
+}
+</code></pre>
+
+<h1 id="study-registration">Study registration</h1>
+<p>JSON API for study registration</p>
+<p>Request Fields</p>
+<ul>
+<li><code>identifier</code>: String identifier (typically a study or protocol number)</li>
+<li><code>name</code>: Human readable study name</li>
+</ul>
+<p><em>Response fields</em></p>
+<ul>
+<li><code>id</code>: Integer</li>
+<li><code>identifier</code>: String</li>
+<li><code>name</code>: String</li>
+<li><code>created_at</code>: DateTime</li>
+<li><code>updated_at</code>: DateTime</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;identifier&quot;: &quot;Study XYZ&quot;,
+    &quot;name&quot;: &quot;Study Name&quot;
+}
+</code></pre>
+
+<p><em>Reponse</em></p>
+<pre><code>{
+  &quot;id&quot;: 4,
+  &quot;identifier&quot;: &quot;Study XYZ&quot;,
+  &quot;name&quot;: &quot;Study Name&quot;,
+  &quot;created_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;,
+  &quot;updated_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;
+}
+</code></pre>
+
+<h1 id="participant-study-registration">Participant-Study registration</h1>
+<p>JSON API for registering an existing participant in and existing study</p>
+<p>Request Fields</p>
+<ul>
+<li><code>participant_id</code>: UUID from <code>participant_registration.id</code> response</li>
+<li><code>study_id</code>: Integer from <code>study_registration.id</code> response</li>
+</ul>
+<p><em>Response fields</em></p>
+<ul>
+<li><code>id</code>: Integer</li>
+<li><code>participant_id</code>: UUID</li>
+<li><code>study_id</code>: Integer</li>
+<li><code>created_at</code>: DateTime</li>
+<li><code>updated_at</code>: DateTime</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
+    &quot;study_id&quot;: 4
+}
+</code></pre>
+
+<p><em>Reponse</em></p>
+<pre><code>{
+  &quot;id&quot;: 19,
+  &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
+  &quot;study_id&quot;: 4,
+  &quot;created_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;,
+  &quot;updated_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;
+}
+</code></pre>
+
+<h1 id="datasource-registration">Datasource registration</h1>
+<p>JSON API for data source registration</p>
+<p>Request Structure</p>
+<pre><code>{
+    &quot;participant_id&quot;: UUID,
+    &quot;datasource&quot;: {
+        &quot;type&quot;: String,
+        &quot;id&quot; (optional): String,
+        &quot;metadata&quot; (optional): JsonObject representing a ,
+        &quot;platform&quot; (optional): {
+            &quot;type&quot;: String,
+            &quot;id&quot;: String,
+            &quot;metadata&quot;: JsonObject representing a HashMap
+        },
+        &quot;application&quot; (optional): {
+            &quot;type&quot;: String,
+            &quot;id&quot;: String,
+            &quot;metadata&quot;: JsonObject representing a
+        },
+        &quot;platform&quot; (optional): {
+            &quot;type&quot;: String,
+            &quot;id&quot;: String,
+            &quot;metadata&quot;: JsonObject representing a
+        },
+        &quot;platformapp&quot; (optional): {
+            &quot;type&quot;: String,
+            &quot;id&quot;: String,
+            &quot;metadata&quot;: JsonObject representing a
+        },
+        &quot;dataDescriptors&quot; (optional): [
+            {
+                JsonObject for each item in the datapoint sample
+            },
+            ...
+        ]
+    }
+}
+</code></pre>
+
+<p><em>Response fields</em></p>
+<ul>
+<li><code>status</code>: Enum: (OK, ERROR)</li>
+<li><code>message</code>: String</li>
+<li><code>datastream_id</code>: Integer</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
+    &quot;datasource&quot;: {
+        &quot;type&quot;: &quot;MEMORY&quot;,
+        &quot;platform&quot;: {
+            &quot;type&quot;: &quot;PHONE&quot;,
+            &quot;metadata&quot;: {
+                &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
+                &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
+                &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
+                &quot;NAME&quot;: &quot;Phone&quot;
+            }
+        },
+        &quot;application&quot;: {
+            &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
+            &quot;metadata&quot;: {
+                &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
+                &quot;VERSION_NUMBER&quot;: &quot;11&quot;
+            }
+        },
+        &quot;dataDescriptors&quot;: [
+            {
+                &quot;UNIT&quot;: &quot;megabyte&quot;,
+                &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
+                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+                &quot;MIN_VALUE&quot;: &quot;0&quot;,
+                &quot;DATA_TYPE&quot;: &quot;float&quot;,
+                &quot;NAME&quot;: &quot;Size&quot;
+            },
+            {
+                &quot;UNIT&quot;: &quot;megabyte&quot;,
+                &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
+                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+                &quot;MIN_VALUE&quot;: &quot;0&quot;,
+                &quot;DATA_TYPE&quot;: &quot;float&quot;,
+                &quot;NAME&quot;: &quot;Available&quot;
+            }
+        ],
+        &quot;metadata&quot;: {
+            &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
+            &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+            &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
+            &quot;NAME&quot;: &quot;Memory&quot;
+        }
+    }
+}
+</code></pre>
+
+<p><em>Reponse</em></p>
+<pre><code>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;message&quot;: &quot;Successfully loaded datasource&quot;,
+  &quot;datastream_id&quot;: &quot;908&quot;
+}
+</code></pre>
+
+<h1 id="data-point-bulk-loader">Data point bulk loader</h1>
+<p>JSON API for data point bulk loading</p>
+<p>The URL determines where data is persisted.</p>
+<ul>
+<li>Postgresql (datapoints)</li>
+<li>Postgresql and Cassandra (rawdatapoints)</li>
+</ul>
+<p>Request Structure</p>
+<pre><code>{
+    &quot;datastream_id&quot;: Integer from datasource_registration process,
+    &quot;data&quot;: [
+        {
+            &quot;dateTime&quot;: Long milliseconds since 1970,
+            &quot;offset&quot;: Long offset in milliseconds from UTC to current timezone,
+            &quot;sample&quot;: Array of JsonObjects
+        },
+        ...
+    ]
+}
+</code></pre>
+
+<p><em>Response fields</em></p>
+<ul>
+<li><code>status</code>: Enum: (OK, ERROR)</li>
+<li><code>message</code>: String</li>
+<li><code>count</code>: Integer indicating number of entries processed</li>
+</ul>
+<p><em>Example</em></p>
+<p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
+<p>Request: POST</p>
+<pre><code>{
+    &quot;datastream_id&quot;: 5,
+    &quot;data&quot;: [
+        {
+            &quot;dateTime&quot;: 1455862218000,
+            &quot;offset&quot;: -21600000,
+            &quot;sample&quot;: [1,2,3,4]
+        },
+        {
+            &quot;dateTime&quot;: 1455862219000,
+            &quot;offset&quot;: -21600000,
+            &quot;sample&quot;: [
+                {
+                    &quot;foo&quot;:&quot;bar&quot;
+                },
+                {
+                    &quot;foo&quot;:&quot;bar&quot;
+                }
+            ]
+        }
+    ]
+}
+</code></pre>
+
+<p><em>Reponse</em></p>
+<pre><code>{
+  &quot;status&quot;: &quot;ok&quot;,
+  &quot;message&quot;: &quot;Successfully loaded datapoints&quot;,
+  &quot;count&quot;: 2
+}
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../../data_protection/" class="btn btn-neutral float-right" title="Data Protection">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../" class="btn btn-neutral" title="Overview"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+      <p>BSD 2-Clause</p>
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+<div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../../data_protection/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+
+</body>
+</html>

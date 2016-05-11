@@ -18,11 +18,19 @@
     
 
     
+        
     <url>
      <loc>http://md2korg.github.io//cerebralcortex/</loc>
      <lastmod>2016-05-11</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
+    <url>
+     <loc>http://md2korg.github.io//cerebralcortex/api/</loc>
+     <lastmod>2016-05-11</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
     
