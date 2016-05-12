@@ -4,17 +4,27 @@ site_author: Timothy Hnat
 copyright: BSD 2-Clause
 google_analytics: ['', 'md2korg.github.io']
 
-theme: readthedocs
+remote_branch: master
+
+# theme: readthedocs
+theme: bootstrap
 
 site_url: http://md2korg.github.io/
 
+
+markdown_extensions:
+  - smarty
+
 pages:
   - Home: index.md
-  - mCerebrum: mCerebrum/index.md
+  - Overview:
+    - Data Protection: data_protection.md
+    - Contributors: contributors.md
+    - References: references.md
+    - License: license.md
+  - mCerebrum:
+    - Overview: mCerebrum/index.md
   - Cerebral Cortex:
     - Overview: cerebralcortex/index.md
     - API: cerebralcortex/api.md
-  - Data Protection: data_protection.md
-  - Contributors: contributors.md
-  - License: license.md
-  - References: references.md
+  - Feedback: feedback.md

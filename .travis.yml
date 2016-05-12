@@ -7,6 +7,8 @@ env:
 
 install:
   - pip install mkdocs -U
+  - pip install mkdocs-bootstrap
+  - pip install mkdocs-bootswatch
 
 script:
   - mkdocs build
