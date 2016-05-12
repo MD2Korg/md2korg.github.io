@@ -6,8 +6,8 @@ google_analytics: ['', 'md2korg.github.io']
 
 remote_branch: master
 
-# theme: readthedocs
-theme: bootstrap
+theme: readthedocs
+# theme: bootstrap
 
 site_url: http://md2korg.github.io/
 
