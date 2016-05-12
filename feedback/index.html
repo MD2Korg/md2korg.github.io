@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Timothy Hnat">
-        <link rel="canonical" href="http://md2korg.github.io/license/">
+        <link rel="canonical" href="http://md2korg.github.io/feedback/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>License - MD2K Software Documentation</title>
+	<title>Feedback - MD2K Software Documentation</title>
 
         <link href="../css/bootstrap-3.0.3.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -66,7 +66,7 @@
             
             
             
-                <li class="dropdown active">
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                     
@@ -82,8 +82,8 @@
                             <a href="../references/">References</a>
                         </li>
                     
-                        <li class="active">
-                            <a href="./">License</a>
+                        <li >
+                            <a href="../license/">License</a>
                         </li>
                     
                     </ul>
@@ -121,8 +121,8 @@
             
             
             
-                <li >
-                    <a href="../feedback/">Feedback</a>
+                <li class="active">
+                    <a href="./">Feedback</a>
                 </li>
             
             
@@ -131,12 +131,12 @@
             <!-- Search, Navigation and Repo links -->
             <ul class="nav navbar-nav navbar-right">
                 <li >
-                    <a rel="next" href="../references/">
+                    <a rel="next" href="../cerebralcortex/api/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
-                <li >
-                    <a rel="prev" href="../mCerebrum/">
+                <li class="disabled">
+                    <a rel="prev" >
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -150,39 +150,73 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#license">License</a></li>
+        <li class="main active"><a href="#feedback">Feedback</a></li>
+        
+    
+        <li class="main "><a href="#bug-reporting">Bug Reporting</a></li>
+        
+            <li><a href="#mcerebrum">mCerebrum</a></li>
+        
+            <li><a href="#cerebral-cortex">Cerebral Cortex</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="license">License</h1>
-<p>Copyright (c) 2015-2016, MD2K</p>
-<p>All rights reserved.</p>
-<p>Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:</p>
-<ul>
-<li>
-<p>Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.</p>
-</li>
-<li>
-<p>Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.</p>
-</li>
-</ul>
-<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &ldquo;AS IS&rdquo;
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p></div>
+<script type="text/javascript" src="https://md2korg.atlassian.net/s/463656ebdf0010e63f7a8c72a675b214-T/sli67f/72002/b6b48b2829824b869586ac216d119363/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=c845e9c4"></script>
+
+<script type="text/javascript" src="https://md2korg.atlassian.net/s/463656ebdf0010e63f7a8c72a675b214-T/sli67f/72002/b6b48b2829824b869586ac216d119363/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=53de3368"></script>
+
+<script type="text/javascript" src="https://md2korg.atlassian.net/s/463656ebdf0010e63f7a8c72a675b214-T/sli67f/72002/b6b48b2829824b869586ac216d119363/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=b5074839"></script>
+
+<h1 id="feedback">Feedback</h1>
+<p><button type="button" class="btn btn-primary" id="feedback-button">Provide feedback or suggestions</button></p>
+<h1 id="bug-reporting">Bug Reporting</h1>
+<h4 id="mcerebrum">mCerebrum</h4>
+<p><button type="button" class="btn btn-danger" id="mc-bug-button">Submit bug report</button></p>
+<h4 id="cerebral-cortex">Cerebral Cortex</h4>
+<p><button type="button" class="btn btn-danger" id="cc-bug-button">Submit bug report</button></p>
+<script type="text/javascript">
+window.ATL_JQ_PAGE_PROPS =  $.extend(window.ATL_JQ_PAGE_PROPS, {
+  'c845e9c4' : {
+    "triggerFunction": function(showCollectorDialog) {
+      //Requires that jQuery is available!
+      jQuery("#mc-bug-button").click(function(e) {
+        e.preventDefault();
+        showCollectorDialog();
+      });
+    },
+    // ==== we add the code below to set the field values ====
+    fieldValues: {
+      description : 'Details: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n',
+      environment : 'Android version: \nApplication name: \nApplication version: '
+    }
+  },
+  '53de3368' : {
+    "triggerFunction": function(showCollectorDialog) {
+      //Requires that jQuery is available!
+      jQuery("#cc-bug-button").click(function(e) {
+        e.preventDefault();
+        showCollectorDialog();
+      });
+    },
+    // ==== we add the code below to set the field values ====
+    fieldValues: {
+      description : 'Details: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n'
+    }
+  },
+  'b5074839' : {
+    "triggerFunction": function(showCollectorDialog) {
+      //Requires that jQuery is available!
+      jQuery("#feedback-button").click(function(e) {
+        e.preventDefault();
+        showCollectorDialog();
+      });
+    }
+  },
+});
+</script></div>
         </div>
 
 	<footer class="col-md-12">

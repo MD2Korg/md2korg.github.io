@@ -10,11 +10,41 @@
     
 
     
+        
+    <url>
+     <loc>http://md2korg.github.io//data_protection/</loc>
+     <lastmod>2016-05-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://md2korg.github.io//contributors/</loc>
+     <lastmod>2016-05-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://md2korg.github.io//references/</loc>
+     <lastmod>2016-05-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://md2korg.github.io//license/</loc>
+     <lastmod>2016-05-12</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
     <url>
      <loc>http://md2korg.github.io//mCerebrum/</loc>
      <lastmod>2016-05-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
+        
     
 
     
@@ -35,31 +65,7 @@
 
     
     <url>
-     <loc>http://md2korg.github.io//data_protection/</loc>
-     <lastmod>2016-05-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>http://md2korg.github.io//contributors/</loc>
-     <lastmod>2016-05-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>http://md2korg.github.io//license/</loc>
-     <lastmod>2016-05-12</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    
-
-    
-    <url>
-     <loc>http://md2korg.github.io//references/</loc>
+     <loc>http://md2korg.github.io//feedback/</loc>
      <lastmod>2016-05-12</lastmod>
      <changefreq>daily</changefreq>
     </url>
