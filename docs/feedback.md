@@ -2,10 +2,15 @@
 <script type="text/javascript" src="https://md2korg.atlassian.net/s/463656ebdf0010e63f7a8c72a675b214-T/sli67f/72002/b6b48b2829824b869586ac216d119363/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=53de3368"></script>
 <script type="text/javascript" src="https://md2korg.atlassian.net/s/463656ebdf0010e63f7a8c72a675b214-T/sli67f/72002/b6b48b2829824b869586ac216d119363/2.0.14/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?locale=en-US&collectorId=b5074839"></script>
 
-# Feedback
+
+## Current bugs and feature suggestions
+<a class="btn btn-info" role="button" href="https://md2korg.atlassian.net/issues/?filter=-4">JIRA Issue Tracker</a>
+
+
+## Feedback
 <button type="button" class="btn btn-primary" id="feedback-button">Provide feedback or suggestions</button>
 
-# Bug Reporting
+## Bug Reporting
 #### mCerebrum
 <button type="button" class="btn btn-danger" id="mc-bug-button">Submit bug report</button>
 #### Cerebral Cortex
