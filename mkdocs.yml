@@ -23,6 +23,7 @@ pages:
     - License: license.md
   - mCerebrum:
     - Overview: mCerebrum/index.md
+    - Troubleshooting: mCerebrum/troubleshooting.md
   - Cerebral Cortex:
     - Overview: cerebralcortex/index.md
     - API: cerebralcortex/api.md
