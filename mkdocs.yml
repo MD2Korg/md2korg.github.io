@@ -2,7 +2,7 @@ site_name: MD2K Software Documentation
 site_description: mCerbrum and Cerebral Cortex software and API documentation
 site_author: Timothy Hnat
 copyright: MD2K 2016
-google_analytics: ['', 'md2korg.github.io']
+google_analytics: [''UA-77812263-1', 'auto']
 
 remote_branch: master
 
