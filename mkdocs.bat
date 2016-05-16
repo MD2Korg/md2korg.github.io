@@ -1,0 +1,1 @@
+C:\ProgramData\chocolatey\lib\python3\tools\Scripts\mkdocs.exe serve
