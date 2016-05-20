@@ -18,3 +18,36 @@ The signal processing for Fieldstream and AutoSense were on a Matlab batch-proce
 mCerebrum, on the other hand, is designed to be compatible with mobile platforms so as to support real-time signal processing of high-frequency data streams in excess of 800 hertz, while meeting quality of service requirements for the mobile platform. In addition, mCerebrum is designed as an open-source project so that it can be easily used by the community and modified to suit specific research needs.
 
 Cerebral Cortex is the big data companion to mCerebrum designed to support population-scale analytics, model development, and data visualizations. One of the primary capabilities of Cerebral Cortex is its ability to support scalable big data machine learning model development and iterative data analysis and model generation across population-scale data sets. Models learned on population-scale data can be sent back to a smartphone in the field to improve detection and classification accuracy.
+
+
+# Software Download
+
+## mCerebrum instructions
+mCerebrum is a suite of several Android applications that are combined with a
+set of configuration files.  These instructions will guide you in downloading,
+installing, and configuring the mCerebrum software suite.  All source code is
+available in the [MD2K's GitHub organization](https://github.com/MD2Korg).
+
+1. Download the latest version of mCerebrum ([latest release](https://github.com/MD2Korg/mCerebrum-Study/releases/latest) ) and install the APK file on and Android 5.0+ device.
+1. mCerebrum will run and the `Settings` button will be highlighted in red, press it.
+1. A prompt will be shown asking you to enter a filename of a configuration file to download, enter `default` and press `OK`.
+1. Once a configuration file is successfully downloaded and installed, you will be prompted with an Admin password screen.  The default password is `1234`.
+1. Congratulations, you have successfully installed the main mCerebrum application.  Please follow the instructions [here](https://md2k.org/wp-content/uploads/2016/05/M0003.pdf) for configuring the platform
+
+
+## List of mCerebrum Apps
+
+| Applications                                                                          | Download                                                                                   |
+|---------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
+| [AutoSense](https://github.com/MD2Korg/mCerebrum-AutoSense)                           | [latest release](https://github.com/MD2Korg/mCerebrum-AutoSense/releases/latest) |
+| [Microsoft Band](https://github.com/MD2Korg/mCerebrum-MicrosoftBand)                  | [latest release](https://github.com/MD2Korg/mCerebrum-MicrosoftBand/releases/latest) |
+| [Phone Sensor](https://github.com/MD2Korg/mCerebrum-PhoneSensor)                      | [latest release](https://github.com/MD2Korg/mCerebrum-PhoneSensor/releases/latest) |
+| [Stream Processor](https://github.com/MD2Korg/mCerebrum-StreamProcessor)              | [latest release](https://github.com/MD2Korg/mCerebrum-StreamProcessor/releases/latest) |
+| [Mood Surfing](https://github.com/MD2Korg/mCerebrum-MoodSurfing)                      | [latest release](https://github.com/MD2Korg/mCerebrum-MoodSurfing/releases/latest) |
+| [Thought Shakeup](https://github.com/MD2Korg/mCerebrum-ThoughtShakeup)                | [latest release](https://github.com/MD2Korg/mCerebrum-ThoughtShakeup/releases/latest) |
+| [Ecological Momentary Assessment (EMA)](https://github.com/MD2Korg/mCerebrum-EMA)     | [latest release](https://github.com/MD2Korg/mCerebrum-EMA/releases/latest) |
+| [EMA Scheduler](https://github.com/MD2Korg/mCerebrum-EMAScheduler)                    | [latest release](https://github.com/MD2Korg/mCerebrum-EMAScheduler/releases/latest) |
+| [Notification Manager](https://github.com/MD2Korg/mCerebrum-NotificationManager)      | [latest release](https://github.com/MD2Korg/mCerebrum-NotificationManager/releases/latest) |
+| [Data stream plotter](https://github.com/MD2Korg/mCerebrum-Plotter)                   | [latest release](https://github.com/MD2Korg/mCerebrum-Plotter/releases/latest) |
+| [DataKit](https://github.com/MD2Korg/mCerebrum-DataKit)                               | [latest release](https://github.com/MD2Korg/mCerebrum-DataKit/releases/latest) |
+| [mCerebrum (Study)](https://github.com/MD2Korg/mCerebrum-Study)                       | [latest release](https://github.com/MD2Korg/mCerebrum-Study/releases/latest) |
