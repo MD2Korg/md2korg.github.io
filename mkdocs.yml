@@ -15,7 +15,9 @@ markdown_extensions:
   - smarty
 
 pages:
-  - Home: index.md
+  - Home:
+    - Introduction: index.md
+    - Contributing: contributing.md
   - Overview:
     - Data Protection: data_protection.md
     - Contributors: contributors.md
