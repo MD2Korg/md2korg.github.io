@@ -25,6 +25,7 @@ pages:
     - License: license.md
   - mCerebrum:
     - Overview: mCerebrum/index.md
+    - Configurations: mCerebrum/configurations.md
     - Troubleshooting: mCerebrum/troubleshooting.md
   - Cerebral Cortex:
     - Overview: cerebralcortex/index.md
