@@ -1,0 +1,2536 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <meta name="author" content="Timothy Hnat">
+        <link rel="canonical" href="http://md2korg.github.io/mCerebrum/configurations/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Configurations - MD2K Software Documentation</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../extra.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-77812263-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">MD2K Software Documentation</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../..">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../contributing/">Contributing</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../data_protection/">Data Protection</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../contributors/">Contributors</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../references/">References</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../license/">License</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">mCerebrum <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../">Overview</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Configurations</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../troubleshooting/">Troubleshooting</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Cerebral Cortex <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../cerebralcortex/">Overview</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../cerebralcortex/api/">API</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../feedback/">Feedback</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../troubleshooting/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#configuration">Configuration</a></li>
+        
+    
+        <li class="main "><a href="#generic-structures">Generic structures</a></li>
+        
+            <li><a href="#data-streams">Data streams</a></li>
+        
+            <li><a href="#privacy-type-options">Privacy type options</a></li>
+        
+            <li><a href="#notification">Notification</a></li>
+        
+            <li><a href="#study-notifications">Study notifications</a></li>
+        
+            <li><a href="#conditions">Conditions</a></li>
+        
+    
+        <li class="main "><a href="#ema">EMA</a></li>
+        
+    
+        <li class="main "><a href="#ema-scheduler">EMA Scheduler</a></li>
+        
+    
+        <li class="main "><a href="#microsoft-band">Microsoft Band</a></li>
+        
+    
+        <li class="main "><a href="#notification-manager">Notification Manager</a></li>
+        
+    
+        <li class="main "><a href="#phone-sensor">Phone Sensor</a></li>
+        
+    
+        <li class="main "><a href="#plotter">Plotter</a></li>
+        
+    
+        <li class="main "><a href="#stream-processor">Stream Processor</a></li>
+        
+    
+        <li class="main "><a href="#autosense">Autosense</a></li>
+        
+    
+        <li class="main "><a href="#datakit">DataKit</a></li>
+        
+            <li><a href="#database">Database</a></li>
+        
+            <li><a href="#archive">Archive</a></li>
+        
+            <li><a href="#upload">Upload</a></li>
+        
+            <li><a href="#privacy">Privacy</a></li>
+        
+            <li><a href="#example">Example</a></li>
+        
+    
+        <li class="main "><a href="#mcerebrum">mCerebrum</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="configuration">Configuration</h1>
+<p><strong>mCerebrum</strong> is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.</p>
+<h1 id="generic-structures">Generic structures</h1>
+<h2 id="data-streams">Data streams</h2>
+<pre><code class="JSON">{
+  &quot;platform&quot;: {
+    &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+    &quot;id&quot;: &quot;CHEST&quot;
+  },
+  &quot;type&quot;: &quot;RESPIRATION&quot;
+}
+</code></pre>
+
+<h2 id="privacy-type-options">Privacy type options</h2>
+<pre><code class="JSON">{
+  &quot;id&quot;: &quot;location&quot;,
+  &quot;title&quot;: &quot;Location&quot;,
+  &quot;summary&quot;: &quot;&quot;,
+  &quot;source&quot;: [
+    {
+      &quot;datasource_type&quot;: &quot;LOCATION&quot;
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="notification">Notification</h2>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 2000
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (MoodSurfing)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Mood Surfing&quot;,
+      &quot;Take a moment to surf your mood&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (Head Space)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;HeadSpace&quot;,
+      &quot;Time a moment to make some head space&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (Thought Shakeup)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Thought Shakeup&quot;,
+      &quot;Take a moment to shake up your thoughts&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_VIBRATE_3&quot;,
+    &quot;name&quot;: &quot;Phone Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 1500
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_TONE_3&quot;,
+    &quot;name&quot;: &quot;Phone Tone&quot;,
+    &quot;type&quot;: &quot;TONE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 1500
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
+    &quot;name&quot;: &quot;Phone Screen&quot;,
+    &quot;type&quot;: &quot;SCREEN&quot;,
+    &quot;priority&quot;: 0,
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
+    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;,
+      &quot;Delay 10 Minutes&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: true,
+      &quot;delay_time&quot;: 600000
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;,
+    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;,
+      &quot;Delay&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: true,
+      &quot;delay_time&quot;: -1
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_MOODSURFING&quot;,
+    &quot;name&quot;: &quot;Phone Message (MoodSurfing)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;Mood Surfing&quot;,
+      &quot;Take a moment to surf your mood&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;,
+    &quot;name&quot;: &quot;Phone Message (ThoughtShakeup)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;Thought Shakeup&quot;,
+      &quot;Take a moment to shake up your thoughts&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_HEADSPACE&quot;,
+    &quot;name&quot;: &quot;Phone Message (HeadSpace)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;HeadSpace&quot;,
+      &quot;Time a moment to make some head space&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  }
+]
+</code></pre>
+
+<h2 id="study-notifications">Study notifications</h2>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;PHONE_VIBRATE&quot;,
+    &quot;name&quot;: &quot;Phone Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE&quot;,
+    &quot;repeat&quot;: 60,
+    &quot;duration&quot;: 10800000
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_TONE&quot;,
+    &quot;name&quot;: &quot;Phone Tone&quot;,
+    &quot;type&quot;: &quot;TONE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 60,
+    &quot;duration&quot;: 10800000
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
+    &quot;name&quot;: &quot;Phone Screen&quot;,
+    &quot;type&quot;: &quot;SCREEN&quot;,
+    &quot;priority&quot;: 0,
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 10000,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_START_DAY&quot;,
+    &quot;name&quot;: &quot;Start Day&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 3600000000,
+    &quot;message&quot;: [
+      &quot;Start Day&quot;,
+      &quot;Please start the Day&quot;,
+      &quot;OK&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: false,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_END_DAY&quot;,
+    &quot;name&quot;: &quot;End Day&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 3600000000,
+    &quot;message&quot;: [
+      &quot;End Day&quot;,
+      &quot;Please end the Day&quot;,
+      &quot;OK&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: false,
+      &quot;delay&quot;: false
+    }
+  }
+]
+</code></pre>
+
+<h2 id="conditions">Conditions</h2>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;PHONE_BATTERY_10&quot;,
+    &quot;type&quot;: &quot;PHONE_BATTERY&quot;,
+    &quot;name&quot;: &quot;Phone battery percentage is greater than 10&quot;,
+    &quot;values&quot;: [
+      &quot;10&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;application&quot;: {
+        &quot;id&quot;: &quot;org.md2k.phonesensor&quot;
+      },
+      &quot;type&quot;: &quot;BATTERY&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;NOT_ACTIVE_1&quot;,
+    &quot;type&quot;: &quot;NOT_ACTIVE&quot;,
+    &quot;name&quot;: &quot;Not physically active in last 1 minute&quot;,
+    &quot;values&quot;: [
+      &quot;60000&quot;,
+      &quot;0&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;application&quot;: {
+        &quot;id&quot;: &quot;org.md2k.streamprocessor&quot;
+      },
+      &quot;type&quot;: &quot;STRESS_ACTIVITY&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;NOT_DRIVING_5&quot;,
+    &quot;type&quot;: &quot;NOT_DRIVING&quot;,
+    &quot;name&quot;: &quot;Not driving in last 5 minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;,
+      &quot;60&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;DATA_QUALITY_5&quot;,
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+    &quot;name&quot;: &quot;Data quality good in last 5 minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;,
+      &quot;80&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;RESPIRATION&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;DATA_QUALITY_DAY_START&quot;,
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+    &quot;name&quot;: &quot;Data quality good from the day started&quot;,
+    &quot;values&quot;: [
+      &quot;DAY_START&quot;,
+      &quot;60&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;RESPIRATION&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMA_ANSWER_5&quot;,
+    &quot;type&quot;: &quot;EMA_ANSWER&quot;,
+    &quot;name&quot;: &quot;EMA answered in 5 Minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;RANDOM_EMA_60&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered Random EMA 60 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;3600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;RANDOM_EMA_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered Random EMA 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;SMOKING_EMA_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;SMOKING_EMA_30&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 30 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;1800000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMI_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;EMI&quot;,
+      &quot;type&quot;: &quot;EMI&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMI_60&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;3600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;EMI&quot;,
+      &quot;type&quot;: &quot;EMI&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;VALID_BLOCK_SMOKING_EMA&quot;,
+    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
+    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
+    &quot;values&quot;: [
+      &quot;1&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;VALID_BLOCK_RANDOM_EMA&quot;,
+    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
+    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
+    &quot;values&quot;: [
+      &quot;1&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PRIVACY&quot;,
+    &quot;type&quot;: &quot;PRIVACY&quot;,
+    &quot;name&quot;: &quot;Privacy is active&quot;,
+    &quot;data_source&quot;: {
+      &quot;type&quot;: &quot;PRIVACY&quot;
+    }
+  }
+]
+</code></pre>
+
+<h1 id="ema">EMA</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.ema/config_ema.json</code></p>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;random_experience_sampling&quot;,
+    &quot;name&quot;: &quot;Random Experience Sampling&quot;,
+    &quot;file_name&quot;: &quot;random_experience_sampling.json&quot;,
+    &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+    &quot;timeout&quot;: 300000
+  },
+  {
+    &quot;id&quot;: &quot;event_contingent_recording&quot;,
+    &quot;name&quot;: &quot;Event Contingent Recording&quot;,
+    &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+    &quot;file_name&quot;: &quot;event_contingent_recording.json&quot;,
+    &quot;timeout&quot;: 300000
+  },
+  {
+    &quot;id&quot;: &quot;end_of_day_recording&quot;,
+    &quot;name&quot;: &quot;End of Day Recording&quot;,
+    &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+    &quot;file_name&quot;: &quot;end_of_day_recording.json&quot;,
+    &quot;timeout&quot;: 300000
+  }
+]
+</code></pre>
+
+<h1 id="ema-scheduler">EMA Scheduler</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.ema_scheduler/config.json</code></p>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+    &quot;type&quot;: &quot;EMA&quot;,
+    &quot;trigger_type&quot;: &quot;RANDOM&quot;,
+    &quot;name&quot;: &quot;Random Experience Sampling&quot;,
+    &quot;enable&quot;: true,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;random_experience_sampling&quot;,
+      &quot;name&quot;: &quot;Random Experience Sampling&quot;,
+      &quot;file_name&quot;: &quot;random_experience_sampling.json&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+      &quot;timeout&quot;: 600000
+    },
+    &quot;blocks&quot;: [
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 0,
+        &quot;end_offset&quot;: 14400000
+      },
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 14400000,
+        &quot;end_offset&quot;: 28800000
+      },
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 28800000,
+        &quot;end_offset&quot;: 43200000
+      }
+    ],
+    &quot;scheduler_rules&quot;: [
+      {
+        &quot;type&quot;: &quot;RANDOM&quot;,
+        &quot;start_time&quot;: &quot;BLOCK_START&quot;,
+        &quot;end_time&quot;: &quot;BLOCK_END&quot;,
+        &quot;divide&quot;: 2,
+        &quot;conditions&quot;: [
+          &quot;PRIVACY&quot;,
+          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
+          &quot;RANDOM_EMA_60&quot;,
+          &quot;SMOKING_EMA_10&quot;,
+          &quot;EMI_10&quot;,
+          &quot;DATA_QUALITY_5&quot;,
+          &quot;NOT_DRIVING_5&quot;,
+          &quot;PHONE_BATTERY_10&quot;
+        ]
+      },
+      {
+        &quot;type&quot;: &quot;RANDOM&quot;,
+        &quot;start_time&quot;: &quot;LAST_SCHEDULE&quot;,
+        &quot;end_time&quot;: &quot;BLOCK_END&quot;,
+        &quot;divide&quot;: 2,
+        &quot;conditions&quot;: [
+          &quot;PRIVACY&quot;,
+          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
+          &quot;RANDOM_EMA_60&quot;,
+          &quot;SMOKING_EMA_10&quot;,
+          &quot;EMI_10&quot;,
+          &quot;DATA_QUALITY_5&quot;,
+          &quot;NOT_DRIVING_5&quot;,
+          &quot;PHONE_BATTERY_10&quot;
+        ]
+      },
+      {
+        &quot;type&quot;: &quot;IMMEDIATE&quot;,
+        &quot;conditions&quot;: [
+          &quot;PRIVACY&quot;,
+          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
+          &quot;RANDOM_EMA_60&quot;,
+          &quot;SMOKING_EMA_10&quot;,
+          &quot;EMI_10&quot;
+        ]
+      }
+    ],
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
+          &quot;PHONE_SCREEN&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 120000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 240000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      }
+    ],
+    &quot;incentive_rules&quot;: [
+      {
+        &quot;incentive&quot;: 0.75,
+        &quot;messages&quot;: [
+          &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
+          &quot;You will be paid $0.75&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;DATA_QUALITY_DAY_START&quot;,
+          &quot;EMA_ANSWER_5&quot;
+        ]
+      },
+      {
+        &quot;incentive&quot;: 0.5,
+        &quot;messages&quot;: [
+          &quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;,
+          &quot;You will be paid $0.50&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;DATA_QUALITY_DAY_START&quot;
+        ]
+      },
+      {
+        &quot;incentive&quot;: 0,
+        &quot;messages&quot;: [
+          &quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;,
+          &quot;You will be paid $0.50&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: []
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+    &quot;type&quot;: &quot;EMA&quot;,
+    &quot;trigger_type&quot;: &quot;SELF_REPORT&quot;,
+    &quot;name&quot;: &quot;Event Contingent EMA&quot;,
+    &quot;enable&quot;: true,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;event_contingent_recording&quot;,
+      &quot;name&quot;: &quot;Event Contingent Recording&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+      &quot;file_name&quot;: &quot;event_contingent_recording.json&quot;,
+      &quot;timeout&quot;: 600000
+    },
+    &quot;blocks&quot;: [
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 0,
+        &quot;end_offset&quot;: 14400000
+      },
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 14400000,
+        &quot;end_offset&quot;: 28800000
+      },
+      {
+        &quot;total&quot;: 1,
+        &quot;base&quot;: &quot;DAY_START&quot;,
+        &quot;start_offset&quot;: 28800000,
+        &quot;end_offset&quot;: 43200000
+      }
+    ],
+    &quot;scheduler_rules&quot;: [
+      {
+        &quot;type&quot;: &quot;IMMEDIATE&quot;,
+        &quot;data_source&quot;: {
+          &quot;type&quot;: &quot;EVENT&quot;
+        },
+        &quot;parameters&quot;: [
+          &quot;SMOKING&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;PRIVACY&quot;,
+          &quot;VALID_BLOCK_SMOKING_EMA&quot;,
+          &quot;RANDOM_EMA_10&quot;,
+          &quot;SMOKING_EMA_30&quot;,
+          &quot;EMI_10&quot;,
+          &quot;DATA_QUALITY_5&quot;,
+          &quot;NOT_DRIVING_5&quot;,
+          &quot;PHONE_BATTERY_10&quot;
+        ]
+      }
+    ],
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
+          &quot;PHONE_SCREEN&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 120000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 240000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      }
+    ],
+    &quot;incentive_rules&quot;: [
+      {
+        &quot;incentive&quot;: 0.75,
+        &quot;messages&quot;: [
+          &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
+          &quot;You will be paid $0.75&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;DATA_QUALITY_DAY_START&quot;,
+          &quot;EMA_ANSWER_5&quot;
+        ]
+      },
+      {
+        &quot;incentive&quot;: 0.5,
+        &quot;messages&quot;: [
+          &quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;,
+          &quot;You will be paid $0.50&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;DATA_QUALITY_DAY_START&quot;
+        ]
+      },
+      {
+        &quot;incentive&quot;: 0,
+        &quot;messages&quot;: [
+          &quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;,
+          &quot;You will be paid $0.50&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: []
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;END_OF_DAY_EMA&quot;,
+    &quot;type&quot;: &quot;EMA&quot;,
+    &quot;trigger_type&quot;: &quot;SELF_REPORT&quot;,
+    &quot;name&quot;: &quot;End of day EMA&quot;,
+    &quot;enable&quot;: true,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;end_of_day_recording&quot;,
+      &quot;name&quot;: &quot;End of Day Recording&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+      &quot;file_name&quot;: &quot;end_of_day_recording.json&quot;,
+      &quot;timeout&quot;: 600000
+    },
+    &quot;scheduler_rules&quot;: [
+      {
+        &quot;type&quot;: &quot;IMMEDIATE&quot;,
+        &quot;data_source&quot;: {
+          &quot;type&quot;: &quot;DAY_END&quot;
+        }
+      }
+    ],
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;,
+          &quot;PHONE_SCREEN&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 120000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      },
+      {
+        &quot;time&quot;: 240000,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;PHONE_VIBRATE_3&quot;
+        ]
+      }
+    ],
+    &quot;incentive_rules&quot;: [
+      {
+        &quot;incentive&quot;: 1,
+        &quot;messages&quot;: [
+          &quot;Thank you. You will be paid $1.00 for taking the End of Day survey.&quot;,
+          &quot;You will be paid $1.00&quot;,
+          &quot;Total Earning: $&quot;
+        ],
+        &quot;conditions&quot;: []
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;EMI&quot;,
+    &quot;type&quot;: &quot;EMI&quot;,
+    &quot;trigger_type&quot;: &quot;EVENT&quot;,
+    &quot;name&quot;: &quot;Intervention&quot;,
+    &quot;enable&quot;: true,
+    &quot;scheduler_rules&quot;: [
+      {
+        &quot;type&quot;: &quot;IMMEDIATE&quot;,
+        &quot;data_source&quot;: {
+          &quot;type&quot;: &quot;ORG_MD2K_CSTRESS_STRESS_EPISODE_CLASSIFICATION&quot;
+        },
+        &quot;parameters&quot;: [
+          &quot;0&quot;,
+          &quot;2&quot;
+        ],
+        &quot;conditions&quot;: [
+          &quot;PRIVACY&quot;,
+          &quot;RANDOM_EMA_10&quot;,
+          &quot;SMOKING_EMA_10&quot;,
+          &quot;EMI_60&quot;,
+          &quot;DATA_QUALITY_5&quot;,
+          &quot;NOT_DRIVING_5&quot;,
+          &quot;PHONE_BATTERY_10&quot;
+        ]
+      }
+    ],
+    &quot;incentive_rules&quot;: [
+      {
+        &quot;incentive&quot;: 1,
+        &quot;conditions&quot;: []
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MOODSURFING&quot;,
+    &quot;type&quot;: &quot;EMI&quot;,
+    &quot;name&quot;: &quot;MoodSurfing&quot;,
+    &quot;trigger_type&quot;: &quot;EVENT&quot;,
+    &quot;enable&quot;: false,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;moodsurfing&quot;,
+      &quot;name&quot;: &quot;MoodSurfing&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.moodsurfing&quot;,
+      &quot;timeout&quot;: 600000
+    },
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_MOODSURFING&quot;
+        ]
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;THOUGHT_SHAKEUP&quot;,
+    &quot;type&quot;: &quot;EMI&quot;,
+    &quot;name&quot;: &quot;Thought Shakeup&quot;,
+    &quot;trigger_type&quot;: &quot;EVENT&quot;,
+    &quot;enable&quot;: false,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;thought_shakeup&quot;,
+      &quot;name&quot;: &quot;Thought Shakeup&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.thoughtshakeup&quot;,
+      &quot;timeout&quot;: 600000
+    },
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;
+        ]
+      }
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;HEADSPACE&quot;,
+    &quot;type&quot;: &quot;EMI&quot;,
+    &quot;name&quot;: &quot;HeadSpace&quot;,
+    &quot;trigger_type&quot;: &quot;EVENT&quot;,
+    &quot;enable&quot;: false,
+    &quot;application&quot;: {
+      &quot;id&quot;: &quot;head_space&quot;,
+      &quot;name&quot;: &quot;HeadSpace&quot;,
+      &quot;package_name&quot;: &quot;com.getsomeheadspace.android&quot;,
+      &quot;timeout&quot;: 1000
+    },
+    &quot;notifications&quot;: [
+      {
+        &quot;time&quot;: 0,
+        &quot;types&quot;: [
+          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+          &quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;,
+          &quot;PHONE_VIBRATE_3&quot;,
+          &quot;PHONE_MESSAGE_HEADSPACE&quot;
+        ]
+      }
+    ]
+  }
+]
+</code></pre>
+
+<h1 id="microsoft-band">Microsoft Band</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.microsoftband/default_config.json</code></p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;31 Hz&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;31 Hz&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;BAND_CONTACT&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;
+  }
+]
+</code></pre>
+
+<h1 id="notification-manager">Notification Manager</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
+<p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
+<h1 id="phone-sensor">Phone Sensor</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.phonesensor/default_config.json</code></p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;BATTERY&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;LOCATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;CPU&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;MEMORY&quot;
+  }
+]
+</code></pre>
+
+<h1 id="plotter">Plotter</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.plotter/default_config.json</code></p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;RESPIRATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ECG&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  }
+]
+</code></pre>
+
+<h1 id="stream-processor">Stream Processor</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
+<p>Stream processor requires that SVM model files be present in this directory.</p>
+<h1 id="autosense">Autosense</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.autosense/default_config.json</code></p>
+<p><a href="#data-streams">datastreams</a></p>
+<p>AutoSense datastreams are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.  </p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;RESPIRATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ECG&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Z&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;GALVANIC_SKIN_RESPONSE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;BATTERY&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;SKIN_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Z&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_Z&quot;
+  }
+]
+</code></pre>
+
+<h1 id="datakit">DataKit</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.datakit/default_config.json</code></p>
+<h2 id="database">Database</h2>
+<p>The database section designates:</p>
+<ul>
+<li><code>enabled</code>: true or false to designate whether to store data to memory</li>
+<li><code>location</code>: Store the sqlite database on the phone&rsquo;s<ul>
+<li><em>INTERNAL_SDCARD</em>: internal memory, no exceptions</li>
+<li><em>EXTERNAL_SDCARD</em>: external memory, no exceptions</li>
+<li><em>EXTERNAL_SDCARD_PREFERRED</em>: external memory is preferred if available, but internal memory will be utilized as a fallback option</li>
+</ul>
+</li>
+</ul>
+<pre><code class="JSON">&quot;database&quot;: {
+  &quot;enabled&quot;: true,
+  &quot;location&quot;: &quot;INTERNAL_SDCARD&quot;
+}
+</code></pre>
+
+<h2 id="archive">Archive</h2>
+<p>This section configures the archive options for DataKit:</p>
+<ul>
+<li><code>enabled</code>: true or false to designate whether to archive records to flash storage</li>
+<li><code>location</code>: Store the archive files on:<ul>
+<li><em>INTERNAL_SDCARD</em>: internal memory, no exceptions</li>
+<li><em>EXTERNAL_SDCARD</em>: external memory, no exceptions</li>
+<li><em>EXTERNAL_SDCARD_PREFERRED</em>: external memory is preferred if available, but internal memory will be utilized as a fallback option</li>
+</ul>
+</li>
+<li><code>interval</code>: Delay in milliseconds from when a datapoint is logged in the system and when it is eligible for archiving</li>
+</ul>
+<pre><code class="JSON">&quot;archive&quot;: {
+  &quot;enabled&quot;: true,
+  &quot;location&quot;: &quot;EXTERNAL_SDCARD_PREFERRED&quot;,
+  &quot;interval&quot;: 86400000
+}
+</code></pre>
+
+<h2 id="upload">Upload</h2>
+<p>This section configures the upload to Cerebral Cortex options for DataKit:</p>
+<ul>
+<li><code>enabled</code>: true or false to designate whether to upload data to mCerebrum&rsquo;s cloud component, Cerebral Cortex</li>
+<li><code>interval</code>: Delay in milliseconds between upload iterations</li>
+<li><code>url</code>: Cerebral Cortex API URL: e.g. https://cerebralcortex.SITE.ORG/</li>
+<li><code>restricted_datasource</code>: List of <a href="#data-streams">datastreams</a> eligible for upload restrictions</li>
+</ul>
+<pre><code class="JSON">&quot;upload&quot;: {
+  &quot;enabled&quot;: true,
+  &quot;interval&quot;: 900000,
+  &quot;url&quot;: &quot;https://cerebralcortex.SITE.ORG/&quot;,
+  &quot;restricted_datasource&quot;: [
+    {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      },
+      &quot;type&quot;: &quot;LOCATION&quot;
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="privacy">Privacy</h2>
+<p>This section configures the privacy controller for DataKit:</p>
+<ul>
+<li><code>duration_options</code>: a list of options where each contains the following:<ul>
+<li><code>id</code>: XX</li>
+<li><code>title</code>: Text to be shown in the user interface</li>
+<li><code>value</code>: Time in milliseconds</li>
+</ul>
+</li>
+<li><code>privacy_type_options</code>: A list of <a href="#privacy-type-options">privacy types</a></li>
+</ul>
+<pre><code class="JSON">&quot;privacy&quot;: {
+  &quot;duration_options&quot;: [
+    {
+      &quot;id&quot;: &quot;300000&quot;,
+      &quot;title&quot;: &quot;5 Minutes&quot;,
+      &quot;value&quot;: 300000
+    },
+    {
+      &quot;id&quot;: &quot;600000&quot;,
+      &quot;title&quot;: &quot;10 Minutes&quot;,
+      &quot;value&quot;: 600000
+    },
+    {
+      &quot;id&quot;: &quot;900000&quot;,
+      &quot;title&quot;: &quot;15 Minutes&quot;,
+      &quot;value&quot;: 900000
+    },
+    {
+      &quot;id&quot;: &quot;1800000&quot;,
+      &quot;title&quot;: &quot;30 Minutes&quot;,
+      &quot;value&quot;: 1800000
+    }
+  ],
+  &quot;privacy_type_options&quot;: [
+    {
+      &quot;id&quot;: &quot;location&quot;,
+      &quot;title&quot;: &quot;Location&quot;,
+      &quot;summary&quot;: &quot;&quot;,
+      &quot;source&quot;: [
+        {
+          &quot;datasource_type&quot;: &quot;LOCATION&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;activity&quot;,
+      &quot;title&quot;: &quot;Activity&quot;,
+      &quot;summary&quot;: &quot;&quot;,
+      &quot;source&quot;: [
+        {
+          &quot;datasource_type&quot;: &quot;LOCATION&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;ACCELEROMETER&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;GYROSCOPE&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;ACCELEROMETER_X&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;ACCELEROMETER_Y&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;ACCELEROMETER_Z&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;GYROSCOPE_X&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;GYROSCOPE_Y&quot;
+        },
+        {
+          &quot;datasource_type&quot;: &quot;GYROSCOPE_Z&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;chest_sensor&quot;,
+      &quot;title&quot;: &quot;Chest Sensor&quot;,
+      &quot;summary&quot;: &quot;&quot;,
+      &quot;source&quot;: [
+        {
+          &quot;platform_type&quot;: &quot;AUTOSENSE_CHEST&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;wrist_sensor&quot;,
+      &quot;title&quot;: &quot;Wrist Sensors&quot;,
+      &quot;summary&quot;: &quot;&quot;,
+      &quot;source&quot;: [
+        {
+          &quot;platform_type&quot;: &quot;AUTOSENSE_WRIST&quot;
+        }
+      ]
+    },
+    {
+      &quot;id&quot;: &quot;ema_intervention&quot;,
+      &quot;title&quot;: &quot;Surveys&quot;,
+      &quot;summary&quot;: &quot;&quot;,
+      &quot;source&quot;: [
+        {
+          &quot;datasource_type&quot;: &quot;SURVEY&quot;
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="example">Example</h2>
+<pre><code class="JSON">{
+  &quot;database&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;location&quot;: &quot;INTERNAL_SDCARD&quot;
+  },
+  &quot;archive&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;location&quot;: &quot;EXTERNAL_SDCARD_PREFERRED&quot;,
+    &quot;interval&quot;: 86400000
+  },
+  &quot;upload&quot;: {
+    &quot;enabled&quot;: true,
+    &quot;interval&quot;: 900000,
+    &quot;url&quot;: &quot;https://northwestern-cerebralcortex.md2k.org/&quot;,
+    &quot;restricted_datasource&quot;: [
+      {
+        &quot;platform&quot;: {
+          &quot;type&quot;: &quot;PHONE&quot;
+        },
+        &quot;type&quot;: &quot;LOCATION&quot;
+      }
+    ]
+  },
+  &quot;privacy&quot;: {
+    &quot;duration_options&quot;: [
+      {
+        &quot;id&quot;: &quot;300000&quot;,
+        &quot;title&quot;: &quot;5 Minutes&quot;,
+        &quot;value&quot;: 300000
+      },
+      {
+        &quot;id&quot;: &quot;600000&quot;,
+        &quot;title&quot;: &quot;10 Minutes&quot;,
+        &quot;value&quot;: 600000
+      },
+      {
+        &quot;id&quot;: &quot;900000&quot;,
+        &quot;title&quot;: &quot;15 Minutes&quot;,
+        &quot;value&quot;: 900000
+      },
+      {
+        &quot;id&quot;: &quot;1800000&quot;,
+        &quot;title&quot;: &quot;30 Minutes&quot;,
+        &quot;value&quot;: 1800000
+      }
+    ],
+    &quot;privacy_type_options&quot;: [
+      {
+        &quot;id&quot;: &quot;location&quot;,
+        &quot;title&quot;: &quot;Location&quot;,
+        &quot;summary&quot;: &quot;&quot;,
+        &quot;source&quot;: [
+          {
+            &quot;datasource_type&quot;: &quot;LOCATION&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;activity&quot;,
+        &quot;title&quot;: &quot;Activity&quot;,
+        &quot;summary&quot;: &quot;&quot;,
+        &quot;source&quot;: [
+          {
+            &quot;datasource_type&quot;: &quot;LOCATION&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;ACCELEROMETER&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;GYROSCOPE&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;ACCELEROMETER_X&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;ACCELEROMETER_Y&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;ACCELEROMETER_Z&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;GYROSCOPE_X&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;GYROSCOPE_Y&quot;
+          },
+          {
+            &quot;datasource_type&quot;: &quot;GYROSCOPE_Z&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;chest_sensor&quot;,
+        &quot;title&quot;: &quot;Chest Sensor&quot;,
+        &quot;summary&quot;: &quot;&quot;,
+        &quot;source&quot;: [
+          {
+            &quot;platform_type&quot;: &quot;AUTOSENSE_CHEST&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;wrist_sensor&quot;,
+        &quot;title&quot;: &quot;Wrist Sensors&quot;,
+        &quot;summary&quot;: &quot;&quot;,
+        &quot;source&quot;: [
+          {
+            &quot;platform_type&quot;: &quot;AUTOSENSE_WRIST&quot;
+          }
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;ema_intervention&quot;,
+        &quot;title&quot;: &quot;Surveys&quot;,
+        &quot;summary&quot;: &quot;&quot;,
+        &quot;source&quot;: [
+          {
+            &quot;datasource_type&quot;: &quot;SURVEY&quot;
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+
+<h1 id="mcerebrum">mCerebrum</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.study/config.json</code></p>
+<pre><code class="JSON">{
+  &quot;config_info&quot;: {
+    &quot;id&quot;: &quot;STU00201566-Test&quot;,
+    &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;,
+    &quot;version_code&quot;: 21,
+    &quot;required_files&quot;: [
+      &quot;org.md2k.autosense/default_config.json&quot;,
+      &quot;org.md2k.datakit/config.json&quot;,
+      &quot;org.md2k.datakit/default_config.json&quot;,
+      &quot;org.md2k.ema/config_ema.json&quot;,
+      &quot;org.md2k.ema/end_of_day_recording.json&quot;,
+      &quot;org.md2k.ema/event_contingent_recording.json&quot;,
+      &quot;org.md2k.ema/random_experience_sampling.json&quot;,
+      &quot;org.md2k.ema_scheduler/config.json&quot;,
+      &quot;org.md2k.ema_scheduler/notification.json&quot;,
+      &quot;org.md2k.ema_scheduler/condition.json&quot;,
+      &quot;org.md2k.microsoftband/default_config.json&quot;,
+      &quot;org.md2k.phonesensor/default_config.json&quot;,
+      &quot;org.md2k.plotter/default_config.json&quot;,
+      &quot;org.md2k.streamprocessor/model.json&quot;,
+      &quot;org.md2k.streamprocessor/model_rip.json&quot;,
+      &quot;org.md2k.notificationmanager/tone.mp3&quot;,
+      &quot;org.md2k.study/config.json&quot;,
+      &quot;org.md2k.study/notification.json&quot;,
+      &quot;org.md2k.study/tutorial.pdf&quot;
+    ]
+  },
+  &quot;study_info&quot;: {
+    &quot;id&quot;: &quot;STU00201566-Test&quot;,
+    &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;
+  },
+  &quot;apps&quot;: [
+    {
+      &quot;id&quot;: &quot;study&quot;,
+      &quot;name&quot;: &quot;Study&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-Study/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;datakit&quot;,
+      &quot;name&quot;: &quot;DataKit&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.datakit&quot;,
+      &quot;config&quot;: &quot;config.json&quot;,
+      &quot;default_config&quot;: &quot;default_config.json&quot;,
+      &quot;service&quot;: &quot;org.md2k.datakit.cerebralcortex.ServiceCerebralCortex&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-DataKit/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;phonesensor&quot;,
+      &quot;name&quot;: &quot;PhoneSensor&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.phonesensor&quot;,
+      &quot;service&quot;: &quot;org.md2k.phonesensor.ServicePhoneSensor&quot;,
+      &quot;settings&quot;: &quot;org.md2k.phonesensor.ActivityPhoneSensorSettings&quot;,
+      &quot;config&quot;: &quot;config.json&quot;,
+      &quot;default_config&quot;: &quot;default_config.json&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-PhoneSensor/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;autosense&quot;,
+      &quot;name&quot;: &quot;AutoSense&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.autosense&quot;,
+      &quot;service&quot;: &quot;org.md2k.autosense.antradio.connection.ServiceAutoSenses&quot;,
+      &quot;settings&quot;: &quot;org.md2k.autosense.ActivityAutoSenseSettings&quot;,
+      &quot;config&quot;: &quot;config.json&quot;,
+      &quot;default_config&quot;: &quot;default_config.json&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-AutoSense/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;microsofthealth&quot;,
+      &quot;name&quot;: &quot;MicrosoftHealth&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;com.microsoft.kapp&quot;,
+      &quot;download_link&quot;: &quot;market://details?id=com.microsoft.kapp&quot;
+    },
+    {
+      &quot;id&quot;: &quot;microsoftband&quot;,
+      &quot;name&quot;: &quot;MicrosoftBand&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.microsoftband&quot;,
+      &quot;service&quot;: &quot;org.md2k.microsoftband.ServiceMicrosoftBands&quot;,
+      &quot;settings&quot;: &quot;org.md2k.microsoftband.ActivityMicrosoftBandSettings&quot;,
+      &quot;config&quot;: &quot;config.json&quot;,
+      &quot;default_config&quot;: &quot;default_config.json&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-MicrosoftBand/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;streamprocessor&quot;,
+      &quot;name&quot;: &quot;StreamProcessor&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.streamprocessor&quot;,
+      &quot;service&quot;: &quot;org.md2k.streamprocessor.ServiceStreamProcessor&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-StreamProcessor/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ema_scheduler&quot;,
+      &quot;name&quot;: &quot;EMAScheduler&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.ema_scheduler&quot;,
+      &quot;service&quot;: &quot;org.md2k.ema_scheduler.ServiceEMAScheduler&quot;,
+      &quot;config&quot;: &quot;config.json&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-EMAScheduler/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;notificationmanager&quot;,
+      &quot;name&quot;: &quot;NotificationManager&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.notificationmanager&quot;,
+      &quot;service&quot;: &quot;org.md2k.notificationmanager.ServiceNotificationManager&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-NotificationManager/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ema&quot;,
+      &quot;name&quot;: &quot;EMA&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-EMA/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;moodsurfing&quot;,
+      &quot;name&quot;: &quot;MoodSurfing&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.moodsurfing&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-MoodSurfing/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;thoughtshakeup&quot;,
+      &quot;name&quot;: &quot;ThoughtShakeup&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.thoughtshakeup&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-ThoughtShakeup/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;headspace&quot;,
+      &quot;name&quot;: &quot;HeadSpace&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;com.getsomeheadspace.android&quot;,
+      &quot;download_link&quot;: &quot;market://details?id=com.getsomeheadspace.android&quot;
+    },
+    {
+      &quot;id&quot;: &quot;plotter&quot;,
+      &quot;name&quot;: &quot;Plotter&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.plotter&quot;,
+      &quot;default_config&quot;: &quot;default_config.json&quot;,
+      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-Plotter/releases&quot;
+    },
+    {
+      &quot;id&quot;: &quot;adobe_acrobat_reader&quot;,
+      &quot;name&quot;: &quot;Adobe Acrobat Reader&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;com.adobe.reader&quot;,
+      &quot;download_link&quot;: &quot;market://details?id=com.adobe.reader&quot;
+    }
+  ],
+  &quot;actions&quot;: [
+    {
+      &quot;id&quot;: &quot;config_info&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Configuration Info&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 7
+    },
+    {
+      &quot;id&quot;: &quot;clear_config&quot;,
+      &quot;type&quot;: &quot;reset&quot;,
+      &quot;name&quot;: &quot;Clear Configuration&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 7,
+      &quot;icon&quot;: &quot;ic_delete_blue_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_config.ActivityClearConfig&quot;
+    },
+    {
+      &quot;id&quot;: &quot;config_download&quot;,
+      &quot;type&quot;: &quot;reset&quot;,
+      &quot;name&quot;: &quot;Download New Configuration&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 7,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;icon&quot;: &quot;ic_download_teal_48dp&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.config_info.ActivityConfigDownload&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_install&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Applications&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 6,
+      &quot;icon&quot;: &quot;ic_install_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_install.ActivityInstallApp&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_settings&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Settings&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 6,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_settings.ActivityAppSettings&quot;,
+      &quot;icon&quot;: &quot;ic_settings_teal_48dp&quot;
+    },
+    {
+      &quot;id&quot;: &quot;datakit_connect&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;DataKit Connection&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 5
+    },
+    {
+      &quot;id&quot;: &quot;study_info&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 4,
+      &quot;name&quot;: &quot;Study&quot;
+    },
+    {
+      &quot;id&quot;: &quot;user_info&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;User ID&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 4,
+      &quot;icon&quot;: &quot;ic_user_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.user_info.ActivityUserInfo&quot;
+    },
+    {
+      &quot;id&quot;: &quot;wakeup_info&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Wakeup Time&quot;,
+      &quot;rank&quot;: 4,
+      &quot;enable&quot;: true,
+      &quot;icon&quot;: &quot;ic_wakeup_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.wakeup_info.ActivityWakeUp&quot;
+    },
+    {
+      &quot;id&quot;: &quot;sleep_info&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Sleep Time&quot;,
+      &quot;rank&quot;: 4,
+      &quot;enable&quot;: true,
+      &quot;icon&quot;: &quot;ic_sleep_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.sleep_info.ActivitySleep&quot;
+    },
+    {
+      &quot;id&quot;: &quot;day_type&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;name&quot;: &quot;Pre/Post Quit Day&quot;,
+      &quot;rank&quot;: 4,
+      &quot;enable&quot;: true,
+      &quot;icon&quot;: &quot;ic_sleep_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.day_type.ActivityDayType&quot;
+    },
+    {
+      &quot;id&quot;: &quot;clear_database&quot;,
+      &quot;type&quot;: &quot;reset&quot;,
+      &quot;name&quot;: &quot;Clear All Data&quot;,
+      &quot;icon&quot;: &quot;ic_delete_indigo_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 4,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_data.ActivityClearData&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_service&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;enable&quot;: true,
+      &quot;name&quot;: &quot;Running Apps&quot;,
+      &quot;rank&quot;: 3,
+      &quot;icon&quot;: &quot;ic_apps_teal_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_service.ActivityService&quot;
+    },
+    {
+      &quot;id&quot;: &quot;data_quality&quot;,
+      &quot;rank&quot;: 2,
+      &quot;enable&quot;: true,
+      &quot;name&quot;: &quot;Sensor Data Quality&quot;
+    },
+    {
+      &quot;id&quot;: &quot;day_start_end&quot;,
+      &quot;type&quot;: &quot;setup&quot;,
+      &quot;rank&quot;: 2,
+      &quot;enable&quot;: true,
+      &quot;name&quot;: &quot;Day Start/Day End&quot;
+    },
+    {
+      &quot;id&quot;: &quot;privacy&quot;,
+      &quot;name&quot;: &quot;Privacy&quot;,
+      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.datakit&quot;,
+      &quot;rank&quot;: 2,
+      &quot;class_name&quot;: &quot;org.md2k.datakit.ActivityPrivacy&quot;
+    },
+    {
+      &quot;id&quot;: &quot;user_status&quot;,
+      &quot;name&quot;: &quot;user_status&quot;,
+      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2
+    },
+    {
+      &quot;id&quot;: &quot;intervention&quot;,
+      &quot;name&quot;: &quot;Intervention&quot;,
+      &quot;icon&quot;: &quot;ic_intervention_48dp&quot;,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.intervention.ActivityInterventionApp&quot;
+    },
+    {
+      &quot;id&quot;: &quot;smoking_self_report&quot;,
+      &quot;name&quot;: &quot;Report Smoking&quot;,
+      &quot;icon&quot;: &quot;ic_smoking_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;rank&quot;: 2,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.selfreport.ActivitySelfReport&quot;
+    },
+    {
+      &quot;id&quot;: &quot;plotter&quot;,
+      &quot;name&quot;: &quot;Plotter&quot;,
+      &quot;enable&quot;: true,
+      &quot;icon&quot;: &quot;ic_plot_teal_48dp&quot;,
+      &quot;rank&quot;: 2,
+      &quot;package_name&quot;: &quot;org.md2k.plotter&quot;
+    },
+    {
+      &quot;id&quot;: &quot;user_app&quot;,
+      &quot;name&quot;: &quot;User Application&quot;,
+      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2
+    },
+    {
+      &quot;id&quot;: &quot;EMA_test&quot;,
+      &quot;type&quot;: &quot;App Controller&quot;,
+      &quot;name&quot;: &quot;Survey/EMI Test&quot;,
+      &quot;enable&quot;: true,
+      &quot;icon&quot;: &quot;ic_notification_teal_48dp&quot;,
+      &quot;rank&quot;: 2,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.EMA_test.ActivityEMA_test&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_reset&quot;,
+      &quot;name&quot;: &quot;Reset App&quot;,
+      &quot;icon&quot;: &quot;ic_refresh_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_reset.ActivityAppReset&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_start&quot;,
+      &quot;name&quot;: &quot;Start Data Collection&quot;,
+      &quot;icon&quot;: &quot;ic_play_teal_48dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_start.ActivityAppStart&quot;
+    },
+    {
+      &quot;id&quot;: &quot;app_stop&quot;,
+      &quot;name&quot;: &quot;Stop &amp; Close Application&quot;,
+      &quot;icon&quot;: &quot;ic_error_red_50dp&quot;,
+      &quot;enable&quot;: true,
+      &quot;rank&quot;: 2,
+      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_stop.ActivityAppStop&quot;
+    }
+  ],
+  &quot;admin_view&quot;: {
+    &quot;password&quot;: &quot;1234&quot;,
+    &quot;view_contents&quot;: [
+      {
+        &quot;id&quot;: &quot;key_configure_app&quot;,
+        &quot;name&quot;: &quot;Configure Applications&quot;,
+        &quot;enable&quot;: true,
+        &quot;values&quot;: [
+          &quot;config_info&quot;,
+          &quot;app_install&quot;,
+          &quot;app_settings&quot;,
+          &quot;config_download&quot;,
+          &quot;clear_config&quot;
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;key_configure_study&quot;,
+        &quot;name&quot;: &quot;Configure Study&quot;,
+        &quot;enable&quot;: true,
+        &quot;values&quot;: [
+          &quot;config_info&quot;,
+          &quot;study_info&quot;,
+          &quot;user_info&quot;,
+          &quot;day_type&quot;,
+          &quot;wakeup_info&quot;,
+          &quot;sleep_info&quot;,
+          &quot;clear_database&quot;
+        ]
+      },
+      {
+        &quot;id&quot;: &quot;key_start_study&quot;,
+        &quot;name&quot;: &quot;Start Study&quot;,
+        &quot;enable&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;key_stop_study&quot;,
+        &quot;name&quot;: &quot;Stop Study&quot;,
+        &quot;enable&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;key_other&quot;,
+        &quot;name&quot;: &quot;Others&quot;,
+        &quot;enable&quot;: true,
+        &quot;values&quot;: [
+          &quot;app_service&quot;,
+          &quot;EMA_test&quot;
+        ]
+      }
+    ]
+  },
+  &quot;user_view&quot;: {
+    &quot;view_contents&quot;: [
+      {
+        &quot;id&quot;: &quot;data_quality&quot;,
+        &quot;enable&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;day_start_end&quot;,
+        &quot;enable&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;privacy&quot;,
+        &quot;enable&quot;: true
+      },
+      {
+        &quot;id&quot;: &quot;user_app&quot;,
+        &quot;enable&quot;: true,
+        &quot;values&quot;: [
+          &quot;smoking_self_report&quot;,
+          &quot;intervention&quot;,
+          &quot;app_reset&quot;
+        ]
+      }
+    ]
+  },
+  &quot;data_quality&quot;: [
+    {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;RESPIRATION&quot;
+    },
+    {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;ECG&quot;
+    },
+    {
+      &quot;platform&quot;: {
+        &quot;id&quot;: &quot;LEFT_WRIST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;
+    },
+    {
+      &quot;platform&quot;: {
+        &quot;id&quot;: &quot;RIGHT_WRIST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;
+    }
+  ],
+  &quot;data_quality_view&quot;: [
+    {
+      &quot;name&quot;: &quot;Breathing&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+          },
+          &quot;type&quot;: &quot;RESPIRATION&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;2bxc8kONPSs&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Tighten the chest band so it fits snugly under the armpits.\n\n2) Make sure all cable connections are secure.\n\n3) Reset the application, wait 15 seconds and check again.\n\n4) Restart the phone, wait one minute and check again.\n\n5) Make sure the chest sensor is charged and powered ON.&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Heart Rate&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+          },
+          &quot;type&quot;: &quot;ECG&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;toiopB7ltc8&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Adjust the position of the electrodes on the body.\n\n2) Make sure all cable connections are secure.\n\n3) Reset the application, wait 15 seconds and check again.\n\n4) Restart the phone, wait one minute and check again.\n\n5) Make sure the chest sensor is charged and powered ON.&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Left Wrist(A)&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;,
+            &quot;id&quot;: &quot;LEFT_WRIST&quot;
+          },
+          &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;MbHUvM6C1GE&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Reset the application, wait 15 seconds and check again.\n\n2) Restart the phone, wait one minute and check again.\n\n3) Make sure the wrist sensor power switch is ON.\n\n4) Make sure the wrist sensor is charged.&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Right Wrist(A)&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;,
+            &quot;id&quot;: &quot;RIGHT_WRIST&quot;
+          },
+          &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;MbHUvM6C1GE&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Reset the application, wait 15 seconds and check again.\n\n2) Restart the phone, wait one minute and check again.\n\n3) Make sure the wrist sensor power switch is ON.\n\n4) Make sure the wrist sensor is charged.&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Left Wrist(M)&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;MICROSOFT_BAND&quot;,
+            &quot;id&quot;: &quot;LEFT_WRIST&quot;
+          },
+          &quot;type&quot;: &quot;ACCELEROMETER&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;QYQJISCLCdg&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Make sure the clasp on the Band is securely locked around the wrist.\n\n2) Reset the application, wait 15 seconds and check again.\n\n3) Restart the phone, wait one minute and check again.\n\n4) Make sure the Band is charged and powered ON.&quot;
+      }
+    },
+    {
+      &quot;name&quot;: &quot;Right Wrist(M)&quot;,
+      &quot;plotter&quot;: {
+        &quot;enable&quot;: true,
+        &quot;datasource&quot;: {
+          &quot;platform&quot;: {
+            &quot;type&quot;: &quot;MICROSOFT_BAND&quot;,
+            &quot;id&quot;: &quot;RIGHT_WRIST&quot;
+          },
+          &quot;type&quot;: &quot;ACCELEROMETER&quot;
+        }
+      },
+      &quot;video&quot;: {
+        &quot;enable&quot;: true,
+        &quot;link&quot;: &quot;QYQJISCLCdg&quot;
+      },
+      &quot;message&quot;: {
+        &quot;enable&quot;: true,
+        &quot;text&quot;: &quot;1) Make sure the clasp on the Band is securely locked around the wrist.\n\n2) Reset the application, wait 15 seconds and check again.\n\n3) Restart the phone, wait one minute and check again.\n\n4) Make sure the Band is charged and powered ON.&quot;
+      }
+    }
+  ],
+  &quot;day_start&quot;: {
+    &quot;by&quot;: &quot;user&quot;,
+    &quot;base&quot;: &quot;wakeup&quot;,
+    &quot;notify&quot;: [
+      {
+        &quot;type&quot;: &quot;button&quot;,
+        &quot;offset&quot;: -30000
+      },
+      {
+        &quot;type&quot;: &quot;prompt&quot;,
+        &quot;offset&quot;: 0,
+        &quot;parameters&quot;: [
+          &quot;PHONE_SCREEN&quot;,
+          &quot;PHONE_MESSAGE_START_DAY&quot;
+        ]
+      },
+      {
+        &quot;type&quot;: &quot;notification&quot;,
+        &quot;offset&quot;: 30000,
+        &quot;parameters&quot;: [
+          &quot;PHONE_VIBRATE&quot;,
+          &quot;PHONE_TONE&quot;,
+          &quot;PHONE_SCREEN&quot;,
+          &quot;PHONE_MESSAGE_START_DAY&quot;
+        ]
+      }
+    ]
+  },
+  &quot;day_end&quot;: {
+    &quot;by&quot;: &quot;user&quot;,
+    &quot;base&quot;: &quot;day_start&quot;,
+    &quot;notify&quot;: [
+      {
+        &quot;type&quot;: &quot;button&quot;,
+        &quot;offset&quot;: 30000
+      }
+    ]
+  }
+}
+</code></pre></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+                <p>MD2K 2016</p>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
