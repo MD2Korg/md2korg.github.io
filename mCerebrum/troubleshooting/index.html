@@ -64,8 +64,23 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li >
-                        <a href="../..">Home</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../..">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../contributing/">Contributing</a>
+</li>
+
+                        
+                        </ul>
                     </li>
                 
                 
@@ -250,13 +265,11 @@
 <li>Make sure the chest sensor is paired to the phone with the correct ID number.</li>
 <li>Make sure all cable connections are secure.</li>
 <li>Make sure the ECG connector is inserted into the correct port of the chest sensor.</li>
-<li>
-<p>Adjust the position of the electrodes on the body.</p>
-</li>
-<li>
-<p>The positive electrode should be under the sternum in the center of the chest.</p>
-</li>
+<li>Adjust the position of the electrodes on the body.<ul>
+<li>The positive electrode should be under the sternum in the center of the chest.</li>
 <li>The negative electrode should be on the left side of the ribcage at approximately the same height as the positive electrode.</li>
+</ul>
+</li>
 <li>Reset the application, wait 15 seconds and check again.</li>
 <li>Restart the phone, wait one minute and check again.</li>
 <li>Make sure the chest sensor is charged and powered ON.</li>
@@ -269,6 +282,7 @@
 <ul>
 <li>Clear all data from the DataKit app.</li>
 <li>Clear all data from the mCerebrum app.</li>
+<li>Delete the configuration folder located in the internal memory <code>/mCerebrum</code></li>
 <li>Make sure you have installed the proper update for each app.</li>
 <li>Delete the mCerebrum app from the phone and re-install it.</li>
 </ul></div>

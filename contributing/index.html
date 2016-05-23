@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Timothy Hnat">
-        <link rel="canonical" href="http://md2korg.github.io/license/">
+        <link rel="canonical" href="http://md2korg.github.io/contributing/">
         <link rel="shortcut icon" href="../img/favicon.ico">
 
-	<title>License - MD2K Software Documentation</title>
+	<title>Contributing - MD2K Software Documentation</title>
 
         <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../css/font-awesome-4.5.0.css" rel="stylesheet">
@@ -64,7 +64,7 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -75,8 +75,8 @@
 
                         
                             
-<li >
-    <a href="../contributing/">Contributing</a>
+<li class="active">
+    <a href="./">Contributing</a>
 </li>
 
                         
@@ -85,7 +85,7 @@
                 
                 
                 
-                    <li class="dropdown active">
+                    <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Overview <b class="caret"></b></a>
                         <ul class="dropdown-menu">
                         
@@ -108,8 +108,8 @@
 
                         
                             
-<li class="active">
-    <a href="./">License</a>
+<li >
+    <a href="../license/">License</a>
 </li>
 
                         
@@ -176,12 +176,12 @@
                 </li>
                 
                     <li >
-                        <a rel="next" href="../references/">
+                        <a rel="next" href="..">
                             <i class="fa fa-arrow-left"></i> Previous
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="../mCerebrum/">
+                        <a rel="prev" href="../data_protection/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -197,39 +197,106 @@
                 <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#license">License</a></li>
+        <li class="main active"><a href="#contributing-guidelines">Contributing guidelines</a></li>
+        
+            <li><a href="#getting-started">Getting started</a></li>
+        
+            <li><a href="#what-can-i-help-with">What can I help with</a></li>
+        
+            <li><a href="#code-contribution-process">Code contribution process</a></li>
+        
+            <li><a href="#before-you-start-the-work">Before you start the work</a></li>
+        
+            <li><a href="#creating-the-contribution-as-a-github-pull-request">Creating the contribution as a GitHub Pull request</a></li>
         
     
     </ul>
 </div></div>
                 <div class="col-md-9" role="main">
 
-<h1 id="license">License</h1>
-<p>Copyright (c) 2015-2016, MD2K</p>
-<p>All rights reserved.</p>
-<p>Redistribution and use in source and binary forms, with or without
-modification, are permitted provided that the following conditions are met:</p>
+<h1 id="contributing-guidelines">Contributing guidelines</h1>
+<p>Thank you for your interest in helping us with the MD2K software platforms.  We always welcome new contributions in any form including:</p>
 <ul>
-<li>
-<p>Redistributions of source code must retain the above copyright notice, this
-  list of conditions and the following disclaimer.</p>
-</li>
-<li>
-<p>Redistributions in binary form must reproduce the above copyright notice,
-  this list of conditions and the following disclaimer in the documentation
-  and/or other materials provided with the distribution.</p>
-</li>
+<li>Bug reports regarding the software, documentation, website, etc&hellip;</li>
+<li>Documentation improvements, tutorials, examples</li>
+<li>Code patches and new features</li>
 </ul>
-<p>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &ldquo;AS IS&rdquo;
-AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
-DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
-FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
-DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
-SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
-CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
-OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p></div>
+<h2 id="getting-started">Getting started</h2>
+<p>Please join and explore our <a href="https://groups.google.com/forum/#!forum/md2k-dev">mailing list</a>.  This is all our discussions occur regarding the MD2K software projects.</p>
+<h2 id="what-can-i-help-with">What can I help with</h2>
+<p>We try to keep all open issues for MD2K software on <a href="https://md2korg.atlassian.net/issues/?filter=-4">JIRA</a> but please ask on the mailing list before starting work on any issues.</p>
+<h2 id="code-contribution-process">Code contribution process</h2>
+<p>While contributing to any MD2K software modules, you will encounter a variety of coding styles, frameworks, and principles.  The most important thing to do is to communicate with the development teams throughout the whole process.</p>
+<h2 id="before-you-start-the-work">Before you start the work</h2>
+<p>Most issues should be brought up in the <a href="https://groups.google.com/forum/#!forum/md2k-dev">mailing list</a>. After discussion, a JIRA issue will be created</p>
+<h2 id="creating-the-contribution-as-a-github-pull-request">Creating the contribution as a GitHub Pull request</h2>
+<p>MD2K utilizes <a href="https://help.github.com/articles/using-pull-requests/">GitHub&rsquo;s Pull Requests</a> as the primary mechanism to accept changes: fork the specific MD2K software repository, make your changes, and send a pull request.</p>
+<ol>
+<li>Fork a MD2K repository</li>
+<li>Create a branch</li>
+<li>Make changes on your local machine</li>
+<li>Merge the master branch into your branch</li>
+<li>Push commits into your remote forked repository</li>
+<li>Send pull request to the MD2K team</li>
+<li>Participate in the code review process on GitHub</li>
+</ol>
+<h3 id="fork-repository">Fork repository</h3>
+<p>Goto the appropriate <a href="https://github.com/MD2Korg/">GitHub repository</a> and click the &ldquo;Fork&rdquo; button to have your own copy.  Clone this onto your local machine:</p>
+<pre><code>$ git clone https://github.com/[YOUR_GITHUB_ID]/[REPOSITORY_NAME].github
+</code></pre>
+
+<p>Add a remote upstream to your repository:</p>
+<pre><code>$ git remote add upstream https://github.com/MD2Korg/[REPOSITORY_NAME]
+</code></pre>
+
+<p>Configure your name and email if necessary:</p>
+<pre><code>$ git config user.name &quot;FirstName LastName&quot;
+$ git config user.email email@domain.com
+</code></pre>
+
+<h3 id="create-a-branch-to-work-with">Create a branch to work with</h3>
+<p>Ensure that the issue you are going to solve is allocated and assigned in the <a href="https://md2korg.atlassian.net/issues/?filter=-4">JIRA</a> issue tracker.  Create a branch to address the issue and the name should reference the JIRA issue, e.g., MD2K-[ISSUE NUMBER].</p>
+<h3 id="make-local-changes">Make local changes</h3>
+<p>Write code and make commits and usual.  Code should contain appropriate licensing in headers and ensure that existing tests pass.</p>
+<h3 id="merge-the-master-branch-into-your-branch">Merge the master branch into your branch</h3>
+<p>Prior to sending a pull request, you should ensure that your branch contain the latest changes.  Run the following:</p>
+<pre><code>$ git fetch upstream
+$ git checkout [YOUR_BRANCH] # Skip the step if you are already on your branch
+$ git merge upstream/master
+</code></pre>
+
+<p>Please resolve all conflicts that arise and test your merged code so that it does not break anything.</p>
+<p>As a courtesy to the merger, you should rebase to master and squash all the commits from your PR into one:</p>
+<pre><code># rebase
+$ git rebase -i upstream/master
+</code></pre>
+
+<p>In the rebase process, make sure that the contribution is squashed to a single commit. From the list of commits, &ldquo;pick&rdquo; the commit in the first line (the oldest), and &ldquo;squash&rdquo; the commits in the remaining lines:</p>
+<pre><code>pick   7387a49 Comment for first commit
+squash 3371411 Comment for second commit
+squash 9bf956d Comment for third commit
+</code></pre>
+
+<p>For more information, please see <a href="http://www.git-scm.com/book/en/v2/Git-Branching-Rebasing">chapter 3</a> and <a href="http://git-scm.com/book/en/v2/Git-Tools-Rewriting-History">chapter 4</a> of the <a href="http://www.git-scm.com/book/en/v2">Git Book</a>.</p>
+<p>During this process, git will allow you to edit the commit message for the final, squashed commit and it will serve as the description of the pull request.  A common template for the commit message is:</p>
+<pre><code>[MD2K-JIRA_ISSUE_NUMBER] Title of the JIRA issue
+
+Description of issues addressed:
+  * Something
+  * Something else
+  * ...
+</code></pre>
+
+<h3 id="push-commits-into-your-remote-repository">Push commits into your remote repository</h3>
+<p>Almost done, push your commits to GitHub.</p>
+<pre><code>$ git push origin head
+</code></pre>
+
+<h3 id="send-a-pull-request">Send a pull request</h3>
+<p>Please read <a href="https://help.github.com/articles/using-pull-requests/">this</a> for more information about pull requests.  Go to your repository on the GitHub website and click the button &ldquo;Compare &amp; Pull request&rdquo;.  You will be given an option to choose which branches to compare and merge, choose the base as the MD2Korg repository master branch and the head as [your_alias]:[branch_name].  Feel free to edit the description with more details.</p>
+<p>Please update the JIRA issue with a link to the Pull Request to alert the MD2K team to start a code review process.</p>
+<h3 id="code-review">Code review</h3>
+<p>We utilize the GitHub commenting system on Pull Requests for the code review and once this process is complete, the MD2K team will squash and merge your contribution into the MD2K codebase.  Thank you for your effort and support.</p></div>
             
         </div>
 

@@ -64,8 +64,23 @@
                 <ul class="nav navbar-nav">
                 
                 
-                    <li class="active">
-                        <a href=".">Home</a>
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Home <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href=".">Introduction</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="contributing/">Contributing</a>
+</li>
+
+                        
+                        </ul>
                     </li>
                 
                 
@@ -166,7 +181,7 @@
                         </a>
                     </li>
                     <li >
-                        <a rel="prev" href="data_protection/">
+                        <a rel="prev" href="contributing/">
                             Next <i class="fa fa-arrow-right"></i>
                         </a>
                     </li>
@@ -193,11 +208,11 @@
             <li><a href="#novelty-of-md2k">Novelty of MD2K</a></li>
         
     
-        <li class="main "><a href="#software-download">Software Download</a></li>
+        <li class="main "><a href="#software-release-information">Software Release Information</a></li>
         
-            <li><a href="#mcerebrum-instructions">mCerebrum instructions</a></li>
+            <li><a href="#schedule">Schedule</a></li>
         
-            <li><a href="#list-of-mcerebrum-apps">List of mCerebrum Apps</a></li>
+            <li><a href="#download">Download</a></li>
         
     
     </ul>
@@ -217,8 +232,88 @@
 <h2 id="novelty-of-md2k">Novelty of MD2K</h2>
 <p>mCerebrum, on the other hand, is designed to be compatible with mobile platforms so as to support real-time signal processing of high-frequency data streams in excess of 800 hertz, while meeting quality of service requirements for the mobile platform. In addition, mCerebrum is designed as an open-source project so that it can be easily used by the community and modified to suit specific research needs.</p>
 <p>Cerebral Cortex is the big data companion to mCerebrum designed to support population-scale analytics, model development, and data visualizations. One of the primary capabilities of Cerebral Cortex is its ability to support scalable big data machine learning model development and iterative data analysis and model generation across population-scale data sets. Models learned on population-scale data can be sent back to a smartphone in the field to improve detection and classification accuracy.</p>
-<h1 id="software-download">Software Download</h1>
-<h2 id="mcerebrum-instructions">mCerebrum instructions</h2>
+<h1 id="software-release-information">Software Release Information</h1>
+<h2 id="schedule">Schedule</h2>
+<p>MD2K software is released based on a monthly development and testing cycle.  Typically, we allocate <strong>3 1-week sprints</strong> for development activities followed by a <strong>single 1-week sprint</strong> dedicated towards testing.  </p>
+<ul>
+<li>Major <code>X.0.0</code> software updates will occur approximately every year</li>
+<li>Minor/Feature <code>1.X.0</code> updates will occur each month on the 3rd Wednesday</li>
+<li>Critical bug fixes <code>1.2.X</code> will be released immediately</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Year</th>
+<th>Month</th>
+<th>Release Day</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2016</td>
+<td>June</td>
+<td>2016/06/15</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>July</td>
+<td>2016/07/13</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>August</td>
+<td>2016/08/17</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>September</td>
+<td>2016/09/14</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>October</td>
+<td>2016/10/19</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>November</td>
+<td>2016/11/16</td>
+</tr>
+<tr>
+<td>2016</td>
+<td>December</td>
+<td>2016/12/21</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>January</td>
+<td>2017/01/18</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>February</td>
+<td>2017/02/15</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>March</td>
+<td>2017/03/15</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>April</td>
+<td>2017/04/19</td>
+</tr>
+<tr>
+<td>2017</td>
+<td>May</td>
+<td>2017/05/17</td>
+</tr>
+</tbody>
+</table>
+<p>All feature requests should be submitted prior to the scheduled release day of the prior month.  For example, for a feature request to be considered for the September 2016 release, it should be submitted to the <a href="./feedback">JIRA</a> tracker before the August release day <code>2016/08/17</code>.  This will allow the software engineers sufficient time to plan and execute the upcoming activities.</p>
+<h2 id="download">Download</h2>
+<h3 id="mcerebrum-instructions">mCerebrum instructions</h3>
 <p>mCerebrum is a suite of several Android applications that are combined with a
 set of configuration files.  These instructions will guide you in downloading,
 installing, and configuring the mCerebrum software suite.  All source code is
@@ -230,7 +325,7 @@ available in the <a href="https://github.com/MD2Korg">MD2K&rsquo;s GitHub organi
 <li>Once a configuration file is successfully downloaded and installed, you will be prompted with an Admin password screen.  The default password is <code>1234</code>.</li>
 <li>Congratulations, you have successfully installed the main mCerebrum application.  Please follow the instructions <a href="https://md2k.org/wp-content/uploads/2016/05/M0003.pdf">here</a> for configuring the platform</li>
 </ol>
-<h2 id="list-of-mcerebrum-apps">List of mCerebrum Apps</h2>
+<h3 id="list-of-mcerebrum-apps">List of mCerebrum Apps</h3>
 <table>
 <thead>
 <tr>
@@ -337,5 +432,5 @@ available in the <a href="https://github.com/MD2Korg">MD2K&rsquo;s GitHub organi
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-05-20 21:00:33.352771
+Build Date UTC : 2016-05-23 19:23:24.304397
 -->
