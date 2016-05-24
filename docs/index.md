@@ -29,20 +29,20 @@ MD2K software is released based on a monthly development and testing cycle.  Typ
 - Minor/Feature `1.X.0` updates will occur each month on the 3rd Wednesday
 - Critical bug fixes `1.2.X` will be released immediately
 
-| Year |    Month   | Release Day |
-|------|------------|-------------|
-| 2016 | June       | 2016/06/15  |
-| 2016 | July       | 2016/07/13  |
-| 2016 | August     | 2016/08/17  |
-| 2016 | September  | 2016/09/14  |
-| 2016 | October    | 2016/10/19  |
-| 2016 | November   | 2016/11/16  |
-| 2016 | December   | 2016/12/21  |
-| 2017 | January    | 2017/01/18  |
-| 2017 | February   | 2017/02/15  |
-| 2017 | March      | 2017/03/15  |
-| 2017 | April      | 2017/04/19  |
-| 2017 | May        | 2017/05/17  |
+| Year |    Month   | Release Day       |
+|------|------------|-------------------|
+| 2016 | June       | 2016/06/15  (Wed) |
+| 2016 | July       | 2016/07/13  (Wed) |
+| 2016 | August     | 2016/08/17  (Wed) |
+| 2016 | September  | 2016/09/14  (Wed) |
+| 2016 | October    | 2016/10/19  (Wed) |
+| 2016 | November   | 2016/11/16  (Wed) |
+| 2016 | December   | 2016/12/21  (Wed) |
+| 2017 | January    | 2017/01/18  (Wed) |
+| 2017 | February   | 2017/02/15  (Wed) |
+| 2017 | March      | 2017/03/15  (Wed) |
+| 2017 | April      | 2017/04/19  (Wed) |
+| 2017 | May        | 2017/05/17  (Wed) |
 
 All feature requests should be submitted prior to the scheduled release day of the prior month.  For example, for a feature request to be considered for the September 2016 release, it should be submitted to the [JIRA](feedback) tracker before the August release day `2016/08/17`.  This will allow the software engineers sufficient time to plan and execute the upcoming activities.
 

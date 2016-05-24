@@ -92,11 +92,13 @@ Querying supports a subset of the fields as specified below and all fields are o
 
 
 ## Privacy type options
+Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
+that prevents data sources that match the define `source` criteria from being routed and recorded.
 
-- `id`:
-- `title`:
-- `summary`:
-- `source`: list of [data sources](#data-source)
+- `id`: unique privacy id string (TODO: What is the meaning of `id` in general?)
+- `title`: String suitable for display on the user interface
+- `summary`: Summary description for display on the user interface for additional details
+- `source`: list of [data sources](#data-source) (TODO: Why is this different than the listed data source definition?)
 
 ```JSON
 {
@@ -729,7 +731,7 @@ Contains a list of ema/emi objects each which contain the following:
         - `IMMEDIATE`
     - `start_time`:
     - `end_time`:
-    - `divide`: ???
+    - `divide`: TODO: What does this mean?
     - `conditions`: A list from a a set of [conditions](#conditions), all which are required to be met for a notification to be delivered
 - `notifications`: A list of notification objects, each of which include:
     - `time`: Milliseconds after the object generation time when to deliver the specified notification(s)
@@ -1514,7 +1516,7 @@ This section configures the upload to Cerebral Cortex options for DataKit:
 This section configures the privacy controller for DataKit:
 
 - `duration_options`: a list of options where each contains the following:
-    - `id`: XX
+    - `id`: TODO: What does this mean?
     - `title`: Text to be shown in the user interface
     - `value`: Time in milliseconds
 - `privacy_type_options`: A list of [privacy types](#privacy-type-options)
