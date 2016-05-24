@@ -1,6 +1,8 @@
 # mCerebrum
 **An Open Source Software Suite for Mobile Sensor Data**
 
+![mCerebrum Logo](../img/mCerebrum-logo.png)
+
 <iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
 # Functionality and Architecture of mCerebrum

@@ -1,6 +1,8 @@
 # Cerebral Cortex
 **designed to facilitate mobile health data analytics and interventions**
 
+![Cerebral Cortex Logo](../img/cerebralCortex-logo.png)
+
 It brings state-of-the-art research techniques and methodologies
 together in a single system to affect clinical outcomes with adaptable,
 just-in-time interventions delivered to participants in the field.
