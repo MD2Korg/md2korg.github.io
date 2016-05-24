@@ -346,11 +346,13 @@
 </code></pre>
 
 <h2 id="privacy-type-options">Privacy type options</h2>
+<p>Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
+that prevents data sources that match the define <code>source</code> criteria from being routed and recorded.</p>
 <ul>
-<li><code>id</code>:</li>
-<li><code>title</code>:</li>
-<li><code>summary</code>:</li>
-<li><code>source</code>: list of <a href="#data-source">data sources</a></li>
+<li><code>id</code>: unique privacy id string (TODO: What is the meaning of <code>id</code> in general?)</li>
+<li><code>title</code>: String suitable for display on the user interface</li>
+<li><code>summary</code>: Summary description for display on the user interface for additional details</li>
+<li><code>source</code>: list of <a href="#data-source">data sources</a> (TODO: Why is this different than the listed data source definition?)</li>
 </ul>
 <pre><code class="JSON">{
   &quot;id&quot;: &quot;location&quot;,
@@ -982,7 +984,7 @@ Each structure contains:</p>
 </li>
 <li><code>start_time</code>:</li>
 <li><code>end_time</code>:</li>
-<li><code>divide</code>: ???</li>
+<li><code>divide</code>: TODO: What does this mean?</li>
 <li><code>conditions</code>: A list from a a set of <a href="#conditions">conditions</a>, all which are required to be met for a notification to be delivered</li>
 </ul>
 </li>
@@ -1755,7 +1757,7 @@ configuration file will show all datastream in the user interface</p>
 <p>This section configures the privacy controller for DataKit:</p>
 <ul>
 <li><code>duration_options</code>: a list of options where each contains the following:<ul>
-<li><code>id</code>: XX</li>
+<li><code>id</code>: TODO: What does this mean?</li>
 <li><code>title</code>: Text to be shown in the user interface</li>
 <li><code>value</code>: Time in milliseconds</li>
 </ul>
