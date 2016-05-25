@@ -237,7 +237,7 @@
         
             <li><a href="#privacy">Privacy</a></li>
         
-            <li><a href="#example">Example</a></li>
+            <li><a href="#complete-example">Complete Example</a></li>
         
     
     </ul>
@@ -257,6 +257,7 @@
 </ul>
 </li>
 </ul>
+<h3 id="example">Example</h3>
 <pre><code class="JSON">&quot;database&quot;: {
   &quot;enabled&quot;: true,
   &quot;location&quot;: &quot;INTERNAL_SDCARD&quot;
@@ -275,6 +276,7 @@
 </li>
 <li><code>interval</code>: Delay in milliseconds from when a datapoint is logged in the system and when it is eligible for archiving</li>
 </ul>
+<h3 id="example_1">Example</h3>
 <pre><code class="JSON">&quot;archive&quot;: {
   &quot;enabled&quot;: true,
   &quot;location&quot;: &quot;EXTERNAL_SDCARD_PREFERRED&quot;,
@@ -290,6 +292,7 @@
 <li><code>url</code>: Cerebral Cortex API URL: e.g. https://cerebralcortex.SITE.ORG/</li>
 <li><code>restricted_datasource</code>: List of <a href="#data-streams">datastreams</a> eligible for upload restrictions</li>
 </ul>
+<h3 id="example_2">Example</h3>
 <pre><code class="JSON">&quot;upload&quot;: {
   &quot;enabled&quot;: true,
   &quot;interval&quot;: 900000,
@@ -314,8 +317,9 @@
 <li><code>value</code>: Time in milliseconds</li>
 </ul>
 </li>
-<li><code>privacy_type_options</code>: A list of <a href="#privacy-type-options">privacy types</a></li>
+<li><code>privacy_type_options</code>: A list of <a href="../configurations/#privacy-type-options">privacy types</a></li>
 </ul>
+<h3 id="example_3">Example</h3>
 <pre><code class="JSON">&quot;privacy&quot;: {
   &quot;duration_options&quot;: [
     {
@@ -418,7 +422,7 @@
 }
 </code></pre>
 
-<h2 id="example">Example</h2>
+<h2 id="complete-example">Complete Example</h2>
 <pre><code class="JSON">{
   &quot;database&quot;: {
     &quot;enabled&quot;: true,
@@ -432,7 +436,7 @@
   &quot;upload&quot;: {
     &quot;enabled&quot;: true,
     &quot;interval&quot;: 900000,
-    &quot;url&quot;: &quot;https://northwestern-cerebralcortex.md2k.org/&quot;,
+    &quot;url&quot;: &quot;https://site-cerebralcortex.site.org/&quot;,
     &quot;restricted_datasource&quot;: [
       {
         &quot;platform&quot;: {

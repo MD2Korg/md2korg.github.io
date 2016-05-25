@@ -229,11 +229,17 @@
     
         <li class="main active"><a href="#phone-sensor">Phone Sensor</a></li>
         
+            <li><a href="#complete-example">Complete Example</a></li>
+        
     
         <li class="main "><a href="#autosense">Autosense</a></li>
         
+            <li><a href="#complete-example_1">Complete Example</a></li>
+        
     
         <li class="main "><a href="#microsoft-band">Microsoft Band</a></li>
+        
+            <li><a href="#complete-example_2">Complete Example</a></li>
         
     
     </ul>
@@ -242,7 +248,17 @@
 
 <h1 id="phone-sensor">Phone Sensor</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.phonesensor/default_config.json</code></p>
-<p>TODO: Need complete listing of all MS Band sensors</p>
+<p>The phone sensor configuration is a list of <a href="../configurations/#data-source">data sources</a> with a <code>FREQUENCY</code> specific to the sensor specified. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
+<p>Frequency can be one of the following:</p>
+<ul>
+<li>Sample rate in hertz: e.g. &ldquo;1.0 Hz&rdquo;</li>
+<li>SENSOR_DELAY_NORMAL</li>
+<li>SENSOR_DELAY_UI</li>
+<li>SENSOR_DELAY_GAME</li>
+<li>SENSOR_DELAY_FASTEST</li>
+<li>ON_CHANGE for <code>PROXIMITY</code> only</li>
+</ul>
+<h3 id="complete-example">Complete Example</h3>
 <pre><code class="JSON">[
   {
     &quot;platform&quot;: {
@@ -285,6 +301,51 @@
       &quot;type&quot;: &quot;PHONE&quot;
     },
     &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;COMPASS&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_LIGHT&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;6.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;PRESSURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;ON_CHANGE&quot;
+    },
+    &quot;type&quot;: &quot;PROXIMITY&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
       &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
     },
     &quot;type&quot;: &quot;CPU&quot;
@@ -303,7 +364,8 @@
 
 <h1 id="autosense">Autosense</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.autosense/default_config.json</code></p>
-<p>AutoSense <a href="#data-source">data sources</a> are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.</p>
+<p>AutoSense <a href="../configurations/#data-source">data sources</a> are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
+<h3 id="complete-example_1">Complete Example</h3>
 <pre><code class="JSON">[
   {
     &quot;platform&quot;: {
@@ -368,6 +430,7 @@
     },
     &quot;type&quot;: &quot;AMBIENT_TEMPERATURE&quot;
   },
+
   {
     &quot;platform&quot;: {
       &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
@@ -409,8 +472,21 @@
 
 <h1 id="microsoft-band">Microsoft Band</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.microsoftband/default_config.json</code></p>
-<p>TODO: Need complete listing of all MS Band sensors</p>
+<p>Microsoft Band <a href="../configurations/#data-source">data sources</a> are associated with hardware and software sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.  The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
+<p><code>ACCELEROMETER</code> and <code>GYROSCOPE</code> sensors must have their frequency configured to one of the following:</p>
+<ul>
+<li>8Hz</li>
+<li>31Hz</li>
+<li>62Hz</li>
+</ul>
+<h3 id="complete-example_2">Complete Example</h3>
 <pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;
+  },
   {
     &quot;platform&quot;: {
       &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
@@ -433,13 +509,100 @@
     &quot;platform&quot;: {
       &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
     },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;???&quot;
+    },
+    &quot;type&quot;: &quot;AIR_PRESSSURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_LIGHT&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
     &quot;type&quot;: &quot;BAND_CONTACT&quot;
   },
   {
     &quot;platform&quot;: {
       &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
     },
-    &quot;type&quot;: &quot;DATA_QUALITY&quot;
+    &quot;type&quot;: &quot;CALORY_BURN&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;DISTANCE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;GALVANIC_SKIN_RESPONSE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;HEART_RATE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;MOTION_TYPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;PACE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;RR_INTERVAL&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;SKIN_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;SPEED&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;STEP_COUNT&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;ULTRA_VIOLET_RADIATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;ALTIMETER&quot;
   }
 ]
 </code></pre></div>
