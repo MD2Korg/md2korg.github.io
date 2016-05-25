@@ -133,6 +133,12 @@
                     
                         
 <li >
+    <a href="../configuration-mCerebrum/">Configuration-mCerebrum</a>
+</li>
+
+                    
+                        
+<li >
     <a href="../configuration-datakit/">Configuration-DataKit</a>
 </li>
 
@@ -213,7 +219,7 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../configuration-datakit/">
+                    <a rel="prev" href="../configuration-mCerebrum/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -242,18 +248,13 @@
         
             <li><a href="#conditions">Conditions</a></li>
         
+            <li><a href="#base">Base</a></li>
+        
     
         <li class="main "><a href="#notification-manager">Notification Manager</a></li>
         
     
         <li class="main "><a href="#stream-processor">Stream Processor</a></li>
-        
-    
-        <li class="main "><a href="#mcerebrum">mCerebrum</a></li>
-        
-            <li><a href="#base">Base</a></li>
-        
-            <li><a href="#example">Example</a></li>
         
     
     </ul>
@@ -264,7 +265,7 @@
 <p><strong>mCerebrum</strong> is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.</p>
 <h1 id="generic-structures">Generic structures</h1>
 <h2 id="data-source">Data source</h2>
-<p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields:</p>
+<p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
 <pre><code class="JSON">{
   &quot;type&quot;: &quot;MEMORY&quot;,
   &quot;id&quot;: &quot;DataSourceID&quot;,
@@ -368,6 +369,24 @@ that prevents data sources that match the define <code>source</code> criteria fr
 </code></pre>
 
 <h2 id="notification">Notification</h2>
+<p>Notifications are handled by mCerebrum by sending a notification object to the notification manager application.  This is the definition of the object and certain fields are require depending on the targeted notification device.  Please refer to the device specific documentation.</p>
+<ul>
+<li><code>id</code>: Unique identifier that is utilized by other configuration file to reference this object instance.</li>
+<li><code>name</code>: Short string description of the notification that can be utilized by application user interfaces</li>
+<li><code>type</code>: Must be one of the following:<ul>
+<li><code>VIBRATION</code>: Causes the notification device to vibrate if possible</li>
+<li><code>MESSAGE</code>: Causes the notification device to display a message if possible</li>
+<li><code>TONE</code>: Causes the notification device to sound a tone if possible</li>
+<li><code>SCREEN</code>: Causes the notification device to turn on a screen if possible</li>
+</ul>
+</li>
+<li><code>priority</code>: Integer priority level, lower is higher priority</li>
+<li><code>datasource</code>: A <a href="#data-source">data source</a> object</li>
+<li><code>format</code>: Specific format option depending on the notification device</li>
+<li><code>repeat</code>: How many time to repeat this notification</li>
+<li><code>duration</code>: How long in milliseconds to alert for each notification iteration</li>
+</ul>
+<h3 id="example">Example</h3>
 <pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
@@ -620,6 +639,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 </code></pre>
 
 <h2 id="study-notifications">Study notifications</h2>
+<p>TODO:</p>
 <pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;PHONE_VIBRATE&quot;,
@@ -721,7 +741,7 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 <li><code>values</code>: List of input values for the evaluation function</li>
 <li><code>data_source</code>: An single object as defined in the <a href="#data-source">data source</a> query support</li>
 </ul>
-<p>Example:</p>
+<h3 id="example_1">Example</h3>
 <pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;PHONE_BATTERY_10&quot;,
@@ -908,16 +928,8 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 ]
 </code></pre>
 
-<h1 id="notification-manager">Notification Manager</h1>
-<p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
-<p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
-<h1 id="stream-processor">Stream Processor</h1>
-<p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
-<p>Stream processor requires that SVM model files be present in this directory.</p>
-<h1 id="mcerebrum">mCerebrum</h1>
-<p>Config file name and location: <code>mCerebrum/org.md2k.study/config.json</code></p>
 <h2 id="base">Base</h2>
-<p>Defined in main application json file</p>
+<p>Defined in main application JSON file</p>
 <pre><code class="JSON">{
     &quot;day_start&quot;: {
         &quot;by&quot;: &quot;user&quot;,
@@ -950,656 +962,12 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 }
 </code></pre>
 
-<h2 id="example">Example</h2>
-<pre><code class="JSON">{
-  &quot;config_info&quot;: {
-    &quot;id&quot;: &quot;STU00201566-Test&quot;,
-    &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;,
-    &quot;version_code&quot;: 21,
-    &quot;required_files&quot;: [
-      &quot;org.md2k.autosense/default_config.json&quot;,
-      &quot;org.md2k.datakit/config.json&quot;,
-      &quot;org.md2k.datakit/default_config.json&quot;,
-      &quot;org.md2k.ema/config_ema.json&quot;,
-      &quot;org.md2k.ema/end_of_day_recording.json&quot;,
-      &quot;org.md2k.ema/event_contingent_recording.json&quot;,
-      &quot;org.md2k.ema/random_experience_sampling.json&quot;,
-      &quot;org.md2k.ema_scheduler/config.json&quot;,
-      &quot;org.md2k.ema_scheduler/notification.json&quot;,
-      &quot;org.md2k.ema_scheduler/condition.json&quot;,
-      &quot;org.md2k.microsoftband/default_config.json&quot;,
-      &quot;org.md2k.phonesensor/default_config.json&quot;,
-      &quot;org.md2k.plotter/default_config.json&quot;,
-      &quot;org.md2k.streamprocessor/model.json&quot;,
-      &quot;org.md2k.streamprocessor/model_rip.json&quot;,
-      &quot;org.md2k.notificationmanager/tone.mp3&quot;,
-      &quot;org.md2k.study/config.json&quot;,
-      &quot;org.md2k.study/notification.json&quot;,
-      &quot;org.md2k.study/tutorial.pdf&quot;
-    ]
-  },
-  &quot;study_info&quot;: {
-    &quot;id&quot;: &quot;STU00201566-Test&quot;,
-    &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;
-  },
-  &quot;apps&quot;: [
-    {
-      &quot;id&quot;: &quot;study&quot;,
-      &quot;name&quot;: &quot;Study&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-Study/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;datakit&quot;,
-      &quot;name&quot;: &quot;DataKit&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.datakit&quot;,
-      &quot;config&quot;: &quot;config.json&quot;,
-      &quot;default_config&quot;: &quot;default_config.json&quot;,
-      &quot;service&quot;: &quot;org.md2k.datakit.cerebralcortex.ServiceCerebralCortex&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-DataKit/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;phonesensor&quot;,
-      &quot;name&quot;: &quot;PhoneSensor&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.phonesensor&quot;,
-      &quot;service&quot;: &quot;org.md2k.phonesensor.ServicePhoneSensor&quot;,
-      &quot;settings&quot;: &quot;org.md2k.phonesensor.ActivityPhoneSensorSettings&quot;,
-      &quot;config&quot;: &quot;config.json&quot;,
-      &quot;default_config&quot;: &quot;default_config.json&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-PhoneSensor/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;autosense&quot;,
-      &quot;name&quot;: &quot;AutoSense&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.autosense&quot;,
-      &quot;service&quot;: &quot;org.md2k.autosense.antradio.connection.ServiceAutoSenses&quot;,
-      &quot;settings&quot;: &quot;org.md2k.autosense.ActivityAutoSenseSettings&quot;,
-      &quot;config&quot;: &quot;config.json&quot;,
-      &quot;default_config&quot;: &quot;default_config.json&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-AutoSense/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;microsofthealth&quot;,
-      &quot;name&quot;: &quot;MicrosoftHealth&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;com.microsoft.kapp&quot;,
-      &quot;download_link&quot;: &quot;market://details?id=com.microsoft.kapp&quot;
-    },
-    {
-      &quot;id&quot;: &quot;microsoftband&quot;,
-      &quot;name&quot;: &quot;MicrosoftBand&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.microsoftband&quot;,
-      &quot;service&quot;: &quot;org.md2k.microsoftband.ServiceMicrosoftBands&quot;,
-      &quot;settings&quot;: &quot;org.md2k.microsoftband.ActivityMicrosoftBandSettings&quot;,
-      &quot;config&quot;: &quot;config.json&quot;,
-      &quot;default_config&quot;: &quot;default_config.json&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-MicrosoftBand/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;streamprocessor&quot;,
-      &quot;name&quot;: &quot;StreamProcessor&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.streamprocessor&quot;,
-      &quot;service&quot;: &quot;org.md2k.streamprocessor.ServiceStreamProcessor&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-StreamProcessor/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;ema_scheduler&quot;,
-      &quot;name&quot;: &quot;EMAScheduler&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.ema_scheduler&quot;,
-      &quot;service&quot;: &quot;org.md2k.ema_scheduler.ServiceEMAScheduler&quot;,
-      &quot;config&quot;: &quot;config.json&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-EMAScheduler/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;notificationmanager&quot;,
-      &quot;name&quot;: &quot;NotificationManager&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.notificationmanager&quot;,
-      &quot;service&quot;: &quot;org.md2k.notificationmanager.ServiceNotificationManager&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-NotificationManager/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;ema&quot;,
-      &quot;name&quot;: &quot;EMA&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-EMA/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;moodsurfing&quot;,
-      &quot;name&quot;: &quot;MoodSurfing&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.moodsurfing&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-MoodSurfing/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;thoughtshakeup&quot;,
-      &quot;name&quot;: &quot;ThoughtShakeup&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.thoughtshakeup&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-ThoughtShakeup/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;headspace&quot;,
-      &quot;name&quot;: &quot;HeadSpace&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;com.getsomeheadspace.android&quot;,
-      &quot;download_link&quot;: &quot;market://details?id=com.getsomeheadspace.android&quot;
-    },
-    {
-      &quot;id&quot;: &quot;plotter&quot;,
-      &quot;name&quot;: &quot;Plotter&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.plotter&quot;,
-      &quot;default_config&quot;: &quot;default_config.json&quot;,
-      &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-Plotter/releases&quot;
-    },
-    {
-      &quot;id&quot;: &quot;adobe_acrobat_reader&quot;,
-      &quot;name&quot;: &quot;Adobe Acrobat Reader&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;com.adobe.reader&quot;,
-      &quot;download_link&quot;: &quot;market://details?id=com.adobe.reader&quot;
-    }
-  ],
-  &quot;actions&quot;: [
-    {
-      &quot;id&quot;: &quot;config_info&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Configuration Info&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 7
-    },
-    {
-      &quot;id&quot;: &quot;clear_config&quot;,
-      &quot;type&quot;: &quot;reset&quot;,
-      &quot;name&quot;: &quot;Clear Configuration&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 7,
-      &quot;icon&quot;: &quot;ic_delete_blue_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_config.ActivityClearConfig&quot;
-    },
-    {
-      &quot;id&quot;: &quot;config_download&quot;,
-      &quot;type&quot;: &quot;reset&quot;,
-      &quot;name&quot;: &quot;Download New Configuration&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 7,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;icon&quot;: &quot;ic_download_teal_48dp&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.config_info.ActivityConfigDownload&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_install&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Applications&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 6,
-      &quot;icon&quot;: &quot;ic_install_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_install.ActivityInstallApp&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_settings&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Settings&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 6,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_settings.ActivityAppSettings&quot;,
-      &quot;icon&quot;: &quot;ic_settings_teal_48dp&quot;
-    },
-    {
-      &quot;id&quot;: &quot;datakit_connect&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;DataKit Connection&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 5
-    },
-    {
-      &quot;id&quot;: &quot;study_info&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 4,
-      &quot;name&quot;: &quot;Study&quot;
-    },
-    {
-      &quot;id&quot;: &quot;user_info&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;User ID&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 4,
-      &quot;icon&quot;: &quot;ic_user_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.user_info.ActivityUserInfo&quot;
-    },
-    {
-      &quot;id&quot;: &quot;wakeup_info&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Wakeup Time&quot;,
-      &quot;rank&quot;: 4,
-      &quot;enable&quot;: true,
-      &quot;icon&quot;: &quot;ic_wakeup_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.wakeup_info.ActivityWakeUp&quot;
-    },
-    {
-      &quot;id&quot;: &quot;sleep_info&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Sleep Time&quot;,
-      &quot;rank&quot;: 4,
-      &quot;enable&quot;: true,
-      &quot;icon&quot;: &quot;ic_sleep_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.sleep_info.ActivitySleep&quot;
-    },
-    {
-      &quot;id&quot;: &quot;day_type&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;name&quot;: &quot;Pre/Post Quit Day&quot;,
-      &quot;rank&quot;: 4,
-      &quot;enable&quot;: true,
-      &quot;icon&quot;: &quot;ic_sleep_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.day_type.ActivityDayType&quot;
-    },
-    {
-      &quot;id&quot;: &quot;clear_database&quot;,
-      &quot;type&quot;: &quot;reset&quot;,
-      &quot;name&quot;: &quot;Clear All Data&quot;,
-      &quot;icon&quot;: &quot;ic_delete_indigo_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 4,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_data.ActivityClearData&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_service&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;enable&quot;: true,
-      &quot;name&quot;: &quot;Running Apps&quot;,
-      &quot;rank&quot;: 3,
-      &quot;icon&quot;: &quot;ic_apps_teal_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_service.ActivityService&quot;
-    },
-    {
-      &quot;id&quot;: &quot;data_quality&quot;,
-      &quot;rank&quot;: 2,
-      &quot;enable&quot;: true,
-      &quot;name&quot;: &quot;Sensor Data Quality&quot;
-    },
-    {
-      &quot;id&quot;: &quot;day_start_end&quot;,
-      &quot;type&quot;: &quot;setup&quot;,
-      &quot;rank&quot;: 2,
-      &quot;enable&quot;: true,
-      &quot;name&quot;: &quot;Day Start/Day End&quot;
-    },
-    {
-      &quot;id&quot;: &quot;privacy&quot;,
-      &quot;name&quot;: &quot;Privacy&quot;,
-      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.datakit&quot;,
-      &quot;rank&quot;: 2,
-      &quot;class_name&quot;: &quot;org.md2k.datakit.ActivityPrivacy&quot;
-    },
-    {
-      &quot;id&quot;: &quot;user_status&quot;,
-      &quot;name&quot;: &quot;user_status&quot;,
-      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2
-    },
-    {
-      &quot;id&quot;: &quot;intervention&quot;,
-      &quot;name&quot;: &quot;Intervention&quot;,
-      &quot;icon&quot;: &quot;ic_intervention_48dp&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.intervention.ActivityInterventionApp&quot;
-    },
-    {
-      &quot;id&quot;: &quot;smoking_self_report&quot;,
-      &quot;name&quot;: &quot;Report Smoking&quot;,
-      &quot;icon&quot;: &quot;ic_smoking_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;rank&quot;: 2,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.selfreport.ActivitySelfReport&quot;
-    },
-    {
-      &quot;id&quot;: &quot;plotter&quot;,
-      &quot;name&quot;: &quot;Plotter&quot;,
-      &quot;enable&quot;: true,
-      &quot;icon&quot;: &quot;ic_plot_teal_48dp&quot;,
-      &quot;rank&quot;: 2,
-      &quot;package_name&quot;: &quot;org.md2k.plotter&quot;
-    },
-    {
-      &quot;id&quot;: &quot;user_app&quot;,
-      &quot;name&quot;: &quot;User Application&quot;,
-      &quot;icon&quot;: &quot;ic_unlock_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2
-    },
-    {
-      &quot;id&quot;: &quot;EMA_test&quot;,
-      &quot;type&quot;: &quot;App Controller&quot;,
-      &quot;name&quot;: &quot;Survey/EMI Test&quot;,
-      &quot;enable&quot;: true,
-      &quot;icon&quot;: &quot;ic_notification_teal_48dp&quot;,
-      &quot;rank&quot;: 2,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.EMA_test.ActivityEMA_test&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_reset&quot;,
-      &quot;name&quot;: &quot;Reset App&quot;,
-      &quot;icon&quot;: &quot;ic_refresh_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_reset.ActivityAppReset&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_start&quot;,
-      &quot;name&quot;: &quot;Start Data Collection&quot;,
-      &quot;icon&quot;: &quot;ic_play_teal_48dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_start.ActivityAppStart&quot;
-    },
-    {
-      &quot;id&quot;: &quot;app_stop&quot;,
-      &quot;name&quot;: &quot;Stop &amp; Close Application&quot;,
-      &quot;icon&quot;: &quot;ic_error_red_50dp&quot;,
-      &quot;enable&quot;: true,
-      &quot;rank&quot;: 2,
-      &quot;package_name&quot;: &quot;org.md2k.study&quot;,
-      &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_stop.ActivityAppStop&quot;
-    }
-  ],
-  &quot;admin_view&quot;: {
-    &quot;password&quot;: &quot;1234&quot;,
-    &quot;view_contents&quot;: [
-      {
-        &quot;id&quot;: &quot;key_configure_app&quot;,
-        &quot;name&quot;: &quot;Configure Applications&quot;,
-        &quot;enable&quot;: true,
-        &quot;values&quot;: [
-          &quot;config_info&quot;,
-          &quot;app_install&quot;,
-          &quot;app_settings&quot;,
-          &quot;config_download&quot;,
-          &quot;clear_config&quot;
-        ]
-      },
-      {
-        &quot;id&quot;: &quot;key_configure_study&quot;,
-        &quot;name&quot;: &quot;Configure Study&quot;,
-        &quot;enable&quot;: true,
-        &quot;values&quot;: [
-          &quot;config_info&quot;,
-          &quot;study_info&quot;,
-          &quot;user_info&quot;,
-          &quot;day_type&quot;,
-          &quot;wakeup_info&quot;,
-          &quot;sleep_info&quot;,
-          &quot;clear_database&quot;
-        ]
-      },
-      {
-        &quot;id&quot;: &quot;key_start_study&quot;,
-        &quot;name&quot;: &quot;Start Study&quot;,
-        &quot;enable&quot;: true
-      },
-      {
-        &quot;id&quot;: &quot;key_stop_study&quot;,
-        &quot;name&quot;: &quot;Stop Study&quot;,
-        &quot;enable&quot;: true
-      },
-      {
-        &quot;id&quot;: &quot;key_other&quot;,
-        &quot;name&quot;: &quot;Others&quot;,
-        &quot;enable&quot;: true,
-        &quot;values&quot;: [
-          &quot;app_service&quot;,
-          &quot;EMA_test&quot;
-        ]
-      }
-    ]
-  },
-  &quot;user_view&quot;: {
-    &quot;view_contents&quot;: [
-      {
-        &quot;id&quot;: &quot;data_quality&quot;,
-        &quot;enable&quot;: true
-      },
-      {
-        &quot;id&quot;: &quot;day_start_end&quot;,
-        &quot;enable&quot;: true
-      },
-      {
-        &quot;id&quot;: &quot;privacy&quot;,
-        &quot;enable&quot;: true
-      },
-      {
-        &quot;id&quot;: &quot;user_app&quot;,
-        &quot;enable&quot;: true,
-        &quot;values&quot;: [
-          &quot;smoking_self_report&quot;,
-          &quot;intervention&quot;,
-          &quot;app_reset&quot;
-        ]
-      }
-    ]
-  },
-  &quot;data_quality&quot;: [
-    {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-      &quot;id&quot;: &quot;RESPIRATION&quot;
-    },
-    {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-      &quot;id&quot;: &quot;ECG&quot;
-    },
-    {
-      &quot;platform&quot;: {
-        &quot;id&quot;: &quot;LEFT_WRIST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;
-    },
-    {
-      &quot;platform&quot;: {
-        &quot;id&quot;: &quot;RIGHT_WRIST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;
-    }
-  ],
-  &quot;data_quality_view&quot;: [
-    {
-      &quot;name&quot;: &quot;Breathing&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-          },
-          &quot;type&quot;: &quot;RESPIRATION&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;2bxc8kONPSs&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Tighten the chest band so it fits snugly under the armpits.\n\n2) Make sure all cable connections are secure.\n\n3) Reset the application, wait 15 seconds and check again.\n\n4) Restart the phone, wait one minute and check again.\n\n5) Make sure the chest sensor is charged and powered ON.&quot;
-      }
-    },
-    {
-      &quot;name&quot;: &quot;Heart Rate&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-          },
-          &quot;type&quot;: &quot;ECG&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;toiopB7ltc8&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Adjust the position of the electrodes on the body.\n\n2) Make sure all cable connections are secure.\n\n3) Reset the application, wait 15 seconds and check again.\n\n4) Restart the phone, wait one minute and check again.\n\n5) Make sure the chest sensor is charged and powered ON.&quot;
-      }
-    },
-    {
-      &quot;name&quot;: &quot;Left Wrist(A)&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;,
-            &quot;id&quot;: &quot;LEFT_WRIST&quot;
-          },
-          &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;MbHUvM6C1GE&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Reset the application, wait 15 seconds and check again.\n\n2) Restart the phone, wait one minute and check again.\n\n3) Make sure the wrist sensor power switch is ON.\n\n4) Make sure the wrist sensor is charged.&quot;
-      }
-    },
-    {
-      &quot;name&quot;: &quot;Right Wrist(A)&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;,
-            &quot;id&quot;: &quot;RIGHT_WRIST&quot;
-          },
-          &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;MbHUvM6C1GE&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Reset the application, wait 15 seconds and check again.\n\n2) Restart the phone, wait one minute and check again.\n\n3) Make sure the wrist sensor power switch is ON.\n\n4) Make sure the wrist sensor is charged.&quot;
-      }
-    },
-    {
-      &quot;name&quot;: &quot;Left Wrist(M)&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;MICROSOFT_BAND&quot;,
-            &quot;id&quot;: &quot;LEFT_WRIST&quot;
-          },
-          &quot;type&quot;: &quot;ACCELEROMETER&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;QYQJISCLCdg&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Make sure the clasp on the Band is securely locked around the wrist.\n\n2) Reset the application, wait 15 seconds and check again.\n\n3) Restart the phone, wait one minute and check again.\n\n4) Make sure the Band is charged and powered ON.&quot;
-      }
-    },
-    {
-      &quot;name&quot;: &quot;Right Wrist(M)&quot;,
-      &quot;plotter&quot;: {
-        &quot;enable&quot;: true,
-        &quot;datasource&quot;: {
-          &quot;platform&quot;: {
-            &quot;type&quot;: &quot;MICROSOFT_BAND&quot;,
-            &quot;id&quot;: &quot;RIGHT_WRIST&quot;
-          },
-          &quot;type&quot;: &quot;ACCELEROMETER&quot;
-        }
-      },
-      &quot;video&quot;: {
-        &quot;enable&quot;: true,
-        &quot;link&quot;: &quot;QYQJISCLCdg&quot;
-      },
-      &quot;message&quot;: {
-        &quot;enable&quot;: true,
-        &quot;text&quot;: &quot;1) Make sure the clasp on the Band is securely locked around the wrist.\n\n2) Reset the application, wait 15 seconds and check again.\n\n3) Restart the phone, wait one minute and check again.\n\n4) Make sure the Band is charged and powered ON.&quot;
-      }
-    }
-  ],
-  &quot;day_start&quot;: {
-    &quot;by&quot;: &quot;user&quot;,
-    &quot;base&quot;: &quot;wakeup&quot;,
-    &quot;notify&quot;: [
-      {
-        &quot;type&quot;: &quot;button&quot;,
-        &quot;offset&quot;: -30000
-      },
-      {
-        &quot;type&quot;: &quot;prompt&quot;,
-        &quot;offset&quot;: 0,
-        &quot;parameters&quot;: [
-          &quot;PHONE_SCREEN&quot;,
-          &quot;PHONE_MESSAGE_START_DAY&quot;
-        ]
-      },
-      {
-        &quot;type&quot;: &quot;notification&quot;,
-        &quot;offset&quot;: 30000,
-        &quot;parameters&quot;: [
-          &quot;PHONE_VIBRATE&quot;,
-          &quot;PHONE_TONE&quot;,
-          &quot;PHONE_SCREEN&quot;,
-          &quot;PHONE_MESSAGE_START_DAY&quot;
-        ]
-      }
-    ]
-  },
-  &quot;day_end&quot;: {
-    &quot;by&quot;: &quot;user&quot;,
-    &quot;base&quot;: &quot;day_start&quot;,
-    &quot;notify&quot;: [
-      {
-        &quot;type&quot;: &quot;button&quot;,
-        &quot;offset&quot;: 30000
-      }
-    ]
-  }
-}
-</code></pre></div>
+<h1 id="notification-manager">Notification Manager</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
+<p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
+<h1 id="stream-processor">Stream Processor</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
+<p>Stream processor requires that SVM model files be present in this directory.</p></div>
         </div>
 
         <footer class="col-md-12">

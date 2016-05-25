@@ -60,6 +60,12 @@
     </url>
         
     <url>
+     <loc>http://md2korg.github.io//mCerebrum/configuration-mCerebrum/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://md2korg.github.io//mCerebrum/configuration-datakit/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
