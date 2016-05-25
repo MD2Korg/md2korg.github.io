@@ -4,41 +4,13 @@
     
         
     <url>
-     <loc>http://md2korg.github.io//</loc>
+     <loc>http://docs.md2k.org//</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://md2korg.github.io//contributing/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    
-
-    
-        
-    <url>
-     <loc>http://md2korg.github.io//data_protection/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//contributors/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//references/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//license/</loc>
+     <loc>http://docs.md2k.org//contributing/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -48,55 +20,25 @@
     
         
     <url>
-     <loc>http://md2korg.github.io//mCerebrum/</loc>
+     <loc>http://docs.md2k.org//data_protection/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://md2korg.github.io//mCerebrum/configurations/</loc>
+     <loc>http://docs.md2k.org//contributors/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-mCerebrum/</loc>
+     <loc>http://docs.md2k.org//references/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-datakit/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-sensors/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-plotter/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-ema/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//mCerebrum/configuration-emascheduler/</loc>
-     <lastmod>2016-05-25</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-        
-    <url>
-     <loc>http://md2korg.github.io//mCerebrum/troubleshooting/</loc>
+     <loc>http://docs.md2k.org//license/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -106,13 +48,71 @@
     
         
     <url>
-     <loc>http://md2korg.github.io//cerebralcortex/</loc>
+     <loc>http://docs.md2k.org//mCerebrum/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://md2korg.github.io//cerebralcortex/api/</loc>
+     <loc>http://docs.md2k.org//mCerebrum/configurations/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-mCerebrum/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-datakit/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-sensors/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-plotter/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-ema/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-emascheduler/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/troubleshooting/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//cerebralcortex/</loc>
+     <lastmod>2016-05-25</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//cerebralcortex/api/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
@@ -121,7 +121,7 @@
 
     
     <url>
-     <loc>http://md2korg.github.io//feedback/</loc>
+     <loc>http://docs.md2k.org//feedback/</loc>
      <lastmod>2016-05-25</lastmod>
      <changefreq>daily</changefreq>
     </url>
