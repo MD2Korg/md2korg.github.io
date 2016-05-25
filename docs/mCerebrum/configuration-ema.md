@@ -10,6 +10,7 @@ Each structure contains:
 - `package_name`: Application reference which handles the specified `file_name`
 - `timeout`: Time in milliseconds after which an EMA is considered abandoned
 
+### Example
 ```JSON
 [
   {

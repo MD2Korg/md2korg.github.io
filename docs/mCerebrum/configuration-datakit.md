@@ -12,6 +12,7 @@ The database section designates:
     - _EXTERNAL_SDCARD_: external memory, no exceptions
     - _EXTERNAL_SDCARD_PREFERRED_: external memory is preferred if available, but internal memory will be utilized as a fallback option
 
+### Example
 ```JSON
 "database": {
   "enabled": true,
@@ -29,6 +30,7 @@ This section configures the archive options for DataKit:
     - _EXTERNAL_SDCARD_PREFERRED_: external memory is preferred if available, but internal memory will be utilized as a fallback option
 - `interval`: Delay in milliseconds from when a datapoint is logged in the system and when it is eligible for archiving
 
+### Example
 ```JSON
 "archive": {
   "enabled": true,
@@ -45,6 +47,7 @@ This section configures the upload to Cerebral Cortex options for DataKit:
 - `url`: Cerebral Cortex API URL: e.g. https://cerebralcortex.SITE.ORG/
 - `restricted_datasource`: List of [datastreams](#data-streams) eligible for upload restrictions
 
+### Example
 ```JSON
 "upload": {
   "enabled": true,
@@ -68,9 +71,9 @@ This section configures the privacy controller for DataKit:
     - `id`: TODO: What does this mean?
     - `title`: Text to be shown in the user interface
     - `value`: Time in milliseconds
-- `privacy_type_options`: A list of [privacy types](#privacy-type-options)
+- `privacy_type_options`: A list of [privacy types](configurations/#privacy-type-options)
 
-
+### Example
 ```JSON
 "privacy": {
   "duration_options": [
@@ -175,7 +178,7 @@ This section configures the privacy controller for DataKit:
 ```
 
 
-## Example
+## Complete Example
 ```JSON
 {
   "database": {
@@ -190,7 +193,7 @@ This section configures the privacy controller for DataKit:
   "upload": {
     "enabled": true,
     "interval": 900000,
-    "url": "https://northwestern-cerebralcortex.md2k.org/",
+    "url": "https://site-cerebralcortex.site.org/",
     "restricted_datasource": [
       {
         "platform": {

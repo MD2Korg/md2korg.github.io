@@ -1,11 +1,12 @@
 # Plotter
 Config file name and location: `mCerebrum/org.md2k.plotter/default_config.json`
 
-This JSON array should contain the data sources that should be made available to the plotting tool.  The absence of this
-configuration file will show all datastream in the user interface
+This JSON array should contain the data sources that should be made available to the plotting tool.  The absence of this configuration file will show all [data sources](configurations/#data-source) in the user interface
 
 
-Example:
+### Example
+This example allows for the displaying of specific sensor streams from the phone,
+AutoSense, and Microsoft band.
 ```JSON
 [
   {
