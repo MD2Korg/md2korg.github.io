@@ -26,6 +26,7 @@ pages:
   - mCerebrum:
     - Overview: mCerebrum/index.md
     - Configurations: mCerebrum/configurations.md
+    - Configuration-mCerebrum: mCerebrum/configuration-mCerebrum.md
     - Configuration-DataKit: mCerebrum/configuration-datakit.md
     - Configuration-Sensors: mCerebrum/configuration-sensors.md
     - Configuration-Plotter: mCerebrum/configuration-plotter.md
