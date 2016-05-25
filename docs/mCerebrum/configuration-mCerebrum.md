@@ -101,9 +101,27 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Application List
-
+The application list defines which applications the system requires to perform its tasks,
+where to get them from, and any necessary configurations and services.
 
 ### Application object
+Each application object consists of several fields:
+
+Required
+
+- `id`: unique identifier
+- `name`: Human readable application name
+- `enable`: `true` or `false` to enable or disable this application
+- `package_name`: Android package name for this application
+- `download_link`: URL designating a GitHub release page or Google play store link
+
+Optional or as necessary
+
+- `config`: The name of a configuration file
+- `default_config`: The name of a default configuration file.  If a default file is defined and exists, it will override the config file.
+- `service`: A specific Android service class for a service
+- `settings`: A specific Android service class for a preference panel
+
 ```JSON
 {
   "id": "datakit",
@@ -118,6 +136,8 @@ This object defines the specific study for the the configuration.
 ```
 
 ### Application List Example
+A complete example List
+
 ```JSON
 [
   {
@@ -249,6 +269,39 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Action List
+Each action object consists of several fields and defines UI action that can occur:
+
+Required
+
+- `id`: unique identifier
+- `enable`: `true` or `false` to enable or disable this application
+- `name`: Human readable name that can be showing in the application user interface
+- `rank`: Integer rank where the larger the number, the higher the priority
+
+Optional or as necessary
+
+- `type`: One of the following
+    - `setup`: ???
+    - `reset`: ???
+- `icon`: Reference to icon resource within the application
+- `package_name`: Android package name for this application
+- `class_name`: Android class name for this application activity
+
+### Action Object Example
+```JSON
+{
+  "id": "clear_config",
+  "type": "reset",
+  "name": "Clear Configuration",
+  "enable": true,
+  "rank": 7,
+  "icon": "ic_delete_blue_48dp",
+  "package_name": "org.md2k.study",
+  "class_name": "org.md2k.study.model_view.clear_config.ActivityClearConfig"
+}
+```
+
+### Action List Example
 ```JSON
 [
   {
@@ -475,6 +528,47 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Administration View
+This configuration block controls the administration view and allows a password to be specified.
+
+### Admin View
+The admin view has two parameters:
+
+- `password`: plaintext password to gain access to the administration panel.  This field may be omitted to disable passwords
+- `view_contents`: a list of [admin view](#admin-view-object) objects
+```JSON
+{
+  "password": "1234",
+  "view_contents": [
+    ADMIN_VIEW_OBJECT
+  ]
+}
+```
+
+### Admin View Object
+
+Required fields:
+
+- `id`: unique identifier to reference this admin view component
+- `name`: Human readable name suitable for display in the application user interface
+- `enable`: `true` or `false` to enable or disable this view
+- `values`: List of `ids` defined in ...
+
+```JSON
+{
+  "id": "key_configure_app",
+  "name": "Configure Applications",
+  "enable": true,
+  "values": [
+    "config_info",
+    "app_install",
+    "app_settings",
+    "config_download",
+    "clear_config"
+  ]
+}
+```
+
+### Administration View Example
 ```JSON
 {
   "password": "1234",
@@ -529,6 +623,26 @@ This object defines the specific study for the the configuration.
 ```
 
 ## User View
+This configuration block controls the user view. There is only one field that can be specified:
+
+- `view_contents`: a list of [user view](#user-view-object) objects
+```JSON
+{
+  "view_contents": [
+    USER_VIEW_OBJECT
+  ]
+}
+```
+
+### User View Object
+
+Required fields:
+
+- `id`: unique identifier to reference this user view component
+- `enable`: `true` or `false` to enable or disable this view
+- `values`: List of `ids` defined in ...
+
+### User View Example
 ```JSON
 {
   "view_contents": [
@@ -558,6 +672,11 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Data Quality List
+Data quality is a component of the platform that allows for the monitoring of data streams and provides a display regarding their data quality. This list is composed of a set of [data sources](configurations/#data-source) that contain:
+
+- `type`: Must be `DATA_QUALITY`
+
+### Data Quality List Example
 ```JSON
 [
   {
@@ -588,7 +707,54 @@ This object defines the specific study for the the configuration.
   }
 ]
 ```
+
+
 ## Data Quality View List
+This list of objects defines how the data quality display interaction occurs and the required resources for each.
+
+### Data Quality View objects
+Parameter for defining a data quality view object.
+
+- `name`: Short name that is displayed in the user interface
+- `plotter`
+    - `enabled`: `true` or `false` to enable or disable plotting of this signal
+    - `datasource`: [Object](configuration-plotter) referring to which [data source](configurations/#data-source) to show in Plotter
+- `video`
+    - `enabled`: `true` or `false` to enable or disable video
+    - `link`: YouTube video identifier
+- `message`
+    - `enabled`: `true` or `false` to enable or disable messages
+    - `text`: Text to show the participant, generally to aid in diagnosing signal problems.
+
+```JSON
+{
+  "name": "Breathing",
+  "plotter": {
+    "enable": true,
+    "datasource": {
+      "platform": {
+        "type": "AUTOSENSE_CHEST"
+      },
+      "type": "RESPIRATION"
+    }
+  },
+  "video": {
+    "enable": true,
+    "link": "2bxc8kONPSs"
+  },
+  "message": {
+    "enable": true,
+    "text": "1) Tighten the chest band so it fits snugly under the armpits.\n\n
+             2) Make sure all cable connections are secure.\n\n
+             3) Reset the application, wait 15 seconds and check again.\n\n
+             4) Restart the phone, wait one minute and check again.\n\n
+             5) Make sure the chest sensor is charged and powered ON."
+  }
+}
+```
+
+
+### Data Quality View List Example
 ```JSON
 [
   {
@@ -719,6 +885,8 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Day Start
+TODO: ???
+
 ```JSON
 {
   "by": "user",
@@ -751,6 +919,8 @@ This object defines the specific study for the the configuration.
 ```
 
 ## Day End
+TODO: ???
+
 ```JSON
 {
   "by": "user",
@@ -765,7 +935,7 @@ This object defines the specific study for the the configuration.
 ```
 
 
-## Example
+## Complete Example
 ```JSON
 {
   "config_info": {
