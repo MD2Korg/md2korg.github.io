@@ -6,10 +6,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         <meta name="author" content="Timothy Hnat">
-        <link rel="canonical" href="http://md2korg.github.io/mCerebrum/troubleshooting/">
+        <link rel="canonical" href="http://md2korg.github.io/mCerebrum/configuration-sensors/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
 
-	<title>Troubleshooting - MD2K Software Documentation</title>
+	<title>Configuration-Sensors - MD2K Software Documentation</title>
 
         <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome-4.0.3.css" rel="stylesheet">
@@ -138,8 +138,8 @@
 
                     
                         
-<li >
-    <a href="../configuration-sensors/">Configuration-Sensors</a>
+<li class="active">
+    <a href="./">Configuration-Sensors</a>
 </li>
 
                     
@@ -162,8 +162,8 @@
 
                     
                         
-<li class="active">
-    <a href="./">Troubleshooting</a>
+<li >
+    <a href="../troubleshooting/">Troubleshooting</a>
 </li>
 
                     
@@ -208,12 +208,12 @@
                     </a>
                 </li>
                 <li >
-                    <a rel="next" href="../configuration-emascheduler/">
+                    <a rel="next" href="../configuration-datakit/">
                         <i class="fa fa-arrow-left"></i> Previous
                     </a>
                 </li>
                 <li >
-                    <a rel="prev" href="../../cerebralcortex/">
+                    <a rel="prev" href="../configuration-plotter/">
                         Next <i class="fa fa-arrow-right"></i>
                     </a>
                 </li>
@@ -227,95 +227,222 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#microsoft-band">Microsoft Band</a></li>
+        <li class="main active"><a href="#phone-sensor">Phone Sensor</a></li>
         
     
-        <li class="main "><a href="#autosense-wrist">AutoSense Wrist</a></li>
+        <li class="main "><a href="#autosense">Autosense</a></li>
         
     
-        <li class="main "><a href="#autosense-rip">AutoSense RIP</a></li>
-        
-    
-        <li class="main "><a href="#autosense-ecg">AutoSense ECG</a></li>
-        
-    
-        <li class="main "><a href="#mcerebrum-app-crashing">mCerebrum app crashing</a></li>
+        <li class="main "><a href="#microsoft-band">Microsoft Band</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
+<h1 id="phone-sensor">Phone Sensor</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.phonesensor/default_config.json</code></p>
+<p>TODO: Need complete listing of all MS Band sensors</p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;BATTERY&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;LOCATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;SENSOR_DELAY_UI&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;CPU&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;PHONE&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;
+    },
+    &quot;type&quot;: &quot;MEMORY&quot;
+  }
+]
+</code></pre>
+
+<h1 id="autosense">Autosense</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.autosense/default_config.json</code></p>
+<p>AutoSense <a href="#data-source">data sources</a> are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.</p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;RESPIRATION&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ECG&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Z&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;GALVANIC_SKIN_RESPONSE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;BATTERY&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;SKIN_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;,
+      &quot;id&quot;: &quot;CHEST&quot;
+    },
+    &quot;type&quot;: &quot;AMBIENT_TEMPERATURE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER_Z&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_X&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_Y&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;AUTOSENSE_WRIST&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE_Z&quot;
+  }
+]
+</code></pre>
+
 <h1 id="microsoft-band">Microsoft Band</h1>
-<p>If you are experiencing bad data quality:</p>
-<ul>
-<li>Make sure the Placement setting is designated for the correct wrist (left or right).</li>
-<li>Make sure the clasp on the Band is securely locked around the wrist.</li>
-<li>Reset the application, wait 15 seconds and check again.</li>
-<li>Restart the phone, wait one minute and check again.</li>
-<li>Make sure the Band is charged and powered ON.</li>
-</ul>
-<p>If you are experiencing pairing issues:</p>
-<ul>
-<li>Clear all data from the DataKit app and mCerebrum app and try again.</li>
-<li>Perform a factory reset on the Band and try again.</li>
-</ul>
-<p>If you are experiencing short battery life:</p>
-<ul>
-<li>Make sure the battery is at 100% before disconnecting the charger.</li>
-<li>Lower the Band’s brightness setting.</li>
-<li>Turn off the Band’s GPS feature.</li>
-<li>Turn off the Band’s Daily Heart Rate feature.</li>
-<li>Turn off the Band’s Watch Mode feature.</li>
-</ul>
-<h1 id="autosense-wrist">AutoSense Wrist</h1>
-<p>If you are experiencing poor data quality:</p>
-<ul>
-<li>Make sure the wrist sensor is paired to the phone with the correct ID number.</li>
-<li>Make sure the Placement setting is designated for the correct wrist (left or right).</li>
-<li>Reset the application, wait 15 seconds and check again.</li>
-<li>Restart the phone, wait one minute and check again.</li>
-<li>Make sure the wrist sensor power switch is ON.</li>
-<li>Make sure the wrist sensor is charged.</li>
-</ul>
-<h1 id="autosense-rip">AutoSense RIP</h1>
-<p>If you are experiencing poor data quality:</p>
-<ul>
-<li>Make sure the chest sensor is paired to the phone with the correct ID number.</li>
-<li>Make sure all cable connections are secure.</li>
-<li>Make sure the RIP connector is inserted into the correct port of the chest sensor.</li>
-<li>Tighten the chest band so it fits snugly under the armpits.</li>
-<li>Reset the application, wait 15 seconds and check again.</li>
-<li>Restart the phone, wait one minute and check again.</li>
-<li>Make sure the chest sensor is charged and powered ON.</li>
-</ul>
-<h1 id="autosense-ecg">AutoSense ECG</h1>
-<p>If you are experiencing poor data quality:</p>
-<ul>
-<li>Make sure the chest sensor is paired to the phone with the correct ID number.</li>
-<li>Make sure all cable connections are secure.</li>
-<li>Make sure the ECG connector is inserted into the correct port of the chest sensor.</li>
-<li>Adjust the position of the electrodes on the body.<ul>
-<li>The positive electrode should be under the sternum in the center of the chest.</li>
-<li>The negative electrode should be on the left side of the ribcage at approximately the same height as the positive electrode.</li>
-</ul>
-</li>
-<li>Reset the application, wait 15 seconds and check again.</li>
-<li>Restart the phone, wait one minute and check again.</li>
-<li>Make sure the chest sensor is charged and powered ON.</li>
-<li>Disconnect and reconnect each connector and electrode. You will hear a snap to indicate a good connection.  </li>
-<li>Try cleaning the skin where the electrode is placed. There should be no lotion or residue on the skin.</li>
-<li>Moisten the adhesive surface of the electrode and try again.  </li>
-</ul>
-<h1 id="mcerebrum-app-crashing">mCerebrum app crashing</h1>
-<p>If the app crashes perpetually:</p>
-<ul>
-<li>Clear all data from the DataKit app.</li>
-<li>Clear all data from the mCerebrum app.</li>
-<li>Delete the configuration folder located in the internal memory <code>/mCerebrum</code></li>
-<li>Make sure you have installed the proper update for each app.</li>
-<li>Delete the mCerebrum app from the phone and re-install it.</li>
-</ul></div>
+<p>Config file name and location: <code>mCerebrum/org.md2k.microsoftband/default_config.json</code></p>
+<p>TODO: Need complete listing of all MS Band sensors</p>
+<pre><code class="JSON">[
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;31 Hz&quot;
+    },
+    &quot;type&quot;: &quot;ACCELEROMETER&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;metadata&quot;: {
+      &quot;FREQUENCY&quot;: &quot;31 Hz&quot;
+    },
+    &quot;type&quot;: &quot;GYROSCOPE&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;BAND_CONTACT&quot;
+  },
+  {
+    &quot;platform&quot;: {
+      &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+    },
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;
+  }
+]
+</code></pre></div>
         </div>
 
         <footer class="col-md-12">
