@@ -26,6 +26,11 @@ pages:
   - mCerebrum:
     - Overview: mCerebrum/index.md
     - Configurations: mCerebrum/configurations.md
+    - Configuration-DataKit: mCerebrum/configuration-datakit.md
+    - Configuration-Sensors: mCerebrum/configuration-sensors.md
+    - Configuration-Plotter: mCerebrum/configuration-plotter.md
+    - Configuration-EMA: mCerebrum/configuration-ema.md
+    - Configuration-EMA Scheduler: mCerebrum/configuration-emascheduler.md
     - Troubleshooting: mCerebrum/troubleshooting.md
   - Cerebral Cortex:
     - Overview: cerebralcortex/index.md
