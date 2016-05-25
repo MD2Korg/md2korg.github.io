@@ -257,7 +257,7 @@
         
             <li><a href="#day-end">Day End</a></li>
         
-            <li><a href="#example_2">Example</a></li>
+            <li><a href="#complete-example">Complete Example</a></li>
         
     
     </ul>
@@ -361,7 +361,25 @@
 </code></pre>
 
 <h2 id="application-list">Application List</h2>
+<p>The application list defines which applications the system requires to perform its tasks,
+where to get them from, and any necessary configurations and services.</p>
 <h3 id="application-object">Application object</h3>
+<p>Each application object consists of several fields:</p>
+<p>Required</p>
+<ul>
+<li><code>id</code>: unique identifier</li>
+<li><code>name</code>: Human readable application name</li>
+<li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this application</li>
+<li><code>package_name</code>: Android package name for this application</li>
+<li><code>download_link</code>: URL designating a GitHub release page or Google play store link</li>
+</ul>
+<p>Optional or as necessary</p>
+<ul>
+<li><code>config</code>: The name of a configuration file</li>
+<li><code>default_config</code>: The name of a default configuration file.  If a default file is defined and exists, it will override the config file.</li>
+<li><code>service</code>: A specific Android service class for a service</li>
+<li><code>settings</code>: A specific Android service class for a preference panel</li>
+</ul>
 <pre><code class="JSON">{
   &quot;id&quot;: &quot;datakit&quot;,
   &quot;name&quot;: &quot;DataKit&quot;,
@@ -375,6 +393,7 @@
 </code></pre>
 
 <h3 id="application-list-example">Application List Example</h3>
+<p>A complete example List</p>
 <pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;study&quot;,
@@ -505,6 +524,39 @@
 </code></pre>
 
 <h2 id="action-list">Action List</h2>
+<p>Each action object consists of several fields and defines UI action that can occur:</p>
+<p>Required</p>
+<ul>
+<li><code>id</code>: unique identifier</li>
+<li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this application</li>
+<li><code>name</code>: Human readable name that can be showing in the application user interface</li>
+<li><code>rank</code>: Integer rank where the larger the number, the higher the priority</li>
+</ul>
+<p>Optional or as necessary</p>
+<ul>
+<li><code>type</code>: One of the following<ul>
+<li><code>setup</code>: ???</li>
+<li><code>reset</code>: ???</li>
+</ul>
+</li>
+<li><code>icon</code>: Reference to icon resource within the application</li>
+<li><code>package_name</code>: Android package name for this application</li>
+<li><code>class_name</code>: Android class name for this application activity</li>
+</ul>
+<h3 id="action-object-example">Action Object Example</h3>
+<pre><code class="JSON">{
+  &quot;id&quot;: &quot;clear_config&quot;,
+  &quot;type&quot;: &quot;reset&quot;,
+  &quot;name&quot;: &quot;Clear Configuration&quot;,
+  &quot;enable&quot;: true,
+  &quot;rank&quot;: 7,
+  &quot;icon&quot;: &quot;ic_delete_blue_48dp&quot;,
+  &quot;package_name&quot;: &quot;org.md2k.study&quot;,
+  &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_config.ActivityClearConfig&quot;
+}
+</code></pre>
+
+<h3 id="action-list-example">Action List Example</h3>
 <pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;config_info&quot;,
@@ -730,6 +782,44 @@
 </code></pre>
 
 <h2 id="administration-view">Administration View</h2>
+<p>This configuration block controls the administration view and allows a password to be specified.</p>
+<h3 id="admin-view">Admin View</h3>
+<p>The admin view has two parameters:</p>
+<ul>
+<li><code>password</code>: plaintext password to gain access to the administration panel.  This field may be omitted to disable passwords</li>
+<li><code>view_contents</code>: a list of <a href="#admin-view-object">admin view</a> objects</li>
+</ul>
+<pre><code class="JSON">{
+  &quot;password&quot;: &quot;1234&quot;,
+  &quot;view_contents&quot;: [
+    ADMIN_VIEW_OBJECT
+  ]
+}
+</code></pre>
+
+<h3 id="admin-view-object">Admin View Object</h3>
+<p>Required fields:</p>
+<ul>
+<li><code>id</code>: unique identifier to reference this admin view component</li>
+<li><code>name</code>: Human readable name suitable for display in the application user interface</li>
+<li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this view</li>
+<li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
+</ul>
+<pre><code class="JSON">{
+  &quot;id&quot;: &quot;key_configure_app&quot;,
+  &quot;name&quot;: &quot;Configure Applications&quot;,
+  &quot;enable&quot;: true,
+  &quot;values&quot;: [
+    &quot;config_info&quot;,
+    &quot;app_install&quot;,
+    &quot;app_settings&quot;,
+    &quot;config_download&quot;,
+    &quot;clear_config&quot;
+  ]
+}
+</code></pre>
+
+<h3 id="administration-view-example">Administration View Example</h3>
 <pre><code class="JSON">{
   &quot;password&quot;: &quot;1234&quot;,
   &quot;view_contents&quot;: [
@@ -783,6 +873,25 @@
 </code></pre>
 
 <h2 id="user-view">User View</h2>
+<p>This configuration block controls the user view. There is only one field that can be specified:</p>
+<ul>
+<li><code>view_contents</code>: a list of <a href="#user-view-object">user view</a> objects</li>
+</ul>
+<pre><code class="JSON">{
+  &quot;view_contents&quot;: [
+    USER_VIEW_OBJECT
+  ]
+}
+</code></pre>
+
+<h3 id="user-view-object">User View Object</h3>
+<p>Required fields:</p>
+<ul>
+<li><code>id</code>: unique identifier to reference this user view component</li>
+<li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this view</li>
+<li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
+</ul>
+<h3 id="user-view-example">User View Example</h3>
 <pre><code class="JSON">{
   &quot;view_contents&quot;: [
     {
@@ -811,6 +920,11 @@
 </code></pre>
 
 <h2 id="data-quality-list">Data Quality List</h2>
+<p>Data quality is a component of the platform that allows for the monitoring of data streams and provides a display regarding their data quality. This list is composed of a set of <a href="../configurations/#data-source">data sources</a> that contain:</p>
+<ul>
+<li><code>type</code>: Must be <code>DATA_QUALITY</code></li>
+</ul>
+<h3 id="data-quality-list-example">Data Quality List Example</h3>
 <pre><code class="JSON">[
   {
     &quot;platform&quot;: {
@@ -842,6 +956,54 @@
 </code></pre>
 
 <h2 id="data-quality-view-list">Data Quality View List</h2>
+<p>This list of objects defines how the data quality display interaction occurs and the required resources for each.</p>
+<h3 id="data-quality-view-objects">Data Quality View objects</h3>
+<p>Parameter for defining a data quality view object.</p>
+<ul>
+<li><code>name</code>: Short name that is displayed in the user interface</li>
+<li><code>plotter</code><ul>
+<li><code>enabled</code>: <code>true</code> or <code>false</code> to enable or disable plotting of this signal</li>
+<li><code>datasource</code>: <a href="../configuration-plotter">Object</a> referring to which <a href="../configurations/#data-source">data source</a> to show in Plotter</li>
+</ul>
+</li>
+<li><code>video</code><ul>
+<li><code>enabled</code>: <code>true</code> or <code>false</code> to enable or disable video</li>
+<li><code>link</code>: YouTube video identifier</li>
+</ul>
+</li>
+<li><code>message</code><ul>
+<li><code>enabled</code>: <code>true</code> or <code>false</code> to enable or disable messages</li>
+<li><code>text</code>: Text to show the participant, generally to aid in diagnosing signal problems.</li>
+</ul>
+</li>
+</ul>
+<pre><code class="JSON">{
+  &quot;name&quot;: &quot;Breathing&quot;,
+  &quot;plotter&quot;: {
+    &quot;enable&quot;: true,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;RESPIRATION&quot;
+    }
+  },
+  &quot;video&quot;: {
+    &quot;enable&quot;: true,
+    &quot;link&quot;: &quot;2bxc8kONPSs&quot;
+  },
+  &quot;message&quot;: {
+    &quot;enable&quot;: true,
+    &quot;text&quot;: &quot;1) Tighten the chest band so it fits snugly under the armpits.\n\n
+             2) Make sure all cable connections are secure.\n\n
+             3) Reset the application, wait 15 seconds and check again.\n\n
+             4) Restart the phone, wait one minute and check again.\n\n
+             5) Make sure the chest sensor is charged and powered ON.&quot;
+  }
+}
+</code></pre>
+
+<h3 id="data-quality-view-list-example">Data Quality View List Example</h3>
 <pre><code class="JSON">[
   {
     &quot;name&quot;: &quot;Breathing&quot;,
@@ -971,6 +1133,7 @@
 </code></pre>
 
 <h2 id="day-start">Day Start</h2>
+<p>TODO: ???</p>
 <pre><code class="JSON">{
   &quot;by&quot;: &quot;user&quot;,
   &quot;base&quot;: &quot;wakeup&quot;,
@@ -1002,6 +1165,7 @@
 </code></pre>
 
 <h2 id="day-end">Day End</h2>
+<p>TODO: ???</p>
 <pre><code class="JSON">{
   &quot;by&quot;: &quot;user&quot;,
   &quot;base&quot;: &quot;day_start&quot;,
@@ -1014,7 +1178,7 @@
 }
 </code></pre>
 
-<h2 id="example_2">Example</h2>
+<h2 id="complete-example">Complete Example</h2>
 <pre><code class="JSON">{
   &quot;config_info&quot;: {
     &quot;id&quot;: &quot;STU00201566-Test&quot;,
