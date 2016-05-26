@@ -199,6 +199,15 @@
       
         
   <li>
+    <a class="" title="Release Notes" href="../../releasenotes/">
+      Release Notes
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
     <a class="" title="Contributing" href="../../contributing/">
       Contributing
     </a>
@@ -372,8 +381,8 @@
         <ul>
           
             <li class="anchor">
-              <a title="Register Participant" href="#register-participant">
-                Register Participant
+              <a title="Workflow for Cerebral Cortex API" href="#workflow-for-cerebral-cortex-api">
+                Workflow for Cerebral Cortex API
               </a>
             </li>
           
@@ -384,20 +393,32 @@
             </li>
           
             <li class="anchor">
-              <a title="Register Participant in Study" href="#register-participant-in-study">
-                Register Participant in Study
+              <a title="Participant registration" href="#participant-registration">
+                Participant registration
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Register Data Source" href="#register-data-source">
-                Register Data Source
+              <a title="Study registration" href="#study-registration">
+                Study registration
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Load data for each data stream" href="#load-data-for-each-data-stream">
-                Load data for each data stream
+              <a title="Participant-Study registration" href="#participant-study-registration">
+                Participant-Study registration
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Datasource registration" href="#datasource-registration">
+                Datasource registration
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Data point bulk loader" href="#data-point-bulk-loader">
+                Data point bulk loader
               </a>
             </li>
           
@@ -453,9 +474,10 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API</h1>
+          <h1 id="cerebral-cortex-api-reference">Cerebral Cortex API Reference</h1>
+<h2 id="workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API</h2>
 <p>JSON API</p>
-<h2 id="register-participant">Register Participant</h2>
+<h3 id="register-participant">Register Participant</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -474,7 +496,7 @@
 </pre></div>
 
 
-<h2 id="register-participant-in-study">Register Participant in Study</h2>
+<h3 id="register-participant-in-study">Register Participant in Study</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies/register_participant</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -484,7 +506,7 @@
 </pre></div>
 
 
-<h2 id="register-data-source">Register Data Source</h2>
+<h3 id="register-data-source">Register Data Source</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -538,7 +560,7 @@
 </pre></div>
 
 
-<h2 id="load-data-for-each-data-stream">Load data for each data stream</h2>
+<h3 id="load-data-for-each-data-stream">Load data for each data stream</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -566,7 +588,7 @@
 </pre></div>
 
 
-<h1 id="participant-registration">Participant registration</h1>
+<h2 id="participant-registration">Participant registration</h2>
 <p>JSON API for participant registration</p>
 <p>Request fields</p>
 <ul>
@@ -580,7 +602,7 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<p><em>Example</em></p>
+<h3 id="example">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -599,7 +621,7 @@
 </pre></div>
 
 
-<p><em>Example</em></p>
+<h3 id="example_1">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -619,7 +641,7 @@
 </pre></div>
 
 
-<h1 id="study-registration">Study registration</h1>
+<h2 id="study-registration">Study registration</h2>
 <p>JSON API for study registration</p>
 <p>Request Fields</p>
 <ul>
@@ -634,7 +656,7 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<p><em>Example</em></p>
+<h3 id="example_2">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -655,7 +677,7 @@
 </pre></div>
 
 
-<h1 id="participant-study-registration">Participant-Study registration</h1>
+<h2 id="participant-study-registration">Participant-Study registration</h2>
 <p>JSON API for registering an existing participant in and existing study</p>
 <p>Request Fields</p>
 <ul>
@@ -670,7 +692,7 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<p><em>Example</em></p>
+<h3 id="example_3">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -691,7 +713,7 @@
 </pre></div>
 
 
-<h1 id="datasource-registration">Datasource registration</h1>
+<h2 id="datasource-registration">Datasource registration</h2>
 <p>JSON API for data source registration</p>
 <p>Request Structure</p>
 <div class="code"><pre><span></span>{
@@ -737,7 +759,7 @@
 <li><code>message</code>: String</li>
 <li><code>datastream_id</code>: Integer</li>
 </ul>
-<p><em>Example</em></p>
+<h3 id="example_4">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
@@ -800,7 +822,7 @@
 </pre></div>
 
 
-<h1 id="data-point-bulk-loader">Data point bulk loader</h1>
+<h2 id="data-point-bulk-loader">Data point bulk loader</h2>
 <p>JSON API for data point bulk loading</p>
 <p>The URL determines where data is persisted.</p>
 <ul>
@@ -828,7 +850,7 @@
 <li><code>message</code>: String</li>
 <li><code>count</code>: Integer indicating number of entries processed</li>
 </ul>
-<p><em>Example</em></p>
+<h3 id="example_5">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
 <div class="code"><pre><span></span>{
