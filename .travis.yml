@@ -1,13 +1,12 @@
 language: python
 python: '3.4'
-node_js: '0.12'
 
 env:
   global:
     secure: ARhvI63WvH5RdWZUBScrsdtOVDu00ETv33Dq36LD0N9r2oBKoXC8RSepKBagFPDEIEsdh8P3GYdIHllS0uHxOZfPxr+WOnGFSAGTsxBrESxl6wRGKqlEQBsA7V8WXKb62kiFBmG3N8YuCeuF1glwm2lr4/N25sknYRzae0xwSc6//abzmJSAQgPqP5bSQ7ZQab9HUXodPFw0sB79Lr35mOARKF8/7TE7JclxsDkRTf2jMhXUvE2qQWgS08Jw8EUn+7O/ZN4tl6fsXxDp/YAYDPe3nIvtdviB1DmAemJRKvlC5dDJC0lumW9SzAckEKubp6OhMTlepo8E4jY43htCI33jTW0gN9kvWUyEQ+DI3bv3IIGJZYyQBc3C85yNc+hATrjCCgXBM6pN2DtzHfPcQR6or4xca9lRPbw9oRmbn8kH1NzGEajz2rhzDNQ3vl7a++qy9teews1S1uJUvMT98UQLJV70bkguAd3oJ5pnYNpjR3PLJB7O3zQcKbHURrNlGkUZRlHWK9SRkTFJFzM8kKa4FpZzsisZYALTVnS/fJ+kTpe2TWf79rdpX7hXY5Ayaq8AMCmOC017YlHFTnFg0XtQjKPV9/Da8wLv1FwbIjLBaSTUAE4oWeMXiDvQpOK1i8f8PBtn2qZOBA8+TlXRweuGKtDzEILz0Kv+z/qzC3g=
 
-# before_install:
-#   - git submodule update --init
+before_install:
+  - nvm install 0.12
 
 install:
   - pip install mkdocs -U
@@ -15,7 +14,8 @@ install:
   - npm install -g gulp
 
 before_script:
-  - cd mkdocs-material && npm install && bower install && gulp build --production
+  - cd mkdocs-material && npm install && bower install
+  - gulp build --production
 
 script:
   - mkdocs build
