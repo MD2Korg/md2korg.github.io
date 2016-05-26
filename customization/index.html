@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>License - Material</title>
+        <title>Customization - Material</title>
       
       
       
-        <link rel="canonical" href="http://squidfunk.github.io/mkdocs-material/license/">
+        <link rel="canonical" href="http://squidfunk.github.io/mkdocs-material/customization/">
       
       
         <meta name="author" content="Martin Donath">
       
     
-    <meta property="og:url" content="http://squidfunk.github.io/mkdocs-material/license/">
+    <meta property="og:url" content="http://squidfunk.github.io/mkdocs-material/customization/">
     <meta property="og:title" content="Material">
-    <meta property="og:image" content="http://squidfunk.github.io/mkdocs-material/license//../images/logo.png">
+    <meta property="og:image" content="http://squidfunk.github.io/mkdocs-material/customization//../images/logo.png">
     <meta name="apple-mobile-web-app-title" content="Material">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -96,7 +96,7 @@
             
           </span>
         
-        License
+        Customization
       </div>
     </div>
     
@@ -198,23 +198,45 @@
           
             
   <li>
-    <a class="" title="Customization" href="../customization/">
+    <a class="current" title="Customization" href="./">
       Customization
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="current" title="License" href="./">
-      License
     </a>
     
       
         
       
       
+        <ul>
+          
+            <li class="anchor">
+              <a title="A good starting point" href="#a-good-starting-point">
+                A good starting point
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Small tweaks" href="#small-tweaks">
+                Small tweaks
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Fundamental changes" href="#fundamental-changes">
+                Fundamental changes
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="License" href="../license/">
+      License
+    </a>
     
   </li>
 
@@ -250,24 +272,78 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="license">License<a class="headerlink" href="#license" title="Permanent link">#</a></h1>
-<p><strong>MIT License</strong></p>
-<p>Copyright (c) 2016 Martin Donath</p>
-<p>Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to
-deal in the Software without restriction, including without limitation the
-rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-sell copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:</p>
-<p>The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.</p>
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-IN THE SOFTWARE.</p>
+          <h1 id="customization">Customization<a class="headerlink" href="#customization" title="Permanent link">#</a></h1>
+<h2 id="a-good-starting-point">A good starting point<a class="headerlink" href="#a-good-starting-point" title="Permanent link">#</a></h2>
+<p>Project documentation is as diverse as the projects themselves and the Material
+theme is a good starting point for making it look good. However, as you write
+your documentation, you may reach some point where some small adjustments are
+necessary to preserve the style.</p>
+<h2 id="small-tweaks">Small tweaks<a class="headerlink" href="#small-tweaks" title="Permanent link">#</a></h2>
+<p><a href="http://www.mkdocs.org">MkDocs</a> provides a simple way for making small adjustments, that is changing
+some margins, centering text, etc. Simply put the CSS and Javascript files that
+contain your adjustments in the <code>docs</code> directory (ideally in subdirectories of
+their own) and include them via the <code>extra_css</code> and <code>extra_javascript</code>
+variables in your <code>mkdocs.yml</code>:</p>
+<pre class="code"><code class="language-yaml">extra_css: ['/stylesheets/extra.css']
+extra_javascript: ['/javascripts/extra.js']</code></pre>
+
+
+<p>Further assistance on including extra CSS and Javascript can be found in the
+<a href="http://www.mkdocs.org/user-guide/styling-your-docs/#customising-a-theme">MkDocs documentation</a>.</p>
+<h2 id="fundamental-changes">Fundamental changes<a class="headerlink" href="#fundamental-changes" title="Permanent link">#</a></h2>
+<p>If you want to make larger adjustments like changing the color palette or
+typography, you should check out or download the repository of the project and
+compile the SASS sources with your changes. The project design is very modular,
+so most things can be tweaked by changing a few variables.</p>
+<h3 id="setup">Setup<a class="headerlink" href="#setup" title="Permanent link">#</a></h3>
+<p>In order to compile the project, you need <code>node</code> with a version greater than
+<code>0.11</code> up and running. Then, make sure <code>bower</code> is installed or install it:</p>
+<pre class="code"><code class="language-sh">npm install -g bower</code></pre>
+
+
+<p>The project itself is hosted on GitHub, so the next
+thing you should do is clone the project from GitHub:</p>
+<pre class="code"><code class="language-sh">git clone https://github.com/squidfunk/mkdocs-material</code></pre>
+
+
+<p>Then you change the directory and install all dependencies specified in the
+<code>package.json</code> and <code>bower.json</code> with the following command:</p>
+<pre class="code"><code class="language-sh">cd mkdocs-material
+npm install &amp;&amp; bower install</code></pre>
+
+
+<h3 id="development">Development<a class="headerlink" href="#development" title="Permanent link">#</a></h3>
+<p>The asset pipeline is contained in <code>Gulpfile.js</code>, which you can start with
+<code>gulp watch</code>. If you specify the <code>--mkdocs</code> flag, this will also run
+<code>mkdocs serve</code>, to monitor changes to the documentation. Point your browser to <a href="http://localhost:8000">localhost:8000</a> and you should see this very
+documentation in front of your eyes.</p>
+<pre class="code"><code class="language-sh">gulp watch --mkdocs</code></pre>
+
+
+<p>For example, changing the color palette is as simple as changing the <code>$primary</code>
+and <code>$accent</code> variables in <code>src/assets/stylesheets/_palette.scss</code>:</p>
+<pre class="code"><code class="language-css">$primary: $red-400;
+$accent:  $teal-a700;</code></pre>
+
+
+<p>The color variables are defined by the SASS library <a href="https://github.com/nkpfstr/quantum-colors">quantum-colors</a> and
+resemble all the colors contained in the material design palette.
+<a href="http://www.materialui.co/colors">This page</a> offers a really good overview of the palette.</p>
+<h3 id="building">Building<a class="headerlink" href="#building" title="Permanent link">#</a></h3>
+<p>When you finished making your changes, you can build the theme by invoking:</p>
+<pre class="code"><code class="language-sh">gulp build --production</code></pre>
+
+
+<p>The <code>--production</code> flag triggers the production-level compilation and
+minification of all CSS and Javascript sources. When the command is ready,
+the final theme is located in the <code>material</code> directory. Add the <code>theme_dir</code>
+variable pointing to the aforementioned directory in your original
+<code>mkdocs.yml</code>:</p>
+<pre class="code"><code class="language-yaml">theme_dir: 'mkdocs-material/material'</code></pre>
+
+
+<p>Now you can run <code>mkdocs build</code> and you should see your documentation with your
+changes to the original Material theme.</p>
           <aside class="copyright" role="note">
             
               Copyright (c) 2016 Martin Donath &ndash;
@@ -286,7 +362,7 @@ IN THE SOFTWARE.</p>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../customization/" title="Customization">
+        <a href="../getting-started/" title="Getting started">
           <span class="direction">
             Previous
           </span>
@@ -296,7 +372,7 @@ IN THE SOFTWARE.</p>
             </div>
             <div class="stretch">
               <div class="title">
-                Customization
+                Getting started
               </div>
             </div>
           </div>
@@ -304,6 +380,22 @@ IN THE SOFTWARE.</p>
       
     </div>
     <div class="next">
+      
+        <a href="../license/" title="License">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                License
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
       
     </div>
   </nav>
