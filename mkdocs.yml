@@ -23,7 +23,6 @@ pages:
   - Feedback: feedback.md
 
 extra:
-  version: '1.0.0'
   palette:
     primary: 'blue'
     accent: 'red'
@@ -49,17 +48,10 @@ repo_name: GitHub
 remote_branch: master
 
 extra_css: [css/md2k.css]
-#, //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css]
 
-# extra_javascript: [//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js]
-# theme: spacelab
-# theme: readthedocs
-# theme: material
 theme_dir: 'mkdocs-material/material'
-
-# include_next_prev: false
 
 markdown_extensions:
   - smarty
-  # - fenced_code
+  - codehilite(css_class=code)
   - admonition

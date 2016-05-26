@@ -24,7 +24,6 @@ Cerebral Cortex is the big data companion to mCerebrum designed to support popul
 
 ## Schedule
 MD2K software is released based on a monthly development and testing cycle.  Typically, we allocate **3 1-week sprints** for development activities followed by a **single 1-week sprint** dedicated towards testing.  
-
 - Major `X.0.0` software updates will occur approximately every year
 - Minor/Feature `1.X.0` updates will occur each month on the 3rd Wednesday
 - Critical bug fixes `1.2.X` will be released immediately
@@ -43,6 +42,8 @@ MD2K software is released based on a monthly development and testing cycle.  Typ
 | 2017 | March      | 2017/03/15  (Wed) |
 | 2017 | April      | 2017/04/19  (Wed) |
 | 2017 | May        | 2017/05/17  (Wed) |
+
+!!! warning "Feature Requests"
 
 All feature requests should be submitted prior to the scheduled release day of the prior month.  For example, for a feature request to be considered for the September 2016 release, it should be submitted to the [JIRA](feedback) tracker before the August release day `2016/08/17`.  This will allow the software engineers sufficient time to plan and execute the upcoming activities.
 
