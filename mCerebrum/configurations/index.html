@@ -1,0 +1,1243 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Configurations - MD2K Software Documentation</title>
+      
+      
+      
+        <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configurations/">
+      
+      
+        <meta name="author" content="MD2K">
+      
+    
+    <meta property="og:url" content="http://docs.md2k.org/mCerebrum/configurations/">
+    <meta property="og:title" content="MD2K Software Documentation">
+    <meta property="og:image" content="http://docs.md2k.org/mCerebrum/configurations//../../img/MD2K-Logo_large.png">
+    <meta name="apple-mobile-web-app-title" content="MD2K Software Documentation">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../../img/MD2K-Logo_large.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../../None">
+    <link rel="icon" type="image/x-icon" href="../../None">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../../assets/fonts/icon.eot?52m981');
+      	src: url('../../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../../assets/stylesheets/application-06cd3bf557.css">
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/palettes-2d6c5d2926.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:400,700|Roboto+Mono">
+      <style>
+        body, input {
+          font-family: 'Roboto', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Roboto Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../../extra.css">
+    
+      <link rel="stylesheet" href="../../css/md2k.css">
+    
+    <script src="../../assets/javascripts/modernizr-4a5cc7e01e.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue palette-accent-red">
+    
+      
+      
+        
+      
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+              
+                mCerebrum <i class="icon icon-link"></i>
+              
+            
+          </span>
+        
+        Configurations
+      </div>
+    </div>
+    
+      
+      <div class="button button-twitter" role="button" aria-label="Twitter">
+        <a href="https://twitter.com/MD2Korg" title="@MD2Korg on Twitter" target="_blank" class="toggle-button icon icon-twitter"></a>
+      </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/MD2Korg" title="@MD2Korg on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Search" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false">
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="https://github.com/MD2Korg/" class="project">
+    <div class="banner">
+      
+        <div class="logo">
+          <img src="../../img/MD2K-Logo_large.png">
+        </div>
+      
+      <div class="name">
+        <strong>
+          MD2K Software Documentation
+          <span class="version">
+            1.0.0
+          </span>
+        </strong>
+        
+          <br>
+          MD2Korg
+        
+      </div>
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+        <ul class="repo">
+          <li class="repo-download">
+            
+            <a href="https://github.com/MD2Korg//archive/1.0.0.zip" target="_blank" title="Download" data-action="download">
+              <i class="icon icon-download"></i> Download
+            </a>
+          </li>
+          <li class="repo-stars">
+            <a href="https://github.com/MD2Korg//stargazers" target="_blank" title="Stargazers" data-action="star">
+              <i class="icon icon-star"></i> Stars
+              <span class="count">&ndash;</span>
+            </a>
+          </li>
+        </ul>
+        <hr>
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <span class="section">Home</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Introduction" href="../..">
+      Introduction
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Contributing" href="../../contributing/">
+      Contributing
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Overview</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Data Protection" href="../../data_protection/">
+      Data Protection
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Contributors" href="../../contributors/">
+      Contributors
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="References" href="../../references/">
+      References
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="License" href="../../license/">
+      License
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">mCerebrum</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="current" title="Configurations" href="./">
+      Configurations
+    </a>
+    
+      
+        
+      
+      
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-mCerebrum" href="../configuration-mCerebrum/">
+      Configuration-mCerebrum
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-DataKit" href="../configuration-datakit/">
+      Configuration-DataKit
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-Sensors" href="../configuration-sensors/">
+      Configuration-Sensors
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-Plotter" href="../configuration-plotter/">
+      Configuration-Plotter
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-EMA" href="../configuration-ema/">
+      Configuration-EMA
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Configuration-EMA Scheduler" href="../configuration-emascheduler/">
+      Configuration-EMA Scheduler
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="Troubleshooting" href="../troubleshooting/">
+      Troubleshooting
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <span class="section">Cerebral Cortex</span>
+    <ul>
+      
+        
+  <li>
+    <a class="" title="Overview" href="../../cerebralcortex/">
+      Overview
+    </a>
+    
+  </li>
+
+      
+        
+  <li>
+    <a class="" title="API" href="../../cerebralcortex/api/">
+      API
+    </a>
+    
+  </li>
+
+      
+    </ul>
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Feedback" href="../../feedback/">
+      Feedback
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">The author</span>
+          <ul>
+            
+              
+              <li>
+                <a href="https://twitter.com/MD2Korg" target="_blank" title="@MD2Korg on Twitter">
+                  @MD2Korg on Twitter
+                </a>
+              </li>
+            
+            
+              
+              <li>
+                <a href="https://github.com/MD2Korg" target="_blank" title="@MD2Korg on GitHub">
+                  @MD2Korg on GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="configuration">Configuration</h1>
+<p><strong>mCerebrum</strong> is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.</p>
+<h1 id="generic-structures">Generic structures</h1>
+<h2 id="data-source">Data source</h2>
+<p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
+<pre><code class="JSON">{
+  &quot;type&quot;: &quot;MEMORY&quot;,
+  &quot;id&quot;: &quot;DataSourceID&quot;,
+  &quot;platform&quot;: {
+    &quot;id&quot;: &quot;Phone1&quot;,
+    &quot;type&quot;: &quot;PHONE&quot;,
+    &quot;metadata&quot;: {
+      &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
+      &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
+      &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
+      &quot;NAME&quot;: &quot;Phone&quot;
+    }
+  },
+  &quot;platformapp&quot;: {
+    &quot;id&quot;: &quot;platformapp1&quot;,
+    &quot;type&quot;: &quot;PHONEAPP&quot;,
+    &quot;metadata&quot;: {
+      &quot;NAME&quot;: &quot;PhoneApp&quot;
+    }
+  },
+  &quot;application&quot;: {
+    &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
+    &quot;type&quot;: &quot;PhoneApp&quot;,
+    &quot;metadata&quot;: {
+      &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
+      &quot;VERSION_NUMBER&quot;: &quot;11&quot;
+    }
+  },
+  &quot;dataDescriptors&quot;: [
+    {
+      &quot;UNIT&quot;: &quot;megabyte&quot;,
+      &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+      &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+      &quot;MIN_VALUE&quot;: &quot;0&quot;,
+      &quot;DATA_TYPE&quot;: &quot;float&quot;,
+      &quot;NAME&quot;: &quot;Size&quot;
+    },
+    {
+      &quot;UNIT&quot;: &quot;megabyte&quot;,
+      &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
+      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+      &quot;MAX_VALUE&quot;: &quot;2048&quot;,
+      &quot;MIN_VALUE&quot;: &quot;0&quot;,
+      &quot;DATA_TYPE&quot;: &quot;float&quot;,
+      &quot;NAME&quot;: &quot;Available&quot;
+    }
+  ],
+  &quot;metadata&quot;: {
+    &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
+    &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
+    &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
+    &quot;NAME&quot;: &quot;Memory&quot;
+  }
+}
+</code></pre>
+
+<p>Querying supports a subset of the fields as specified below and all fields are optional to include additional data stream.  Any data stream that matches all specified parameter is returned.</p>
+<ul>
+<li><code>type</code>: String specification designating the type of the object</li>
+<li><code>id</code>: TODO: What does id mean here?</li>
+</ul>
+<p><code>Platform</code>, <code>platformapp</code>, and <code>application</code> each contain specific <code>type</code> and <code>id</code> fields that are identically defined.</p>
+<pre><code class="JSON">{
+  &quot;type&quot;: &quot;MEMORY&quot;,
+  &quot;id&quot;: &quot;DataSourceID&quot;,
+  &quot;platform&quot;: {
+    &quot;id&quot;: &quot;Phone1&quot;,
+    &quot;type&quot;: &quot;PHONE&quot;
+  },
+  &quot;platformapp&quot;: {
+    &quot;id&quot;: &quot;platformapp1&quot;,
+    &quot;type&quot;: &quot;PHONEAPP&quot;
+  },
+  &quot;application&quot;: {
+    &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
+    &quot;type&quot;: &quot;PhoneApp&quot;
+  }
+}
+</code></pre>
+
+<h2 id="privacy-type-options">Privacy type options</h2>
+<p>Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
+that prevents data sources that match the define <code>source</code> criteria from being routed and recorded.</p>
+<ul>
+<li><code>id</code>: unique privacy id string (TODO: What is the meaning of <code>id</code> in general?)</li>
+<li><code>title</code>: String suitable for display on the user interface</li>
+<li><code>summary</code>: Summary description for display on the user interface for additional details</li>
+<li><code>source</code>: list of <a href="#data-source">data sources</a> (TODO: Why is this different than the listed data source definition?)</li>
+</ul>
+<pre><code class="JSON">{
+  &quot;id&quot;: &quot;location&quot;,
+  &quot;title&quot;: &quot;Location&quot;,
+  &quot;summary&quot;: &quot;&quot;,
+  &quot;source&quot;: [
+    {
+      &quot;datasource_type&quot;: &quot;LOCATION&quot;
+    }
+  ]
+}
+</code></pre>
+
+<h2 id="notification">Notification</h2>
+<p>Notifications are handled by mCerebrum by sending a notification object to the notification manager application.  This is the definition of the object and certain fields are require depending on the targeted notification device.  Please refer to the device specific documentation.</p>
+<ul>
+<li><code>id</code>: Unique identifier that is utilized by other configuration file to reference this object instance.</li>
+<li><code>name</code>: Short string description of the notification that can be utilized by application user interfaces</li>
+<li><code>type</code>: Must be one of the following:<ul>
+<li><code>VIBRATION</code>: Causes the notification device to vibrate if possible</li>
+<li><code>MESSAGE</code>: Causes the notification device to display a message if possible</li>
+<li><code>TONE</code>: Causes the notification device to sound a tone if possible</li>
+<li><code>SCREEN</code>: Causes the notification device to turn on a screen if possible</li>
+</ul>
+</li>
+<li><code>priority</code>: Integer priority level, lower is higher priority</li>
+<li><code>datasource</code>: A <a href="#data-source">data source</a> object</li>
+<li><code>format</code>: Specific format option depending on the notification device</li>
+<li><code>repeat</code>: How many time to repeat this notification</li>
+<li><code>duration</code>: How long in milliseconds to alert for each notification iteration</li>
+</ul>
+<h3 id="example">Example</h3>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 2000
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (MoodSurfing)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Mood Surfing&quot;,
+      &quot;Take a moment to surf your mood&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (Head Space)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;HeadSpace&quot;,
+      &quot;Time a moment to make some head space&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;,
+    &quot;name&quot;: &quot;Microsoft Band Message (Thought Shakeup)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Thought Shakeup&quot;,
+      &quot;Take a moment to shake up your thoughts&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_VIBRATE_3&quot;,
+    &quot;name&quot;: &quot;Phone Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 1500
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_TONE_3&quot;,
+    &quot;name&quot;: &quot;Phone Tone&quot;,
+    &quot;type&quot;: &quot;TONE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 3,
+    &quot;duration&quot;: 1500
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
+    &quot;name&quot;: &quot;Phone Screen&quot;,
+    &quot;type&quot;: &quot;SCREEN&quot;,
+    &quot;priority&quot;: 0,
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
+    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;,
+      &quot;Delay 10 Minutes&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: true,
+      &quot;delay_time&quot;: 600000
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;,
+    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 300000,
+    &quot;message&quot;: [
+      &quot;Survey&quot;,
+      &quot;Time to take a Survey&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;,
+      &quot;Delay&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: true,
+      &quot;delay_time&quot;: -1
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_MOODSURFING&quot;,
+    &quot;name&quot;: &quot;Phone Message (MoodSurfing)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;Mood Surfing&quot;,
+      &quot;Take a moment to surf your mood&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;,
+    &quot;name&quot;: &quot;Phone Message (ThoughtShakeup)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;Thought Shakeup&quot;,
+      &quot;Take a moment to shake up your thoughts&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_HEADSPACE&quot;,
+    &quot;name&quot;: &quot;Phone Message (HeadSpace)&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 120000,
+    &quot;message&quot;: [
+      &quot;HeadSpace&quot;,
+      &quot;Time a moment to make some head space&quot;,
+      &quot;OK&quot;,
+      &quot;Cancel&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: true,
+      &quot;delay&quot;: false
+    }
+  }
+]
+</code></pre>
+
+<h2 id="study-notifications">Study notifications</h2>
+<p>TODO:</p>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;PHONE_VIBRATE&quot;,
+    &quot;name&quot;: &quot;Phone Vibration&quot;,
+    &quot;type&quot;: &quot;VIBRATION&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE&quot;,
+    &quot;repeat&quot;: 60,
+    &quot;duration&quot;: 10800000
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_TONE&quot;,
+    &quot;name&quot;: &quot;Phone Tone&quot;,
+    &quot;type&quot;: &quot;TONE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
+    &quot;repeat&quot;: 60,
+    &quot;duration&quot;: 10800000
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
+    &quot;name&quot;: &quot;Phone Screen&quot;,
+    &quot;type&quot;: &quot;SCREEN&quot;,
+    &quot;priority&quot;: 0,
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 10000,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_START_DAY&quot;,
+    &quot;name&quot;: &quot;Start Day&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 3600000000,
+    &quot;message&quot;: [
+      &quot;Start Day&quot;,
+      &quot;Please start the Day&quot;,
+      &quot;OK&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: false,
+      &quot;delay&quot;: false
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PHONE_MESSAGE_END_DAY&quot;,
+    &quot;name&quot;: &quot;End Day&quot;,
+    &quot;type&quot;: &quot;MESSAGE&quot;,
+    &quot;priority&quot;: 0,
+    &quot;datasource&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;PHONE&quot;
+      }
+    },
+    &quot;repeat&quot;: 1,
+    &quot;duration&quot;: 3600000000,
+    &quot;message&quot;: [
+      &quot;End Day&quot;,
+      &quot;Please end the Day&quot;,
+      &quot;OK&quot;
+    ],
+    &quot;response_option&quot;: {
+      &quot;ok&quot;: true,
+      &quot;cancel&quot;: false,
+      &quot;delay&quot;: false
+    }
+  }
+]
+</code></pre>
+
+<h2 id="conditions">Conditions</h2>
+<p>Conditions provide a mechanism to specify constraints based on the output of various sensors and data streams.  They are
+defined as follows  and referenced by <code>id</code> within other documents.</p>
+<ul>
+<li><code>id</code>: Unique string identifier to be used as reference within other JSON configurations</li>
+<li><code>type</code>: defines the type category of condition and is user specified</li>
+<li><code>name</code>: String describing the condition and could be shown to a participant</li>
+<li><code>values</code>: List of input values for the evaluation function</li>
+<li><code>data_source</code>: An single object as defined in the <a href="#data-source">data source</a> query support</li>
+</ul>
+<h3 id="example_1">Example</h3>
+<pre><code class="JSON">[
+  {
+    &quot;id&quot;: &quot;PHONE_BATTERY_10&quot;,
+    &quot;type&quot;: &quot;PHONE_BATTERY&quot;,
+    &quot;name&quot;: &quot;Phone battery percentage is greater than 10&quot;,
+    &quot;values&quot;: [
+      &quot;10&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;application&quot;: {
+        &quot;id&quot;: &quot;org.md2k.phonesensor&quot;
+      },
+      &quot;type&quot;: &quot;BATTERY&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;NOT_ACTIVE_1&quot;,
+    &quot;type&quot;: &quot;NOT_ACTIVE&quot;,
+    &quot;name&quot;: &quot;Not physically active in last 1 minute&quot;,
+    &quot;values&quot;: [
+      &quot;60000&quot;,
+      &quot;0&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;application&quot;: {
+        &quot;id&quot;: &quot;org.md2k.streamprocessor&quot;
+      },
+      &quot;type&quot;: &quot;STRESS_ACTIVITY&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;NOT_DRIVING_5&quot;,
+    &quot;type&quot;: &quot;NOT_DRIVING&quot;,
+    &quot;name&quot;: &quot;Not driving in last 5 minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;,
+      &quot;60&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;DATA_QUALITY_5&quot;,
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+    &quot;name&quot;: &quot;Data quality good in last 5 minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;,
+      &quot;80&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;RESPIRATION&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;DATA_QUALITY_DAY_START&quot;,
+    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+    &quot;name&quot;: &quot;Data quality good from the day started&quot;,
+    &quot;values&quot;: [
+      &quot;DAY_START&quot;,
+      &quot;60&quot;
+    ],
+    &quot;data_source&quot;: {
+      &quot;platform&quot;: {
+        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
+      },
+      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
+      &quot;id&quot;: &quot;RESPIRATION&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMA_ANSWER_5&quot;,
+    &quot;type&quot;: &quot;EMA_ANSWER&quot;,
+    &quot;name&quot;: &quot;EMA answered in 5 Minutes&quot;,
+    &quot;values&quot;: [
+      &quot;300000&quot;
+    ]
+  },
+  {
+    &quot;id&quot;: &quot;RANDOM_EMA_60&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered Random EMA 60 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;3600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;RANDOM_EMA_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered Random EMA 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;SMOKING_EMA_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;SMOKING_EMA_30&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 30 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;1800000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMI_10&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;EMI&quot;,
+      &quot;type&quot;: &quot;EMI&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;EMI_60&quot;,
+    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
+    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
+    &quot;values&quot;: [
+      &quot;3600000&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;EMI&quot;,
+      &quot;type&quot;: &quot;EMI&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;VALID_BLOCK_SMOKING_EMA&quot;,
+    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
+    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
+    &quot;values&quot;: [
+      &quot;1&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;VALID_BLOCK_RANDOM_EMA&quot;,
+    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
+    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
+    &quot;values&quot;: [
+      &quot;1&quot;
+    ],
+    &quot;source&quot;: {
+      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
+      &quot;type&quot;: &quot;EMA&quot;
+    }
+  },
+  {
+    &quot;id&quot;: &quot;PRIVACY&quot;,
+    &quot;type&quot;: &quot;PRIVACY&quot;,
+    &quot;name&quot;: &quot;Privacy is active&quot;,
+    &quot;data_source&quot;: {
+      &quot;type&quot;: &quot;PRIVACY&quot;
+    }
+  }
+]
+</code></pre>
+
+<h2 id="base">Base</h2>
+<p>Defined in main application JSON file</p>
+<pre><code class="JSON">{
+    &quot;day_start&quot;: {
+        &quot;by&quot;: &quot;user&quot;,
+        &quot;base&quot;: &quot;wakeup&quot;,
+        &quot;notify&quot;: [
+          {
+            &quot;type&quot;: &quot;button&quot;,
+            &quot;offset&quot;: -30000
+          },
+          {
+            &quot;type&quot;: &quot;prompt&quot;,
+            &quot;offset&quot;: 0,
+            &quot;parameters&quot;: [
+              &quot;PHONE_SCREEN&quot;,
+              &quot;PHONE_MESSAGE_START_DAY&quot;
+            ]
+          },
+          {
+            &quot;type&quot;: &quot;notification&quot;,
+            &quot;offset&quot;: 30000,
+            &quot;parameters&quot;: [
+              &quot;PHONE_VIBRATE&quot;,
+              &quot;PHONE_TONE&quot;,
+              &quot;PHONE_SCREEN&quot;,
+              &quot;PHONE_MESSAGE_START_DAY&quot;
+            ]
+          }
+        ]
+      }
+}
+</code></pre>
+
+<h1 id="notification-manager">Notification Manager</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
+<p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
+<h1 id="stream-processor">Stream Processor</h1>
+<p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
+<p>Stream processor requires that SVM model files be present in this directory.</p>
+          <aside class="copyright" role="note">
+            
+              MD2K 2016 &ndash;
+            
+            Documentation built with
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>
+            using the
+            <a href="http://squidfunk.github.io/mkdocs-material/" target="_blank">
+              Material
+            </a>
+            theme.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../" title="Overview">
+          <span class="direction">
+            Previous
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Overview
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../configuration-mCerebrum/" title="Configuration-mCerebrum">
+          <span class="direction">
+            Next
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Configuration-mCerebrum
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '../..';
+      var repo_id  = 'MD2Korg';
+    </script>
+    <script src="../../assets/javascripts/application-dfb6964a49.js"></script>
+    
+    
+      <script>
+        (function(i,s,o,g,r,a,m){
+          i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||
+          []).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;
+          m.parentNode.insertBefore(a,m)
+        })(window, document,
+          'script', '//www.google-analytics.com/analytics.js', 'ga');
+        /* General initialization */
+        ga('create', 'UA-77812263-1', 'auto');
+        ga('set', 'anonymizeIp', true);
+        ga('send', 'pageview');
+        /* Track outbound links */
+        var buttons = document.querySelectorAll('a');
+        Array.prototype.map.call(buttons, function(item) {
+          if (item.host != document.location.host) {
+            item.addEventListener('click', function() {
+              var action = item.getAttribute('data-action') || 'follow';
+              ga('send', 'event', 'outbound', action, item.href);
+            });
+          }
+        });
+        /* Register handler to log search on blur */
+        var query = document.querySelector('.query');
+        query.addEventListener('blur', function() {
+          if (this.value) {
+            var path = document.location.pathname;
+            ga('send', 'pageview', path + '?q=' + this.value);
+          }
+        });
+      </script>
+    
+  </body>
+</html>
