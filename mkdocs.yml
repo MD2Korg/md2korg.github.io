@@ -54,7 +54,8 @@ remote_branch: master
 # extra_javascript: [//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js]
 # theme: spacelab
 # theme: readthedocs
-theme: material
+# theme: material
+theme_dir: 'mkdocs-material/material'
 
 # include_next_prev: false
 
