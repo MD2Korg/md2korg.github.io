@@ -1,7 +1,19 @@
-.repo {
-  display: none
+.MD2Kbanner {
+
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  padding: 0px;
+
+  text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+
+  text-align: center;
+
+  background: url(../img/MD2K-Logo_large.png) 0 0 no-repeat;
 }
 
-.logo {
-  
+.repo {
+  display: none;
 }
