@@ -1,6 +1,7 @@
 pages:
   - Home:
     - Introduction: index.md
+    - Release Notes: releasenotes.md
     - Contributing: contributing.md
   - Overview:
     - Data Protection: data_protection.md

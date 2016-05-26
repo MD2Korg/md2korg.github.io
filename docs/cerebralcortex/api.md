@@ -1,7 +1,9 @@
-# Workflow for Cerebral Cortex API
+# Cerebral Cortex API Reference
+
+## Workflow for Cerebral Cortex API
 JSON API
 
-## Register Participant
+### Register Participant
 **URL:** `https://cerebralcortex/participants`
 
 Request: POST
@@ -22,7 +24,7 @@ Request: POST
 }
 ```
 
-## Register Participant in Study
+### Register Participant in Study
 **URL:** `https://cerebralcortex/studies/register_participant`
 
 Request: POST
@@ -33,7 +35,7 @@ Request: POST
 }
 ```
 
-## Register Data Source
+### Register Data Source
 **URL:** `https://cerebralcortex/datasources/register`
 
 Request: POST
@@ -88,7 +90,7 @@ Request: POST
 }
 ```
 
-## Load data for each data stream
+### Load data for each data stream
 **URL:** `https://cerebralcortex/datapoints/bulkload` or `https://cerebralcortex/rawdatapoints/bulkload`
 
 Request: POST
@@ -119,7 +121,7 @@ Request: POST
 
 
 
-# Participant registration
+## Participant registration
 JSON API for participant registration
 
 Request fields
@@ -135,7 +137,7 @@ Response fields
 * `updated_at`: DateTime
 
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/participants`
 
@@ -157,7 +159,7 @@ _Response_
 }
 ```
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/participants`
 
@@ -180,7 +182,7 @@ _Reponse_
 ```
 
 
-# Study registration
+## Study registration
 JSON API for study registration
 
 Request Fields
@@ -197,7 +199,7 @@ _Response fields_
 * `updated_at`: DateTime
 
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/studies`
 
@@ -221,7 +223,7 @@ _Reponse_
 
 
 
-# Participant-Study registration
+## Participant-Study registration
 JSON API for registering an existing participant in and existing study
 
 Request Fields
@@ -238,7 +240,7 @@ _Response fields_
 * `updated_at`: DateTime
 
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/studies`
 
@@ -263,7 +265,7 @@ _Reponse_
 
 
 
-# Datasource registration
+## Datasource registration
 JSON API for data source registration
 
 Request Structure
@@ -311,7 +313,7 @@ _Response fields_
 * `datastream_id`: Integer
 
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/datasources/register`
 
@@ -378,7 +380,7 @@ _Reponse_
 
 
 
-# Data point bulk loader
+## Data point bulk loader
 JSON API for data point bulk loading
 
 The URL determines where data is persisted.
@@ -408,7 +410,7 @@ _Response fields_
 * `count`: Integer indicating number of entries processed
 
 
-_Example_
+### Example
 
 **URL:** `https://cerebralcortex/datapoints/bulkload` or `https://cerebralcortex/rawdatapoints/bulkload`
 

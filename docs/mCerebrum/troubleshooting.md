@@ -1,4 +1,6 @@
-# Microsoft Band
+# Troubleshooting Guide
+
+## Microsoft Band
 If you are experiencing bad data quality:
 
 - Make sure the Placement setting is designated for the correct wrist (left or right).
@@ -21,7 +23,7 @@ If you are experiencing short battery life:
 - Turn off the Band’s Watch Mode feature.
 
 
-# AutoSense Wrist
+## AutoSense Wrist
 If you are experiencing poor data quality:
 
 - Make sure the wrist sensor is paired to the phone with the correct ID number.
@@ -32,7 +34,7 @@ If you are experiencing poor data quality:
 - Make sure the wrist sensor is charged.
 
 
-# AutoSense RIP
+## AutoSense RIP
 If you are experiencing poor data quality:
 
 - Make sure the chest sensor is paired to the phone with the correct ID number.
@@ -43,7 +45,7 @@ If you are experiencing poor data quality:
 - Restart the phone, wait one minute and check again.
 - Make sure the chest sensor is charged and powered ON.
 
-# AutoSense ECG
+## AutoSense ECG
 If you are experiencing poor data quality:
 
 - Make sure the chest sensor is paired to the phone with the correct ID number.
@@ -60,7 +62,7 @@ If you are experiencing poor data quality:
 - Moisten the adhesive surface of the electrode and try again.  
 
 
-# mCerebrum app crashing
+## mCerebrum app crashing
 
 If the app crashes perpetually:
 
