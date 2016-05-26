@@ -14,7 +14,7 @@ install:
   - npm install -g gulp
 
 before_script:
-  - cd mkdocs-material && npm install && bower install && gulp build --production
+  - cd mkdocs-material && npm install && bower install && gulp build --production && cd ..
 
 script:
   - mkdocs build
