@@ -151,7 +151,7 @@
         <strong>
           MD2K Software Documentation
           <span class="version">
-            1.0.0
+            
           </span>
         </strong>
         
@@ -167,7 +167,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/MD2Korg//archive/1.0.0.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/MD2Korg//archive/master.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -456,12 +456,13 @@
           <h1 id="ema-scheduler">EMA Scheduler</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.ema_scheduler/config.json</code></p>
 <p>EMA scheduler configuration structure:</p>
-<pre><code class="JSON">[
-  EMA_EMI_OBJECT_1,
-  EMA_EMI_OBJECT_2,
-  ...
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="p">[</span>
+  <span class="err">EMA_EMI_OBJECT_</span><span class="mi">1</span><span class="p">,</span>
+  <span class="err">EMA_EMI_OBJECT_</span><span class="mi">2</span><span class="p">,</span>
+  <span class="err">...</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="emaemi-object">EMA/EMI Object</h2>
 <p>The EMA/EMI object defines what, when, and under which conditions an event will be sent to the participant.</p>
@@ -494,25 +495,26 @@
 <li><code>incentive_rules</code>: A list of <a href="#incentive-object">incentive</a> objects to apply</li>
 </ul>
 <h4 id="partial-example">Partial Example</h4>
-<pre><code class="JSON">{
-  &quot;id&quot;: &quot;RANDOM_EMA&quot;,
-  &quot;type&quot;: &quot;EMA&quot;,
-  &quot;trigger_type&quot;: &quot;RANDOM&quot;,
-  &quot;name&quot;: &quot;Random Experience Sampling&quot;,
-  &quot;enable&quot;: true,
-  &quot;application&quot;: {
-    &quot;id&quot;: &quot;random_experience_sampling&quot;,
-    &quot;name&quot;: &quot;Random Experience Sampling&quot;,
-    &quot;file_name&quot;: &quot;random_experience_sampling.json&quot;,
-    &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
-    &quot;timeout&quot;: 600000
-  },
-  &quot;blocks&quot;: [SEE_BELOW],
-  &quot;scheduler_rules&quot;: [SEE_BELOW],
-  &quot;notifications&quot;: [SEE_BELOW],
-  &quot;incentive_rules&quot;: [SEE_BELOW]
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Random Experience Sampling&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Random Experience Sampling&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling.json&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;blocks&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">SEE_BELOW</span><span class="p">],</span>
+  <span class="nt">&quot;scheduler_rules&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">SEE_BELOW</span><span class="p">],</span>
+  <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">SEE_BELOW</span><span class="p">],</span>
+  <span class="nt">&quot;incentive_rules&quot;</span><span class="p">:</span> <span class="p">[</span><span class="err">SEE_BELOW</span><span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h2 id="block-object">Block object</h2>
 <p>A block object defines a time window within event can occur and provides a way to limit the total number of EMA/EMI events.  These are the fields that must be specified:</p>
@@ -523,36 +525,38 @@
 <li><code>end_offset</code>: Offset time in milliseconds from the value defined in <code>base</code></li>
 </ul>
 <h3 id="block-example">Block Example</h3>
-<pre><code class="JSON">{
-  &quot;total&quot;: 1,
-  &quot;base&quot;: &quot;DAY_START&quot;,
-  &quot;start_offset&quot;: 14400000,
-  &quot;end_offset&quot;: 28800000
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+  <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span><span class="p">,</span>
+  <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h3 id="block-list-example">Block List Example</h3>
-<pre><code class="JSON">&quot;blocks&quot;: [
-  {
-    &quot;total&quot;: 1,
-    &quot;base&quot;: &quot;DAY_START&quot;,
-    &quot;start_offset&quot;: 0,
-    &quot;end_offset&quot;: 14400000
-  },
-  {
-    &quot;total&quot;: 1,
-    &quot;base&quot;: &quot;DAY_START&quot;,
-    &quot;start_offset&quot;: 14400000,
-    &quot;end_offset&quot;: 28800000
-  },
-  {
-    &quot;total&quot;: 1,
-    &quot;base&quot;: &quot;DAY_START&quot;,
-    &quot;start_offset&quot;: 28800000,
-    &quot;end_offset&quot;: 43200000
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="s2">&quot;blocks&quot;</span><span class="err">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span><span class="p">,</span>
+    <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span><span class="p">,</span>
+    <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">43200000</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="scheduler-object">Scheduler object</h2>
 <p>TODO: This section is incomplete.  Missing EMI-specific configurations.  Discuss with Monowar</p>
@@ -570,70 +574,72 @@
 </ul>
 <h3 id="scheduler-example">Scheduler Example</h3>
 <p>This example configures a <code>RANDOM</code> &hellip;</p>
-<pre><code class="JSON">{
-  &quot;type&quot;: &quot;RANDOM&quot;,
-  &quot;start_time&quot;: &quot;BLOCK_START&quot;,
-  &quot;end_time&quot;: &quot;BLOCK_END&quot;,
-  &quot;divide&quot;: 2,
-  &quot;conditions&quot;: [
-    &quot;PRIVACY&quot;,
-    &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-    &quot;RANDOM_EMA_60&quot;,
-    &quot;SMOKING_EMA_10&quot;,
-    &quot;EMI_10&quot;,
-    &quot;DATA_QUALITY_5&quot;,
-    &quot;NOT_DRIVING_5&quot;,
-    &quot;PHONE_BATTERY_10&quot;
-  ]
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_START&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_END&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;divide&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+  <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h3 id="scheduler-list-example">Scheduler List Example</h3>
-<pre><code class="JSON">&quot;scheduler_rules&quot;: [
-  {
-    &quot;type&quot;: &quot;RANDOM&quot;,
-    &quot;start_time&quot;: &quot;BLOCK_START&quot;,
-    &quot;end_time&quot;: &quot;BLOCK_END&quot;,
-    &quot;divide&quot;: 2,
-    &quot;conditions&quot;: [
-      &quot;PRIVACY&quot;,
-      &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-      &quot;RANDOM_EMA_60&quot;,
-      &quot;SMOKING_EMA_10&quot;,
-      &quot;EMI_10&quot;,
-      &quot;DATA_QUALITY_5&quot;,
-      &quot;NOT_DRIVING_5&quot;,
-      &quot;PHONE_BATTERY_10&quot;
-    ]
-  },
-  {
-    &quot;type&quot;: &quot;RANDOM&quot;,
-    &quot;start_time&quot;: &quot;LAST_SCHEDULE&quot;,
-    &quot;end_time&quot;: &quot;BLOCK_END&quot;,
-    &quot;divide&quot;: 2,
-    &quot;conditions&quot;: [
-      &quot;PRIVACY&quot;,
-      &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-      &quot;RANDOM_EMA_60&quot;,
-      &quot;SMOKING_EMA_10&quot;,
-      &quot;EMI_10&quot;,
-      &quot;DATA_QUALITY_5&quot;,
-      &quot;NOT_DRIVING_5&quot;,
-      &quot;PHONE_BATTERY_10&quot;
-    ]
-  },
-  {
-    &quot;type&quot;: &quot;IMMEDIATE&quot;,
-    &quot;conditions&quot;: [
-      &quot;PRIVACY&quot;,
-      &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-      &quot;RANDOM_EMA_60&quot;,
-      &quot;SMOKING_EMA_10&quot;,
-      &quot;EMI_10&quot;
-    ]
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="s2">&quot;scheduler_rules&quot;</span><span class="err">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_START&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_END&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;divide&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_SCHEDULE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_END&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;divide&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IMMEDIATE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;EMI_10&quot;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="notification-object">Notification object</h2>
 <p>The notification objects define what types of alerts can be sent to the participant and their duration(s).</p>
@@ -644,43 +650,45 @@
 </ul>
 <h3 id="notification-example">Notification Example</h3>
 <p>In this example, 2 minutes (120000 milliseconds) after the EMA/EMI was triggered, it sends the <code>MICROSOFT_BAND_VIBRATE_3</code> and <code>PHONE_VIBRATE_3</code> notifications to the Notification Manager for delivery to the participant.</p>
-<pre><code class="JSON">{
-  &quot;time&quot;: 120000,
-  &quot;types&quot;: [
-    &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-    &quot;PHONE_VIBRATE_3&quot;
-  ]
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+  <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h3 id="notification-list-example">Notification List Example</h3>
-<pre><code class="JSON">&quot;notifications&quot;: [
-  {
-    &quot;time&quot;: 0,
-    &quot;types&quot;: [
-      &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-      &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
-      &quot;PHONE_VIBRATE_3&quot;,
-      &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
-      &quot;PHONE_SCREEN&quot;
-    ]
-  },
-  {
-    &quot;time&quot;: 120000,
-    &quot;types&quot;: [
-      &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-      &quot;PHONE_VIBRATE_3&quot;
-    ]
-  },
-  {
-    &quot;time&quot;: 240000,
-    &quot;types&quot;: [
-      &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-      &quot;PHONE_VIBRATE_3&quot;
-    ]
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="s2">&quot;notifications&quot;</span><span class="err">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_EMA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_SCREEN&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+    <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">240000</span><span class="p">,</span>
+    <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="incentive-object">Incentive object</h2>
 <p>Incentives allow the system to be configuration for micro-payments based on the participant meeting a set of <a href="../configurations/#conditions">conditions</a> or rules.  The following must be specified:</p>
@@ -690,479 +698,481 @@
 <li><code>conditions</code>: A set of <a href="../configurations/#conditions">conditions</a> that must be met to receive this incentive.</li>
 </ul>
 <h3 id="incentive-example">Incentive Example</h3>
-<pre><code class="JSON">{
-  &quot;incentive&quot;: 0.75,
-  &quot;messages&quot;: [
-    &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
-    &quot;You will be paid $0.75&quot;,
-    &quot;Total Earning: $&quot;
-  ],
-  &quot;conditions&quot;: [
-    &quot;DATA_QUALITY_DAY_START&quot;,
-    &quot;EMA_ANSWER_5&quot;
-  ]
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+  <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;You will be paid $0.75&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;Total Earning: $&quot;</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;EMA_ANSWER_5&quot;</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h3 id="incentive-list-example">Incentive List Example</h3>
-<pre><code class="JSON">&quot;incentive_rules&quot;: [
-  {
-    &quot;incentive&quot;: 0.75,
-    &quot;messages&quot;: [
-      &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
-      &quot;You will be paid $0.75&quot;,
-      &quot;Total Earning: $&quot;
-    ],
-    &quot;conditions&quot;: [
-      &quot;DATA_QUALITY_DAY_START&quot;,
-      &quot;EMA_ANSWER_5&quot;
-    ]
-  },
-  {
-    &quot;incentive&quot;: 0.5,
-    &quot;messages&quot;: [
-      &quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;,
-      &quot;You will be paid $0.50&quot;,
-      &quot;Total Earning: $&quot;
-    ],
-    &quot;conditions&quot;: [
-      &quot;DATA_QUALITY_DAY_START&quot;
-    ]
-  },
-  {
-    &quot;incentive&quot;: 0,
-    &quot;messages&quot;: [
-      &quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;,
-      &quot;You will be paid $0.50&quot;,
-      &quot;Total Earning: $&quot;
-    ],
-    &quot;conditions&quot;: []
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="s2">&quot;incentive_rules&quot;</span><span class="err">:</span> <span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+    <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;You will be paid $0.75&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Total Earning: $&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;EMA_ANSWER_5&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+    <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Total Earning: $&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Total Earning: $&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h1 id="complete-example">Complete Example</h1>
-<pre><code class="JSON">[
-  {
-    &quot;id&quot;: &quot;RANDOM_EMA&quot;,
-    &quot;type&quot;: &quot;EMA&quot;,
-    &quot;trigger_type&quot;: &quot;RANDOM&quot;,
-    &quot;name&quot;: &quot;Random Experience Sampling&quot;,
-    &quot;enable&quot;: true,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;random_experience_sampling&quot;,
-      &quot;name&quot;: &quot;Random Experience Sampling&quot;,
-      &quot;file_name&quot;: &quot;random_experience_sampling.json&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
-      &quot;timeout&quot;: 600000
-    },
-    &quot;blocks&quot;: [
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 0,
-        &quot;end_offset&quot;: 14400000
-      },
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 14400000,
-        &quot;end_offset&quot;: 28800000
-      },
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 28800000,
-        &quot;end_offset&quot;: 43200000
-      }
-    ],
-    &quot;scheduler_rules&quot;: [
-      {
-        &quot;type&quot;: &quot;RANDOM&quot;,
-        &quot;start_time&quot;: &quot;BLOCK_START&quot;,
-        &quot;end_time&quot;: &quot;BLOCK_END&quot;,
-        &quot;divide&quot;: 2,
-        &quot;conditions&quot;: [
-          &quot;PRIVACY&quot;,
-          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-          &quot;RANDOM_EMA_60&quot;,
-          &quot;SMOKING_EMA_10&quot;,
-          &quot;EMI_10&quot;,
-          &quot;DATA_QUALITY_5&quot;,
-          &quot;NOT_DRIVING_5&quot;,
-          &quot;PHONE_BATTERY_10&quot;
-        ]
-      },
-      {
-        &quot;type&quot;: &quot;RANDOM&quot;,
-        &quot;start_time&quot;: &quot;LAST_SCHEDULE&quot;,
-        &quot;end_time&quot;: &quot;BLOCK_END&quot;,
-        &quot;divide&quot;: 2,
-        &quot;conditions&quot;: [
-          &quot;PRIVACY&quot;,
-          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-          &quot;RANDOM_EMA_60&quot;,
-          &quot;SMOKING_EMA_10&quot;,
-          &quot;EMI_10&quot;,
-          &quot;DATA_QUALITY_5&quot;,
-          &quot;NOT_DRIVING_5&quot;,
-          &quot;PHONE_BATTERY_10&quot;
-        ]
-      },
-      {
-        &quot;type&quot;: &quot;IMMEDIATE&quot;,
-        &quot;conditions&quot;: [
-          &quot;PRIVACY&quot;,
-          &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-          &quot;RANDOM_EMA_60&quot;,
-          &quot;SMOKING_EMA_10&quot;,
-          &quot;EMI_10&quot;
-        ]
-      }
-    ],
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
-          &quot;PHONE_SCREEN&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 120000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 240000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      }
-    ],
-    &quot;incentive_rules&quot;: [
-      {
-        &quot;incentive&quot;: 0.75,
-        &quot;messages&quot;: [
-          &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
-          &quot;You will be paid $0.75&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;DATA_QUALITY_DAY_START&quot;,
-          &quot;EMA_ANSWER_5&quot;
-        ]
-      },
-      {
-        &quot;incentive&quot;: 0.5,
-        &quot;messages&quot;: [
-          &quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;,
-          &quot;You will be paid $0.50&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;DATA_QUALITY_DAY_START&quot;
-        ]
-      },
-      {
-        &quot;incentive&quot;: 0,
-        &quot;messages&quot;: [
-          &quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;,
-          &quot;You will be paid $0.50&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: []
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;SMOKING_EMA&quot;,
-    &quot;type&quot;: &quot;EMA&quot;,
-    &quot;trigger_type&quot;: &quot;SELF_REPORT&quot;,
-    &quot;name&quot;: &quot;Event Contingent EMA&quot;,
-    &quot;enable&quot;: true,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;event_contingent_recording&quot;,
-      &quot;name&quot;: &quot;Event Contingent Recording&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
-      &quot;file_name&quot;: &quot;event_contingent_recording.json&quot;,
-      &quot;timeout&quot;: 600000
-    },
-    &quot;blocks&quot;: [
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 0,
-        &quot;end_offset&quot;: 14400000
-      },
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 14400000,
-        &quot;end_offset&quot;: 28800000
-      },
-      {
-        &quot;total&quot;: 1,
-        &quot;base&quot;: &quot;DAY_START&quot;,
-        &quot;start_offset&quot;: 28800000,
-        &quot;end_offset&quot;: 43200000
-      }
-    ],
-    &quot;scheduler_rules&quot;: [
-      {
-        &quot;type&quot;: &quot;IMMEDIATE&quot;,
-        &quot;data_source&quot;: {
-          &quot;type&quot;: &quot;EVENT&quot;
-        },
-        &quot;parameters&quot;: [
-          &quot;SMOKING&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;PRIVACY&quot;,
-          &quot;VALID_BLOCK_SMOKING_EMA&quot;,
-          &quot;RANDOM_EMA_10&quot;,
-          &quot;SMOKING_EMA_30&quot;,
-          &quot;EMI_10&quot;,
-          &quot;DATA_QUALITY_5&quot;,
-          &quot;NOT_DRIVING_5&quot;,
-          &quot;PHONE_BATTERY_10&quot;
-        ]
-      }
-    ],
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
-          &quot;PHONE_SCREEN&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 120000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 240000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      }
-    ],
-    &quot;incentive_rules&quot;: [
-      {
-        &quot;incentive&quot;: 0.75,
-        &quot;messages&quot;: [
-          &quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;,
-          &quot;You will be paid $0.75&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;DATA_QUALITY_DAY_START&quot;,
-          &quot;EMA_ANSWER_5&quot;
-        ]
-      },
-      {
-        &quot;incentive&quot;: 0.5,
-        &quot;messages&quot;: [
-          &quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;,
-          &quot;You will be paid $0.50&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;DATA_QUALITY_DAY_START&quot;
-        ]
-      },
-      {
-        &quot;incentive&quot;: 0,
-        &quot;messages&quot;: [
-          &quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;,
-          &quot;You will be paid $0.50&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: []
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;END_OF_DAY_EMA&quot;,
-    &quot;type&quot;: &quot;EMA&quot;,
-    &quot;trigger_type&quot;: &quot;SELF_REPORT&quot;,
-    &quot;name&quot;: &quot;End of day EMA&quot;,
-    &quot;enable&quot;: true,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;end_of_day_recording&quot;,
-      &quot;name&quot;: &quot;End of Day Recording&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.ema&quot;,
-      &quot;file_name&quot;: &quot;end_of_day_recording.json&quot;,
-      &quot;timeout&quot;: 600000
-    },
-    &quot;scheduler_rules&quot;: [
-      {
-        &quot;type&quot;: &quot;IMMEDIATE&quot;,
-        &quot;data_source&quot;: {
-          &quot;type&quot;: &quot;DAY_END&quot;
-        }
-      }
-    ],
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;,
-          &quot;PHONE_SCREEN&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 120000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      },
-      {
-        &quot;time&quot;: 240000,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;PHONE_VIBRATE_3&quot;
-        ]
-      }
-    ],
-    &quot;incentive_rules&quot;: [
-      {
-        &quot;incentive&quot;: 1,
-        &quot;messages&quot;: [
-          &quot;Thank you. You will be paid $1.00 for taking the End of Day survey.&quot;,
-          &quot;You will be paid $1.00&quot;,
-          &quot;Total Earning: $&quot;
-        ],
-        &quot;conditions&quot;: []
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;EMI&quot;,
-    &quot;type&quot;: &quot;EMI&quot;,
-    &quot;trigger_type&quot;: &quot;EVENT&quot;,
-    &quot;name&quot;: &quot;Intervention&quot;,
-    &quot;enable&quot;: true,
-    &quot;scheduler_rules&quot;: [
-      {
-        &quot;type&quot;: &quot;IMMEDIATE&quot;,
-        &quot;data_source&quot;: {
-          &quot;type&quot;: &quot;ORG_MD2K_CSTRESS_STRESS_EPISODE_CLASSIFICATION&quot;
-        },
-        &quot;parameters&quot;: [
-          &quot;0&quot;,
-          &quot;2&quot;
-        ],
-        &quot;conditions&quot;: [
-          &quot;PRIVACY&quot;,
-          &quot;RANDOM_EMA_10&quot;,
-          &quot;SMOKING_EMA_10&quot;,
-          &quot;EMI_60&quot;,
-          &quot;DATA_QUALITY_5&quot;,
-          &quot;NOT_DRIVING_5&quot;,
-          &quot;PHONE_BATTERY_10&quot;
-        ]
-      }
-    ],
-    &quot;incentive_rules&quot;: [
-      {
-        &quot;incentive&quot;: 1,
-        &quot;conditions&quot;: []
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;MOODSURFING&quot;,
-    &quot;type&quot;: &quot;EMI&quot;,
-    &quot;name&quot;: &quot;MoodSurfing&quot;,
-    &quot;trigger_type&quot;: &quot;EVENT&quot;,
-    &quot;enable&quot;: false,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;moodsurfing&quot;,
-      &quot;name&quot;: &quot;MoodSurfing&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.moodsurfing&quot;,
-      &quot;timeout&quot;: 600000
-    },
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_MOODSURFING&quot;
-        ]
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;THOUGHT_SHAKEUP&quot;,
-    &quot;type&quot;: &quot;EMI&quot;,
-    &quot;name&quot;: &quot;Thought Shakeup&quot;,
-    &quot;trigger_type&quot;: &quot;EVENT&quot;,
-    &quot;enable&quot;: false,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;thought_shakeup&quot;,
-      &quot;name&quot;: &quot;Thought Shakeup&quot;,
-      &quot;package_name&quot;: &quot;org.md2k.thoughtshakeup&quot;,
-      &quot;timeout&quot;: 600000
-    },
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;
-        ]
-      }
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;HEADSPACE&quot;,
-    &quot;type&quot;: &quot;EMI&quot;,
-    &quot;name&quot;: &quot;HeadSpace&quot;,
-    &quot;trigger_type&quot;: &quot;EVENT&quot;,
-    &quot;enable&quot;: false,
-    &quot;application&quot;: {
-      &quot;id&quot;: &quot;head_space&quot;,
-      &quot;name&quot;: &quot;HeadSpace&quot;,
-      &quot;package_name&quot;: &quot;com.getsomeheadspace.android&quot;,
-      &quot;timeout&quot;: 1000
-    },
-    &quot;notifications&quot;: [
-      {
-        &quot;time&quot;: 0,
-        &quot;types&quot;: [
-          &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-          &quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;,
-          &quot;PHONE_VIBRATE_3&quot;,
-          &quot;PHONE_MESSAGE_HEADSPACE&quot;
-        ]
-      }
-    ]
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Random Experience Sampling&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Random Experience Sampling&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling.json&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;blocks&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">43200000</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;scheduler_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_END&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;divide&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_time&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_SCHEDULE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;end_time&quot;</span><span class="p">:</span> <span class="s2">&quot;BLOCK_END&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;divide&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IMMEDIATE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMI_10&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_SCREEN&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">240000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;incentive_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.75&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMA_ANSWER_5&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;SELF_REPORT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Event Contingent EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;event_contingent_recording&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Event Contingent Recording&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;event_contingent_recording.json&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;blocks&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">14400000</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;total&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;start_offset&quot;</span><span class="p">:</span> <span class="mi">28800000</span><span class="p">,</span>
+        <span class="nt">&quot;end_offset&quot;</span><span class="p">:</span> <span class="mi">43200000</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;scheduler_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IMMEDIATE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;SMOKING&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;VALID_BLOCK_SMOKING_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RANDOM_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMOKING_EMA_30&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_SCREEN&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">240000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;incentive_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. You will be paid $0.75 for taking the survey within 5 minutes and wearing the sensors for more than 60% of the time since day started.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.75&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMA_ANSWER_5&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. You will be paid $0.50 for taking the survey and wearing the sensors for more than 60% of the time since day started. But you missed $0.25 bonus for not answering the survey within 5 minutes.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. Unfortunately, you will be paid $0.00 because you have not worn sensors for at least 60% of the time since day started.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $0.50&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;END_OF_DAY_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;SELF_REPORT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End of day EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;end_of_day_recording&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End of Day Recording&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;end_of_day_recording.json&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;scheduler_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IMMEDIATE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DAY_END&quot;</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_EMA&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_SCREEN&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">240000</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;incentive_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;messages&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;Thank you. You will be paid $1.00 for taking the End of Day survey.&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;You will be paid $1.00&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;Total Earning: $&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Intervention&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="nt">&quot;scheduler_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;IMMEDIATE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ORG_MD2K_CSTRESS_STRESS_EPISODE_CLASSIFICATION&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;2&quot;</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;RANDOM_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;EMI_60&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_BATTERY_10&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;incentive_rules&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;incentive&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;conditions&quot;</span><span class="p">:</span> <span class="p">[]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MOODSURFING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MoodSurfing&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;moodsurfing&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MoodSurfing&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.moodsurfing&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_MOODSURFING&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;THOUGHT_SHAKEUP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Thought Shakeup&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;thought_shakeup&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Thought Shakeup&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.thoughtshakeup&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;HEADSPACE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;HeadSpace&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;trigger_type&quot;</span><span class="p">:</span> <span class="s2">&quot;EVENT&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;head_space&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;HeadSpace&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;com.getsomeheadspace.android&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">1000</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;notifications&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;time&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+        <span class="nt">&quot;types&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+          <span class="s2">&quot;PHONE_MESSAGE_HEADSPACE&quot;</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
           <aside class="copyright" role="note">
             
               &copy; MD2K 2016 &ndash;

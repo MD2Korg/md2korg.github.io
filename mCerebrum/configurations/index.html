@@ -151,7 +151,7 @@
         <strong>
           MD2K Software Documentation
           <span class="version">
-            1.0.0
+            
           </span>
         </strong>
         
@@ -167,7 +167,7 @@
         <ul class="repo">
           <li class="repo-download">
             
-            <a href="https://github.com/MD2Korg//archive/1.0.0.zip" target="_blank" title="Download" data-action="download">
+            <a href="https://github.com/MD2Korg//archive/master.zip" target="_blank" title="Download" data-action="download">
               <i class="icon icon-download"></i> Download
             </a>
           </li>
@@ -424,62 +424,63 @@
 <h1 id="generic-structures">Generic structures</h1>
 <h2 id="data-source">Data source</h2>
 <p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
-<pre><code class="JSON">{
-  &quot;type&quot;: &quot;MEMORY&quot;,
-  &quot;id&quot;: &quot;DataSourceID&quot;,
-  &quot;platform&quot;: {
-    &quot;id&quot;: &quot;Phone1&quot;,
-    &quot;type&quot;: &quot;PHONE&quot;,
-    &quot;metadata&quot;: {
-      &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
-      &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
-      &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
-      &quot;NAME&quot;: &quot;Phone&quot;
-    }
-  },
-  &quot;platformapp&quot;: {
-    &quot;id&quot;: &quot;platformapp1&quot;,
-    &quot;type&quot;: &quot;PHONEAPP&quot;,
-    &quot;metadata&quot;: {
-      &quot;NAME&quot;: &quot;PhoneApp&quot;
-    }
-  },
-  &quot;application&quot;: {
-    &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
-    &quot;type&quot;: &quot;PhoneApp&quot;,
-    &quot;metadata&quot;: {
-      &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
-      &quot;VERSION_NUMBER&quot;: &quot;11&quot;
-    }
-  },
-  &quot;dataDescriptors&quot;: [
-    {
-      &quot;UNIT&quot;: &quot;megabyte&quot;,
-      &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
-      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-      &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-      &quot;MIN_VALUE&quot;: &quot;0&quot;,
-      &quot;DATA_TYPE&quot;: &quot;float&quot;,
-      &quot;NAME&quot;: &quot;Size&quot;
-    },
-    {
-      &quot;UNIT&quot;: &quot;megabyte&quot;,
-      &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
-      &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-      &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-      &quot;MIN_VALUE&quot;: &quot;0&quot;,
-      &quot;DATA_TYPE&quot;: &quot;float&quot;,
-      &quot;NAME&quot;: &quot;Available&quot;
-    }
-  ],
-  &quot;metadata&quot;: {
-    &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
-    &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-    &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
-    &quot;NAME&quot;: &quot;Memory&quot;
-  }
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSourceID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;OPERATING_SYSTEM&quot;</span><span class="p">:</span> <span class="s2">&quot;5.1.1&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MODEL&quot;</span><span class="p">:</span> <span class="s2">&quot;SAMSUNG-SM-G900A&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MANUFACTURER&quot;</span><span class="p">:</span> <span class="s2">&quot;samsung&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;platformapp&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;platformapp1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONEAPP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;PhoneApp&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.phonesensor&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PhoneApp&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;VERSION_NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;VERSION_NUMBER&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;dataDescriptors&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Size of the memory&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Size&quot;</span>
+    <span class="p">},</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Available memory&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Available&quot;</span>
+    <span class="p">}</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;measures usage of memory&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Memory&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <p>Querying supports a subset of the fields as specified below and all fields are optional to include additional data stream.  Any data stream that matches all specified parameter is returned.</p>
 <ul>
@@ -487,23 +488,24 @@
 <li><code>id</code>: TODO: What does id mean here?</li>
 </ul>
 <p><code>Platform</code>, <code>platformapp</code>, and <code>application</code> each contain specific <code>type</code> and <code>id</code> fields that are identically defined.</p>
-<pre><code class="JSON">{
-  &quot;type&quot;: &quot;MEMORY&quot;,
-  &quot;id&quot;: &quot;DataSourceID&quot;,
-  &quot;platform&quot;: {
-    &quot;id&quot;: &quot;Phone1&quot;,
-    &quot;type&quot;: &quot;PHONE&quot;
-  },
-  &quot;platformapp&quot;: {
-    &quot;id&quot;: &quot;platformapp1&quot;,
-    &quot;type&quot;: &quot;PHONEAPP&quot;
-  },
-  &quot;application&quot;: {
-    &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
-    &quot;type&quot;: &quot;PhoneApp&quot;
-  }
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSourceID&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;platformapp&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;platformapp1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONEAPP&quot;</span>
+  <span class="p">},</span>
+  <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.phonesensor&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PhoneApp&quot;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h2 id="privacy-type-options">Privacy type options</h2>
 <p>Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
@@ -514,17 +516,18 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>summary</code>: Summary description for display on the user interface for additional details</li>
 <li><code>source</code>: list of <a href="#data-source">data sources</a> (TODO: Why is this different than the listed data source definition?)</li>
 </ul>
-<pre><code class="JSON">{
-  &quot;id&quot;: &quot;location&quot;,
-  &quot;title&quot;: &quot;Location&quot;,
-  &quot;summary&quot;: &quot;&quot;,
-  &quot;source&quot;: [
-    {
-      &quot;datasource_type&quot;: &quot;LOCATION&quot;
-    }
-  ]
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Location&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="p">{</span>
+      <span class="nt">&quot;datasource_type&quot;</span><span class="p">:</span> <span class="s2">&quot;LOCATION&quot;</span>
+    <span class="p">}</span>
+  <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h2 id="notification">Notification</h2>
 <p>Notifications are handled by mCerebrum by sending a notification object to the notification manager application.  This is the definition of the object and certain fields are require depending on the targeted notification device.  Please refer to the device specific documentation.</p>
@@ -545,349 +548,351 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>duration</code>: How long in milliseconds to alert for each notification iteration</li>
 </ul>
 <h3 id="example">Example</h3>
-<pre><code class="JSON">[
-  {
-    &quot;id&quot;: &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
-    &quot;name&quot;: &quot;Microsoft Band Vibration&quot;,
-    &quot;type&quot;: &quot;VIBRATION&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
-      }
-    },
-    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
-    &quot;repeat&quot;: 3,
-    &quot;duration&quot;: 2000
-  },
-  {
-    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_EMA&quot;,
-    &quot;name&quot;: &quot;Microsoft Band Message (EMA)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;Survey&quot;,
-      &quot;Time to take a Survey&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;,
-    &quot;name&quot;: &quot;Microsoft Band Message (MoodSurfing)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;Mood Surfing&quot;,
-      &quot;Take a moment to surf your mood&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;,
-    &quot;name&quot;: &quot;Microsoft Band Message (Head Space)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;HeadSpace&quot;,
-      &quot;Time a moment to make some head space&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;,
-    &quot;name&quot;: &quot;Microsoft Band Message (Thought Shakeup)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;MICROSOFT_BAND&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;Thought Shakeup&quot;,
-      &quot;Take a moment to shake up your thoughts&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_VIBRATE_3&quot;,
-    &quot;name&quot;: &quot;Phone Vibration&quot;,
-    &quot;type&quot;: &quot;VIBRATION&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;format&quot;: &quot;THREE_TONE&quot;,
-    &quot;repeat&quot;: 3,
-    &quot;duration&quot;: 1500
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_TONE_3&quot;,
-    &quot;name&quot;: &quot;Phone Tone&quot;,
-    &quot;type&quot;: &quot;TONE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
-    &quot;repeat&quot;: 3,
-    &quot;duration&quot;: 1500
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
-    &quot;name&quot;: &quot;Phone Screen&quot;,
-    &quot;type&quot;: &quot;SCREEN&quot;,
-    &quot;priority&quot;: 0,
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA&quot;,
-    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;Survey&quot;,
-      &quot;Time to take a Survey&quot;,
-      &quot;OK&quot;,
-      &quot;Cancel&quot;,
-      &quot;Delay 10 Minutes&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: true,
-      &quot;delay&quot;: true,
-      &quot;delay_time&quot;: 600000
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;,
-    &quot;name&quot;: &quot;Phone Message (EMA)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 300000,
-    &quot;message&quot;: [
-      &quot;Survey&quot;,
-      &quot;Time to take a Survey&quot;,
-      &quot;OK&quot;,
-      &quot;Cancel&quot;,
-      &quot;Delay&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: true,
-      &quot;delay&quot;: true,
-      &quot;delay_time&quot;: -1
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_MOODSURFING&quot;,
-    &quot;name&quot;: &quot;Phone Message (MoodSurfing)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 120000,
-    &quot;message&quot;: [
-      &quot;Mood Surfing&quot;,
-      &quot;Take a moment to surf your mood&quot;,
-      &quot;OK&quot;,
-      &quot;Cancel&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: true,
-      &quot;delay&quot;: false
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;,
-    &quot;name&quot;: &quot;Phone Message (ThoughtShakeup)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 120000,
-    &quot;message&quot;: [
-      &quot;Thought Shakeup&quot;,
-      &quot;Take a moment to shake up your thoughts&quot;,
-      &quot;OK&quot;,
-      &quot;Cancel&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: true,
-      &quot;delay&quot;: false
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_HEADSPACE&quot;,
-    &quot;name&quot;: &quot;Phone Message (HeadSpace)&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 120000,
-    &quot;message&quot;: [
-      &quot;HeadSpace&quot;,
-      &quot;Time a moment to make some head space&quot;,
-      &quot;OK&quot;,
-      &quot;Cancel&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: true,
-      &quot;delay&quot;: false
-    }
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Vibration&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;VIBRATION&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;THREE_TONE_HIGH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">2000</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Message (EMA)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Survey&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Time to take a Survey&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_MOODSURFING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Message (MoodSurfing)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Mood Surfing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Take a moment to surf your mood&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_HEADSPACE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Message (Head Space)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;HeadSpace&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Time a moment to make some head space&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_MESSAGE_THOUGHTSHAKEUP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Message (Thought Shakeup)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Thought Shakeup&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Take a moment to shake up your thoughts&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_VIBRATE_3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Vibration&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;VIBRATION&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;THREE_TONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1500</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_TONE_3&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Tone&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;TONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;THREE_TONE_HIGH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">1500</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_SCREEN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Screen&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SCREEN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Message (EMA)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Survey&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Time to take a Survey&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Cancel&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Delay 10 Minutes&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay_time&quot;</span><span class="p">:</span> <span class="mi">600000</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_DELAY_EMA_15_30_60_120&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Message (EMA)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">300000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Survey&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Time to take a Survey&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Cancel&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Delay&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay_time&quot;</span><span class="p">:</span> <span class="mi">-1</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_MOODSURFING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Message (MoodSurfing)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Mood Surfing&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Take a moment to surf your mood&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Cancel&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_THOUGHTSHAKEUP&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Message (ThoughtShakeup)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Thought Shakeup&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Take a moment to shake up your thoughts&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Cancel&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_HEADSPACE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Message (HeadSpace)&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">120000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;HeadSpace&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Time a moment to make some head space&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Cancel&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="study-notifications">Study notifications</h2>
 <p>TODO:</p>
-<pre><code class="JSON">[
-  {
-    &quot;id&quot;: &quot;PHONE_VIBRATE&quot;,
-    &quot;name&quot;: &quot;Phone Vibration&quot;,
-    &quot;type&quot;: &quot;VIBRATION&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;format&quot;: &quot;THREE_TONE&quot;,
-    &quot;repeat&quot;: 60,
-    &quot;duration&quot;: 10800000
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_TONE&quot;,
-    &quot;name&quot;: &quot;Phone Tone&quot;,
-    &quot;type&quot;: &quot;TONE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;format&quot;: &quot;THREE_TONE_HIGH&quot;,
-    &quot;repeat&quot;: 60,
-    &quot;duration&quot;: 10800000
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_SCREEN&quot;,
-    &quot;name&quot;: &quot;Phone Screen&quot;,
-    &quot;type&quot;: &quot;SCREEN&quot;,
-    &quot;priority&quot;: 0,
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 10000,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_START_DAY&quot;,
-    &quot;name&quot;: &quot;Start Day&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 3600000000,
-    &quot;message&quot;: [
-      &quot;Start Day&quot;,
-      &quot;Please start the Day&quot;,
-      &quot;OK&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: false,
-      &quot;delay&quot;: false
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PHONE_MESSAGE_END_DAY&quot;,
-    &quot;name&quot;: &quot;End Day&quot;,
-    &quot;type&quot;: &quot;MESSAGE&quot;,
-    &quot;priority&quot;: 0,
-    &quot;datasource&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;PHONE&quot;
-      }
-    },
-    &quot;repeat&quot;: 1,
-    &quot;duration&quot;: 3600000000,
-    &quot;message&quot;: [
-      &quot;End Day&quot;,
-      &quot;Please end the Day&quot;,
-      &quot;OK&quot;
-    ],
-    &quot;response_option&quot;: {
-      &quot;ok&quot;: true,
-      &quot;cancel&quot;: false,
-      &quot;delay&quot;: false
-    }
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_VIBRATE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Vibration&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;VIBRATION&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;THREE_TONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10800000</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_TONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Tone&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;TONE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;format&quot;</span><span class="p">:</span> <span class="s2">&quot;THREE_TONE_HIGH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">60</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10800000</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_SCREEN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Screen&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;SCREEN&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">10000</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_START_DAY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Start Day&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">3600000000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;Start Day&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Please start the Day&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_MESSAGE_END_DAY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End Day&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MESSAGE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;priority&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
+      <span class="p">}</span>
+    <span class="p">},</span>
+    <span class="nt">&quot;repeat&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+    <span class="nt">&quot;duration&quot;</span><span class="p">:</span> <span class="mi">3600000000</span><span class="p">,</span>
+    <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;End Day&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;Please end the Day&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;OK&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;response_option&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;ok&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="nt">&quot;cancel&quot;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+      <span class="nt">&quot;delay&quot;</span><span class="p">:</span> <span class="kc">false</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="conditions">Conditions</h2>
 <p>Conditions provide a mechanism to specify constraints based on the output of various sensors and data streams.  They are
@@ -900,225 +905,227 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 <li><code>data_source</code>: An single object as defined in the <a href="#data-source">data source</a> query support</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre><code class="JSON">[
-  {
-    &quot;id&quot;: &quot;PHONE_BATTERY_10&quot;,
-    &quot;type&quot;: &quot;PHONE_BATTERY&quot;,
-    &quot;name&quot;: &quot;Phone battery percentage is greater than 10&quot;,
-    &quot;values&quot;: [
-      &quot;10&quot;
-    ],
-    &quot;data_source&quot;: {
-      &quot;application&quot;: {
-        &quot;id&quot;: &quot;org.md2k.phonesensor&quot;
-      },
-      &quot;type&quot;: &quot;BATTERY&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;NOT_ACTIVE_1&quot;,
-    &quot;type&quot;: &quot;NOT_ACTIVE&quot;,
-    &quot;name&quot;: &quot;Not physically active in last 1 minute&quot;,
-    &quot;values&quot;: [
-      &quot;60000&quot;,
-      &quot;0&quot;
-    ],
-    &quot;data_source&quot;: {
-      &quot;application&quot;: {
-        &quot;id&quot;: &quot;org.md2k.streamprocessor&quot;
-      },
-      &quot;type&quot;: &quot;STRESS_ACTIVITY&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;NOT_DRIVING_5&quot;,
-    &quot;type&quot;: &quot;NOT_DRIVING&quot;,
-    &quot;name&quot;: &quot;Not driving in last 5 minutes&quot;,
-    &quot;values&quot;: [
-      &quot;300000&quot;,
-      &quot;60&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;DATA_QUALITY_5&quot;,
-    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-    &quot;name&quot;: &quot;Data quality good in last 5 minutes&quot;,
-    &quot;values&quot;: [
-      &quot;300000&quot;,
-      &quot;80&quot;
-    ],
-    &quot;data_source&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-      &quot;id&quot;: &quot;RESPIRATION&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;DATA_QUALITY_DAY_START&quot;,
-    &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-    &quot;name&quot;: &quot;Data quality good from the day started&quot;,
-    &quot;values&quot;: [
-      &quot;DAY_START&quot;,
-      &quot;60&quot;
-    ],
-    &quot;data_source&quot;: {
-      &quot;platform&quot;: {
-        &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
-      },
-      &quot;type&quot;: &quot;DATA_QUALITY&quot;,
-      &quot;id&quot;: &quot;RESPIRATION&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;EMA_ANSWER_5&quot;,
-    &quot;type&quot;: &quot;EMA_ANSWER&quot;,
-    &quot;name&quot;: &quot;EMA answered in 5 Minutes&quot;,
-    &quot;values&quot;: [
-      &quot;300000&quot;
-    ]
-  },
-  {
-    &quot;id&quot;: &quot;RANDOM_EMA_60&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered Random EMA 60 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;3600000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;RANDOM_EMA_10&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered Random EMA 10 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;600000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;SMOKING_EMA_10&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 10 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;600000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;SMOKING_EMA_30&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered SMOKING EMA 30 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;1800000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;EMI_10&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;600000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;EMI&quot;,
-      &quot;type&quot;: &quot;EMI&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;EMI_60&quot;,
-    &quot;type&quot;: &quot;LAST_EMA_EMI&quot;,
-    &quot;name&quot;: &quot;Last Triggered EMI 10 minute ago&quot;,
-    &quot;values&quot;: [
-      &quot;3600000&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;EMI&quot;,
-      &quot;type&quot;: &quot;EMI&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;VALID_BLOCK_SMOKING_EMA&quot;,
-    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
-    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
-    &quot;values&quot;: [
-      &quot;1&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;SMOKING_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;VALID_BLOCK_RANDOM_EMA&quot;,
-    &quot;type&quot;: &quot;VALID_BLOCK&quot;,
-    &quot;name&quot;: &quot;No EMA/EMI triggered in this block&quot;,
-    &quot;values&quot;: [
-      &quot;1&quot;
-    ],
-    &quot;source&quot;: {
-      &quot;id&quot;: &quot;RANDOM_EMA&quot;,
-      &quot;type&quot;: &quot;EMA&quot;
-    }
-  },
-  {
-    &quot;id&quot;: &quot;PRIVACY&quot;,
-    &quot;type&quot;: &quot;PRIVACY&quot;,
-    &quot;name&quot;: &quot;Privacy is active&quot;,
-    &quot;data_source&quot;: {
-      &quot;type&quot;: &quot;PRIVACY&quot;
-    }
-  }
-]
-</code></pre>
+<div class="code"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_BATTERY_10&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_BATTERY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone battery percentage is greater than 10&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;10&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.phonesensor&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;BATTERY&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;NOT_ACTIVE_1&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NOT_ACTIVE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Not physically active in last 1 minute&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;60000&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;0&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.streamprocessor&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;STRESS_ACTIVITY&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;NOT_DRIVING_5&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;NOT_DRIVING&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Not driving in last 5 minutes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;300000&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;60&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY_5&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data quality good in last 5 minutes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;300000&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;80&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTOSENSE_CHEST&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RESPIRATION&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY_DAY_START&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Data quality good from the day started&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;DAY_START&quot;</span><span class="p">,</span>
+      <span class="s2">&quot;60&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTOSENSE_CHEST&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;DATA_QUALITY&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RESPIRATION&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA_ANSWER_5&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA_ANSWER&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA answered in 5 Minutes&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;300000&quot;</span>
+    <span class="p">]</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA_60&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered Random EMA 60 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;3600000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA_10&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered Random EMA 10 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;600000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA_10&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered SMOKING EMA 10 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;600000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA_30&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered SMOKING EMA 30 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;1800000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI_10&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered EMI 10 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;600000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI_60&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;LAST_EMA_EMI&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Last Triggered EMI 10 minute ago&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;3600000&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMI&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;VALID_BLOCK_SMOKING_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;VALID_BLOCK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;No EMA/EMI triggered in this block&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;1&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;SMOKING_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;VALID_BLOCK_RANDOM_EMA&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;VALID_BLOCK&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;No EMA/EMI triggered in this block&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;values&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="s2">&quot;1&quot;</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;RANDOM_EMA&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;EMA&quot;</span>
+    <span class="p">}</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PRIVACY&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Privacy is active&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;data_source&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PRIVACY&quot;</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+
 
 <h2 id="base">Base</h2>
 <p>Defined in main application JSON file</p>
-<pre><code class="JSON">{
-    &quot;day_start&quot;: {
-        &quot;by&quot;: &quot;user&quot;,
-        &quot;base&quot;: &quot;wakeup&quot;,
-        &quot;notify&quot;: [
-          {
-            &quot;type&quot;: &quot;button&quot;,
-            &quot;offset&quot;: -30000
-          },
-          {
-            &quot;type&quot;: &quot;prompt&quot;,
-            &quot;offset&quot;: 0,
-            &quot;parameters&quot;: [
-              &quot;PHONE_SCREEN&quot;,
-              &quot;PHONE_MESSAGE_START_DAY&quot;
-            ]
-          },
-          {
-            &quot;type&quot;: &quot;notification&quot;,
-            &quot;offset&quot;: 30000,
-            &quot;parameters&quot;: [
-              &quot;PHONE_VIBRATE&quot;,
-              &quot;PHONE_TONE&quot;,
-              &quot;PHONE_SCREEN&quot;,
-              &quot;PHONE_MESSAGE_START_DAY&quot;
-            ]
-          }
-        ]
-      }
-}
-</code></pre>
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;day_start&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;wakeup&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;notify&quot;</span><span class="p">:</span> <span class="p">[</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;button&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">-30000</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;prompt&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span>
+            <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;PHONE_SCREEN&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;PHONE_MESSAGE_START_DAY&quot;</span>
+            <span class="p">]</span>
+          <span class="p">},</span>
+          <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;notification&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">30000</span><span class="p">,</span>
+            <span class="nt">&quot;parameters&quot;</span><span class="p">:</span> <span class="p">[</span>
+              <span class="s2">&quot;PHONE_VIBRATE&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;PHONE_TONE&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;PHONE_SCREEN&quot;</span><span class="p">,</span>
+              <span class="s2">&quot;PHONE_MESSAGE_START_DAY&quot;</span>
+            <span class="p">]</span>
+          <span class="p">}</span>
+        <span class="p">]</span>
+      <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+
 
 <h1 id="notification-manager">Notification Manager</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
