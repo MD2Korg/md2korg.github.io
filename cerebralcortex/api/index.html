@@ -66,6 +66,8 @@
       </style>
     
     
+      <link rel="stylesheet" href="../../extra.css">
+    
       <link rel="stylesheet" href="../../css/md2k.css">
     
     <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
@@ -461,33 +463,33 @@
 <h2 id="register-participant">Register Participant</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="register-study">Register Study</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;identifier&quot;: &quot;Study XYZ&quot;,
     &quot;name&quot;: &quot;Study Name&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="register-participant-in-study">Register Participant in Study</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies/register_participant</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
     &quot;study_id&quot;: 4
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="register-data-source">Register Data Source</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
     &quot;datasource&quot;: {
         &quot;type&quot;: &quot;MEMORY&quot;,
@@ -534,13 +536,13 @@
             &quot;NAME&quot;: &quot;Memory&quot;
         }
     }
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="load-data-for-each-data-stream">Load data for each data stream</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;datastream_id&quot;: 5,
     &quot;data&quot;: [
         {
@@ -561,8 +563,8 @@
             ]
         }
     ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="participant-registration">Participant registration</h1>
 <p>JSON API for participant registration</p>
@@ -581,37 +583,37 @@
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Response</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
   &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
   &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
   &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
     &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Reponse</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
   &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
   &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
   &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="study-registration">Study registration</h1>
 <p>JSON API for study registration</p>
@@ -631,21 +633,21 @@
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;identifier&quot;: &quot;Study XYZ&quot;,
     &quot;name&quot;: &quot;Study Name&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Reponse</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;id&quot;: 4,
   &quot;identifier&quot;: &quot;Study XYZ&quot;,
   &quot;name&quot;: &quot;Study Name&quot;,
   &quot;created_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;,
   &quot;updated_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="participant-study-registration">Participant-Study registration</h1>
 <p>JSON API for registering an existing participant in and existing study</p>
@@ -665,26 +667,26 @@
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
     &quot;study_id&quot;: 4
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Reponse</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;id&quot;: 19,
   &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
   &quot;study_id&quot;: 4,
   &quot;created_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;,
   &quot;updated_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="datasource-registration">Datasource registration</h1>
 <p>JSON API for data source registration</p>
 <p>Request Structure</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;participant_id&quot;: UUID,
     &quot;datasource&quot;: {
         &quot;type&quot;: String,
@@ -717,8 +719,8 @@
             ...
         ]
     }
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Response fields</em></p>
 <ul>
@@ -729,7 +731,7 @@
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
     &quot;datasource&quot;: {
         &quot;type&quot;: &quot;MEMORY&quot;,
@@ -776,16 +778,16 @@
             &quot;NAME&quot;: &quot;Memory&quot;
         }
     }
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Reponse</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;status&quot;: &quot;ok&quot;,
   &quot;message&quot;: &quot;Successfully loaded datasource&quot;,
   &quot;datastream_id&quot;: &quot;908&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="data-point-bulk-loader">Data point bulk loader</h1>
 <p>JSON API for data point bulk loading</p>
@@ -795,7 +797,7 @@
 <li>Postgresql and Cassandra (rawdatapoints)</li>
 </ul>
 <p>Request Structure</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;datastream_id&quot;: Integer from datasource_registration process,
     &quot;data&quot;: [
         {
@@ -805,8 +807,8 @@
         },
         ...
     ]
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Response fields</em></p>
 <ul>
@@ -817,7 +819,7 @@
 <p><em>Example</em></p>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
-<pre class="code"><code>{
+<pre><code>{
     &quot;datastream_id&quot;: 5,
     &quot;data&quot;: [
         {
@@ -838,15 +840,16 @@
             ]
         }
     ]
-}</code></pre>
-
+}
+</code></pre>
 
 <p><em>Reponse</em></p>
-<pre class="code"><code>{
+<pre><code>{
   &quot;status&quot;: &quot;ok&quot;,
   &quot;message&quot;: &quot;Successfully loaded datapoints&quot;,
   &quot;count&quot;: 2
-}</code></pre>
+}
+</code></pre>
           <aside class="copyright" role="note">
             
               MD2K 2016 &ndash;

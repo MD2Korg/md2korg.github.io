@@ -66,6 +66,8 @@
       </style>
     
     
+      <link rel="stylesheet" href="../../extra.css">
+    
       <link rel="stylesheet" href="../../css/md2k.css">
     
     <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
@@ -470,11 +472,11 @@
 </li>
 </ul>
 <h3 id="example">Example</h3>
-<pre class="code"><code class="language-JSON">&quot;database&quot;: {
+<pre><code class="JSON">&quot;database&quot;: {
   &quot;enabled&quot;: true,
   &quot;location&quot;: &quot;INTERNAL_SDCARD&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="archive">Archive</h2>
 <p>This section configures the archive options for DataKit:</p>
@@ -489,12 +491,12 @@
 <li><code>interval</code>: Delay in milliseconds from when a datapoint is logged in the system and when it is eligible for archiving</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre class="code"><code class="language-JSON">&quot;archive&quot;: {
+<pre><code class="JSON">&quot;archive&quot;: {
   &quot;enabled&quot;: true,
   &quot;location&quot;: &quot;EXTERNAL_SDCARD_PREFERRED&quot;,
   &quot;interval&quot;: 86400000
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="upload">Upload</h2>
 <p>This section configures the upload to Cerebral Cortex options for DataKit:</p>
@@ -505,7 +507,7 @@
 <li><code>restricted_datasource</code>: List of <a href="#data-streams">datastreams</a> eligible for upload restrictions</li>
 </ul>
 <h3 id="example_2">Example</h3>
-<pre class="code"><code class="language-JSON">&quot;upload&quot;: {
+<pre><code class="JSON">&quot;upload&quot;: {
   &quot;enabled&quot;: true,
   &quot;interval&quot;: 900000,
   &quot;url&quot;: &quot;https://cerebralcortex.SITE.ORG/&quot;,
@@ -517,8 +519,8 @@
       &quot;type&quot;: &quot;LOCATION&quot;
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="privacy">Privacy</h2>
 <p>This section configures the privacy controller for DataKit:</p>
@@ -532,7 +534,7 @@
 <li><code>privacy_type_options</code>: A list of <a href="../configurations/#privacy-type-options">privacy types</a></li>
 </ul>
 <h3 id="example_3">Example</h3>
-<pre class="code"><code class="language-JSON">&quot;privacy&quot;: {
+<pre><code class="JSON">&quot;privacy&quot;: {
   &quot;duration_options&quot;: [
     {
       &quot;id&quot;: &quot;300000&quot;,
@@ -631,11 +633,11 @@
       ]
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="complete-example">Complete Example</h2>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;database&quot;: {
     &quot;enabled&quot;: true,
     &quot;location&quot;: &quot;INTERNAL_SDCARD&quot;
@@ -758,7 +760,8 @@
       }
     ]
   }
-}</code></pre>
+}
+</code></pre>
           <aside class="copyright" role="note">
             
               MD2K 2016 &ndash;

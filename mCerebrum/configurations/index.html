@@ -66,6 +66,8 @@
       </style>
     
     
+      <link rel="stylesheet" href="../../extra.css">
+    
       <link rel="stylesheet" href="../../css/md2k.css">
     
     <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
@@ -427,7 +429,7 @@
 <h1 id="generic-structures">Generic structures</h1>
 <h2 id="data-source">Data source</h2>
 <p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;type&quot;: &quot;MEMORY&quot;,
   &quot;id&quot;: &quot;DataSourceID&quot;,
   &quot;platform&quot;: {
@@ -481,8 +483,8 @@
     &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
     &quot;NAME&quot;: &quot;Memory&quot;
   }
-}</code></pre>
-
+}
+</code></pre>
 
 <p>Querying supports a subset of the fields as specified below and all fields are optional to include additional data stream.  Any data stream that matches all specified parameter is returned.</p>
 <ul>
@@ -490,7 +492,7 @@
 <li><code>id</code>: TODO: What does id mean here?</li>
 </ul>
 <p><code>Platform</code>, <code>platformapp</code>, and <code>application</code> each contain specific <code>type</code> and <code>id</code> fields that are identically defined.</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;type&quot;: &quot;MEMORY&quot;,
   &quot;id&quot;: &quot;DataSourceID&quot;,
   &quot;platform&quot;: {
@@ -505,8 +507,8 @@
     &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
     &quot;type&quot;: &quot;PhoneApp&quot;
   }
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="privacy-type-options">Privacy type options</h2>
 <p>Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
@@ -517,7 +519,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>summary</code>: Summary description for display on the user interface for additional details</li>
 <li><code>source</code>: list of <a href="#data-source">data sources</a> (TODO: Why is this different than the listed data source definition?)</li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;id&quot;: &quot;location&quot;,
   &quot;title&quot;: &quot;Location&quot;,
   &quot;summary&quot;: &quot;&quot;,
@@ -526,8 +528,8 @@ that prevents data sources that match the define <code>source</code> criteria fr
       &quot;datasource_type&quot;: &quot;LOCATION&quot;
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="notification">Notification</h2>
 <p>Notifications are handled by mCerebrum by sending a notification object to the notification manager application.  This is the definition of the object and certain fields are require depending on the targeted notification device.  Please refer to the device specific documentation.</p>
@@ -548,7 +550,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>duration</code>: How long in milliseconds to alert for each notification iteration</li>
 </ul>
 <h3 id="example">Example</h3>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;MICROSOFT_BAND_VIBRATE_3&quot;,
     &quot;name&quot;: &quot;Microsoft Band Vibration&quot;,
@@ -796,12 +798,12 @@ that prevents data sources that match the define <code>source</code> criteria fr
       &quot;delay&quot;: false
     }
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="study-notifications">Study notifications</h2>
 <p>TODO:</p>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;PHONE_VIBRATE&quot;,
     &quot;name&quot;: &quot;Phone Vibration&quot;,
@@ -889,8 +891,8 @@ that prevents data sources that match the define <code>source</code> criteria fr
       &quot;delay&quot;: false
     }
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="conditions">Conditions</h2>
 <p>Conditions provide a mechanism to specify constraints based on the output of various sensors and data streams.  They are
@@ -903,7 +905,7 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 <li><code>data_source</code>: An single object as defined in the <a href="#data-source">data source</a> query support</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;PHONE_BATTERY_10&quot;,
     &quot;type&quot;: &quot;PHONE_BATTERY&quot;,
@@ -1086,12 +1088,12 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
       &quot;type&quot;: &quot;PRIVACY&quot;
     }
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="base">Base</h2>
 <p>Defined in main application JSON file</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
     &quot;day_start&quot;: {
         &quot;by&quot;: &quot;user&quot;,
         &quot;base&quot;: &quot;wakeup&quot;,
@@ -1120,8 +1122,8 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
           }
         ]
       }
-}</code></pre>
-
+}
+</code></pre>
 
 <h1 id="notification-manager">Notification Manager</h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>

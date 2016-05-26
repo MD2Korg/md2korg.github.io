@@ -66,6 +66,8 @@
       </style>
     
     
+      <link rel="stylesheet" href="../../extra.css">
+    
       <link rel="stylesheet" href="../../css/md2k.css">
     
     <script src="../../assets/javascripts/modernizr-4ab42b99fd.js"></script>
@@ -502,7 +504,7 @@
 <p>Config file name and location: <code>mCerebrum/org.md2k.study/config.json</code></p>
 <h3 id="structure-overview">Structure Overview</h3>
 <p>This is the general structure of the mCerebrum configuration file.  Please see additional details in the following subsections.</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;config_info&quot;: {
     CONFIG_INFO
   },
@@ -541,8 +543,8 @@
   &quot;day_end&quot;: {
     DAY_END
   }
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="config-info">Config Info</h2>
 <p>The config info key specifies several required pieces of information and defines which resources are required.</p>
@@ -553,7 +555,7 @@
 <li><code>required_files</code>: List of files required to be present in the configuration folder before allowing the system to be configured.</li>
 </ul>
 <h3 id="example">Example</h3>
-<pre class="code"><code class="language-JSON">&quot;config_info&quot;: {
+<pre><code class="JSON">&quot;config_info&quot;: {
   &quot;id&quot;: &quot;STU00201566-Test&quot;,
   &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;,
   &quot;version_code&quot;: 21,
@@ -578,8 +580,8 @@
     &quot;org.md2k.study/notification.json&quot;,
     &quot;org.md2k.study/tutorial.pdf&quot;
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="study-info">Study Info</h2>
 <p>This object defines the specific study for the the configuration.</p>
@@ -588,11 +590,11 @@
 <li><code>name</code>: Human readable study description.  This identifies a specific study.</li>
 </ul>
 <h3 id="example_1">Example</h3>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;id&quot;: &quot;STU00201566-Test&quot;,
   &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="application-list">Application List</h2>
 <p>The application list defines which applications the system requires to perform its tasks,
@@ -614,7 +616,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>service</code>: A specific Android service class for a service</li>
 <li><code>settings</code>: A specific Android service class for a preference panel</li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;id&quot;: &quot;datakit&quot;,
   &quot;name&quot;: &quot;DataKit&quot;,
   &quot;enable&quot;: true,
@@ -623,12 +625,12 @@ where to get them from, and any necessary configurations and services.</p>
   &quot;default_config&quot;: &quot;default_config.json&quot;,
   &quot;service&quot;: &quot;org.md2k.datakit.cerebralcortex.ServiceCerebralCortex&quot;,
   &quot;download_link&quot;: &quot;https://github.com/MD2Korg/mCerebrum-DataKit/releases&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="application-list-example">Application List Example</h3>
 <p>A complete example List</p>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;study&quot;,
     &quot;name&quot;: &quot;Study&quot;,
@@ -754,8 +756,8 @@ where to get them from, and any necessary configurations and services.</p>
     &quot;package_name&quot;: &quot;com.adobe.reader&quot;,
     &quot;download_link&quot;: &quot;market://details?id=com.adobe.reader&quot;
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="action-list">Action List</h2>
 <p>Each action object consists of several fields and defines UI action that can occur:</p>
@@ -778,7 +780,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>class_name</code>: Android class name for this application activity</li>
 </ul>
 <h3 id="action-object-example">Action Object Example</h3>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;id&quot;: &quot;clear_config&quot;,
   &quot;type&quot;: &quot;reset&quot;,
   &quot;name&quot;: &quot;Clear Configuration&quot;,
@@ -787,11 +789,11 @@ where to get them from, and any necessary configurations and services.</p>
   &quot;icon&quot;: &quot;ic_delete_blue_48dp&quot;,
   &quot;package_name&quot;: &quot;org.md2k.study&quot;,
   &quot;class_name&quot;: &quot;org.md2k.study.model_view.clear_config.ActivityClearConfig&quot;
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="action-list-example">Action List Example</h3>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;id&quot;: &quot;config_info&quot;,
     &quot;type&quot;: &quot;setup&quot;,
@@ -1012,8 +1014,8 @@ where to get them from, and any necessary configurations and services.</p>
     &quot;package_name&quot;: &quot;org.md2k.study&quot;,
     &quot;class_name&quot;: &quot;org.md2k.study.model_view.app_stop.ActivityAppStop&quot;
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="administration-view">Administration View</h2>
 <p>This configuration block controls the administration view and allows a password to be specified.</p>
@@ -1023,13 +1025,13 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>password</code>: plaintext password to gain access to the administration panel.  This field may be omitted to disable passwords</li>
 <li><code>view_contents</code>: a list of <a href="#admin-view-object">admin view</a> objects</li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;password&quot;: &quot;1234&quot;,
   &quot;view_contents&quot;: [
     ADMIN_VIEW_OBJECT
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="admin-view-object">Admin View Object</h3>
 <p>Required fields:</p>
@@ -1039,7 +1041,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this view</li>
 <li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;id&quot;: &quot;key_configure_app&quot;,
   &quot;name&quot;: &quot;Configure Applications&quot;,
   &quot;enable&quot;: true,
@@ -1050,11 +1052,11 @@ where to get them from, and any necessary configurations and services.</p>
     &quot;config_download&quot;,
     &quot;clear_config&quot;
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="administration-view-example">Administration View Example</h3>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;password&quot;: &quot;1234&quot;,
   &quot;view_contents&quot;: [
     {
@@ -1103,20 +1105,20 @@ where to get them from, and any necessary configurations and services.</p>
       ]
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="user-view">User View</h2>
 <p>This configuration block controls the user view. There is only one field that can be specified:</p>
 <ul>
 <li><code>view_contents</code>: a list of <a href="#user-view-object">user view</a> objects</li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;view_contents&quot;: [
     USER_VIEW_OBJECT
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="user-view-object">User View Object</h3>
 <p>Required fields:</p>
@@ -1126,7 +1128,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
 </ul>
 <h3 id="user-view-example">User View Example</h3>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;view_contents&quot;: [
     {
       &quot;id&quot;: &quot;data_quality&quot;,
@@ -1150,8 +1152,8 @@ where to get them from, and any necessary configurations and services.</p>
       ]
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="data-quality-list">Data Quality List</h2>
 <p>Data quality is a component of the platform that allows for the monitoring of data streams and provides a display regarding their data quality. This list is composed of a set of <a href="../configurations/#data-source">data sources</a> that contain:</p>
@@ -1159,7 +1161,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>type</code>: Must be <code>DATA_QUALITY</code></li>
 </ul>
 <h3 id="data-quality-list-example">Data Quality List Example</h3>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;platform&quot;: {
       &quot;type&quot;: &quot;AUTOSENSE_CHEST&quot;
@@ -1186,8 +1188,8 @@ where to get them from, and any necessary configurations and services.</p>
     },
     &quot;type&quot;: &quot;DATA_QUALITY&quot;
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="data-quality-view-list">Data Quality View List</h2>
 <p>This list of objects defines how the data quality display interaction occurs and the required resources for each.</p>
@@ -1211,7 +1213,7 @@ where to get them from, and any necessary configurations and services.</p>
 </ul>
 </li>
 </ul>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;name&quot;: &quot;Breathing&quot;,
   &quot;plotter&quot;: {
     &quot;enable&quot;: true,
@@ -1234,11 +1236,11 @@ where to get them from, and any necessary configurations and services.</p>
              4) Restart the phone, wait one minute and check again.\n\n
              5) Make sure the chest sensor is charged and powered ON.&quot;
   }
-}</code></pre>
-
+}
+</code></pre>
 
 <h3 id="data-quality-view-list-example">Data Quality View List Example</h3>
-<pre class="code"><code class="language-JSON">[
+<pre><code class="JSON">[
   {
     &quot;name&quot;: &quot;Breathing&quot;,
     &quot;plotter&quot;: {
@@ -1363,12 +1365,12 @@ where to get them from, and any necessary configurations and services.</p>
       &quot;text&quot;: &quot;1) Make sure the clasp on the Band is securely locked around the wrist.\n\n2) Reset the application, wait 15 seconds and check again.\n\n3) Restart the phone, wait one minute and check again.\n\n4) Make sure the Band is charged and powered ON.&quot;
     }
   }
-]</code></pre>
-
+]
+</code></pre>
 
 <h2 id="day-start">Day Start</h2>
 <p>TODO: ???</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;by&quot;: &quot;user&quot;,
   &quot;base&quot;: &quot;wakeup&quot;,
   &quot;notify&quot;: [
@@ -1395,12 +1397,12 @@ where to get them from, and any necessary configurations and services.</p>
       ]
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="day-end">Day End</h2>
 <p>TODO: ???</p>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;by&quot;: &quot;user&quot;,
   &quot;base&quot;: &quot;day_start&quot;,
   &quot;notify&quot;: [
@@ -1409,11 +1411,11 @@ where to get them from, and any necessary configurations and services.</p>
       &quot;offset&quot;: 30000
     }
   ]
-}</code></pre>
-
+}
+</code></pre>
 
 <h2 id="complete-example">Complete Example</h2>
-<pre class="code"><code class="language-JSON">{
+<pre><code class="JSON">{
   &quot;config_info&quot;: {
     &quot;id&quot;: &quot;STU00201566-Test&quot;,
     &quot;name&quot;: &quot;MD2K Smoking Study (at NW)-Test&quot;,
@@ -2060,7 +2062,8 @@ where to get them from, and any necessary configurations and services.</p>
       }
     ]
   }
-}</code></pre>
+}
+</code></pre>
           <aside class="copyright" role="note">
             
               MD2K 2016 &ndash;
