@@ -74,7 +74,7 @@
     {% for path in extra_css %}
       <link rel="stylesheet" href="{{ path }}">
     {% endfor %}
-    <script src="{{ base_url }}/assets/javascripts/modernizr-4a5cc7e01e.js"></script>
+    <script src="{{ base_url }}/assets/javascripts/modernizr.js"></script>
     {% block extrahead %}{% endblock %}
   </head>
   {% set palette = config.extra.get("palette", {}) %}
