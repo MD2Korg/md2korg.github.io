@@ -49,8 +49,9 @@ repo_name: GitHub
 
 remote_branch: master
 
-extra_css: [css/md2k.css]
+# extra_css: [css/md2k.css, //cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/styles/default.min.css]
 
+# extra_javascript: [//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.4.0/highlight.min.js]
 # theme: spacelab
 # theme: readthedocs
 theme: material
@@ -59,5 +60,5 @@ theme: material
 
 markdown_extensions:
   - smarty
+  # - fenced_code
   - admonition
-  - codehilite(css_class=code)
