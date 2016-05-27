@@ -294,7 +294,7 @@ Incentives allow the system to be configuration for micro-payments based on the 
 ```
 
 
-# Complete Example
+## Complete Example
 ```JSON
 [
   {

@@ -1,18 +1,18 @@
 # mCerebrum
 **An Open Source Software Suite for Mobile Sensor Data**
 
-![mCerebrum Logo](../img/mCerebrum-logo.png)
+<!-- ![mCerebrum Logo](../img/mCerebrum-logo.png) -->
 
 <iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
 
-# Functionality and Architecture of mCerebrum
+## Functionality and Architecture of mCerebrum
 ![mCerebrum Architecture](../img/mCerebrum-v3.png)
 
 mCerebrum is a configurable software platform for mobile and wearable devices. The mCerebrum platform is divided into functional layers so that each component is flexible and can be adapted and extended without adversely affecting the other components.  Two components – an access controller and data router – links each layer.  The access controller is responsible to ensuring that pairs of components within the system have appropriate credentials to communicate with each other through the data router, which is responsible for routing data objects throughout the platform.
 
 To meet future needs, we anticipate continuing to adapt and augment the mCerebrum platform to support future technologies and the needs of new studies. The component-based architecture is easily modified and adapted to specific studies and the simple APIs should provide for easy integration into existing applications. mCerebrum has the following layers and associated application components:
 
-# Mobile Sensor Support for Data Collection
+## Mobile Sensor Support for Data Collection
 mCerebrum provides support for reliable data collection from mobile and wearable sensors in excess of 800 hertz, and real-time processing of these data for sensor-triggered just-in-time adaptive interventions. mCerebrum currently supports a variety of data sources including:
 
 * Microsoft band (accelerometers, gyroscopes, galvanic skin response, UV exposure)
@@ -30,7 +30,7 @@ mCerebrum supports real-time data processing algorithms to evaluate stress, acti
 
 Finally, mCerebrum provides end-to-end access control, encryption, and data source linage along with a simple set of APIs for application development that is freely available under the open source BSD 2-clause license.
 
-## Communication Interfaces
+### Communication Interfaces
 
 Data sources are either on the smartphone or come from external devices that can be connected to the platform through various radios or wire interfaces:
 
@@ -43,7 +43,7 @@ The Microsoft Band, EasySense (lung fluid and heart/lung motion), and Omron (blo
 
 The ICO smokerlyzer is connected to mCerebrum via the headphone jack. Our platform is able to communicate over this connection with the device to measure carbon monoxide of a smoker in the field. The [Phone Sensor](https://github.com/MD2Korg/mCerebrum-PhoneSensor) application can record all available sensors on a smartphone platform and is typically configured to record the accelerometer, gyroscope, GPS, CPU, and battery levels from the device. Once data has arrived on mCerebrum through any one of the interfaces, it is routed via the data router and Data Kit. We have applications that integrate into mCerebrum across a variety of different communication modalities and push data into our common data core, Data Kit, for use by additional signal processing.
 
-## Signal processing
+### Signal processing
 A signal processing layer is responsible for converting sensor data into markers on which the Intervention Kit acts.  The primary real-time data processor, [Stream Processor](https://github.com/MD2Korg/mCerebrum-StreamProcessor), subscribes to data sources produced by the lower tiers and produces markers for the upper tiers.  Currently, it contains signal processing algorithms designed to compute various features and markers including: data quality of raw sensor signals:
 
 * **puffMarker** uses respiration (from a chest band) and hand gesture data (from wrist sensors) to determine when each cigarette puff occurs
@@ -54,14 +54,14 @@ A signal processing layer is responsible for converting sensor data into markers
 
 The stream processor performs this computation in one-minute blocks that provides near real-time markers for other applications. A visualization layer contains multiple components around displaying the results of the signal processing and can be shown to the participant as necessary but is typically utilized for gaining a sense of how well the system if functioning on the backend.
 
-## Storage interfaces
+### Storage interfaces
 Storage interfaces provide encrypted data storage and transport capabilities and are subject to the privacy controller, which allows a participant to temporally disable sensor data flow within the system according to rules dictated by the study rules. There are currently three storage interfaces:
 
 * [Data Kit](https://github.com/MD2Korg/mCerebrum-DataKit) is designed to manage and store information produced by all layers and is a key component of mCerebrum data pipeline. It provides an encrypted data store (SQLite) and exposes publisher/subscriber and query interfaces for other components.
 * A [Cerebral Cortex](https://github.com/MD2Korg/mCerebrum-CerebralCortex) interface to the system allows for data to be offloaded periodically, depending on quality of service constraints, from mCerebrum via an encrypted REST API over a secure cellular or Wi-Fi network to a Cerebral Cortex cloud service for additional storage and signal processing.
 * A [data export](https://github.com/MD2Korg/DataExporter) interface is provided to allow for researchers to extract all recorded information from a mCerebrum device onto a computer for analysis.
 
-## Participant interaction
+### Participant interaction
 Participants interact with the system through a suite of applications.
 
 * The [mCerebrum-Study](https://github.com/MD2Korg/mCerebrum-Study) application that provides user interfaces to additional applications and allows for the configuration of the system.

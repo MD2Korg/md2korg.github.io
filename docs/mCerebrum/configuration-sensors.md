@@ -1,4 +1,6 @@
-# Phone Sensor
+# Sensor Interface configurations
+
+## Phone Sensor
 Config file name and location: `mCerebrum/org.md2k.phonesensor/default_config.json`
 
 The phone sensor configuration is a list of [data sources](configurations/#data-source) with a `FREQUENCY` specific to the sensor specified. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.
@@ -119,7 +121,7 @@ Frequency can be one of the following:
 ```
 
 
-# Autosense
+## Autosense
 Config file name and location: `mCerebrum/org.md2k.autosense/default_config.json`
 
 AutoSense [data sources](configurations/#data-source) are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.
@@ -231,7 +233,7 @@ AutoSense [data sources](configurations/#data-source) are associated with hardwa
 ```
 
 
-# Microsoft Band
+## Microsoft Band
 Config file name and location: `mCerebrum/org.md2k.microsoftband/default_config.json`
 
 Microsoft Band [data sources](configurations/#data-source) are associated with hardware and software sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.  The absence of a configuration file will allow the system to allow the configuration of all possible data sources.

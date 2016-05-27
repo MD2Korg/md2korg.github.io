@@ -1,5 +1,3 @@
-
-
 # DataKit
 Config file name and location: `mCerebrum/org.md2k.datakit/default_config.json`
 

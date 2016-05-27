@@ -1,8 +1,6 @@
 # Configuration
 **mCerebrum** is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.
 
-# Generic structures
-
 ## Data source
 A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  `dataDescriptors` and `metadata` are always optional.
 
@@ -712,12 +710,12 @@ Defined in main application JSON file
 }
 ```
 
-# Notification Manager
+## Notification Manager
 Config file name and location: `mCerebrum/org.md2k.notificationmanager/`
 
 Notification manager requires `tone.mp3` to be present in this folder and utilizes this file for audible alerts for participants.
 
-# Stream Processor
+## Stream Processor
 Config file name and location: `mCerebrum/org.md2k.streamprocessor`
 
 Stream processor requires that SVM model files be present in this directory.
