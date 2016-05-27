@@ -288,6 +288,58 @@
         
       
       
+        <ul>
+          
+            <li class="anchor">
+              <a title="Data source" href="#data-source">
+                Data source
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Privacy type options" href="#privacy-type-options">
+                Privacy type options
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Notification" href="#notification">
+                Notification
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Study notifications" href="#study-notifications">
+                Study notifications
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Conditions" href="#conditions">
+                Conditions
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Base" href="#base">
+                Base
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Notification Manager" href="#notification-manager">
+                Notification Manager
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Stream Processor" href="#stream-processor">
+                Stream Processor
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -430,7 +482,6 @@
           
           <h1 id="configuration">Configuration</h1>
 <p><strong>mCerebrum</strong> is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.</p>
-<h1 id="generic-structures">Generic structures</h1>
 <h2 id="data-source">Data source</h2>
 <p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
 <div class="code"><pre><span></span><span class="p">{</span>
@@ -1136,10 +1187,10 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 </pre></div>
 
 
-<h1 id="notification-manager">Notification Manager</h1>
+<h2 id="notification-manager">Notification Manager</h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
 <p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
-<h1 id="stream-processor">Stream Processor</h1>
+<h2 id="stream-processor">Stream Processor</h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
 <p>Stream processor requires that SVM model files be present in this directory.</p>
           <aside class="copyright" role="note">

@@ -318,8 +318,20 @@
         <ul>
           
             <li class="anchor">
-              <a title="Complete Example" href="#complete-example">
-                Complete Example
+              <a title="Phone Sensor" href="#phone-sensor">
+                Phone Sensor
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Autosense" href="#autosense">
+                Autosense
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Microsoft Band" href="#microsoft-band">
+                Microsoft Band
               </a>
             </li>
           
@@ -438,7 +450,8 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="phone-sensor">Phone Sensor</h1>
+          <h1 id="sensor-interface-configurations">Sensor Interface configurations</h1>
+<h2 id="phone-sensor">Phone Sensor</h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.phonesensor/default_config.json</code></p>
 <p>The phone sensor configuration is a list of <a href="../configurations/#data-source">data sources</a> with a <code>FREQUENCY</code> specific to the sensor specified. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
 <p>Frequency can be one of the following:</p>
@@ -555,7 +568,7 @@
 </pre></div>
 
 
-<h1 id="autosense">Autosense</h1>
+<h2 id="autosense">Autosense</h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.autosense/default_config.json</code></p>
 <p>AutoSense <a href="../configurations/#data-source">data sources</a> are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
 <h3 id="complete-example_1">Complete Example</h3>
@@ -664,7 +677,7 @@
 </pre></div>
 
 
-<h1 id="microsoft-band">Microsoft Band</h1>
+<h2 id="microsoft-band">Microsoft Band</h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.microsoftband/default_config.json</code></p>
 <p>Microsoft Band <a href="../configurations/#data-source">data sources</a> are associated with hardware and software sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.  The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
 <p><code>ACCELEROMETER</code> and <code>GYROSCOPE</code> sensors must have their frequency configured to one of the following:</p>

@@ -369,6 +369,46 @@
         
       
       
+        <ul>
+          
+            <li class="anchor">
+              <a title="Functionality and Architecture of Cerebral Cortex" href="#functionality-and-architecture-of-cerebral-cortex">
+                Functionality and Architecture of Cerebral Cortex
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Gateway" href="#gateway">
+                Gateway
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="User interfaces" href="#user-interfaces">
+                User interfaces
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Machine interfaces" href="#machine-interfaces">
+                Machine interfaces
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Analytics" href="#analytics">
+                Analytics
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Data Storage" href="#data-storage">
+                Data Storage
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -430,16 +470,17 @@
           
           <h1 id="cerebral-cortex">Cerebral Cortex</h1>
 <p><strong>designed to facilitate mobile health data analytics and interventions</strong></p>
-<p><img alt="Cerebral Cortex Logo" src="./../img/cerebralCortex-logo.png" /></p>
+<!-- ![Cerebral Cortex Logo](../img/cerebralCortex-logo.png) -->
+
 <p>It brings state-of-the-art research techniques and methodologies
 together in a single system to affect clinical outcomes with adaptable,
 just-in-time interventions delivered to participants in the field.</p>
-<h1 id="functionality-and-architecture-of-cerebral-cortex">Functionality and Architecture of Cerebral Cortex</h1>
+<h2 id="functionality-and-architecture-of-cerebral-cortex">Functionality and Architecture of Cerebral Cortex</h2>
 <p><img alt="mCerebrum Architecture" src="./../img/CerebralCortex-v3.png" /></p>
 <p>Cerebral Cortex is a flexible layered architecture designed around different functional layers so that each component can be adapted and extended without adversely affecting the other components.  A Kernel links the layers to provide security controls between modules and a unified data interface to abstract implementation specifics. To meet future needs, we anticipate continuing to adapt and augment the Cerebral Cortex platform to support future technologies and the needs of new studies. Cerebral Cortex has the following layers and associated modules:</p>
-<h1 id="gateway">Gateway</h1>
+<h2 id="gateway">Gateway</h2>
 <p>A gateway layer operates in front of all the other layers to provide secure interfaces and APIs for interfacing with the platform.  This currently includes maintaining HTTP over SSL and routing requests to the appropriate internal platforms.</p>
-<h1 id="user-interfaces">User interfaces</h1>
+<h2 id="user-interfaces">User interfaces</h2>
 <p>The user interface layer is currently composed of four core applications:</p>
 <ul>
 <li>A <strong>study administration web portal</strong> which provides a secure and encrypted interface that allows study coordinators to conduct, configure, and monitor field studies with mCerebrum.</li>
@@ -447,7 +488,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>health science visualization</strong> through our Discovery Dashboard provides data visualizations designed for the health community, which aid in data interpretation by transforming the high-frequency sensor data streams into key digital biomarkers.</li>
 <li>A <strong>data science visualization</strong> complements Discovery Dashboard by providing a mechanism for inspecting multiple high-frequency data streams.</li>
 </ul>
-<h1 id="machine-interfaces">Machine interfaces</h1>
+<h2 id="machine-interfaces">Machine interfaces</h2>
 <p>A set of machine interfaces complements the UI by providing several different APIs for both Cerebral Cortex’s internal applications and as an interface to external web services and other data sources.</p>
 <ul>
 <li>The <strong>Cerebral Cortex API</strong> is designed to work in conjunction with the kernel to provide an interface for external applications such as mCerebrum to produce and consume data from the system. This is the primary interface on which our high-frequency data streams arrive from mCerebrum.</li>
@@ -455,7 +496,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>data import and export</strong> module is designed to translate high-frequency data streams into commonly usable formats for use by health and data science researchers. It will also support inserting data into Cerebral Cortex from these same formats.</li>
 </ul>
 <p>Both the user and machine interfaces are built around a rapidly deployable containerized platform (Docker) to support a more flexible set of deployments across multiple different cloud architectures.</p>
-<h1 id="analytics">Analytics</h1>
+<h2 id="analytics">Analytics</h2>
 <p>The analytics layer contains modules primarily designed around the Apache Spark toolchain to run algorithm on the population-scale data sets that Cerebral Cortex contains.  Many processes parallel what is computed in mCerebrum and extends the analysis to examine data at larger time resolutions (e.g., processing the entire day’s worth of data for better estimate of baseline physiology rather than relying on history for online computation in mCerebrum) for higher accuracy and for population scale analytics. Described are several modules within the system.</p>
 <ul>
 <li><strong>Stress</strong> is a cloud implementation of the cStress research and is designed to run on an entire person’s data instead of the real-time implementation on mCerebrum.</li>
@@ -465,7 +506,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>batch processor</strong> provides a mechanism to read data from HBase and run algorithms on it without worrying about writing specialized distributed processing code.</li>
 <li><strong>Machine learning</strong> support multiple libraries include Scikit-learn and Spark’s MLlib. The ultimate goal for machine learning is to interoperate with the Discover Dashboard to provide an interactive interface on which various machine learning techniques can quickly be evaluated and tunes. Models learned on population-scale data can be sent back to a smartphone in the field to improve detection and classification accuracy.</li>
 </ul>
-<h1 id="data-storage">Data Storage</h1>
+<h2 id="data-storage">Data Storage</h2>
 <p>Data storage is currently provided by a combination of the Apache Hadoop Distributed File System (HDFS) and HBase, a distributed bigtable datastore. HBase is responsible for storing the vast majority of the high-frequency time series data streams and provides a queryable interface that integrates well with the analytics layer tools.</p>
           <aside class="copyright" role="note">
             

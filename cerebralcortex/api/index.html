@@ -480,111 +480,111 @@
 <h3 id="register-participant">Register Participant</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h2 id="register-study">Register Study</h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;identifier&quot;: &quot;Study XYZ&quot;,
-    &quot;name&quot;: &quot;Study Name&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h3 id="register-participant-in-study">Register Participant in Study</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies/register_participant</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
-    &quot;study_id&quot;: 4
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h3 id="register-data-source">Register Data Source</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
-    &quot;datasource&quot;: {
-        &quot;type&quot;: &quot;MEMORY&quot;,
-        &quot;platform&quot;: {
-            &quot;type&quot;: &quot;PHONE&quot;,
-            &quot;metadata&quot;: {
-                &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
-                &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
-                &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
-                &quot;NAME&quot;: &quot;Phone&quot;
-            }
-        },
-        &quot;application&quot;: {
-            &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
-            &quot;metadata&quot;: {
-                &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
-                &quot;VERSION_NUMBER&quot;: &quot;11&quot;
-            }
-        },
-        &quot;dataDescriptors&quot;: [
-            {
-                &quot;UNIT&quot;: &quot;megabyte&quot;,
-                &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
-                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-                &quot;MIN_VALUE&quot;: &quot;0&quot;,
-                &quot;DATA_TYPE&quot;: &quot;float&quot;,
-                &quot;NAME&quot;: &quot;Size&quot;
-            },
-            {
-                &quot;UNIT&quot;: &quot;megabyte&quot;,
-                &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
-                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-                &quot;MIN_VALUE&quot;: &quot;0&quot;,
-                &quot;DATA_TYPE&quot;: &quot;float&quot;,
-                &quot;NAME&quot;: &quot;Available&quot;
-            }
-        ],
-        &quot;metadata&quot;: {
-            &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
-            &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-            &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
-            &quot;NAME&quot;: &quot;Memory&quot;
-        }
-    }
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;OPERATING_SYSTEM&quot;</span><span class="p">:</span> <span class="s2">&quot;5.1.1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MODEL&quot;</span><span class="p">:</span> <span class="s2">&quot;SAMSUNG-SM-G900A&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MANUFACTURER&quot;</span><span class="p">:</span> <span class="s2">&quot;samsung&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.phonesensor&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;VERSION_NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;VERSION_NUMBER&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;dataDescriptors&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Size of the memory&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Size&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Available memory&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Available&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;measures usage of memory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Memory&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h3 id="load-data-for-each-data-stream">Load data for each data stream</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;datastream_id&quot;: 5,
-    &quot;data&quot;: [
-        {
-            &quot;dateTime&quot;: 1455862218000,
-            &quot;offset&quot;: -21600000,
-            &quot;sample&quot;: [1,2,3,4]
-        },
-        {
-            &quot;dateTime&quot;: 1455862219000,
-            &quot;offset&quot;: -21600000,
-            &quot;sample&quot;: [
-                {
-                    &quot;foo&quot;:&quot;bar&quot;
-                },
-                {
-                    &quot;foo&quot;:&quot;bar&quot;
-                }
-            ]
-        }
-    ]
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="mi">1455862218000</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">-21600000</span><span class="p">,</span>
+            <span class="nt">&quot;sample&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="mi">1455862219000</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">-21600000</span><span class="p">,</span>
+            <span class="nt">&quot;sample&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -605,39 +605,39 @@
 <h3 id="example">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <p><em>Response</em></p>
-<div class="code"><pre><span></span>{
-  &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
-  &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
-  &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
-  &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h3 id="example_1">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
-    &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p><em>Reponse</em></p>
-<div class="code"><pre><span></span>{
-  &quot;id&quot;: &quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;,
-  &quot;identifier&quot;: &quot;Participant Name/Identifier&quot;,
-  &quot;created_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;,
-  &quot;updated_at&quot;: &quot;2016-04-28T01:56:38.217Z&quot;
-}
+<p><em>Response</em></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -659,21 +659,21 @@
 <h3 id="example_2">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;identifier&quot;: &quot;Study XYZ&quot;,
-    &quot;name&quot;: &quot;Study Name&quot;
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p><em>Reponse</em></p>
-<div class="code"><pre><span></span>{
-  &quot;id&quot;: 4,
-  &quot;identifier&quot;: &quot;Study XYZ&quot;,
-  &quot;name&quot;: &quot;Study Name&quot;,
-  &quot;created_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;,
-  &quot;updated_at&quot;: &quot;2016-04-18T20:09:00.286Z&quot;
-}
+<p><em>Response</em></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-18T20:09:00.286Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-18T20:09:00.286Z&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -695,61 +695,61 @@
 <h3 id="example_3">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
-    &quot;study_id&quot;: 4
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p><em>Reponse</em></p>
-<div class="code"><pre><span></span>{
-  &quot;id&quot;: 19,
-  &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
-  &quot;study_id&quot;: 4,
-  &quot;created_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;,
-  &quot;updated_at&quot;: &quot;2016-04-28T02:15:04.213Z&quot;
-}
+<p><em>Response</em></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+  <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T02:15:04.213Z&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T02:15:04.213Z&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
 <h2 id="datasource-registration">Datasource registration</h2>
 <p>JSON API for data source registration</p>
 <p>Request Structure</p>
-<div class="code"><pre><span></span>{
-    &quot;participant_id&quot;: UUID,
-    &quot;datasource&quot;: {
-        &quot;type&quot;: String,
-        &quot;id&quot; (optional): String,
-        &quot;metadata&quot; (optional): JsonObject representing a ,
-        &quot;platform&quot; (optional): {
-            &quot;type&quot;: String,
-            &quot;id&quot;: String,
-            &quot;metadata&quot;: JsonObject representing a HashMap
-        },
-        &quot;application&quot; (optional): {
-            &quot;type&quot;: String,
-            &quot;id&quot;: String,
-            &quot;metadata&quot;: JsonObject representing a
-        },
-        &quot;platform&quot; (optional): {
-            &quot;type&quot;: String,
-            &quot;id&quot;: String,
-            &quot;metadata&quot;: JsonObject representing a
-        },
-        &quot;platformapp&quot; (optional): {
-            &quot;type&quot;: String,
-            &quot;id&quot;: String,
-            &quot;metadata&quot;: JsonObject representing a
-        },
-        &quot;dataDescriptors&quot; (optional): [
-            {
-                JsonObject for each item in the datapoint sample
-            },
-            ...
-        ]
-    }
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="err">UUID</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+        <span class="nt">&quot;id&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+        <span class="nt">&quot;metadata&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="err">JsonObject</span> <span class="err">representing</span> <span class="err">a</span> <span class="p">,</span>
+        <span class="nt">&quot;platform&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="err">JsonObject</span> <span class="err">representing</span> <span class="err">a</span> <span class="err">HashMap</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;application&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="err">JsonObject</span> <span class="err">representing</span> <span class="err">a</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;platform&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="err">JsonObject</span> <span class="err">representing</span> <span class="err">a</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;platformapp&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="err">JsonObject</span> <span class="err">representing</span> <span class="err">a</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;dataDescriptors&quot;</span> <span class="err">(optional)</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="err">JsonObject</span> <span class="err">for</span> <span class="err">each</span> <span class="err">item</span> <span class="err">in</span> <span class="err">the</span> <span class="err">datapoint</span> <span class="err">sample</span>
+            <span class="p">},</span>
+            <span class="err">...</span>
+        <span class="p">]</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -762,63 +762,63 @@
 <h3 id="example_4">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;participant_id&quot;: &quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;,
-    &quot;datasource&quot;: {
-        &quot;type&quot;: &quot;MEMORY&quot;,
-        &quot;platform&quot;: {
-            &quot;type&quot;: &quot;PHONE&quot;,
-            &quot;metadata&quot;: {
-                &quot;OPERATING_SYSTEM&quot;: &quot;5.1.1&quot;,
-                &quot;MODEL&quot;: &quot;SAMSUNG-SM-G900A&quot;,
-                &quot;MANUFACTURER&quot;: &quot;samsung&quot;,
-                &quot;NAME&quot;: &quot;Phone&quot;
-            }
-        },
-        &quot;application&quot;: {
-            &quot;id&quot;: &quot;org.md2k.phonesensor&quot;,
-            &quot;metadata&quot;: {
-                &quot;VERSION_NAME&quot;: &quot;0.8.0&quot;,
-                &quot;VERSION_NUMBER&quot;: &quot;11&quot;
-            }
-        },
-        &quot;dataDescriptors&quot;: [
-            {
-                &quot;UNIT&quot;: &quot;megabyte&quot;,
-                &quot;DESCRIPTION&quot;: &quot;Size of the memory&quot;,
-                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-                &quot;MIN_VALUE&quot;: &quot;0&quot;,
-                &quot;DATA_TYPE&quot;: &quot;float&quot;,
-                &quot;NAME&quot;: &quot;Size&quot;
-            },
-            {
-                &quot;UNIT&quot;: &quot;megabyte&quot;,
-                &quot;DESCRIPTION&quot;: &quot;Available memory&quot;,
-                &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-                &quot;MAX_VALUE&quot;: &quot;2048&quot;,
-                &quot;MIN_VALUE&quot;: &quot;0&quot;,
-                &quot;DATA_TYPE&quot;: &quot;float&quot;,
-                &quot;NAME&quot;: &quot;Available&quot;
-            }
-        ],
-        &quot;metadata&quot;: {
-            &quot;DESCRIPTION&quot;: &quot;measures usage of memory&quot;,
-            &quot;FREQUENCY&quot;: &quot;1.0 Hz&quot;,
-            &quot;DATA_TYPE&quot;: &quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;,
-            &quot;NAME&quot;: &quot;Memory&quot;
-        }
-    }
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;OPERATING_SYSTEM&quot;</span><span class="p">:</span> <span class="s2">&quot;5.1.1&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MODEL&quot;</span><span class="p">:</span> <span class="s2">&quot;SAMSUNG-SM-G900A&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MANUFACTURER&quot;</span><span class="p">:</span> <span class="s2">&quot;samsung&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;application&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.phonesensor&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+                <span class="nt">&quot;VERSION_NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;0.8.0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;VERSION_NUMBER&quot;</span><span class="p">:</span> <span class="s2">&quot;11&quot;</span>
+            <span class="p">}</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;dataDescriptors&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Size of the memory&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Size&quot;</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;UNIT&quot;</span><span class="p">:</span> <span class="s2">&quot;megabyte&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;Available memory&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MAX_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;2048&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;MIN_VALUE&quot;</span><span class="p">:</span> <span class="s2">&quot;0&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;float&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Available&quot;</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+            <span class="nt">&quot;DESCRIPTION&quot;</span><span class="p">:</span> <span class="s2">&quot;measures usage of memory&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;FREQUENCY&quot;</span><span class="p">:</span> <span class="s2">&quot;1.0 Hz&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;DATA_TYPE&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.datakitapi.datatype.DataTypeFloatArray&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;NAME&quot;</span><span class="p">:</span> <span class="s2">&quot;Memory&quot;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p><em>Reponse</em></p>
-<div class="code"><pre><span></span>{
-  &quot;status&quot;: &quot;ok&quot;,
-  &quot;message&quot;: &quot;Successfully loaded datasource&quot;,
-  &quot;datastream_id&quot;: &quot;908&quot;
-}
+<p><em>Response</em></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully loaded datasource&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="s2">&quot;908&quot;</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -830,17 +830,17 @@
 <li>Postgresql and Cassandra (rawdatapoints)</li>
 </ul>
 <p>Request Structure</p>
-<div class="code"><pre><span></span>{
-    &quot;datastream_id&quot;: Integer from datasource_registration process,
-    &quot;data&quot;: [
-        {
-            &quot;dateTime&quot;: Long milliseconds since 1970,
-            &quot;offset&quot;: Long offset in milliseconds from UTC to current timezone,
-            &quot;sample&quot;: Array of JsonObjects
-        },
-        ...
-    ]
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="err">Integer</span> <span class="err">from</span> <span class="err">datasource_registration</span> <span class="err">process</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="err">Long</span> <span class="err">milliseconds</span> <span class="err">since</span> <span class="mi">1970</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="err">Long</span> <span class="err">offset</span> <span class="err">in</span> <span class="err">milliseconds</span> <span class="err">from</span> <span class="err">UTC</span> <span class="err">to</span> <span class="err">current</span> <span class="err">timezone</span><span class="p">,</span>
+            <span class="nt">&quot;sample&quot;</span><span class="p">:</span> <span class="err">Array</span> <span class="err">of</span> <span class="err">JsonObjects</span>
+        <span class="p">},</span>
+        <span class="err">...</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
 
@@ -853,37 +853,37 @@
 <h3 id="example_5">Example</h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
 <p>Request: POST</p>
-<div class="code"><pre><span></span>{
-    &quot;datastream_id&quot;: 5,
-    &quot;data&quot;: [
-        {
-            &quot;dateTime&quot;: 1455862218000,
-            &quot;offset&quot;: -21600000,
-            &quot;sample&quot;: [1,2,3,4]
-        },
-        {
-            &quot;dateTime&quot;: 1455862219000,
-            &quot;offset&quot;: -21600000,
-            &quot;sample&quot;: [
-                {
-                    &quot;foo&quot;:&quot;bar&quot;
-                },
-                {
-                    &quot;foo&quot;:&quot;bar&quot;
-                }
-            ]
-        }
-    ]
-}
+<div class="code"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="mi">1455862218000</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">-21600000</span><span class="p">,</span>
+            <span class="nt">&quot;sample&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">]</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="mi">1455862219000</span><span class="p">,</span>
+            <span class="nt">&quot;offset&quot;</span><span class="p">:</span> <span class="mi">-21600000</span><span class="p">,</span>
+            <span class="nt">&quot;sample&quot;</span><span class="p">:</span> <span class="p">[</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span>
+                <span class="p">},</span>
+                <span class="p">{</span>
+                    <span class="nt">&quot;foo&quot;</span><span class="p">:</span><span class="s2">&quot;bar&quot;</span>
+                <span class="p">}</span>
+            <span class="p">]</span>
+        <span class="p">}</span>
+    <span class="p">]</span>
+<span class="p">}</span>
 </pre></div>
 
 
-<p><em>Reponse</em></p>
-<div class="code"><pre><span></span>{
-  &quot;status&quot;: &quot;ok&quot;,
-  &quot;message&quot;: &quot;Successfully loaded datapoints&quot;,
-  &quot;count&quot;: 2
-}
+<p><em>Response</em></p>
+<div class="code"><pre><span></span><span class="p">{</span>
+  <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully loaded datapoints&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span>
+<span class="p">}</span>
 </pre></div>
           <aside class="copyright" role="note">
             
