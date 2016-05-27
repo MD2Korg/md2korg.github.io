@@ -10,6 +10,12 @@
     </url>
         
     <url>
+     <loc>http://docs.md2k.org//software/</loc>
+     <lastmod>2016-05-27</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
      <loc>http://docs.md2k.org//releasenotes/</loc>
      <lastmod>2016-05-27</lastmod>
      <changefreq>daily</changefreq>
