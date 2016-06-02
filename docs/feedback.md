@@ -33,7 +33,7 @@ window.ATL_JQ_PAGE_PROPS =  $.extend(window.ATL_JQ_PAGE_PROPS, {
     },
     // ==== we add the code below to set the field values ====
     fieldValues: {
-      description : 'Details: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n',
+      description : 'Submitter Name: \n\nEmail: \n\nDetails: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n',
       environment : 'Android version: \nApplication name: \nApplication version: '
     }
   },
@@ -47,7 +47,7 @@ window.ATL_JQ_PAGE_PROPS =  $.extend(window.ATL_JQ_PAGE_PROPS, {
     },
     // ==== we add the code below to set the field values ====
     fieldValues: {
-      description : 'Details: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n'
+      description : 'Submitter Name: \n\nEmail: \n\nDetails: \n\n\nExpected result: \n\n\nActual result: \n\n\nSteps to reproduce: \n\n\nAdditional information: \n\n'
     }
   },
   'b5074839' : {
