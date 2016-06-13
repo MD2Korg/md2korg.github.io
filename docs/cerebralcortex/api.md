@@ -1,5 +1,10 @@
 # Cerebral Cortex API Reference
 
+## Header information
+All POST resquests must specify:
+`Content-Type: application/josn`
+
+
 ## Workflow for Cerebral Cortex API
 JSON API
 
