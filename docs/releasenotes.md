@@ -8,18 +8,31 @@ to support various smoking cessation studies.
 
 ### Features added
 
+#### Capabilities
 - AutoSense mCerebrum data interface
 - Microsoft Band mCerebrum data interface
 - Smartphone data interface
 - Mood Surfing application
 - Thought Shakeup application
+- Support for calling third-party applications
 - Participant application interface
-- Ecological momentary assessment
-- Ecological momentary intervention
+- Participant self-report
+- Triggered prompting
+  - Sensor
+  - Random
+  - Scheduled
+- Ecological momentary assessment (EMA)
+- Ecological momentary intervention (EMI)
 - Notification management system
-- Study coordinator interfaces
+- Study coordinator interface
 - Cloud data uploader
 - Highly customizable application suite via JSON
+- In-application help including text and video
+
+#### Biomarkers
+- Stress probability
+- Stress episodes
+- Activity
 
 ### Bugs fixed
 
