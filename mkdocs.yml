@@ -1,8 +1,9 @@
 pages:
   - Home:
     - Introduction: index.md
-    - Software: software.md
-    - Release Notes: releasenotes.md
+    - Software: software/software.md
+    - Release Notes: software/releasenotes.md
+    - Testing Guidelines: software/testingguidelines.md
     - Contributing: contributing.md
   - Overview:
     - Data Protection: data_protection.md
