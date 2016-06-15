@@ -1,7 +1,8 @@
 pages:
   - Home:
     - Introduction: index.md
-    - Software: software/software.md
+  - Software:
+    - Overview: software/index.md
     - Release Notes: software/releasenotes.md
     - Testing Guidelines: software/testingguidelines.md
     - Contributing: contributing.md
