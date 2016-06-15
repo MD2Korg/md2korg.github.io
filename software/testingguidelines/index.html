@@ -9,19 +9,19 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Configuration-EMA - MD2K Software Documentation</title>
+        <title>Testing Guidelines - MD2K Software Documentation</title>
       
       
       
-        <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configuration-ema/">
+        <link rel="canonical" href="http://docs.md2k.org/software/testingguidelines/">
       
       
         <meta name="author" content="MD2K">
       
     
-    <meta property="og:url" content="http://docs.md2k.org/mCerebrum/configuration-ema/">
+    <meta property="og:url" content="http://docs.md2k.org/software/testingguidelines/">
     <meta property="og:title" content="MD2K Software Documentation">
-    <meta property="og:image" content="http://docs.md2k.org/mCerebrum/configuration-ema//../../">
+    <meta property="og:image" content="http://docs.md2k.org/software/testingguidelines//../../">
     <meta name="apple-mobile-web-app-title" content="MD2K Software Documentation">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -99,12 +99,12 @@
           <span class="path">
             
               
-                mCerebrum <i class="icon icon-link"></i>
+                Home <i class="icon icon-link"></i>
               
             
           </span>
         
-        Configuration-EMA
+        Testing Guidelines
       </div>
     </div>
     
@@ -199,7 +199,7 @@
       
         
   <li>
-    <a class="" title="Software" href="../../software/software/">
+    <a class="" title="Software" href="../software/">
       Software
     </a>
     
@@ -208,7 +208,7 @@
       
         
   <li>
-    <a class="" title="Release Notes" href="../../software/releasenotes/">
+    <a class="" title="Release Notes" href="../releasenotes/">
       Release Notes
     </a>
     
@@ -217,9 +217,42 @@
       
         
   <li>
-    <a class="" title="Testing Guidelines" href="../../software/testingguidelines/">
+    <a class="current" title="Testing Guidelines" href="./">
       Testing Guidelines
     </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="mCerebrum (Study Application)" href="#mcerebrum-study-application">
+                mCerebrum (Study Application)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Sensors" href="#sensors">
+                Sensors
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="EMA" href="#ema">
+                EMA
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="EMI" href="#emi">
+                EMI
+              </a>
+            </li>
+          
+        </ul>
+      
     
   </li>
 
@@ -289,7 +322,7 @@
       
         
   <li>
-    <a class="" title="Overview" href="../">
+    <a class="" title="Overview" href="../../mCerebrum/">
       Overview
     </a>
     
@@ -298,7 +331,7 @@
       
         
   <li>
-    <a class="" title="Configurations" href="../configurations/">
+    <a class="" title="Configurations" href="../../mCerebrum/configurations/">
       Configurations
     </a>
     
@@ -307,7 +340,7 @@
       
         
   <li>
-    <a class="" title="Configuration-mCerebrum" href="../configuration-mCerebrum/">
+    <a class="" title="Configuration-mCerebrum" href="../../mCerebrum/configuration-mCerebrum/">
       Configuration-mCerebrum
     </a>
     
@@ -316,7 +349,7 @@
       
         
   <li>
-    <a class="" title="Configuration-DataKit" href="../configuration-datakit/">
+    <a class="" title="Configuration-DataKit" href="../../mCerebrum/configuration-datakit/">
       Configuration-DataKit
     </a>
     
@@ -325,7 +358,7 @@
       
         
   <li>
-    <a class="" title="Configuration-Sensors" href="../configuration-sensors/">
+    <a class="" title="Configuration-Sensors" href="../../mCerebrum/configuration-sensors/">
       Configuration-Sensors
     </a>
     
@@ -334,7 +367,7 @@
       
         
   <li>
-    <a class="" title="Configuration-Plotter" href="../configuration-plotter/">
+    <a class="" title="Configuration-Plotter" href="../../mCerebrum/configuration-plotter/">
       Configuration-Plotter
     </a>
     
@@ -343,31 +376,16 @@
       
         
   <li>
-    <a class="current" title="Configuration-EMA" href="./">
+    <a class="" title="Configuration-EMA" href="../../mCerebrum/configuration-ema/">
       Configuration-EMA
     </a>
-    
-      
-        
-      
-      
-        <ul>
-          
-            <li class="anchor">
-              <a title="Example" href="#example">
-                Example
-              </a>
-            </li>
-          
-        </ul>
-      
     
   </li>
 
       
         
   <li>
-    <a class="" title="Configuration-EMA Scheduler" href="../configuration-emascheduler/">
+    <a class="" title="Configuration-EMA Scheduler" href="../../mCerebrum/configuration-emascheduler/">
       Configuration-EMA Scheduler
     </a>
     
@@ -376,7 +394,7 @@
       
         
   <li>
-    <a class="" title="Troubleshooting" href="../troubleshooting/">
+    <a class="" title="Troubleshooting" href="../../mCerebrum/troubleshooting/">
       Troubleshooting
     </a>
     
@@ -456,42 +474,15 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="ema">EMA</h1>
-<p>Config file name and location: <code>mCerebrum/org.md2k.ema/config_ema.json</code></p>
-<p>This JSON array contains a listing of all defined EMA configurations in the system.
-Each structure contains:</p>
-<ul>
-<li><code>id</code>: unique EMA identifier</li>
-<li><code>name</code>: string that is displayed to the user describing an EMA</li>
-<li><code>file_name</code>: file name of a json document located in this folder for a specific EMA</li>
-<li><code>package_name</code>: Application reference which handles the specified <code>file_name</code></li>
-<li><code>timeout</code>: Time in milliseconds after which an EMA is considered abandoned</li>
-</ul>
-<h3 id="example">Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Random Experience Sampling&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;random_experience_sampling.json&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">300000</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;event_contingent_recording&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Event Contingent Recording&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;event_contingent_recording.json&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">300000</span>
-  <span class="p">},</span>
-  <span class="p">{</span>
-    <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;end_of_day_recording&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;End of Day Recording&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;package_name&quot;</span><span class="p">:</span> <span class="s2">&quot;org.md2k.ema&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;file_name&quot;</span><span class="p">:</span> <span class="s2">&quot;end_of_day_recording.json&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">300000</span>
-  <span class="p">}</span>
-<span class="p">]</span>
-</pre></div>
+          <h1 id="software-testing-guidelines">Software Testing Guidelines</h1>
+<p>The purpose of this procedure is to provide a set of recommendations for someone evaluating the platform to both get he/she up to speed on some of the capabilities and to ensure the basic functionality is functioning properly.</p>
+<h2 id="mcerebrum-study-application">mCerebrum (Study Application)</h2>
+<h2 id="sensors">Sensors</h2>
+<h3 id="autosense">AutoSense</h3>
+<h3 id="microsoft-band">Microsoft Band</h3>
+<h3 id="phone">Phone</h3>
+<h2 id="ema">EMA</h2>
+<h2 id="emi">EMI</h2>
           <aside class="copyright" role="note">
             
               &copy; MD2K 2016 &ndash;
@@ -510,7 +501,7 @@ Each structure contains:</p>
   <nav class="pagination" aria-label="Footer">
     <div class="previous">
       
-        <a href="../configuration-plotter/" title="Configuration-Plotter">
+        <a href="../releasenotes/" title="Release Notes">
           <span class="direction">
             Previous
           </span>
@@ -520,7 +511,7 @@ Each structure contains:</p>
             </div>
             <div class="stretch">
               <div class="title">
-                Configuration-Plotter
+                Release Notes
               </div>
             </div>
           </div>
@@ -529,14 +520,14 @@ Each structure contains:</p>
     </div>
     <div class="next">
       
-        <a href="../configuration-emascheduler/" title="Configuration-EMA Scheduler">
+        <a href="../../contributing/" title="Contributing">
           <span class="direction">
             Next
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Configuration-EMA Scheduler
+                Contributing
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

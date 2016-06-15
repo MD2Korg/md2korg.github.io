@@ -31,74 +31,119 @@
             "title": "Novelty of MD2K"
         },
         {
-            "location": "/software/",
+            "location": "/software/software/",
             "text": "Software Release Information\n\n\nSchedule\n\n\nMD2K software is released based on a monthly development and testing cycle.  Typically, we allocate \n3 1-week sprints\n for development activities followed by a \nsingle 1-week sprint\n dedicated towards testing.  \n\n\n\n\nMajor \nX.0.0\n software updates will occur approximately every year\n\n\nMinor/Feature \n1.X.0\n updates will occur each month on the 3rd Wednesday\n\n\nCritical bug fixes \n1.2.X\n will be released immediately\n\n\n\n\n\n\n\n\n\n\nYear\n\n\nMonth\n\n\nRelease Day\n\n\n\n\n\n\n\n\n\n\n2016\n\n\nJune\n\n\n2016/06/15  (Wed)\n\n\n\n\n\n\n2016\n\n\nJuly\n\n\n2016/07/13  (Wed)\n\n\n\n\n\n\n2016\n\n\nAugust\n\n\n2016/08/17  (Wed)\n\n\n\n\n\n\n2016\n\n\nSeptember\n\n\n2016/09/14  (Wed)\n\n\n\n\n\n\n2016\n\n\nOctober\n\n\n2016/10/19  (Wed)\n\n\n\n\n\n\n2016\n\n\nNovember\n\n\n2016/11/16  (Wed)\n\n\n\n\n\n\n2016\n\n\nDecember\n\n\n2016/12/21  (Wed)\n\n\n\n\n\n\n2017\n\n\nJanuary\n\n\n2017/01/18  (Wed)\n\n\n\n\n\n\n2017\n\n\nFebruary\n\n\n2017/02/15  (Wed)\n\n\n\n\n\n\n2017\n\n\nMarch\n\n\n2017/03/15  (Wed)\n\n\n\n\n\n\n2017\n\n\nApril\n\n\n2017/04/19  (Wed)\n\n\n\n\n\n\n2017\n\n\nMay\n\n\n2017/05/17  (Wed)\n\n\n\n\n\n\n\n\n\n\nFeature Requests\n\n\n\n\nAll feature requests should be submitted prior to the scheduled release day of the prior month.  For example, for a feature request to be considered for the September 2016 release, it should be submitted to the \nJIRA\n tracker before the August release day \n2016/08/17\n.  This will allow the software engineers sufficient time to plan and execute the upcoming activities.\n\n\nDownload\n\n\nmCerebrum instructions\n\n\nmCerebrum is a suite of several Android applications that are combined with a\nset of configuration files.  These instructions will guide you in downloading,\ninstalling, and configuring the mCerebrum software suite.  All source code is\navailable in the \nMD2K\ns GitHub organization\n.\n\n\n\n\nDownload the latest version of mCerebrum (\nlatest release\n ) and install the APK file on and Android 5.0+ device.\n\n\nmCerebrum will run and the \nSettings\n button will be highlighted in red, press it.\n\n\nA prompt will be shown asking you to enter a filename of a configuration file to download, enter \ndefault\n and press \nOK\n.\n\n\nOnce a configuration file is successfully downloaded and installed, you will be prompted with an Admin password screen.  The default password is \n1234\n.\n\n\nCongratulations, you have successfully installed the main mCerebrum application.  Please follow the instructions \nhere\n for configuring the platform\n\n\n\n\nList of mCerebrum Apps\n\n\n\n\n\n\n\n\nApplications\n\n\nDownload\n\n\n\n\n\n\n\n\n\n\nAutoSense\n\n\nlatest release\n\n\n\n\n\n\nMicrosoft Band\n\n\nlatest release\n\n\n\n\n\n\nPhone Sensor\n\n\nlatest release\n\n\n\n\n\n\nStream Processor\n\n\nlatest release\n\n\n\n\n\n\nMood Surfing\n\n\nlatest release\n\n\n\n\n\n\nThought Shakeup\n\n\nlatest release\n\n\n\n\n\n\nEcological Momentary Assessment (EMA)\n\n\nlatest release\n\n\n\n\n\n\nEMA Scheduler\n\n\nlatest release\n\n\n\n\n\n\nNotification Manager\n\n\nlatest release\n\n\n\n\n\n\nData stream plotter\n\n\nlatest release\n\n\n\n\n\n\nDataKit\n\n\nlatest release\n\n\n\n\n\n\nmCerebrum (Study)\n\n\nlatest release",
             "title": "Software"
         },
         {
-            "location": "/software/#software-release-information",
+            "location": "/software/software/#software-release-information",
             "text": "",
             "title": "Software Release Information"
         },
         {
-            "location": "/software/#schedule",
+            "location": "/software/software/#schedule",
             "text": "MD2K software is released based on a monthly development and testing cycle.  Typically, we allocate  3 1-week sprints  for development activities followed by a  single 1-week sprint  dedicated towards testing.     Major  X.0.0  software updates will occur approximately every year  Minor/Feature  1.X.0  updates will occur each month on the 3rd Wednesday  Critical bug fixes  1.2.X  will be released immediately      Year  Month  Release Day      2016  June  2016/06/15  (Wed)    2016  July  2016/07/13  (Wed)    2016  August  2016/08/17  (Wed)    2016  September  2016/09/14  (Wed)    2016  October  2016/10/19  (Wed)    2016  November  2016/11/16  (Wed)    2016  December  2016/12/21  (Wed)    2017  January  2017/01/18  (Wed)    2017  February  2017/02/15  (Wed)    2017  March  2017/03/15  (Wed)    2017  April  2017/04/19  (Wed)    2017  May  2017/05/17  (Wed)      Feature Requests   All feature requests should be submitted prior to the scheduled release day of the prior month.  For example, for a feature request to be considered for the September 2016 release, it should be submitted to the  JIRA  tracker before the August release day  2016/08/17 .  This will allow the software engineers sufficient time to plan and execute the upcoming activities.",
             "title": "Schedule"
         },
         {
-            "location": "/software/#download",
+            "location": "/software/software/#download",
             "text": "",
             "title": "Download"
         },
         {
-            "location": "/software/#mcerebrum-instructions",
+            "location": "/software/software/#mcerebrum-instructions",
             "text": "mCerebrum is a suite of several Android applications that are combined with a\nset of configuration files.  These instructions will guide you in downloading,\ninstalling, and configuring the mCerebrum software suite.  All source code is\navailable in the  MD2K s GitHub organization .   Download the latest version of mCerebrum ( latest release  ) and install the APK file on and Android 5.0+ device.  mCerebrum will run and the  Settings  button will be highlighted in red, press it.  A prompt will be shown asking you to enter a filename of a configuration file to download, enter  default  and press  OK .  Once a configuration file is successfully downloaded and installed, you will be prompted with an Admin password screen.  The default password is  1234 .  Congratulations, you have successfully installed the main mCerebrum application.  Please follow the instructions  here  for configuring the platform",
             "title": "mCerebrum instructions"
         },
         {
-            "location": "/software/#list-of-mcerebrum-apps",
+            "location": "/software/software/#list-of-mcerebrum-apps",
             "text": "Applications  Download      AutoSense  latest release    Microsoft Band  latest release    Phone Sensor  latest release    Stream Processor  latest release    Mood Surfing  latest release    Thought Shakeup  latest release    Ecological Momentary Assessment (EMA)  latest release    EMA Scheduler  latest release    Notification Manager  latest release    Data stream plotter  latest release    DataKit  latest release    mCerebrum (Study)  latest release",
             "title": "List of mCerebrum Apps"
         },
         {
-            "location": "/releasenotes/",
+            "location": "/software/releasenotes/",
             "text": "Software Release notes\n\n\n1.0.0\n\n\nDescription\n\n\nInitial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.\n\n\nFeatures added\n\n\nCapabilities\n\n\n\n\nAutoSense mCerebrum data interface\n\n\nMicrosoft Band mCerebrum data interface\n\n\nSmartphone data interface\n\n\nMood Surfing application\n\n\nThought Shakeup application\n\n\nSupport for calling third-party applications\n\n\nParticipant application interface\n\n\nParticipant self-report\n\n\nTriggered prompting\n\n\nSensor\n\n\nRandom\n\n\nScheduled\n\n\nEcological momentary assessment (EMA)\n\n\nEcological momentary intervention (EMI)\n\n\nNotification management system\n\n\nStudy coordinator interface\n\n\nCloud data uploader\n\n\nHighly customizable application suite via JSON\n\n\nIn-application help including text and video\n\n\n\n\nBiomarkers\n\n\n\n\nStress probability\n\n\nStress episodes\n\n\nActivity\n\n\n\n\nBugs fixed\n\n\n\n\nNone: initial release",
             "title": "Release Notes"
         },
         {
-            "location": "/releasenotes/#software-release-notes",
+            "location": "/software/releasenotes/#software-release-notes",
             "text": "",
             "title": "Software Release notes"
         },
         {
-            "location": "/releasenotes/#100",
+            "location": "/software/releasenotes/#100",
             "text": "",
             "title": "1.0.0"
         },
         {
-            "location": "/releasenotes/#description",
+            "location": "/software/releasenotes/#description",
             "text": "Initial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.",
             "title": "Description"
         },
         {
-            "location": "/releasenotes/#features-added",
+            "location": "/software/releasenotes/#features-added",
             "text": "",
             "title": "Features added"
         },
         {
-            "location": "/releasenotes/#capabilities",
+            "location": "/software/releasenotes/#capabilities",
             "text": "AutoSense mCerebrum data interface  Microsoft Band mCerebrum data interface  Smartphone data interface  Mood Surfing application  Thought Shakeup application  Support for calling third-party applications  Participant application interface  Participant self-report  Triggered prompting  Sensor  Random  Scheduled  Ecological momentary assessment (EMA)  Ecological momentary intervention (EMI)  Notification management system  Study coordinator interface  Cloud data uploader  Highly customizable application suite via JSON  In-application help including text and video",
             "title": "Capabilities"
         },
         {
-            "location": "/releasenotes/#biomarkers",
+            "location": "/software/releasenotes/#biomarkers",
             "text": "Stress probability  Stress episodes  Activity",
             "title": "Biomarkers"
         },
         {
-            "location": "/releasenotes/#bugs-fixed",
+            "location": "/software/releasenotes/#bugs-fixed",
             "text": "None: initial release",
             "title": "Bugs fixed"
+        },
+        {
+            "location": "/software/testingguidelines/",
+            "text": "Software Testing Guidelines\n\n\nThe purpose of this procedure is to provide a set of recommendations for someone evaluating the platform to both get he/she up to speed on some of the capabilities and to ensure the basic functionality is functioning properly.\n\n\nmCerebrum (Study Application)\n\n\nSensors\n\n\nAutoSense\n\n\nMicrosoft Band\n\n\nPhone\n\n\nEMA\n\n\nEMI",
+            "title": "Testing Guidelines"
+        },
+        {
+            "location": "/software/testingguidelines/#software-testing-guidelines",
+            "text": "The purpose of this procedure is to provide a set of recommendations for someone evaluating the platform to both get he/she up to speed on some of the capabilities and to ensure the basic functionality is functioning properly.",
+            "title": "Software Testing Guidelines"
+        },
+        {
+            "location": "/software/testingguidelines/#mcerebrum-study-application",
+            "text": "",
+            "title": "mCerebrum (Study Application)"
+        },
+        {
+            "location": "/software/testingguidelines/#sensors",
+            "text": "",
+            "title": "Sensors"
+        },
+        {
+            "location": "/software/testingguidelines/#autosense",
+            "text": "",
+            "title": "AutoSense"
+        },
+        {
+            "location": "/software/testingguidelines/#microsoft-band",
+            "text": "",
+            "title": "Microsoft Band"
+        },
+        {
+            "location": "/software/testingguidelines/#phone",
+            "text": "",
+            "title": "Phone"
+        },
+        {
+            "location": "/software/testingguidelines/#ema",
+            "text": "",
+            "title": "EMA"
+        },
+        {
+            "location": "/software/testingguidelines/#emi",
+            "text": "",
+            "title": "EMI"
         },
         {
             "location": "/contributing/",

@@ -10,13 +10,19 @@
     </url>
         
     <url>
-     <loc>http://docs.md2k.org//software/</loc>
+     <loc>http://docs.md2k.org//software/software/</loc>
      <lastmod>2016-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
-     <loc>http://docs.md2k.org//releasenotes/</loc>
+     <loc>http://docs.md2k.org//software/releasenotes/</loc>
+     <lastmod>2016-06-15</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//software/testingguidelines/</loc>
      <lastmod>2016-06-15</lastmod>
      <changefreq>daily</changefreq>
     </url>
