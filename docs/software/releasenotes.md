@@ -18,9 +18,9 @@ to support various smoking cessation studies.
 - Participant application interface
 - Participant self-report
 - Triggered prompting
-  - Sensor
-  - Random
-  - Scheduled
+    - Sensor
+    - Random
+    - Scheduled
 - Ecological momentary assessment (EMA)
 - Ecological momentary intervention (EMI)
 - Notification management system
