@@ -56,3 +56,10 @@ available in the [MD2K's GitHub organization](https://github.com/MD2Korg).
 | [Data stream plotter](https://github.com/MD2Korg/mCerebrum-Plotter)                   | [latest release](https://github.com/MD2Korg/mCerebrum-Plotter/releases/latest) |
 | [DataKit](https://github.com/MD2Korg/mCerebrum-DataKit)                               | [latest release](https://github.com/MD2Korg/mCerebrum-DataKit/releases/latest) |
 | [mCerebrum (Study)](https://github.com/MD2Korg/mCerebrum-Study)                       | [latest release](https://github.com/MD2Korg/mCerebrum-Study/releases/latest) |
+
+
+## Supported by
+
+![GitHub](../img/GitHub_Logo.png) [GitHub](https://github.com)
+
+![JetBrains](../img/logo_JetBrains_4.png) [JetBrains - IntelliJ IDEA](http://www.jetbrains.com/)
