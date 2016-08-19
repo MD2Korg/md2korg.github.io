@@ -67,7 +67,7 @@
         },
         {
             "location": "/software/releasenotes/",
-            "text": "Software Release notes\n\n\n1.0.0\n\n\nDescription\n\n\nInitial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.\n\n\nFeatures added\n\n\nCapabilities\n\n\n\n\nAutoSense mCerebrum data interface\n\n\nMicrosoft Band mCerebrum data interface\n\n\nSmartphone data interface\n\n\nMood Surfing application\n\n\nThought Shakeup application\n\n\nSupport for calling third-party applications\n\n\nParticipant application interface\n\n\nParticipant self-report\n\n\nTriggered prompting\n\n\nSensor\n\n\nRandom\n\n\nScheduled\n\n\n\n\n\n\nEcological momentary assessment (EMA)\n\n\nEcological momentary intervention (EMI)\n\n\nNotification management system\n\n\nStudy coordinator interface\n\n\nCloud data uploader\n\n\nHighly customizable application suite via JSON\n\n\nIn-application help including text and video\n\n\n\n\nBiomarkers\n\n\n\n\nStress probability\n\n\nStress episodes\n\n\nActivity\n\n\n\n\nBugs fixed\n\n\n\n\nNone: initial release",
+            "text": "Software Release notes\n\n\n1.2.0 - 2016.08.17\n\n\nDescription\n\n\nThis release is primarily a bug fix release and fixes system stability\nproblems that affect all of mCerebrum\ns applications\n\n\nFeatures added\n\n\nCapabilities\n\n\n\n\nNew data quality metric for improved incentive payment accuracy\n\n\nInternal restructuring of wrist sensor data in anticipation MotionSense\n\n\nImproved software management and upgrade process\n\n\n\n\nBiomarkers\n\n\n\n\nSmoking episodes\n\n\nDriving/riding in a vehicle\n\n\n\n\nBugs fixed\n\n\n\n\nDatapoint corruption\n\n\nHigh-frequency data logging changes to reduce the load on the system\n\n\nApplication slowdown and crashing after 5+ hours\n\n\nApplication crash and restart problems\n\n\n\n\nPrompts during physical activity restricted\n\n\n\n\n\n\n1.0.0 - 2016.06.15\n\n\nDescription\n\n\nInitial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.\n\n\nFeatures added\n\n\nCapabilities\n\n\n\n\nAutoSense mCerebrum data interface\n\n\nMicrosoft Band mCerebrum data interface\n\n\nSmartphone data interface\n\n\nMood Surfing application\n\n\nThought Shakeup application\n\n\nSupport for calling third-party applications\n\n\nParticipant application interface\n\n\nParticipant self-report\n\n\nTriggered prompting\n\n\nSensor\n\n\nRandom\n\n\nScheduled\n\n\n\n\n\n\nEcological momentary assessment (EMA)\n\n\nEcological momentary intervention (EMI)\n\n\nNotification management system\n\n\nStudy coordinator interface\n\n\nCloud data uploader\n\n\nHighly customizable application suite via JSON\n\n\nIn-application help including text and video\n\n\n\n\nBiomarkers\n\n\n\n\nStress probability\n\n\nStress episodes\n\n\nActivity\n\n\n\n\nBugs fixed\n\n\n\n\nNone: initial release",
             "title": "Release Notes"
         },
         {
@@ -76,13 +76,13 @@
             "title": "Software Release notes"
         },
         {
-            "location": "/software/releasenotes/#100",
+            "location": "/software/releasenotes/#120-20160817",
             "text": "",
-            "title": "1.0.0"
+            "title": "1.2.0 - 2016.08.17"
         },
         {
             "location": "/software/releasenotes/#description",
-            "text": "Initial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.",
+            "text": "This release is primarily a bug fix release and fixes system stability\nproblems that affect all of mCerebrum s applications",
             "title": "Description"
         },
         {
@@ -92,16 +92,51 @@
         },
         {
             "location": "/software/releasenotes/#capabilities",
-            "text": "AutoSense mCerebrum data interface  Microsoft Band mCerebrum data interface  Smartphone data interface  Mood Surfing application  Thought Shakeup application  Support for calling third-party applications  Participant application interface  Participant self-report  Triggered prompting  Sensor  Random  Scheduled    Ecological momentary assessment (EMA)  Ecological momentary intervention (EMI)  Notification management system  Study coordinator interface  Cloud data uploader  Highly customizable application suite via JSON  In-application help including text and video",
+            "text": "New data quality metric for improved incentive payment accuracy  Internal restructuring of wrist sensor data in anticipation MotionSense  Improved software management and upgrade process",
             "title": "Capabilities"
         },
         {
             "location": "/software/releasenotes/#biomarkers",
-            "text": "Stress probability  Stress episodes  Activity",
+            "text": "Smoking episodes  Driving/riding in a vehicle",
             "title": "Biomarkers"
         },
         {
             "location": "/software/releasenotes/#bugs-fixed",
+            "text": "Datapoint corruption  High-frequency data logging changes to reduce the load on the system  Application slowdown and crashing after 5+ hours  Application crash and restart problems",
+            "title": "Bugs fixed"
+        },
+        {
+            "location": "/software/releasenotes/#prompts-during-physical-activity-restricted",
+            "text": "",
+            "title": "Prompts during physical activity restricted"
+        },
+        {
+            "location": "/software/releasenotes/#100-20160615",
+            "text": "",
+            "title": "1.0.0 - 2016.06.15"
+        },
+        {
+            "location": "/software/releasenotes/#description_1",
+            "text": "Initial release of the mCerebrum application suite.  This release is designed\nto support various smoking cessation studies.",
+            "title": "Description"
+        },
+        {
+            "location": "/software/releasenotes/#features-added_1",
+            "text": "",
+            "title": "Features added"
+        },
+        {
+            "location": "/software/releasenotes/#capabilities_1",
+            "text": "AutoSense mCerebrum data interface  Microsoft Band mCerebrum data interface  Smartphone data interface  Mood Surfing application  Thought Shakeup application  Support for calling third-party applications  Participant application interface  Participant self-report  Triggered prompting  Sensor  Random  Scheduled    Ecological momentary assessment (EMA)  Ecological momentary intervention (EMI)  Notification management system  Study coordinator interface  Cloud data uploader  Highly customizable application suite via JSON  In-application help including text and video",
+            "title": "Capabilities"
+        },
+        {
+            "location": "/software/releasenotes/#biomarkers_1",
+            "text": "Stress probability  Stress episodes  Activity",
+            "title": "Biomarkers"
+        },
+        {
+            "location": "/software/releasenotes/#bugs-fixed_1",
             "text": "None: initial release",
             "title": "Bugs fixed"
         },
