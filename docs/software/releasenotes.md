@@ -1,6 +1,35 @@
 # Software Release notes
 
-## 1.0.0
+
+## 1.2.0 - 2016.08.17
+
+### Description
+This release is primarily a bug fix release and fixes system stability
+problems that affect all of mCerebrum's applications
+
+### Features added
+
+#### Capabilities
+- New data quality metric for improved incentive payment accuracy
+- Internal restructuring of wrist sensor data in anticipation MotionSense
+- Improved software management and upgrade process
+
+#### Biomarkers
+- Smoking episodes
+- Driving/riding in a vehicle
+
+### Bugs fixed
+- Datapoint corruption
+- High-frequency data logging changes to reduce the load on the system
+- Application slowdown and crashing after 5+ hours
+- Application crash and restart problems
+- Prompts during physical activity restricted
+-
+
+
+
+
+## 1.0.0 - 2016.06.15
 
 ### Description
 Initial release of the mCerebrum application suite.  This release is designed
