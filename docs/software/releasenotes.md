@@ -24,9 +24,6 @@ problems that affect all of mCerebrum's applications
 - Application slowdown and crashing after 5+ hours
 - Application crash and restart problems
 - Prompts during physical activity restricted
--
-
-
 
 
 ## 1.0.0 - 2016.06.15
