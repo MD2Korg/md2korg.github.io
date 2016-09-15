@@ -9,9 +9,6 @@ MD2K software is released based on a monthly development and testing cycle.  Typ
 
 | Year |    Month   | Release Day       |
 |------|------------|-------------------|
-| 2016 | June       | 2016/06/15  (Wed) |
-| 2016 | July       | 2016/07/13  (Wed) |
-| 2016 | August     | 2016/08/17  (Wed) |
 | 2016 | September  | 2016/09/14  (Wed) |
 | 2016 | October    | 2016/10/19  (Wed) |
 | 2016 | November   | 2016/11/16  (Wed) |
