@@ -3,6 +3,8 @@ The MD2K software platform includes mobile phone software platform called mCereb
 
 Cerebral Cortex is the big data companion of mCerebrum designed to support population-scale data analysis, visualization, model development, and intervention design for mobile sensor data. It provides the ability to do machine learning model development on population scale data sets and provides interoperable interfaces for aggregation of diverse data sources.
 
+<center><iframe src="https://www.youtube.com/embed/uSQn2puExxM" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
+
 ## Limitations of Existing mHealth Platforms
 Several software platforms have recently emerged for collecting mobile health data. For example, Apple and Google each provide a set of APIs and tools for mobile mHeath data collection. But, Apple HealthKit and Google Fit APIs are primarily designed for low frequency data collection of digital biomarkers including: blood pressure, weight, or physical activity. Both of these platforms have limited expressiveness for time series data streams.
 

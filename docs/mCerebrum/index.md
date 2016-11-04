@@ -3,7 +3,7 @@
 
 <!-- ![mCerebrum Logo](../img/mCerebrum-logo.png) -->
 
-<iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe>
+<center><iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
 
 ## Functionality and Architecture of mCerebrum
 ![mCerebrum Architecture](../img/mCerebrum-v3.png)
