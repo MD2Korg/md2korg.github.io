@@ -1,4 +1,7 @@
 
+## Reference
+- [http://idratherbewriting.com/documentation-theme-jekyll/](http://idratherbewriting.com/documentation-theme-jekyll/)
+
 ## More information
 - [MD2K](https://md2k.org/)
 - [Documentation and Training](http://docs.md2k.org)
