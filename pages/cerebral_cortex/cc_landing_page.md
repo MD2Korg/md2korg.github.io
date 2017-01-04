@@ -11,14 +11,14 @@ folder: cerebral_cortex
 # Cerebral Cortex
 **designed to facilitate mobile health data analytics and interventions**
 
-<!-- ![Cerebral Cortex Logo](../img/cerebralCortex-logo.png) -->
+{% include image.html file="cerebralCortex-logo.png" caption="Cerebral Cortex" %}
 
 It brings state-of-the-art research techniques and methodologies
 together in a single system to affect clinical outcomes with adaptable,
 just-in-time interventions delivered to participants in the field.
 
 ## Functionality and Architecture of Cerebral Cortex
-![mCerebrum Architecture](../img/CerebralCortex-v3.png)
+{% include image.html file="CerebralCortex-v3.png" caption="mCerebrum Architecture" %}
 
 Cerebral Cortex is a flexible layered architecture designed around different functional layers so that each component can be adapted and extended without adversely affecting the other components.  A Kernel links the layers to provide security controls between modules and a unified data interface to abstract implementation specifics. To meet future needs, we anticipate continuing to adapt and augment the Cerebral Cortex platform to support future technologies and the needs of new studies. Cerebral Cortex has the following layers and associated modules:
 
@@ -54,3 +54,6 @@ The analytics layer contains modules primarily designed around the Apache Spark 
 
 ## Data Storage
 Data storage is currently provided by a combination of the Apache Hadoop Distributed File System (HDFS) and HBase, a distributed bigtable datastore. HBase is responsible for storing the vast majority of the high-frequency time series data streams and provides a queryable interface that integrates well with the analytics layer tools.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

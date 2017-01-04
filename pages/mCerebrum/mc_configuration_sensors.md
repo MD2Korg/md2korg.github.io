@@ -384,3 +384,6 @@ Microsoft Band [data sources](configurations/#data-source) are associated with h
   }
 ]
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

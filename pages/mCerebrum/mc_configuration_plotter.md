@@ -18,6 +18,7 @@ This JSON array should contain the data sources that should be made available to
 ### Example
 This example allows for the displaying of specific sensor streams from the phone,
 AutoSense, and Microsoft band.
+
 ```JSON
 [
   {
@@ -73,3 +74,6 @@ AutoSense, and Microsoft band.
   }
 ]
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

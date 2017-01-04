@@ -68,7 +68,7 @@ defaults:
       layout: "page"
       comments: true
       search: true
-      sidebar: home_sidebar
+      sidebar: md2k_sidebar
   -
     scope:
       path: ""

@@ -22,6 +22,7 @@ JSON API
 **URL:** `https://cerebralcortex/participants`
 
 Request: POST
+
 ```JSON
 {
     "identifier": "Participant Name/Identifier"
@@ -32,6 +33,7 @@ Request: POST
 **URL:** `https://cerebralcortex/studies`
 
 Request: POST
+
 ```JSON
 {
     "identifier": "Study XYZ",
@@ -43,6 +45,7 @@ Request: POST
 **URL:** `https://cerebralcortex/studies/register_participant`
 
 Request: POST
+
 ```JSON
 {
     "participant_id": "b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6",
@@ -54,6 +57,7 @@ Request: POST
 **URL:** `https://cerebralcortex/datasources/register`
 
 Request: POST
+
 ```JSON
 {
     "participant_id": "b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6",
@@ -109,6 +113,7 @@ Request: POST
 **URL:** `https://cerebralcortex/datapoints/bulkload` or `https://cerebralcortex/rawdatapoints/bulkload`
 
 Request: POST
+
 ```JSON
 {
     "datastream_id": 5,
@@ -157,6 +162,7 @@ Response fields
 **URL:** `https://cerebralcortex/participants`
 
 Request: POST
+
 ```JSON
 {
     "identifier": "Participant Name/Identifier"
@@ -179,6 +185,7 @@ _Response_
 **URL:** `https://cerebralcortex/participants`
 
 Request: POST
+
 ```JSON
 {
     "identifier": "Participant Name/Identifier",
@@ -187,6 +194,7 @@ Request: POST
 ```
 
 _Response_
+
 ```JSON
 {
   "id": "a37fbcab-0f90-4dd3-907d-f0cb3f247302",
@@ -219,13 +227,16 @@ _Response fields_
 **URL:** `https://cerebralcortex/studies`
 
 Request: POST
+
 ```JSON
 {
     "identifier": "Study XYZ",
     "name": "Study Name"
 }
 ```
+
 _Response_
+
 ```JSON
 {
   "id": 4,
@@ -260,6 +271,7 @@ _Response fields_
 **URL:** `https://cerebralcortex/studies`
 
 Request: POST
+
 ```JSON
 {
     "participant_id": "b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6",
@@ -268,6 +280,7 @@ Request: POST
 ```
 
 _Response_
+
 ```JSON
 {
   "id": 19,
@@ -284,6 +297,7 @@ _Response_
 JSON API for data source registration
 
 Request Structure
+
 ```JSON
 {
     "participant_id": UUID,
@@ -333,6 +347,7 @@ _Response fields_
 **URL:** `https://cerebralcortex/datasources/register`
 
 Request: POST
+
 ```JSON
 {
     "participant_id": "b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6",
@@ -385,6 +400,7 @@ Request: POST
 ```
 
 _Response_
+
 ```JSON
 {
   "status": "ok",
@@ -404,6 +420,7 @@ The URL determines where data is persisted.
 * Postgresql and Cassandra (rawdatapoints)
 
 Request Structure
+
 ```JSON
 {
     "datastream_id": Integer from datasource_registration process,
@@ -430,6 +447,7 @@ _Response fields_
 **URL:** `https://cerebralcortex/datapoints/bulkload` or `https://cerebralcortex/rawdatapoints/bulkload`
 
 Request: POST
+
 ```JSON
 {
     "datastream_id": 5,
@@ -456,6 +474,7 @@ Request: POST
 ```
 
 _Response_
+
 ```JSON
 {
   "status": "ok",
@@ -463,3 +482,6 @@ _Response_
   "count": 2
 }
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

@@ -111,3 +111,6 @@ Please update the JIRA issue with a link to the Pull Request to alert the MD2K t
 
 ### Code review
 We utilize the GitHub commenting system on Pull Requests for the code review and once this process is complete, the MD2K team will squash and merge your contribution into the MD2K codebase.  Thank you for your effort and support.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

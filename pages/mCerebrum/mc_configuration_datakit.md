@@ -314,3 +314,6 @@ This section configures the privacy controller for DataKit:
   }
 }
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

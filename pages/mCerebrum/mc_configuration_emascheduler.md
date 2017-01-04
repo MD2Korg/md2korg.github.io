@@ -13,6 +13,7 @@ folder: mCerebrum
 Config file name and location: `mCerebrum/org.md2k.ema_scheduler/config.json`
 
 EMA scheduler configuration structure:
+
 ```JSON
 [
   EMA_EMI_OBJECT_1,
@@ -46,6 +47,7 @@ The EMA/EMI object defines what, when, and under which conditions an event will 
 - `incentive_rules`: A list of [incentive](#incentive-object) objects to apply
 
 #### Partial Example
+
 ```JSON
 {
   "id": "RANDOM_EMA",
@@ -76,6 +78,7 @@ A block object defines a time window within event can occur and provides a way t
 - `end_offset`: Offset time in milliseconds from the value defined in `base`
 
 ### Block Example
+
 ```JSON
 {
   "total": 1,
@@ -86,6 +89,7 @@ A block object defines a time window within event can occur and provides a way t
 ```
 
 ### Block List Example
+
 ```JSON
 "blocks": [
   {
@@ -124,6 +128,7 @@ A scheduler object designates the rules for delivering the specified EMA/EMI to 
 
 ### Scheduler Example
 This example configures a `RANDOM` ...
+
 ```JSON
 {
   "type": "RANDOM",
@@ -144,6 +149,7 @@ This example configures a `RANDOM` ...
 ```
 
 ### Scheduler List Example
+
 ```JSON
 "scheduler_rules": [
   {
@@ -213,6 +219,7 @@ In this example, 2 minutes (120000 milliseconds) after the EMA/EMI was triggered
 ```
 
 ### Notification List Example
+
 ```JSON
 "notifications": [
   {
@@ -251,6 +258,7 @@ Incentives allow the system to be configuration for micro-payments based on the 
 - `conditions`: A set of [conditions](configurations/#conditions) that must be met to receive this incentive.
 
 ### Incentive Example
+
 ```JSON
 {
   "incentive": 0.75,
@@ -267,6 +275,7 @@ Incentives allow the system to be configuration for micro-payments based on the 
 ```
 
 ### Incentive List Example
+
 ```JSON
 "incentive_rules": [
   {
@@ -306,6 +315,7 @@ Incentives allow the system to be configuration for micro-payments based on the 
 
 
 ## Complete Example
+
 ```JSON
 [
   {
@@ -728,3 +738,6 @@ Incentives allow the system to be configuration for micro-payments based on the 
   }
 ]
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

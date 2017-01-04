@@ -82,3 +82,6 @@ If the app crashes perpetually:
 - Delete the configuration folder located in the internal memory `/mCerebrum`
 - Make sure you have installed the proper update for each app.
 - Delete the mCerebrum app from the phone and re-install it.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

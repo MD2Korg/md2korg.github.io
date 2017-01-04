@@ -71,3 +71,6 @@ window.ATL_JQ_PAGE_PROPS =  $.extend(window.ATL_JQ_PAGE_PROPS, {
   },
 });
 </script>
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

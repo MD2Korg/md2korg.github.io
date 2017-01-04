@@ -47,3 +47,6 @@ Each structure contains:
   }
 ]
 ```
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

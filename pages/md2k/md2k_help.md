@@ -15,3 +15,6 @@ Resources for getting help with mCerebrum and Cerebral Cortex are available in t
 * [discuss.md2k.org](https://discuss.md2k.org/)
 
 The discussion site is our preferred way to support the platforms, instead of email, as it allows for others to benefit from the discussions.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

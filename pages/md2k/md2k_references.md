@@ -63,3 +63,6 @@ Sarker, M. Sharmin, A.A. Ali, M.M. Rahman, R. Bari, S.M. Hossain, S. Kumar. Asse
 1. Andrew Raij, Patrick Blitz, Amin Ahsan Ali, Scott Fisk, Brian French, Somnath Mitra, Motohiro Nakajima, M Nuyen, Kurt Plarre, Mahbubur Rahman, Siddharth Shah, Yuan Shi, Nathan Stohs, Mustafa al’Absi, Emre Ertin, Thomas Kamarck, Santosh Kumar, Marcia Scott, Daniel Siewiorek, Asim Smailagic. mStress: Supporting Continuous Collection of Objective and Subjective Measures of Psychosocial Stress on Mobile Devices, Technical Report No. CS-10-004, Department of Computer Science, University of Memphis, 2010
 
 1. Yuan Shi, Minh Hoai Nguyen, Patrick Blitz, Brian French, Scott Fisk, Fernando De la Torre, Asim Smailagic, Daniel P Siewiorek, Mustafa al’Absi, Emre Ertin, Thomas Kamarck, Santosh Kumar. Personalized stress detection from physiological measurements, International Symposium on Quality of Life Technology, 2010
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

@@ -730,3 +730,6 @@ Notification manager requires `tone.mp3` to be present in this folder and utiliz
 Config file name and location: `mCerebrum/org.md2k.streamprocessor`
 
 Stream processor requires that SVM model files be present in this directory.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

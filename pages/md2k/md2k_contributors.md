@@ -20,3 +20,6 @@ Dr. Kumar is the Lillian and Morrie Moss Chair of Excellence Professor in the De
 
 ## Syed Monowar Hossain
 Mr. Hossain is Lead Software Engineer for the MD2K Center. He is a Ph.D. Student in the Department of Computer Science at the University of Memphis.  He has 4+ years of experience in designing, implementing, integrating, testing and supporting mHealth applications to conduct research studies using wearable sensors for mobile devices on the Android platform. His research interest is on real time inference of different user behavior and context from physiological measurements collected from body worn sensors.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->

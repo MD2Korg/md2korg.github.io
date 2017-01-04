@@ -12,12 +12,12 @@ folder: mCerebrum
 # mCerebrum
 **An Open Source Software Suite for Mobile Sensor Data**
 
-<!-- ![mCerebrum Logo](../img/mCerebrum-logo.png) -->
+{% include image.html file="mCerebrum-logo.png" caption="mCerebrum Logo" %}
 
 <center><iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
 
 ## Functionality and Architecture of mCerebrum
-![mCerebrum Architecture](../img/mCerebrum-v3.png)
+{% include image.html file="mCerebrum-v3.png" caption="mCerebrum Architecture" %}
 
 mCerebrum is a configurable software platform for mobile and wearable devices. The mCerebrum platform is divided into functional layers so that each component is flexible and can be adapted and extended without adversely affecting the other components.  Two components – an access controller and data router – links each layer.  The access controller is responsible to ensuring that pairs of components within the system have appropriate credentials to communicate with each other through the data router, which is responsible for routing data objects throughout the platform.
 
@@ -84,3 +84,6 @@ Participants interact with the system through a suite of applications.
 For example, puffMarker uses multiple data streams (respiration, and wrist-based accelerometers and gyroscopes) to detect when a cigarette puff occurs.  This puff information is utilized by the intervention manager to provide alerts to the participant through mCerebrum's notification system that sends a set of configurable messages, tones, and vibrations to a Microsoft band and the smartphone. Failure to acknowledge the intervention or message can result in repeated attempts to contact followed by an escalation of causing additional alerts to be sent.
 
 Similarly, ECG, respiration, and accelerometer data is used by the cStress model to assess the likelihood of stress that is then used to generate triggers for launching stress intervention apps.
+
+<!-- Required Footer for all pages -->
+<!-- {% include links.html %} -->
