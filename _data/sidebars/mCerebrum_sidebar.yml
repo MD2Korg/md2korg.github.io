@@ -1,0 +1,63 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+
+entries:
+- title: mCerebrum
+  product: mCerebrum
+  version: 1.0
+  folders:
+
+  - title: Getting Started
+    output: web
+    folderitems:
+    - title: Overview
+      url: /mc_landing_page.html
+      output: web
+
+    - title: Sample 1
+      url: /mc_sample1.html
+      output: web
+
+    - title: Sample 2
+      url: /mc_sample2.html
+      output: web
+
+    - title: Sample 3
+      url: /mc_sample3.html
+      output: web
+
+  - title: Configurations
+    output: web
+
+    folderitems:
+    - title: Overview
+      url: /mc_configurations.html
+      output: web
+
+    - title: DataKit
+      url: /mc_configuration_datakit.html
+      output: web
+
+    - title: Sensors
+      url: /mc_configuration_sensors.html
+      output: web
+
+    - title: Plotter
+      url: /mc_configuration_plotter.html
+      output: web
+
+    - title: EMA
+      url: /mc_configuration_ema.html
+      output: web
+
+    - title: EMA Scheduler
+      url: /mc_configuration_ema_scheduler.html
+      output: web
+
+  - title: Troubleshooting
+    output: web
+
+    folderitems:
+    - title: Troubleshooting
+      url: /mc_troubleshooting.html
+      output: web

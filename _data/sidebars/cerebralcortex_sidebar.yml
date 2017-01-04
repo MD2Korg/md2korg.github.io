@@ -1,0 +1,83 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: Cerebral Cortex
+  product: CerebralCortex
+  version: 1.0
+  folders:
+
+  - title: Introduction
+    output: web
+    folderitems:
+
+    - title: Overview
+      url: /cerebralcortex_index.html
+      output: web
+
+    - title: API
+      url: /cerebralcortex_api.html
+      output: web
+
+  # - title: Simple Workflow
+  #   output: web
+  #   folderitems:
+  #
+  #   - title: Sample 1
+  #     url: /cc_sample1.html
+  #     output: web
+  #
+  #   - title: Sample 2
+  #     url: /cc_sample2.html
+  #     output: web
+  #
+  #   - title: Sample 3
+  #     url: /cc_sample3.html
+  #     output: web
+  #
+  #   - title: Sample 4
+  #     url: /cc_sample4.html
+  #     output: web
+  #
+  #   - title: Sample 5
+  #     url: /cc_sample5.html
+  #     output: web
+  #
+  # - title: Complex Workflow
+  #   output: web
+  #   folderitems:
+  #
+  #   - title: Sample 6
+  #     url: /cc_sample6.html
+  #     output: web
+  #
+  #   - title: Sample 7
+  #     url: /cc_sample7.html
+  #     output: web
+  #
+  #   - title: Sample 8
+  #     url: /cc_sample8.html
+  #     output: web
+  #
+  #   - title: Sample 9
+  #     url: /cc_sample9.html
+  #     output: web
+  #
+  #   - title: Sample 10
+  #     url: /cc_sample10.html
+  #     output: web
+  #
+  #   - title: Sample 11
+  #     url: /cc_sample11.html
+  #     output: web
+  #
+  #   - title: Sample 12
+  #     url: /cc_sample12.html
+  #     output: web
+  #
+  #   - title: Sample 13
+  #     url: /cc_sample13.html
+  #     output: web
+  #
+  #   - title: Sample 14
+  #     url: /cc_sample14.html
+  #     output: web
