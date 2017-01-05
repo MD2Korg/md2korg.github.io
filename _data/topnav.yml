@@ -24,6 +24,6 @@ topnav_dropdowns:
     - title: Software
       folderitems:
         - title: mCerebrum
-          url: /mCerebrum_index.html
+          url: /mc_landing_page.html
         - title: Cerebral Cortex
-          url: /cerebralcortex_index.html
+          url: /cc_landing_page.html

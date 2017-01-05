@@ -4,7 +4,7 @@ keywords: documentation theme, jekyll, technical writers, help authoring tools, 
 tags: [getting_started]
 summary: "TODO"
 sidebar: cerebralcortex_sidebar
-permalink: cerebralcortex_index.html
+permalink: cc_landing_page.html
 folder: cerebral_cortex
 ---
 

@@ -11,7 +11,7 @@ entries:
     folderitems:
 
     - title: Overview
-      url: /cerebralcortex_index.html
+      url: /cc_landing_page.html
       output: web
 
     - title: API

@@ -5,7 +5,7 @@ tags: [getting_started]
 summary: "TODO"
 sidebar: mCerebrum_sidebar
 toc: false
-permalink: mCerebrum_index.html
+permalink: /mc_landing_page/
 folder: mCerebrum
 ---
 
