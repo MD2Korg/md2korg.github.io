@@ -1,24 +1,158 @@
----
-layout: none
-search: exclude
----
-
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% for post in site.posts %}
-  {% unless post.search == "exclude" %}
-  <url>
-    <loc>{{site.url}}{{post.url}}</loc>
-  </url>
-  {% endunless %}
-  {% endfor %}
 
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
 
-  {% for page in site.pages %}
-  {% unless page.search == "exclude" %}
-  <url>
-    <loc>{{site.url}}{{ page.url}}</loc>
-  </url>
-  {% endunless %}
-  {% endfor %}
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//software/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org/</loc>
+     <lastmod></lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//software/testingguidelines/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//contributing/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//help/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//data_protection/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//contributors/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//references/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//license/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configurations/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-mCerebrum/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-datakit/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-sensors/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-plotter/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-ema/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/configuration-emascheduler/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//mCerebrum/troubleshooting/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>http://docs.md2k.org//cerebralcortex/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>http://docs.md2k.org//cerebralcortex/api/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>http://docs.md2k.org//feedback/</loc>
+     <lastmod>2017-01-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
 </urlset>
