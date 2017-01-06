@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configuration-sensors/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Configuration-Sensors - MD2K Software Documentation</title>
+        <title>Configuration-Sensors - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="../.." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -776,25 +778,25 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/mCerebrum/configuration-sensors.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/mCerebrum/configuration-sensors.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="sensor-interface-configurations">Sensor Interface configurations</h1>
-<h2 id="phone-sensor">Phone Sensor</h2>
+                <h1 id="sensor-interface-configurations">Sensor Interface configurations<a class="headerlink" href="#sensor-interface-configurations" title="Permanent link">&para;</a></h1>
+<h2 id="phone-sensor">Phone Sensor<a class="headerlink" href="#phone-sensor" title="Permanent link">&para;</a></h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.phonesensor/default_config.json</code></p>
 <p>The phone sensor configuration is a list of <a href="../configurations/#data-source">data sources</a> with a <code>FREQUENCY</code> specific to the sensor specified. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
 <p>Frequency can be one of the following:</p>
 <ul>
-<li>Sample rate in hertz: e.g. &ldquo;1.0 Hz&rdquo;</li>
+<li>Sample rate in hertz: e.g. "1.0 Hz"</li>
 <li>SENSOR_DELAY_NORMAL</li>
 <li>SENSOR_DELAY_UI</li>
 <li>SENSOR_DELAY_GAME</li>
 <li>SENSOR_DELAY_FASTEST</li>
 <li>ON_CHANGE for <code>PROXIMITY</code> only</li>
 </ul>
-<h3 id="complete-example">Complete Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE&quot;</span>
@@ -898,11 +900,11 @@
 </pre></div>
 
 
-<h2 id="autosense">Autosense</h2>
+<h2 id="autosense">Autosense<a class="headerlink" href="#autosense" title="Permanent link">&para;</a></h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.autosense/default_config.json</code></p>
 <p>AutoSense <a href="../configurations/#data-source">data sources</a> are associated with hardware sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors. The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
-<h3 id="complete-example_1">Complete Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="complete-example_1">Complete Example<a class="headerlink" href="#complete-example_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTOSENSE_CHEST&quot;</span><span class="p">,</span>
@@ -1007,7 +1009,7 @@
 </pre></div>
 
 
-<h2 id="microsoft-band">Microsoft Band</h2>
+<h2 id="microsoft-band">Microsoft Band<a class="headerlink" href="#microsoft-band" title="Permanent link">&para;</a></h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.microsoftband/default_config.json</code></p>
 <p>Microsoft Band <a href="../configurations/#data-source">data sources</a> are associated with hardware and software sensors and are expected to be explicitly listed to enable.  The following example illustrates all possible sensors and data streams.  Remove entries to disable the UI for specific sensors.  The absence of a configuration file will allow the system to allow the configuration of all possible data sources.</p>
 <p><code>ACCELEROMETER</code> and <code>GYROSCOPE</code> sensors must have their frequency configured to one of the following:</p>
@@ -1016,8 +1018,8 @@
 <li>31Hz</li>
 <li>62Hz</li>
 </ul>
-<h3 id="complete-example_2">Complete Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="complete-example_2">Complete Example<a class="headerlink" href="#complete-example_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND&quot;</span>
@@ -1191,7 +1193,7 @@
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -1202,12 +1204,51 @@
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

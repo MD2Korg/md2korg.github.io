@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/cerebralcortex/api/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>API - MD2K Software Documentation</title>
+        <title>API - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="../.." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -992,49 +994,46 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/cerebralcortex/api.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/cerebralcortex/api.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="cerebral-cortex-api-reference">Cerebral Cortex API Reference</h1>
-<h2 id="header-information">Header information</h2>
+                <h1 id="cerebral-cortex-api-reference">Cerebral Cortex API Reference<a class="headerlink" href="#cerebral-cortex-api-reference" title="Permanent link">&para;</a></h1>
+<h2 id="header-information">Header information<a class="headerlink" href="#header-information" title="Permanent link">&para;</a></h2>
 <p>All POST resquests must specify:
 <code>Content-Type: application/josn</code></p>
-<h2 id="workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API</h2>
+<h2 id="workflow-for-cerebral-cortex-api">Workflow for Cerebral Cortex API<a class="headerlink" href="#workflow-for-cerebral-cortex-api" title="Permanent link">&para;</a></h2>
 <p>JSON API</p>
-<h3 id="register-participant">Register Participant</h3>
+<h3 id="register-participant">Register Participant<a class="headerlink" href="#register-participant" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="register-study">Register Study</h2>
+</p>
+<h2 id="register-study">Register Study<a class="headerlink" href="#register-study" title="Permanent link">&para;</a></h2>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h3 id="register-participant-in-study">Register Participant in Study</h3>
+</p>
+<h3 id="register-participant-in-study">Register Participant in Study<a class="headerlink" href="#register-participant-in-study" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies/register_participant</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
     <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h3 id="register-data-source">Register Data Source</h3>
+</p>
+<h3 id="register-data-source">Register Data Source<a class="headerlink" href="#register-data-source" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
     <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
@@ -1083,12 +1082,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h3 id="load-data-for-each-data-stream">Load data for each data stream</h3>
+</p>
+<h3 id="load-data-for-each-data-stream">Load data for each data stream<a class="headerlink" href="#load-data-for-each-data-stream" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1111,9 +1109,8 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="participant-registration">Participant registration</h2>
+</p>
+<h2 id="participant-registration">Participant registration<a class="headerlink" href="#participant-registration" title="Permanent link">&para;</a></h2>
 <p>JSON API for participant registration</p>
 <p>Request fields</p>
 <ul>
@@ -1127,17 +1124,16 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<h3 id="example">Example</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
+</p>
 <p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span><span class="p">,</span>
   <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
   <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span><span class="p">,</span>
@@ -1146,27 +1142,25 @@
 </pre></div>
 
 
-<h3 id="example_1">Example</h3>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/participants</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+</p>
+<p><em>Response</em>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;a37fbcab-0f90-4dd3-907d-f0cb3f247302&quot;</span><span class="p">,</span>
   <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Participant Name/Identifier&quot;</span><span class="p">,</span>
   <span class="nt">&quot;created_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span><span class="p">,</span>
   <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T01:56:38.217Z&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="study-registration">Study registration</h2>
+</p>
+<h2 id="study-registration">Study registration<a class="headerlink" href="#study-registration" title="Permanent link">&para;</a></h2>
 <p>JSON API for study registration</p>
 <p>Request Fields</p>
 <ul>
@@ -1181,18 +1175,17 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<h3 id="example_2">Example</h3>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
-
-<p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<em>Response</em>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
   <span class="nt">&quot;identifier&quot;</span><span class="p">:</span> <span class="s2">&quot;Study XYZ&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study Name&quot;</span><span class="p">,</span>
@@ -1200,9 +1193,8 @@
   <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-18T20:09:00.286Z&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="participant-study-registration">Participant-Study registration</h2>
+</p>
+<h2 id="participant-study-registration">Participant-Study registration<a class="headerlink" href="#participant-study-registration" title="Permanent link">&para;</a></h2>
 <p>JSON API for registering an existing participant in and existing study</p>
 <p>Request Fields</p>
 <ul>
@@ -1217,18 +1209,17 @@
 <li><code>created_at</code>: DateTime</li>
 <li><code>updated_at</code>: DateTime</li>
 </ul>
-<h3 id="example_3">Example</h3>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/studies</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
     <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+</p>
+<p><em>Response</em>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
   <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
   <span class="nt">&quot;study_id&quot;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
@@ -1236,12 +1227,11 @@
   <span class="nt">&quot;updated_at&quot;</span><span class="p">:</span> <span class="s2">&quot;2016-04-28T02:15:04.213Z&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="datasource-registration">Datasource registration</h2>
+</p>
+<h2 id="datasource-registration">Datasource registration<a class="headerlink" href="#datasource-registration" title="Permanent link">&para;</a></h2>
 <p>JSON API for data source registration</p>
-<p>Request Structure</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request Structure
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="err">UUID</span><span class="p">,</span>
     <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="err">String</span><span class="p">,</span>
@@ -1276,18 +1266,17 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
-
+</p>
 <p><em>Response fields</em></p>
 <ul>
 <li><code>status</code>: Enum: (OK, ERROR)</li>
 <li><code>message</code>: String</li>
 <li><code>datastream_id</code>: Integer</li>
 </ul>
-<h3 id="example_4">Example</h3>
+<h3 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datasources/register</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;participant_id&quot;</span><span class="p">:</span> <span class="s2">&quot;b1c966b4-06c8-4ebd-9aee-67bcfd38d0d6&quot;</span><span class="p">,</span>
     <span class="nt">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
@@ -1336,26 +1325,24 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+</p>
+<p><em>Response</em>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully loaded datasource&quot;</span><span class="p">,</span>
   <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="s2">&quot;908&quot;</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="data-point-bulk-loader">Data point bulk loader</h2>
+</p>
+<h2 id="data-point-bulk-loader">Data point bulk loader<a class="headerlink" href="#data-point-bulk-loader" title="Permanent link">&para;</a></h2>
 <p>JSON API for data point bulk loading</p>
 <p>The URL determines where data is persisted.</p>
 <ul>
 <li>Postgresql (datapoints)</li>
 <li>Postgresql and Cassandra (rawdatapoints)</li>
 </ul>
-<p>Request Structure</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request Structure
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="err">Integer</span> <span class="err">from</span> <span class="err">datasource_registration</span> <span class="err">process</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1367,18 +1354,17 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-
-
+</p>
 <p><em>Response fields</em></p>
 <ul>
 <li><code>status</code>: Enum: (OK, ERROR)</li>
 <li><code>message</code>: String</li>
 <li><code>count</code>: Integer indicating number of entries processed</li>
 </ul>
-<h3 id="example_5">Example</h3>
+<h3 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h3>
 <p><strong>URL:</strong> <code>https://cerebralcortex/datapoints/bulkload</code> or <code>https://cerebralcortex/rawdatapoints/bulkload</code></p>
-<p>Request: POST</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<p>Request: POST
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;datastream_id&quot;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
     <span class="nt">&quot;data&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
@@ -1401,15 +1387,15 @@
     <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<p><em>Response</em></p>
-<div class="code"><pre><span></span><span class="p">{</span>
+</p>
+<p><em>Response</em>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;status&quot;</span><span class="p">:</span> <span class="s2">&quot;ok&quot;</span><span class="p">,</span>
   <span class="nt">&quot;message&quot;</span><span class="p">:</span> <span class="s2">&quot;Successfully loaded datapoints&quot;</span><span class="p">,</span>
   <span class="nt">&quot;count&quot;</span><span class="p">:</span> <span class="mi">2</span>
 <span class="p">}</span>
 </pre></div>
+</p>
               
             </article>
           </div>
@@ -1458,7 +1444,7 @@
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -1469,12 +1455,51 @@
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

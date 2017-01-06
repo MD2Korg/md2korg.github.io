@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configurations/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Configurations - MD2K Software Documentation</title>
+        <title>Configurations - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="../.." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -820,15 +822,15 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/mCerebrum/configurations.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/mCerebrum/configurations.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="configuration">Configuration</h1>
+                <h1 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h1>
 <p><strong>mCerebrum</strong> is primarily configured and controlled by a set of JSON configuration files.  This document describes how to utilize and adapt these configurations to your own requirements.</p>
-<h2 id="data-source">Data source</h2>
+<h2 id="data-source">Data source<a class="headerlink" href="#data-source" title="Permanent link">&para;</a></h2>
 <p>A data source uniquely represents a single data stream within mCerebrum.  Subsets of a data source definition can be utilized to query for multiple streams. This example contains all possible fields.  <code>dataDescriptors</code> and <code>metadata</code> are always optional.</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSourceID&quot;</span><span class="p">,</span>
   <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -892,7 +894,7 @@
 <li><code>id</code>: TODO: What does id mean here?</li>
 </ul>
 <p><code>Platform</code>, <code>platformapp</code>, and <code>application</code> each contain specific <code>type</code> and <code>id</code> fields that are identically defined.</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;MEMORY&quot;</span><span class="p">,</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;DataSourceID&quot;</span><span class="p">,</span>
   <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -911,7 +913,7 @@
 </pre></div>
 
 
-<h2 id="privacy-type-options">Privacy type options</h2>
+<h2 id="privacy-type-options">Privacy type options<a class="headerlink" href="#privacy-type-options" title="Permanent link">&para;</a></h2>
 <p>Privacy options are define by specifying the following four parameters and are utilized by DataKit to provide a mechanism
 that prevents data sources that match the define <code>source</code> criteria from being routed and recorded.</p>
 <ul>
@@ -920,7 +922,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>summary</code>: Summary description for display on the user interface for additional details</li>
 <li><code>source</code>: list of <a href="#data-source">data sources</a> (TODO: Why is this different than the listed data source definition?)</li>
 </ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;location&quot;</span><span class="p">,</span>
   <span class="nt">&quot;title&quot;</span><span class="p">:</span> <span class="s2">&quot;Location&quot;</span><span class="p">,</span>
   <span class="nt">&quot;summary&quot;</span><span class="p">:</span> <span class="s2">&quot;&quot;</span><span class="p">,</span>
@@ -933,7 +935,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 </pre></div>
 
 
-<h2 id="notification">Notification</h2>
+<h2 id="notification">Notification<a class="headerlink" href="#notification" title="Permanent link">&para;</a></h2>
 <p>Notifications are handled by mCerebrum by sending a notification object to the notification manager application.  This is the definition of the object and certain fields are require depending on the targeted notification device.  Please refer to the device specific documentation.</p>
 <ul>
 <li><code>id</code>: Unique identifier that is utilized by other configuration file to reference this object instance.</li>
@@ -951,8 +953,8 @@ that prevents data sources that match the define <code>source</code> criteria fr
 <li><code>repeat</code>: How many time to repeat this notification</li>
 <li><code>duration</code>: How long in milliseconds to alert for each notification iteration</li>
 </ul>
-<h3 id="example">Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;MICROSOFT_BAND_VIBRATE_3&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Microsoft Band Vibration&quot;</span><span class="p">,</span>
@@ -1204,9 +1206,9 @@ that prevents data sources that match the define <code>source</code> criteria fr
 </pre></div>
 
 
-<h2 id="study-notifications">Study notifications</h2>
+<h2 id="study-notifications">Study notifications<a class="headerlink" href="#study-notifications" title="Permanent link">&para;</a></h2>
 <p>TODO:</p>
-<div class="code"><pre><span></span><span class="p">[</span>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_VIBRATE&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Phone Vibration&quot;</span><span class="p">,</span>
@@ -1298,7 +1300,7 @@ that prevents data sources that match the define <code>source</code> criteria fr
 </pre></div>
 
 
-<h2 id="conditions">Conditions</h2>
+<h2 id="conditions">Conditions<a class="headerlink" href="#conditions" title="Permanent link">&para;</a></h2>
 <p>Conditions provide a mechanism to specify constraints based on the output of various sensors and data streams.  They are
 defined as follows  and referenced by <code>id</code> within other documents.</p>
 <ul>
@@ -1308,8 +1310,8 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 <li><code>values</code>: List of input values for the evaluation function</li>
 <li><code>data_source</code>: An single object as defined in the <a href="#data-source">data source</a> query support</li>
 </ul>
-<h3 id="example_1">Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_BATTERY_10&quot;</span><span class="p">,</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;PHONE_BATTERY&quot;</span><span class="p">,</span>
@@ -1496,9 +1498,9 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 </pre></div>
 
 
-<h2 id="base">Base</h2>
+<h2 id="base">Base<a class="headerlink" href="#base" title="Permanent link">&para;</a></h2>
 <p>Defined in main application JSON file</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;day_start&quot;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
         <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;wakeup&quot;</span><span class="p">,</span>
@@ -1531,10 +1533,10 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
 </pre></div>
 
 
-<h2 id="notification-manager">Notification Manager</h2>
+<h2 id="notification-manager">Notification Manager<a class="headerlink" href="#notification-manager" title="Permanent link">&para;</a></h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.notificationmanager/</code></p>
 <p>Notification manager requires <code>tone.mp3</code> to be present in this folder and utilizes this file for audible alerts for participants.</p>
-<h2 id="stream-processor">Stream Processor</h2>
+<h2 id="stream-processor">Stream Processor<a class="headerlink" href="#stream-processor" title="Permanent link">&para;</a></h2>
 <p>Config file name and location: <code>mCerebrum/org.md2k.streamprocessor</code></p>
 <p>Stream processor requires that SVM model files be present in this directory.</p>
               
@@ -1585,7 +1587,7 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -1596,12 +1598,51 @@ defined as follows  and referenced by <code>id</code> within other documents.</p
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/cerebralcortex/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Overview - MD2K Software Documentation</title>
+        <title>Overview - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href=".." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -740,23 +742,23 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/cerebralcortex/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/cerebralcortex/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="cerebral-cortex">Cerebral Cortex</h1>
+                <h1 id="cerebral-cortex">Cerebral Cortex<a class="headerlink" href="#cerebral-cortex" title="Permanent link">&para;</a></h1>
 <p><strong>designed to facilitate mobile health data analytics and interventions</strong></p>
 <!-- ![Cerebral Cortex Logo](../img/cerebralCortex-logo.png) -->
 
 <p>It brings state-of-the-art research techniques and methodologies
 together in a single system to affect clinical outcomes with adaptable,
 just-in-time interventions delivered to participants in the field.</p>
-<h2 id="functionality-and-architecture-of-cerebral-cortex">Functionality and Architecture of Cerebral Cortex</h2>
+<h2 id="functionality-and-architecture-of-cerebral-cortex">Functionality and Architecture of Cerebral Cortex<a class="headerlink" href="#functionality-and-architecture-of-cerebral-cortex" title="Permanent link">&para;</a></h2>
 <p><img alt="mCerebrum Architecture" src="./../img/CerebralCortex-v3.png" /></p>
 <p>Cerebral Cortex is a flexible layered architecture designed around different functional layers so that each component can be adapted and extended without adversely affecting the other components.  A Kernel links the layers to provide security controls between modules and a unified data interface to abstract implementation specifics. To meet future needs, we anticipate continuing to adapt and augment the Cerebral Cortex platform to support future technologies and the needs of new studies. Cerebral Cortex has the following layers and associated modules:</p>
-<h2 id="gateway">Gateway</h2>
+<h2 id="gateway">Gateway<a class="headerlink" href="#gateway" title="Permanent link">&para;</a></h2>
 <p>A gateway layer operates in front of all the other layers to provide secure interfaces and APIs for interfacing with the platform.  This currently includes maintaining HTTP over SSL and routing requests to the appropriate internal platforms.</p>
-<h2 id="user-interfaces">User interfaces</h2>
+<h2 id="user-interfaces">User interfaces<a class="headerlink" href="#user-interfaces" title="Permanent link">&para;</a></h2>
 <p>The user interface layer is currently composed of four core applications:</p>
 <ul>
 <li>A <strong>study administration web portal</strong> which provides a secure and encrypted interface that allows study coordinators to conduct, configure, and monitor field studies with mCerebrum.</li>
@@ -764,7 +766,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>health science visualization</strong> through our Discovery Dashboard provides data visualizations designed for the health community, which aid in data interpretation by transforming the high-frequency sensor data streams into key digital biomarkers.</li>
 <li>A <strong>data science visualization</strong> complements Discovery Dashboard by providing a mechanism for inspecting multiple high-frequency data streams.</li>
 </ul>
-<h2 id="machine-interfaces">Machine interfaces</h2>
+<h2 id="machine-interfaces">Machine interfaces<a class="headerlink" href="#machine-interfaces" title="Permanent link">&para;</a></h2>
 <p>A set of machine interfaces complements the UI by providing several different APIs for both Cerebral Cortex’s internal applications and as an interface to external web services and other data sources.</p>
 <ul>
 <li>The <strong>Cerebral Cortex API</strong> is designed to work in conjunction with the kernel to provide an interface for external applications such as mCerebrum to produce and consume data from the system. This is the primary interface on which our high-frequency data streams arrive from mCerebrum.</li>
@@ -772,7 +774,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>data import and export</strong> module is designed to translate high-frequency data streams into commonly usable formats for use by health and data science researchers. It will also support inserting data into Cerebral Cortex from these same formats.</li>
 </ul>
 <p>Both the user and machine interfaces are built around a rapidly deployable containerized platform (Docker) to support a more flexible set of deployments across multiple different cloud architectures.</p>
-<h2 id="analytics">Analytics</h2>
+<h2 id="analytics">Analytics<a class="headerlink" href="#analytics" title="Permanent link">&para;</a></h2>
 <p>The analytics layer contains modules primarily designed around the Apache Spark toolchain to run algorithm on the population-scale data sets that Cerebral Cortex contains.  Many processes parallel what is computed in mCerebrum and extends the analysis to examine data at larger time resolutions (e.g., processing the entire day’s worth of data for better estimate of baseline physiology rather than relying on history for online computation in mCerebrum) for higher accuracy and for population scale analytics. Described are several modules within the system.</p>
 <ul>
 <li><strong>Stress</strong> is a cloud implementation of the cStress research and is designed to run on an entire person’s data instead of the real-time implementation on mCerebrum.</li>
@@ -782,7 +784,7 @@ just-in-time interventions delivered to participants in the field.</p>
 <li>A <strong>batch processor</strong> provides a mechanism to read data from HBase and run algorithms on it without worrying about writing specialized distributed processing code.</li>
 <li><strong>Machine learning</strong> support multiple libraries include Scikit-learn and Spark’s MLlib. The ultimate goal for machine learning is to interoperate with the Discover Dashboard to provide an interactive interface on which various machine learning techniques can quickly be evaluated and tunes. Models learned on population-scale data can be sent back to a smartphone in the field to improve detection and classification accuracy.</li>
 </ul>
-<h2 id="data-storage">Data Storage</h2>
+<h2 id="data-storage">Data Storage<a class="headerlink" href="#data-storage" title="Permanent link">&para;</a></h2>
 <p>Data storage is currently provided by a combination of the Apache Hadoop Distributed File System (HDFS) and HBase, a distributed bigtable datastore. HBase is responsible for storing the vast majority of the high-frequency time series data streams and provides a queryable interface that integrates well with the analytics layer tools.</p>
               
             </article>
@@ -832,7 +834,7 @@ just-in-time interventions delivered to participants in the field.</p>
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -843,12 +845,51 @@ just-in-time interventions delivered to participants in the field.</p>
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configuration-datakit/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Configuration-DataKit - MD2K Software Documentation</title>
+        <title>Configuration-DataKit - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="../.." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -830,32 +832,32 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/mCerebrum/configuration-datakit.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/mCerebrum/configuration-datakit.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="datakit">DataKit</h1>
+                <h1 id="datakit">DataKit<a class="headerlink" href="#datakit" title="Permanent link">&para;</a></h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.datakit/default_config.json</code></p>
-<h2 id="database">Database</h2>
+<h2 id="database">Database<a class="headerlink" href="#database" title="Permanent link">&para;</a></h2>
 <p>The database section designates:</p>
 <ul>
 <li><code>enabled</code>: true or false to designate whether to store data to memory</li>
-<li><code>location</code>: Store the sqlite database on the phone&rsquo;s<ul>
+<li><code>location</code>: Store the sqlite database on the phone's<ul>
 <li><em>INTERNAL_SDCARD</em>: internal memory, no exceptions</li>
 <li><em>EXTERNAL_SDCARD</em>: external memory, no exceptions</li>
 <li><em>EXTERNAL_SDCARD_PREFERRED</em>: external memory is preferred if available, but internal memory will be utilized as a fallback option</li>
 </ul>
 </li>
 </ul>
-<h3 id="example">Example</h3>
-<div class="code"><pre><span></span><span class="s2">&quot;database&quot;</span><span class="err">:</span> <span class="p">{</span>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;database&quot;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;INTERNAL_SDCARD&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h2 id="archive">Archive</h2>
+<h2 id="archive">Archive<a class="headerlink" href="#archive" title="Permanent link">&para;</a></h2>
 <p>This section configures the archive options for DataKit:</p>
 <ul>
 <li><code>enabled</code>: true or false to designate whether to archive records to flash storage</li>
@@ -867,8 +869,8 @@
 </li>
 <li><code>interval</code>: Delay in milliseconds from when a datapoint is logged in the system and when it is eligible for archiving</li>
 </ul>
-<h3 id="example_1">Example</h3>
-<div class="code"><pre><span></span><span class="s2">&quot;archive&quot;</span><span class="err">:</span> <span class="p">{</span>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;archive&quot;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;EXTERNAL_SDCARD_PREFERRED&quot;</span><span class="p">,</span>
   <span class="nt">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">86400000</span>
@@ -876,16 +878,16 @@
 </pre></div>
 
 
-<h2 id="upload">Upload</h2>
+<h2 id="upload">Upload<a class="headerlink" href="#upload" title="Permanent link">&para;</a></h2>
 <p>This section configures the upload to Cerebral Cortex options for DataKit:</p>
 <ul>
-<li><code>enabled</code>: true or false to designate whether to upload data to mCerebrum&rsquo;s cloud component, Cerebral Cortex</li>
+<li><code>enabled</code>: true or false to designate whether to upload data to mCerebrum's cloud component, Cerebral Cortex</li>
 <li><code>interval</code>: Delay in milliseconds between upload iterations</li>
-<li><code>url</code>: Cerebral Cortex API URL: e.g. https://cerebralcortex.SITE.ORG/</li>
+<li><code>url</code>: Cerebral Cortex API URL: e.g. <a href="https://cerebralcortex.SITE.ORG/">https://cerebralcortex.SITE.ORG/</a></li>
 <li><code>restricted_datasource</code>: List of <a href="#data-streams">datastreams</a> eligible for upload restrictions</li>
 </ul>
-<h3 id="example_2">Example</h3>
-<div class="code"><pre><span></span><span class="s2">&quot;upload&quot;</span><span class="err">:</span> <span class="p">{</span>
+<h3 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;upload&quot;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nt">&quot;interval&quot;</span><span class="p">:</span> <span class="mi">900000</span><span class="p">,</span>
   <span class="nt">&quot;url&quot;</span><span class="p">:</span> <span class="s2">&quot;https://cerebralcortex.SITE.ORG/&quot;</span><span class="p">,</span>
@@ -901,7 +903,7 @@
 </pre></div>
 
 
-<h2 id="privacy">Privacy</h2>
+<h2 id="privacy">Privacy<a class="headerlink" href="#privacy" title="Permanent link">&para;</a></h2>
 <p>This section configures the privacy controller for DataKit:</p>
 <ul>
 <li><code>duration_options</code>: a list of options where each contains the following:<ul>
@@ -912,8 +914,8 @@
 </li>
 <li><code>privacy_type_options</code>: A list of <a href="../configurations/#privacy-type-options">privacy types</a></li>
 </ul>
-<h3 id="example_3">Example</h3>
-<div class="code"><pre><span></span><span class="s2">&quot;privacy&quot;</span><span class="err">:</span> <span class="p">{</span>
+<h3 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;privacy&quot;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&quot;duration_options&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;300000&quot;</span><span class="p">,</span>
@@ -1016,8 +1018,8 @@
 </pre></div>
 
 
-<h2 id="complete-example">Complete Example</h2>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;database&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;enabled&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;location&quot;</span><span class="p">:</span> <span class="s2">&quot;INTERNAL_SDCARD&quot;</span>
@@ -1190,7 +1192,7 @@
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -1201,12 +1203,51 @@
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="./assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Introduction - MD2K Software Documentation</title>
+        <title>Introduction - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -712,22 +714,22 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/index.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="introduction">Introduction</h1>
+                <h1 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h1>
 <p>The MD2K software platform includes mobile phone software platform called mCerebrum and a cloud counterpart called Cerebral Cortex. mCerebrum is a configurable software platform for mobile and wearable sensors. It provides support for reliable data collection from mobile and wearable sensors, and real-time processing of these data for sensor triggered just-in-time adaptive interventions.</p>
 <p>Cerebral Cortex is the big data companion of mCerebrum designed to support population-scale data analysis, visualization, model development, and intervention design for mobile sensor data. It provides the ability to do machine learning model development on population scale data sets and provides interoperable interfaces for aggregation of diverse data sources.</p>
 <p><center><iframe src="https://www.youtube.com/embed/uSQn2puExxM" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center></p>
-<h2 id="limitations-of-existing-mhealth-platforms">Limitations of Existing mHealth Platforms</h2>
+<h2 id="limitations-of-existing-mhealth-platforms">Limitations of Existing mHealth Platforms<a class="headerlink" href="#limitations-of-existing-mhealth-platforms" title="Permanent link">&para;</a></h2>
 <p>Several software platforms have recently emerged for collecting mobile health data. For example, Apple and Google each provide a set of APIs and tools for mobile mHeath data collection. But, Apple HealthKit and Google Fit APIs are primarily designed for low frequency data collection of digital biomarkers including: blood pressure, weight, or physical activity. Both of these platforms have limited expressiveness for time series data streams.</p>
-<h2 id="uniqueness-of-md2k">Uniqueness of MD2K</h2>
+<h2 id="uniqueness-of-md2k">Uniqueness of MD2K<a class="headerlink" href="#uniqueness-of-md2k" title="Permanent link">&para;</a></h2>
 <p>The <a href="https://www.github.com/MD2Korg/">MD2K</a> platform , on the other hand, is designed from the ground up as a high-frequency data stream processing toolchain that provides flexible data types and custom object storage. It can collect and analyze data from tens of wearable sensors via a wide array of wireless radios (ANT, Bluetooth, Bluetooth LE, etc.). It also provides native support for triggering notifications, self-report prompts, and interventions based on real-time values of digital biomarkers derived from sensor data.</p>
-<h2 id="background">Background</h2>
+<h2 id="background">Background<a class="headerlink" href="#background" title="Permanent link">&para;</a></h2>
 <p>mCerebrum is backed by 9 years of software development on the <a href="http://www.fieldstream.org/">Fieldstream</a> and <a href="https://sites.google.com/site/autosenseproject/">AutoSense</a> projects which yielded in excess of 20,000 hours of wearable sensor data from a variety of lab and field studies with hundreds of participants. Over 27 research articles (with over 400 citations) have been published using analysis of these data (see list of articles below; go here for citations). mCerebrum is based on these extensive experiences with real-life high-frequency sensor data and its analysis for both technology and health research.</p>
 <p>The signal processing for Fieldstream and AutoSense were on a Matlab batch-processing codebase that operates on data after a participant has returned the data collection device to the lab. Therefore, no real-time sensor-triggered notifications or interventions were possible with the existing framework and furthermore, the codebase does not lend itself well to distributed processing for scalable application performance.</p>
-<h2 id="novelty-of-md2k">Novelty of MD2K</h2>
+<h2 id="novelty-of-md2k">Novelty of MD2K<a class="headerlink" href="#novelty-of-md2k" title="Permanent link">&para;</a></h2>
 <p>mCerebrum, on the other hand, is designed to be compatible with mobile platforms so as to support real-time signal processing of high-frequency data streams in excess of 800 hertz, while meeting quality of service requirements for the mobile platform. In addition, mCerebrum is designed as an open-source project so that it can be easily used by the community and modified to suit specific research needs.</p>
 <p>Cerebral Cortex is the big data companion to mCerebrum designed to support population-scale analytics, model development, and data visualizations. One of the primary capabilities of Cerebral Cortex is its ability to support scalable big data machine learning model development and iterative data analysis and model generation across population-scale data sets. Models learned on population-scale data can be sent back to a smartphone in the field to improve detection and classification accuracy.</p>
               
@@ -764,7 +766,7 @@
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -775,12 +777,51 @@
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       

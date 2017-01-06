@@ -5,13 +5,13 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="mCerbrum and Cerebral Cortex software and API documentation">
+        <meta name="description" content="mCerbrum and Cerebral Cortex software documentation and training material">
       
       
         <link rel="canonical" href="http://docs.md2k.org/mCerebrum/configuration-mCerebrum/">
       
       
-        <meta name="author" content="MD2K">
+        <meta name="author" content="MD2K.org">
       
       
         <link rel="shortcut icon" href="../../assets/images/favicon.ico">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Configuration-mCerebrum - MD2K Software Documentation</title>
+        <title>Configuration-mCerebrum - MD2K Software and Training</title>
       
     
     
@@ -35,6 +35,8 @@
   <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
 
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <link rel="stylesheet" href="https://file.myfontastic.com/n6vo44Re5QaWo8oCKShBs7/icons.css">
 
     
     
@@ -85,7 +87,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../.." title="MD2K Software Documentation" class="md-icon md-header-nav__icon md-header-nav__icon--home">
+        <a href="../.." title="MD2K Software and Training" class="md-icon md-header-nav__icon md-header-nav__icon--home">
           
             school
           
@@ -174,7 +176,7 @@
         school
       
     </i>
-    MD2K Software Documentation
+    MD2K Software and Training
   </label>
   
     <div class="md-nav__source">
@@ -1116,15 +1118,15 @@
           <div class="md-content">
             <article class="md-content__inner md-typeset">
                
-                 <a href="https://github.com/MD2Korg/edit/master/docs/mCerebrum/configuration-mCerebrum.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
+                 <a href="https://github.com/MD2Korg/md2korg.github.io/edit/dev/docs/mCerebrum/configuration-mCerebrum.md" title="Edit this page" class="md-icon md-content__edit">edit</a>
                
               
                 
-                <h1 id="mcerebrum">mCerebrum</h1>
+                <h1 id="mcerebrum">mCerebrum<a class="headerlink" href="#mcerebrum" title="Permanent link">&para;</a></h1>
 <p>Config file name and location: <code>mCerebrum/org.md2k.study/config.json</code></p>
-<h3 id="structure-overview">Structure Overview</h3>
-<p>This is the general structure of the mCerebrum configuration file.  Please see additional details in the following subsections.</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h3 id="structure-overview">Structure Overview<a class="headerlink" href="#structure-overview" title="Permanent link">&para;</a></h3>
+<p>This is the general structure of the mCerebrum configuration file.  Please see additional details in the following subsections.
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;config_info&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="err">CONFIG_INFO</span>
   <span class="p">},</span>
@@ -1165,9 +1167,8 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h2 id="config-info">Config Info</h2>
+</p>
+<h2 id="config-info">Config Info<a class="headerlink" href="#config-info" title="Permanent link">&para;</a></h2>
 <p>The config info key specifies several required pieces of information and defines which resources are required.</p>
 <ul>
 <li><code>id</code>: Unique study identifier.  E.g. ProtocolNumber TODO: Why is this here?</li>
@@ -1175,8 +1176,8 @@
 <li><code>version_code</code>: The version of this file that is utilized by mCerebrum to determine if it can utilize this configuration</li>
 <li><code>required_files</code>: List of files required to be present in the configuration folder before allowing the system to be configured.</li>
 </ul>
-<h3 id="example">Example</h3>
-<div class="code"><pre><span></span><span class="s2">&quot;config_info&quot;</span><span class="err">:</span> <span class="p">{</span>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="s2">&quot;config_info&quot;</span><span class="err">:</span> <span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;STU00201566-Test&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MD2K Smoking Study (at NW)-Test&quot;</span><span class="p">,</span>
   <span class="nt">&quot;version_code&quot;</span><span class="p">:</span> <span class="mi">21</span><span class="p">,</span>
@@ -1205,24 +1206,24 @@
 </pre></div>
 
 
-<h2 id="study-info">Study Info</h2>
+<h2 id="study-info">Study Info<a class="headerlink" href="#study-info" title="Permanent link">&para;</a></h2>
 <p>This object defines the specific study for the the configuration.</p>
 <ul>
 <li><code>id</code>: Unique study identifier.  E.g. ProtocolNumber</li>
 <li><code>name</code>: Human readable study description.  This identifies a specific study.</li>
 </ul>
-<h3 id="example_1">Example</h3>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h3 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;STU00201566-Test&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MD2K Smoking Study (at NW)-Test&quot;</span>
 <span class="p">}</span>
 </pre></div>
 
 
-<h2 id="application-list">Application List</h2>
+<h2 id="application-list">Application List<a class="headerlink" href="#application-list" title="Permanent link">&para;</a></h2>
 <p>The application list defines which applications the system requires to perform its tasks,
 where to get them from, and any necessary configurations and services.</p>
-<h3 id="application-object">Application object</h3>
+<h3 id="application-object">Application object<a class="headerlink" href="#application-object" title="Permanent link">&para;</a></h3>
 <p>Each application object consists of several fields:</p>
 <p>Required</p>
 <ul>
@@ -1239,7 +1240,7 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>service</code>: A specific Android service class for a service</li>
 <li><code>settings</code>: A specific Android service class for a preference panel</li>
 </ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;datakit&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;DataKit&quot;</span><span class="p">,</span>
   <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1252,9 +1253,9 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h3 id="application-list-example">Application List Example</h3>
+<h3 id="application-list-example">Application List Example<a class="headerlink" href="#application-list-example" title="Permanent link">&para;</a></h3>
 <p>A complete example List</p>
-<div class="code"><pre><span></span><span class="p">[</span>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;study&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Study&quot;</span><span class="p">,</span>
@@ -1384,7 +1385,7 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="action-list">Action List</h2>
+<h2 id="action-list">Action List<a class="headerlink" href="#action-list" title="Permanent link">&para;</a></h2>
 <p>Each action object consists of several fields and defines UI action that can occur:</p>
 <p>Required</p>
 <ul>
@@ -1404,8 +1405,8 @@ where to get them from, and any necessary configurations and services.</p>
 <li><code>package_name</code>: Android package name for this application</li>
 <li><code>class_name</code>: Android class name for this application activity</li>
 </ul>
-<h3 id="action-object-example">Action Object Example</h3>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h3 id="action-object-example">Action Object Example<a class="headerlink" href="#action-object-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;clear_config&quot;</span><span class="p">,</span>
   <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;reset&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Clear Configuration&quot;</span><span class="p">,</span>
@@ -1418,8 +1419,8 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h3 id="action-list-example">Action List Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="action-list-example">Action List Example<a class="headerlink" href="#action-list-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;config_info&quot;</span><span class="p">,</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;setup&quot;</span><span class="p">,</span>
@@ -1644,32 +1645,31 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="administration-view">Administration View</h2>
+<h2 id="administration-view">Administration View<a class="headerlink" href="#administration-view" title="Permanent link">&para;</a></h2>
 <p>This configuration block controls the administration view and allows a password to be specified.</p>
-<h3 id="admin-view">Admin View</h3>
+<h3 id="admin-view">Admin View<a class="headerlink" href="#admin-view" title="Permanent link">&para;</a></h3>
 <p>The admin view has two parameters:</p>
 <ul>
 <li><code>password</code>: plaintext password to gain access to the administration panel.  This field may be omitted to disable passwords</li>
-<li><code>view_contents</code>: a list of <a href="#admin-view-object">admin view</a> objects</li>
-</ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<li><code>view_contents</code>: a list of <a href="#admin-view-object">admin view</a> objects
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
   <span class="nt">&quot;view_contents&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="err">ADMIN_VIEW_OBJECT</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h3 id="admin-view-object">Admin View Object</h3>
+</li>
+</ul>
+<h3 id="admin-view-object">Admin View Object<a class="headerlink" href="#admin-view-object" title="Permanent link">&para;</a></h3>
 <p>Required fields:</p>
 <ul>
 <li><code>id</code>: unique identifier to reference this admin view component</li>
 <li><code>name</code>: Human readable name suitable for display in the application user interface</li>
 <li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this view</li>
-<li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
+<li><code>values</code>: List of <code>ids</code> defined in ...</li>
 </ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;key_configure_app&quot;</span><span class="p">,</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Configure Applications&quot;</span><span class="p">,</span>
   <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1684,8 +1684,8 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h3 id="administration-view-example">Administration View Example</h3>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h3 id="administration-view-example">Administration View Example<a class="headerlink" href="#administration-view-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;1234&quot;</span><span class="p">,</span>
   <span class="nt">&quot;view_contents&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -1738,28 +1738,27 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="user-view">User View</h2>
+<h2 id="user-view">User View<a class="headerlink" href="#user-view" title="Permanent link">&para;</a></h2>
 <p>This configuration block controls the user view. There is only one field that can be specified:</p>
 <ul>
-<li><code>view_contents</code>: a list of <a href="#user-view-object">user view</a> objects</li>
-</ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<li><code>view_contents</code>: a list of <a href="#user-view-object">user view</a> objects
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;view_contents&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="err">USER_VIEW_OBJECT</span>
   <span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
-
-
-<h3 id="user-view-object">User View Object</h3>
+</li>
+</ul>
+<h3 id="user-view-object">User View Object<a class="headerlink" href="#user-view-object" title="Permanent link">&para;</a></h3>
 <p>Required fields:</p>
 <ul>
 <li><code>id</code>: unique identifier to reference this user view component</li>
 <li><code>enable</code>: <code>true</code> or <code>false</code> to enable or disable this view</li>
-<li><code>values</code>: List of <code>ids</code> defined in &hellip;</li>
+<li><code>values</code>: List of <code>ids</code> defined in ...</li>
 </ul>
-<h3 id="user-view-example">User View Example</h3>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h3 id="user-view-example">User View Example<a class="headerlink" href="#user-view-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;view_contents&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
       <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;data_quality&quot;</span><span class="p">,</span>
@@ -1787,13 +1786,13 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="data-quality-list">Data Quality List</h2>
+<h2 id="data-quality-list">Data Quality List<a class="headerlink" href="#data-quality-list" title="Permanent link">&para;</a></h2>
 <p>Data quality is a component of the platform that allows for the monitoring of data streams and provides a display regarding their data quality. This list is composed of a set of <a href="../configurations/#data-source">data sources</a> that contain:</p>
 <ul>
 <li><code>type</code>: Must be <code>DATA_QUALITY</code></li>
 </ul>
-<h3 id="data-quality-list-example">Data Quality List Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="data-quality-list-example">Data Quality List Example<a class="headerlink" href="#data-quality-list-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;platform&quot;</span><span class="p">:</span> <span class="p">{</span>
       <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;AUTOSENSE_CHEST&quot;</span>
@@ -1824,9 +1823,9 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="data-quality-view-list">Data Quality View List</h2>
+<h2 id="data-quality-view-list">Data Quality View List<a class="headerlink" href="#data-quality-view-list" title="Permanent link">&para;</a></h2>
 <p>This list of objects defines how the data quality display interaction occurs and the required resources for each.</p>
-<h3 id="data-quality-view-objects">Data Quality View objects</h3>
+<h3 id="data-quality-view-objects">Data Quality View objects<a class="headerlink" href="#data-quality-view-objects" title="Permanent link">&para;</a></h3>
 <p>Parameter for defining a data quality view object.</p>
 <ul>
 <li><code>name</code>: Short name that is displayed in the user interface</li>
@@ -1846,7 +1845,7 @@ where to get them from, and any necessary configurations and services.</p>
 </ul>
 </li>
 </ul>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Breathing&quot;</span><span class="p">,</span>
   <span class="nt">&quot;plotter&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;enable&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -1873,8 +1872,8 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h3 id="data-quality-view-list-example">Data Quality View List Example</h3>
-<div class="code"><pre><span></span><span class="p">[</span>
+<h3 id="data-quality-view-list-example">Data Quality View List Example<a class="headerlink" href="#data-quality-view-list-example" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Breathing&quot;</span><span class="p">,</span>
     <span class="nt">&quot;plotter&quot;</span><span class="p">:</span> <span class="p">{</span>
@@ -2003,9 +2002,9 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="day-start">Day Start</h2>
+<h2 id="day-start">Day Start<a class="headerlink" href="#day-start" title="Permanent link">&para;</a></h2>
 <p>TODO: ???</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
   <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;wakeup&quot;</span><span class="p">,</span>
   <span class="nt">&quot;notify&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2036,9 +2035,9 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="day-end">Day End</h2>
+<h2 id="day-end">Day End<a class="headerlink" href="#day-end" title="Permanent link">&para;</a></h2>
 <p>TODO: ???</p>
-<div class="code"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;by&quot;</span><span class="p">:</span> <span class="s2">&quot;user&quot;</span><span class="p">,</span>
   <span class="nt">&quot;base&quot;</span><span class="p">:</span> <span class="s2">&quot;day_start&quot;</span><span class="p">,</span>
   <span class="nt">&quot;notify&quot;</span><span class="p">:</span> <span class="p">[</span>
@@ -2051,8 +2050,8 @@ where to get them from, and any necessary configurations and services.</p>
 </pre></div>
 
 
-<h2 id="complete-example">Complete Example</h2>
-<div class="code"><pre><span></span><span class="p">{</span>
+<h2 id="complete-example">Complete Example<a class="headerlink" href="#complete-example" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><span class="p">{</span>
   <span class="nt">&quot;config_info&quot;</span><span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="s2">&quot;STU00201566-Test&quot;</span><span class="p">,</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;MD2K Smoking Study (at NW)-Test&quot;</span><span class="p">,</span>
@@ -2749,7 +2748,7 @@ where to get them from, and any necessary configurations and services.</p>
       <div class="md-footer-copyright">
         
           <span class="md-footer-copyright__highlight">
-            MD2K 2016
+            Copyright &copy; 2017 MD2K Center of Excellence
           </span>
           <br>
         
@@ -2760,12 +2759,51 @@ where to get them from, and any necessary configurations and services.</p>
           Material for MkDocs</a>
       </div>
       
+        <div class="md-footer-social">
+          
+            <a href="https://github.com/MD2Korg" class="md-footer-social__link socicon-github"></a>
+          
+            <a href="https://twitter.com/MD2Korg" class="md-footer-social__link socicon-twitter"></a>
+          
+        </div>
+      
     </div>
   </div>
 </footer>
       
     </div>
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+          
+          <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+        
+      
+        
+      
+        
+      
+        
+      
+        
       
         
       
