@@ -10,7 +10,7 @@ before_install:
 
 install:
   - pip install mkdocs -U
-  - pip install pygments
+  - pip install pygments pymdown-extensions 
   - npm install -g bower
   - npm install -g gulp
 
