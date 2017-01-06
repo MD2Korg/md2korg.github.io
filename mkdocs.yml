@@ -35,21 +35,23 @@ extra:
   font:
     text: 'Roboto'
     code: 'Roboto Mono'
-  author:
-    github: 'MD2Korg'
-    twitter: 'MD2Korg'
+  social:
+    - type: github
+      link: https://github.com/MD2Korg
+    - type: twitter
+      link: https://twitter.com/MD2Korg
 
 
-site_name: MD2K Software Documentation
-site_description: mCerbrum and Cerebral Cortex software and API documentation
-site_author: MD2K
+site_name: MD2K Software and Training
+site_description: mCerbrum and Cerebral Cortex software documentation and training material
+site_author: MD2K.org
 site_url: http://docs.md2k.org/
 
-copyright: MD2K 2016
+copyright: 'Copyright &copy; 2017 MD2K Center of Excellence'
 google_analytics: ['UA-77812263-1', 'auto']
 
 repo_url: https://github.com/MD2Korg/
-repo_name: GitHub
+edit_uri: md2korg.github.io/edit/dev/docs/
 
 remote_branch: master
 
@@ -57,7 +59,23 @@ extra_css: [css/md2k.css]
 
 theme_dir: 'mkdocs-material/material'
 
+
+# Extensions
 markdown_extensions:
-  - smarty
-  - codehilite(css_class=code)
-  - admonition
+  - markdown.extensions.admonition
+  - markdown.extensions.codehilite(guess_lang=false)
+  - markdown.extensions.footnotes
+  - markdown.extensions.meta
+  - markdown.extensions.toc(permalink=true)
+  - pymdownx.arithmatex
+  - pymdownx.betterem(smart_enable=all)
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.githubemoji
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist(custom_checkbox=true)
+  - pymdownx.tilde
