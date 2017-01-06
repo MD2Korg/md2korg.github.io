@@ -1,4 +1,4 @@
 [submodule "mkdocs-material"]
 	path = mkdocs-material
-	url = https://github.com/MD2Korg/mkdocs-material
+	url = https://github.com/squidfunk/mkdocs-material
 	branch = master

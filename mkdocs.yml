@@ -3,7 +3,8 @@ pages:
     - Introduction: index.md
   - Software:
     - Overview: software/index.md
-    - Release Notes: software/releasenotes.md
+    - Nested:
+      - Release Notes: software/releasenotes.md
     - Testing Guidelines: software/testingguidelines.md
     - Contributing: contributing.md
     - Getting Help: help.md
