@@ -1,10 +1,3 @@
-# mCerebrum
-**An Open Source Software Suite for Mobile Sensor Data**
-
-<!-- ![mCerebrum Logo](../img/mCerebrum-logo.png) -->
-
-<center><iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
-
 # Getting Started
 mCerebrum is a suite of several Android applications that are combined with a set of configuration files. All source code is available in [MD2K's GitHub organization](https://github.com/MD2Korg).
 
