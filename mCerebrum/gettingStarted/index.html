@@ -645,62 +645,74 @@
 
 <p><center><iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center></p>
 <h1 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h1>
-<p>mCerebrum is a suite of several Android applications that are combined with a set of configuration files. All source code is available in the MD2K's GitHub organization.</p>
-<p>These instructions will guide you in downloading, installing, and configuring the mCerebrum software suite. </p>
-<p>To meet future needs, we anticipate continuing to adapt and augment the mCerebrum platform to support future technologies and the needs of new studies. The component-based architecture is easily modified and adapted to specific studies and the simple APIs should provide for easy integration into existing applications. mCerebrum has the following layers and associated application components:</p>
-<h2 id="mobile-sensor-support-for-data-collection">Mobile Sensor Support for Data Collection<a class="headerlink" href="#mobile-sensor-support-for-data-collection" title="Permanent link">&para;</a></h2>
-<p>mCerebrum provides support for reliable data collection from mobile and wearable sensors in excess of 800 hertz, and real-time processing of these data for sensor-triggered just-in-time adaptive interventions. mCerebrum currently supports a variety of data sources including:</p>
-<ul>
-<li>Microsoft band (accelerometers, gyroscopes, galvanic skin response, UV exposure)</li>
-<li>AutoSense Chest (ECG, respiration, galvanic skin response, accelerometer)</li>
-<li>AutoSense Wrist (accelerometer, gyroscope, galvanic skin response)</li>
-<li>EasySense (ultra wideband radio frequency for lung fluid and cardiorespiratory motion)</li>
-<li>Omron BLE Blood Pressure Monitor (blood pressure)</li>
-<li>Omron BLE Weight Scale (weight, balance, frailty)</li>
-<li>Android smartphones (GPS, accelerometers)</li>
-<li>iCO Smokerlyzer (smoking status)</li>
-</ul>
-<p>These sensor platforms communicate with mCerebrum over one of four interfaces: 802.15.4, Bluetooth, headphone port, or local API.</p>
-<p>mCerebrum supports real-time data processing algorithms to evaluate stress, activity, driving/riding, smoking, and conversation. mCerebrum collects user reported data collection through EMAs, intervention response, and self reports.</p>
-<p>Finally, mCerebrum provides end-to-end access control, encryption, and data source linage along with a simple set of APIs for application development that is freely available under the open source BSD 2-clause license.</p>
-<h3 id="communication-interfaces">Communication Interfaces<a class="headerlink" href="#communication-interfaces" title="Permanent link">&para;</a></h3>
-<p>Data sources are either on the smartphone or come from external devices that can be connected to the platform through various radios or wire interfaces:</p>
-<ul>
-<li>802.15.4 (ANT+)</li>
-<li>Bluetooth</li>
-<li>headphone port</li>
-<li>local</li>
-</ul>
-<p>The Microsoft Band, EasySense (lung fluid and heart/lung motion), and Omron (blood pressure and weight) devices have custom applications that utilize the Bluetooth radio to interact with the device and relay data into mCerebrum. <a href="https://github.com/MD2Korg/mCerebrum-MicrosoftBand">Microsoft Band</a> samples accelerometer, gyroscope, GSR, light, and heart rate for measuring arm movements for eating and smoking behavior detection. <a href="https://github.com/MD2Korg/mCerebrum-AutoSense">AutoSense</a> receives data from multiple devices over an 802.15.4 (ANT+) radio that includes: Chest, which contains ECG, respiration, and accelerometer data and Wrist, which samples accelerometer and gyroscope information before sending data into Data Kit.  A Bluetooth version of AutoSense is under development for more flexibility in deployments. These two radio chipsets represent most of the wireless communication between wearable sensors and a smartphone and are currently integrated into mCerebrum.</p>
-<p>The ICO smokerlyzer is connected to mCerebrum via the headphone jack. Our platform is able to communicate over this connection with the device to measure carbon monoxide of a smoker in the field. The <a href="https://github.com/MD2Korg/mCerebrum-PhoneSensor">Phone Sensor</a> application can record all available sensors on a smartphone platform and is typically configured to record the accelerometer, gyroscope, GPS, CPU, and battery levels from the device. Once data has arrived on mCerebrum through any one of the interfaces, it is routed via the data router and Data Kit. We have applications that integrate into mCerebrum across a variety of different communication modalities and push data into our common data core, Data Kit, for use by additional signal processing.</p>
-<h3 id="signal-processing">Signal processing<a class="headerlink" href="#signal-processing" title="Permanent link">&para;</a></h3>
-<p>A signal processing layer is responsible for converting sensor data into markers on which the Intervention Kit acts.  The primary real-time data processor, <a href="https://github.com/MD2Korg/mCerebrum-StreamProcessor">Stream Processor</a>, subscribes to data sources produced by the lower tiers and produces markers for the upper tiers.  Currently, it contains signal processing algorithms designed to compute various features and markers including: data quality of raw sensor signals:</p>
-<ul>
-<li><strong>puffMarker</strong> uses respiration (from a chest band) and hand gesture data (from wrist sensors) to determine when each cigarette puff occurs</li>
-<li><strong>activity recovery</strong> uses interbeat interval (from ECG) and activity level (from accelerometers) to measure the body’s recovery time after an exercise period as an index of cardiac fitness</li>
-<li><strong>cStress</strong> uses ECG, respiration, and accelerometer data to an estimated the likelihood of stress for each minute that these sensors are worn properly</li>
-<li><strong>stress trigger</strong> converts the stress probabilities into episodes of high and low stress that can be used to decide whether to trigger a stress intervention</li>
-<li><strong>driving detector</strong> that determine if a person is involved in driving a motorized vehicle</li>
-</ul>
-<p>The stream processor performs this computation in one-minute blocks that provides near real-time markers for other applications. A visualization layer contains multiple components around displaying the results of the signal processing and can be shown to the participant as necessary but is typically utilized for gaining a sense of how well the system if functioning on the backend.</p>
-<h3 id="storage-interfaces">Storage interfaces<a class="headerlink" href="#storage-interfaces" title="Permanent link">&para;</a></h3>
-<p>Storage interfaces provide encrypted data storage and transport capabilities and are subject to the privacy controller, which allows a participant to temporally disable sensor data flow within the system according to rules dictated by the study rules. There are currently three storage interfaces:</p>
-<ul>
-<li><a href="https://github.com/MD2Korg/mCerebrum-DataKit">Data Kit</a> is designed to manage and store information produced by all layers and is a key component of mCerebrum data pipeline. It provides an encrypted data store (SQLite) and exposes publisher/subscriber and query interfaces for other components.</li>
-<li>A <a href="https://github.com/MD2Korg/mCerebrum-CerebralCortex">Cerebral Cortex</a> interface to the system allows for data to be offloaded periodically, depending on quality of service constraints, from mCerebrum via an encrypted REST API over a secure cellular or Wi-Fi network to a Cerebral Cortex cloud service for additional storage and signal processing.</li>
-<li>A <a href="https://github.com/MD2Korg/DataExporter">data export</a> interface is provided to allow for researchers to extract all recorded information from a mCerebrum device onto a computer for analysis.</li>
-</ul>
-<h3 id="participant-interaction">Participant interaction<a class="headerlink" href="#participant-interaction" title="Permanent link">&para;</a></h3>
-<p>Participants interact with the system through a suite of applications.</p>
-<ul>
-<li>The <a href="https://github.com/MD2Korg/mCerebrum-Study">mCerebrum-Study</a> application that provides user interfaces to additional applications and allows for the configuration of the system.</li>
-<li>The <a href="https://github.com/MD2Korg/mCerebrum-EMA">EMA</a> and <a href="https://github.com/MD2Korg/mCerebrum-SelfReport">Self Report</a> applications are designed to all for the delivery of scheduled or event-based questionnaires to the participant and to deliver any self-reported information.</li>
-<li>We developed several applications designed around stress reduction techniques, <a href="https://github.com/MD2Korg/mCerebrum-MoodSurfing">Mood Surfing</a> and <a href="https://github.com/MD2Korg/mCerebrum-ThoughtShakeup">Thought Shakeup</a>, and also support the launching of any external intervention application.</li>
-<li><a href="https://github.com/MD2Korg/mCerebrum-Plotter">Plotter</a>, a real-time data visualization tool, allows the participant to visualize many of the raw sensor signals to aid in attaching and verifying the quality of sampled data.</li>
-<li><a href="https://github.com/MD2Korg/mCerebrum-InterventionKit">Intervention kit</a> is a sensor-triggered EMA and intervention application bridges this layer with the signal-processing layer to provide data-driven and scheduled notifications and interventions. It also provides an API for notifying a participant either through a wearable device or the smartphone via different modalities, which include vibration and sound. The ability to provide just-in-time interventions based on a real-time analysis of high-frequency data streams and its ability to combine diverse data streams from a variety of sensors is a key capability of mCerebrum.</li>
-</ul>
-<p>For example, puffMarker uses multiple data streams (respiration, and wrist-based accelerometers and gyroscopes) to detect when a cigarette puff occurs.  This puff information is utilized by the intervention manager to provide alerts to the participant through mCerebrum's notification system that sends a set of configurable messages, tones, and vibrations to a Microsoft band and the smartphone. Failure to acknowledge the intervention or message can result in repeated attempts to contact followed by an escalation of causing additional alerts to be sent.</p>
-<p>Similarly, ECG, respiration, and accelerometer data is used by the cStress model to assess the likelihood of stress that is then used to generate triggers for launching stress intervention apps.</p>
+<p>mCerebrum is a suite of several Android applications that are combined with a set of configuration files. All source code is available in <a href="https://github.com/MD2Korg">MD2K's GitHub organization</a>.</p>
+<p>These instructions will guide you in downloading, installing, and configuring the mCerebrum software suite using the default configuration to collect phone sensor data.</p>
+<h2 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Download the <a href="https://github.com/MD2Korg/mCerebrum-Study/releases/latest">latest version of mCerebrum</a> and install the APK file on an Android 5.0+ device.</li>
+<li>Follow the on-screen instructions on your Android device to complete the installation.</li>
+<li>When the installation is complete, open mCerebrum. You should see the home screen as shown here:</li>
+</ol>
+<p><img alt="mCerebrum Splash Screen" src="../../img/mCerebrumSplashDefault.png" /></p>
+<h2 id="configuration">Configuration<a class="headerlink" href="#configuration" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Tap the Settings button (highlighted in red) to begin the setup process.</li>
+<li>If prompted to download a configuration file, enter “default” and tap OK to use the default mCerebrum configuration file. If you are not prompted, skip this step.</li>
+</ol>
+<h2 id="installupdate-apps">Install/Update Apps<a class="headerlink" href="#installupdate-apps" title="Permanent link">&para;</a></h2>
+<p>mCerebrum uses a suite of software applications in conjunction with the main mCerebrum interface app. Follow these steps to download the latest versions of the apps in the mCerebrum suite.
+1.  From the main Settings screen, tap <em>Configure Applications &gt; Applications</em> then tap the Check Updates button at the bottom of the screen.
+2.  <em>A)</em> If any apps listed show a red X icon, tap the app in the list then tap Install. <em>B)</em> If any apps listed show a yellow caution icon, tap the app in the list then tap Update.
+3.  When every app shows a green check mark, all apps are installed and up-to-date. Tap the <em>Close</em> button.</p>
+<h2 id="sensors-setup">Sensors Setup<a class="headerlink" href="#sensors-setup" title="Permanent link">&para;</a></h2>
+<ol>
+<li>From the main Settings screen, tap <em>Configure Applications &gt; Settings &gt; PhoneSensor</em>.</li>
+<li>You will see a list of all the available sensors included with your phone (Battery, Location, Accelerometer, etc.). Tap to toggle on each sensor that you wish to use to collect data.</li>
+<li>When you are finished, tap the <em>Save</em> button at the bottom of the screen.</li>
+</ol>
+<p><em>Note</em>: To ensure high-quality data collection, the GPS feature of the smartphone must be set to High Accuracy Mode in your phone’s main settings (outside of the mCerebrum app).</p>
+<h2 id="study-setup">Study Setup<a class="headerlink" href="#study-setup" title="Permanent link">&para;</a></h2>
+<ol>
+<li>From the main Settings screen, tap <em>Configure Study</em>.</li>
+<li>Tap <em>User ID</em> and set your desired unique user ID for the participant.</li>
+<li>Tap <em>Wakeup Time</em> and select the time you expect data collection to begin each morning. The participant will receive a prompt to “start the day” at the time you select.</li>
+<li>Tap <em>Sleep Time</em> and select the time you expect data collection to conclude each day.</li>
+<li>If all items on the Study Settings screen show a green check mark beside them, study setup is complete.  Tap the <em>Save</em> button at the bottom of the screen.</li>
+</ol>
+<h2 id="start-study">Start Study<a class="headerlink" href="#start-study" title="Permanent link">&para;</a></h2>
+<ol>
+<li>From the main Settings screen, once Configure Applications and Configure Study show a green checkmark, tap the <em>Start Study</em> button to begin the study.</li>
+<li>If prompted to start the day, tap the <em>Start</em> button to begin data collection.</li>
+<li>Tap <em>Close</em> to exit the Settings screen. You should see the mCerebrum home screen below. Once you have tapped to start the day, data collection has begun.</li>
+</ol>
+<p><img alt="mCerebrum Home Screen" src="../../img/mCerebrumHome.png" /></p>
+<h2 id="visualize-real-time-data">Visualize Real-Time Data<a class="headerlink" href="#visualize-real-time-data" title="Permanent link">&para;</a></h2>
+<ol>
+<li>From the mCerebrum home screen, tap the <em>Plotter</em> button.</li>
+<li>Select from the list of available sensors to visualize each set of data in real-time.</li>
+</ol>
+<h2 id="export-data">Export Data<a class="headerlink" href="#export-data" title="Permanent link">&para;</a></h2>
+<p>When you are ready to export the data you have collected, perform the following steps to save your data to a computer.</p>
+<h4 id="shut-down-all-applications">Shut Down All Applications<a class="headerlink" href="#shut-down-all-applications" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Enter the main Settings screen by tapping the 3 dots in the upper-right-hand corner of the home screen, then tapping <em>Settings</em>.</li>
+<li>Tap the <em>Running Apps</em> button. (<em>Note</em>: the study must be started to access running apps.)</li>
+<li>Tap the <em>Stop All</em> button to stop all applications.</li>
+<li>Return to the previous screen and tap <em>Stop Study</em>.</li>
+<li>Restart the phone.</li>
+<li>When the phone restarts, if the mCerebrum app opens, tap <em>Exit</em> to close it. (If mCerebrum does not open, skip this step.)</li>
+<li>From the phone’s home screen, open the DataKit app and ensure it is INACTIVE.</li>
+</ol>
+<h4 id="save-data-to-a-computer">Save Data to a Computer<a class="headerlink" href="#save-data-to-a-computer" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Connect the smartphone to a PC using the charging cable.</li>
+<li>Create a new folder on your computer. (It may be helpful to use the participant’s user ID as the new folder name.)</li>
+<li>Using the computer, navigate to the phone’s org.md2k.datakit folder. <em>[Phone &gt; Android &gt; data &gt; org.md2k.datakit]</em></li>
+<li>Copy the org.md2k.datakit folder and paste it to the new folder you created on your computer.</li>
+<li>Navigate to the phone’s log folder. <em>[Phone &gt; log]</em></li>
+<li>Copy the log folder and paste it to the new folder you created.</li>
+</ol>
+<p>All data is now exported to the computer.</p>
               
             </article>
           </div>
