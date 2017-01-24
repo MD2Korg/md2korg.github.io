@@ -5,7 +5,10 @@
 
 <center><iframe src="https://www.youtube.com/embed/GR3pahhXp4U" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
 
-mCerebrum is a configurable software platform for mobile and wearable devices. The mCerebrum platform is divided into functional layers so that each component is flexible and can be adapted and extended without adversely affecting the other components.  Two components – an access controller and data router – links each layer.  The access controller is responsible to ensuring that pairs of components within the system have appropriate credentials to communicate with each other through the data router, which is responsible for routing data objects throughout the platform.
+# Getting Started
+mCerebrum is a suite of several Android applications that are combined with a set of configuration files. All source code is available in the MD2K's GitHub organization.
+
+These instructions will guide you in downloading, installing, and configuring the mCerebrum software suite. 
 
 To meet future needs, we anticipate continuing to adapt and augment the mCerebrum platform to support future technologies and the needs of new studies. The component-based architecture is easily modified and adapted to specific studies and the simple APIs should provide for easy integration into existing applications. mCerebrum has the following layers and associated application components:
 
