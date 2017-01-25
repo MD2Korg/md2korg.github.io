@@ -16,8 +16,9 @@ These instructions will guide you in downloading, installing, and configuring th
 
 ## Install/Update Apps
 mCerebrum uses a suite of software applications in conjunction with the main mCerebrum interface app. Follow these steps to download the latest versions of the apps in the mCerebrum suite.
+
 1.	From the main Settings screen, tap *Configure Applications > Applications* then tap the Check Updates button at the bottom of the screen.
-2.	*A)* If any apps listed show a red X icon, tap the app in the list then tap Install. *B)* If any apps listed show a yellow caution icon, tap the app in the list then tap Update.
+2.	If any apps listed show a red X icon, tap the app in the list then tap *Install*. If any apps listed show a yellow caution icon, tap the app in the list then tap *Update*.
 3.	When every app shows a green check mark, all apps are installed and up-to-date. Tap the *Close* button.
 
 ## Sensors Setup
