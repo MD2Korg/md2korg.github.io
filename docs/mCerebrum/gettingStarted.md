@@ -1,7 +1,7 @@
 # Getting Started
 mCerebrum is a suite of several Android applications that are combined with a set of configuration files. All source code is available in [MD2K's GitHub organization](https://github.com/MD2Korg).
 
-These instructions will guide you in downloading, installing, and configuring the mCerebrum software suite using the default configuration to collect phone sensor data.
+These instructions will guide you in downloading, installing, and configuring the mCerebrum software suite using the default configuration to collect **phone sensor data**.
 
 ## Installation
 1. Download the [latest version of mCerebrum](https://github.com/MD2Korg/mCerebrum-Study/releases/latest) and install the APK file on an Android 5.0+ device.
@@ -15,11 +15,11 @@ These instructions will guide you in downloading, installing, and configuring th
 2. If prompted to download a configuration file, enter “default” and tap OK to use the default mCerebrum configuration file. If you are not prompted, skip this step.
 
 ## Install/Update Apps
-mCerebrum uses a suite of software applications in conjunction with the main mCerebrum interface app. Follow these steps to download the latest versions of the apps in the mCerebrum suite.
+mCerebrum uses a suite of software applications in conjunction with the main mCerebrum interface app. Follow these steps to download the latest versions of all the apps in your configuration of the mCerebrum suite.
 
 1.	From the main Settings screen, tap *Configure Applications > Applications* then tap the Check Updates button at the bottom of the screen.
-2.	If any apps listed show a red X icon, tap the app in the list then tap *Install*. If any apps listed show a yellow caution icon, tap the app in the list then tap *Update*. (Alternatively, you may tap the *Fix All* button at the bottom of the screen to begin the installation of all updates at once.)
-3.	When every app shows a green check mark, all apps are installed and up-to-date. Tap the *Close* button.
+2.	If any apps listed show a red X icon ![mCerebrum Splash Screen](../img/redX.jpg), tap the app in the list then tap *Install*. If any apps listed show a yellow caution icon ![mCerebrum Splash Screen](../img/yellowcaution.jpg), tap the app in the list then tap *Update*. (Alternatively, you may tap the *Fix All* button at the bottom of the screen to begin the installation of all updates at once.)
+3.	When every app shows a green check mark ![mCerebrum Splash Screen](../img/greencheckmark.jpg), all apps are installed and up-to-date. Tap the *Close* button.
 
 ## Sensors Setup
 1.	From the main Settings screen, tap *Configure Applications > Settings > PhoneSensor*.
@@ -46,8 +46,21 @@ mCerebrum uses a suite of software applications in conjunction with the main mCe
 1.	From the mCerebrum home screen, tap the *Plotter* button.
 2.	Select from the list of available sensors to visualize each set of data in real-time.
 
+![mCerebrum Home Screen](../img/plotterButton.png)
+
+## Privacy
+Privacy Control allows users to turn off certain features for a limited period of time.
+
+![mCerebrum Home Screen](../img/privacyActivate.png)
+1. From the mCerebrum home screen, tap the *Turn On* button under the Privacy heading.
+2. On the Privacy Control Settings screen, tap *Set Privacy Duration*. Select the amount of time for which you wish to disable the feature(s).
+3. Next, tap *Set Privacy Type*. Select each of the features you would like to temporarily disable. You will see a check mark appear to confirm the feature is selected. Tap *OK* when finished.
+4. Tap the *Start* button to begin the privacy timer.
+5. You will see a countdown timer under the Privacy Status heading to confirm the privacy settings are enabled. When you
+are finished, tap *Close*.
+
 ## Export Data
-When you are ready to export the data you have collected, perform the following steps to save your data to a computer.
+When you are ready to export the data you have collected, perform the following steps to save your data to a computer:
 #### Shut Down All Applications
 1.	Enter the main Settings screen by tapping the 3 dots in the upper-right-hand corner of the home screen, then tapping *Settings*.
 2.	Tap the *Running Apps* button. (*Note*: the study must be started to access running apps.)
@@ -56,6 +69,8 @@ When you are ready to export the data you have collected, perform the following 
 5.	Restart the phone.
 6.	When the phone restarts, if the mCerebrum app opens, tap *Exit* to close it. (If mCerebrum does not open, skip this step.)
 7.	From the phone’s home screen, open the DataKit app and ensure it is INACTIVE.
+
+![mCerebrum Home Screen](../img/DatakitINACTIVE.png)
 
 #### Save Data to a Computer
 1.	Connect the smartphone to a PC using the charging cable.
