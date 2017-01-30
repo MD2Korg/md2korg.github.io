@@ -1,5 +1,15 @@
 # Troubleshooting Guide
 
+## mCerebrum app crashing
+If the app crashes perpetually:
+
+- Clear all data from the DataKit app.
+- Clear all data from the mCerebrum app.
+- Delete the configuration folder located in the internal memory `/mCerebrum`
+- Make sure you have installed the proper update for each app.
+- Delete the mCerebrum app from the phone and re-install it.
+
+
 ## Microsoft Band
 If you are experiencing bad data quality:
 
@@ -60,14 +70,3 @@ If you are experiencing poor data quality:
 - Disconnect and reconnect each connector and electrode. You will hear a snap to indicate a good connection.  
 - Try cleaning the skin where the electrode is placed. There should be no lotion or residue on the skin.
 - Moisten the adhesive surface of the electrode and try again.  
-
-
-## mCerebrum app crashing
-
-If the app crashes perpetually:
-
-- Clear all data from the DataKit app.
-- Clear all data from the mCerebrum app.
-- Delete the configuration folder located in the internal memory `/mCerebrum`
-- Make sure you have installed the proper update for each app.
-- Delete the mCerebrum app from the phone and re-install it.
