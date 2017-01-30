@@ -52,6 +52,7 @@ mCerebrum uses a suite of software applications in conjunction with the main mCe
 Privacy Control allows users to turn off certain features for a limited period of time.
 
 ![mCerebrum Home Screen](../img/privacyActivate.png)
+
 1. From the mCerebrum home screen, tap the *Turn On* button under the Privacy heading.
 2. On the Privacy Control Settings screen, tap *Set Privacy Duration*. Select the amount of time for which you wish to disable the feature(s).
 3. Next, tap *Set Privacy Type*. Select each of the features you would like to temporarily disable. You will see a check mark appear to confirm the feature is selected. Tap *OK* when finished.
