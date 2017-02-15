@@ -3891,21 +3891,19 @@ var Application =
 
 	        /* Collapsed, so expand */
 	      } else {
-	        (function () {
-	          _this.el_.dataset.mdState = "expand";
-	          _this.el_.style.maxHeight = "";
+	        this.el_.dataset.mdState = "expand";
+	        this.el_.style.maxHeight = "";
 
-	          /* Read height and unset pseudo-toggled state */
-	          var height = _this.el_.getBoundingClientRect().height;
-	          _this.el_.dataset.mdState = "";
+	        /* Read height and unset pseudo-toggled state */
+	        var height = this.el_.getBoundingClientRect().height;
+	        this.el_.dataset.mdState = "";
 
-	          /* Set initial state and animate */
-	          _this.el_.style.maxHeight = "0px";
-	          requestAnimationFrame(function () {
-	            _this.el_.dataset.mdState = "animate";
-	            _this.el_.style.maxHeight = height + "px";
-	          });
-	        })();
+	        /* Set initial state and animate */
+	        this.el_.style.maxHeight = "0px";
+	        requestAnimationFrame(function () {
+	          _this.el_.dataset.mdState = "animate";
+	          _this.el_.style.maxHeight = height + "px";
+	        });
 	      }
 
 	      /* Remove state on end of transition */
@@ -4047,24 +4045,20 @@ var Application =
 
 	      /* Set overflow scrolling on parent */
 	      if (!ev.target.checked) {
-	        (function () {
-	          var end = function end() {
-	            parent.style.webkitOverflowScrolling = "touch";
-	            pane.removeEventListener("transitionend", end);
-	          };
-	          pane.addEventListener("transitionend", end, false);
-	        })();
+	        var end = function end() {
+	          parent.style.webkitOverflowScrolling = "touch";
+	          pane.removeEventListener("transitionend", end);
+	        };
+	        pane.addEventListener("transitionend", end, false);
 	      }
 
 	      /* Set overflow scrolling on target */
 	      if (ev.target.checked) {
-	        (function () {
-	          var end = function end() {
-	            target.style.webkitOverflowScrolling = "touch";
-	            pane.removeEventListener("transitionend", end, false);
-	          };
-	          pane.addEventListener("transitionend", end, false);
-	        })();
+	        var _end = function _end() {
+	          target.style.webkitOverflowScrolling = "touch";
+	          pane.removeEventListener("transitionend", _end, false);
+	        };
+	        pane.addEventListener("transitionend", _end, false);
 	      }
 	    }
 
@@ -4377,33 +4371,31 @@ var Application =
 
 	      /* Initialize index, if this has not be done yet */
 	      if (ev.type === "focus" && !this.index_) {
-	        (function () {
 
-	          /* Initialize index */
-	          var init = function init(data) {
-	            _this.index_ = (0, _lunr2.default)(function () {
-	              /* eslint-disable no-invalid-this, lines-around-comment */
-	              this.field("title", { boost: 10 });
-	              this.field("text");
-	              this.ref("location");
-	              /* eslint-enable no-invalid-this, lines-around-comment */
-	            });
+	        /* Initialize index */
+	        var init = function init(data) {
+	          _this.index_ = (0, _lunr2.default)(function () {
+	            /* eslint-disable no-invalid-this, lines-around-comment */
+	            this.field("title", { boost: 10 });
+	            this.field("text");
+	            this.ref("location");
+	            /* eslint-enable no-invalid-this, lines-around-comment */
+	          });
 
-	            /* Index documents */
-	            _this.data_ = data.reduce(function (docs, doc) {
-	              _this.index_.add(doc);
-	              docs[doc.location] = doc;
-	              return docs;
-	            }, {});
-	          };
+	          /* Index documents */
+	          _this.data_ = data.reduce(function (docs, doc) {
+	            _this.index_.add(doc);
+	            docs[doc.location] = doc;
+	            return docs;
+	          }, {});
+	        };
 
-	          /* Initialize index after short timeout to account for transition */
-	          setTimeout(function () {
-	            return typeof _this.data_ === "function" ? _this.data_().then(init) : init(_this.data_);
-	          }, 250);
+	        /* Initialize index after short timeout to account for transition */
+	        setTimeout(function () {
+	          return typeof _this.data_ === "function" ? _this.data_().then(init) : init(_this.data_);
+	        }, 250);
 
-	          /* Execute search on new input event after clearing current list */
-	        })();
+	        /* Execute search on new input event after clearing current list */
 	      } else if (ev.type === "keyup") {
 	        while (this.list_.firstChild) {
 	          this.list_.removeChild(this.list_.firstChild);
