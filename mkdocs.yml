@@ -13,7 +13,7 @@ pages:
     - References: references.md
     - License: license.md
   - mCerebrum:
-    - Overview: mCerebrum/index.md
+    - Overview: mCerebrum/overview.md
     - Getting Started: mCerebrum/gettingStarted.md
     - Configurations: mCerebrum/configurations.md
     - Configuration-mCerebrum: mCerebrum/configuration-mCerebrum.md
