@@ -55,7 +55,7 @@ edit_uri: md2korg.github.io/edit/dev/docs/
 
 remote_branch: master
 
-extra_css: [css/md2k.css]
+extra_css: [css/md2k.css, css/bootstrap.min.css, css/bootstrap-theme.min.css]
 
 theme_dir: 'mkdocs-material/material'
 
