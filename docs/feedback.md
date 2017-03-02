@@ -3,6 +3,8 @@
 # Feedback
 Please provide as many details as possible when reporting bugs or other feedback.
 
+For a list of current activities and all outstanding issues please see the <a href='https://www.pivotaltracker.com/n/projects/1982081' target='_blank'>issue tracker</a>
+
 ## mCerebrum and Cerebral Cortex
 
 <div id="md2kform">
