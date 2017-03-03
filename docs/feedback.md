@@ -8,17 +8,36 @@ For a list of current activities and all outstanding issues please see the <a hr
 ## mCerebrum and Cerebral Cortex
 
 <div id="md2kform">
-<form class="form-horizontal">
+<form class="form-horizontal" id='myform'>
 <fieldset>
 
 <!-- Form Name -->
 <legend>Feedback Form</legend>
 
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="radios">Choose the type of feedback you are submitting</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="radios-0">
+      <input type="radio" name="radios" id="bug_option" value="1" checked="checked">
+      Bug Report
+    </label>
+	</div>
+  <div class="radio">
+    <label for="radios-1">
+      <input type="radio" name="radios" id="feature_option" value="2">
+      Feature Request
+    </label>
+	</div>
+  </div>
+</div>
+
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="textinput">Short Description</label>
   <div class="col-md-4">
-  <input id="name" name="textinput" type="text" placeholder="placeholder" class="form-control input-md" required="">
+  <input id="name" name="textinput" type="text" class="form-control input-md" required>
 
   </div>
 </div>
@@ -27,7 +46,16 @@ For a list of current activities and all outstanding issues please see the <a hr
 <div class="form-group">
   <label class="col-md-4 control-label" for="textarea">Details</label>
   <div class="col-md-4">
-    <textarea class="form-control" id="description" name="textarea"></textarea>
+    <textarea class="form-control" id="description" name="textarea" rows="5" placeholder="Please describe the bug or feature with as much detail as appropriate."></textarea>
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Submitter</label>
+  <div class="col-md-4">
+  <input id="submitter" name="textinput" type="text" placeholder="Your name and email(optional)" class="form-control input-md">
+
   </div>
 </div>
 
@@ -64,9 +92,26 @@ For a list of current activities and all outstanding issues please see the <a hr
     url += '/projects/' + projectId;
     url += '/stories';
 
+    var form_selection = $('input[name=radios]:checked', '#myform').val();
+    var s_type="feature";
+    if (form_selection == 1) {
+      s_type = "bug";
+    }
+    if (form_selection == 2) {
+      s_type = "feature";
+    }
+
+
+    var description_string = $('#description').val();
+    var submitter = $('#submitter').val()
+    if (submitter.length > 0) {
+      description_string = submitter + '\n\n' + description_string;
+    }
+
     object = {
               name: $('#name').val(),
-              description: $('#description').val(),
+              story_type: s_type,
+              description: description_string,
              }
     console.log(object)
     // do API request to get story names
