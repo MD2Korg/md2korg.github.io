@@ -3,7 +3,6 @@ button[data-md-color-accent] {
   width: 13rem;
   margin-bottom: 0.4rem;
   padding: 2.4rem 0.8rem 0.4rem;
-  -webkit-transition: background-color 0.25s, opacity 0.25s;
   transition: background-color 0.25s, opacity 0.25s;
   border-radius: 0.2rem;
   color: white;
