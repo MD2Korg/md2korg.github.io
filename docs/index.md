@@ -11,6 +11,8 @@ Several software platforms have recently emerged for collecting mobile health da
 ## Uniqueness of MD2K
 The [MD2K](https://www.github.com/MD2Korg/) platform , on the other hand, is designed from the ground up as a high-frequency data stream processing toolchain that provides flexible data types and custom object storage. It can collect and analyze data from tens of wearable sensors via a wide array of wireless radios (ANT, Bluetooth, Bluetooth LE, etc.). It also provides native support for triggering notifications, self-report prompts, and interventions based on real-time values of digital biomarkers derived from sensor data.
 
+<center><iframe src="https://www.youtube.com/embed/ENngs9eL4VQ" width="560" height="315" frameborder="0" allowfullscreen="allowfullscreen"></iframe></center>
+
 ## Background
 mCerebrum is backed by 9 years of software development on the [Fieldstream](http://www.fieldstream.org/) and [AutoSense](https://sites.google.com/site/autosenseproject/) projects which yielded in excess of 20,000 hours of wearable sensor data from a variety of lab and field studies with hundreds of participants. Over 27 research articles (with over 400 citations) have been published using analysis of these data (see list of articles below; go here for citations). mCerebrum is based on these extensive experiences with real-life high-frequency sensor data and its analysis for both technology and health research.
 
